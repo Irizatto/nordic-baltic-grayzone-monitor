@@ -12,6 +12,7 @@ from fetch_barentswatch_ais import fetch_barentswatch_ais, write_latest as write
 from fetch_digitraffic_ais import fetch_digitraffic_ais, write_latest as write_digitraffic
 from fetch_gfw_data import fetch_gfw_sar, write_latest as write_gfw_sar
 from analyze_suspicious import score_vessel, update_history
+from events import record_events
 
 
 def _now() -> str:
@@ -79,6 +80,7 @@ def run() -> dict:
     vessels = _merge_newest([_decorate_for_dashboard(v) for v in real_records] + mock_vessels)
     history_by_mmsi = update_history(vessels)
     vessels = [score_vessel(vessel, history_by_mmsi.get(str(vessel.get("mmsi")), []), sar_detections) for vessel in vessels]
+    record_events(vessels, sar_detections)
     all_mock = not real_records
     metadata = {"generated_at":_now(),"mode":"mock" if all_mock else "mixed","sources":["mock"] + sorted({v["source"] for v in real_records}),"source_status":source_status,"fallbacks":["Mock vessels remain available when a live AIS source is missing, unavailable, or returns an error."]}
 
