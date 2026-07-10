@@ -56,37 +56,42 @@ def run() -> dict:
             digitraffic = fetch_digitraffic_ais()
             write_digitraffic(digitraffic)
             real_records.extend(digitraffic)
-            source_status["digitraffic"] = {"status":"ok","timestamp":_now(),"records":len(digitraffic)}
+            source_status["digitraffic"] = {"status":"ok","timestamp":_now(),"records_fetched":len(digitraffic)}
         except requests.RequestException as error:
             source_status["digitraffic"] = {"status":"error_kept_old_data","timestamp":_now(),"detail":str(error)}
 
     try:
         barentswatch = None if USE_MOCK_DATA else fetch_barentswatch_ais()
         if barentswatch is None:
-            source_status["barentswatch"] = {"status":"credentials_missing_fallback_mock","timestamp":_now(),"detail":"BARRENTSWATCH_CLIENT_ID / BARENTSWATCH_CLIENT_SECRET unavailable or mock mode enabled"}
+            source_status["barentswatch"] = {"status":"credentials_missing_fallback_mock","timestamp":_now(),"detail":"BARENTSWATCH_CLIENT_ID / BARENTSWATCH_CLIENT_SECRET unavailable or mock mode enabled"}
         else:
             write_barentswatch(barentswatch)
             real_records.extend(barentswatch)
-            source_status["barentswatch"] = {"status":"ok","timestamp":_now(),"records":len(barentswatch)}
+            source_status["barentswatch"] = {"status":"ok","timestamp":_now(),"records_fetched":len(barentswatch)}
     except requests.RequestException as error:
         source_status["barentswatch"] = {"status":"error_kept_old_data","timestamp":_now(),"detail":str(error)}
 
     sar_detections, gfw_status, gfw_detail = fetch_gfw_sar()
     if gfw_status == "ok":
         write_gfw_sar(sar_detections)
-    source_status["gfw_sar"] = {"status":gfw_status,"timestamp":_now(),"records":len(sar_detections),"detail":gfw_detail}
+    source_status["gfw_sar"] = {"status":gfw_status,"timestamp":_now(),"records_fetched":len(sar_detections),"records_published":len(sar_detections),"detail":gfw_detail}
 
     mock_vessels = [v for v in previous.get("vessels", []) if v.get("source") == "mock"]
     vessels = _merge_newest([_decorate_for_dashboard(v) for v in real_records] + mock_vessels)
     history_by_mmsi = update_history(vessels)
     vessels = [score_vessel(vessel, history_by_mmsi.get(str(vessel.get("mmsi")), []), sar_detections) for vessel in vessels]
     record_events(vessels, sar_detections)
+    records_fetched = list(vessels)
+    priority = [vessel for vessel in vessels if vessel.get("risk_level") in {"Watch", "High Review Priority", "Critical Review Priority"}]
+    remainder = sorted((vessel for vessel in vessels if vessel not in priority), key=lambda vessel: vessel.get("risk_score", 0), reverse=True)
+    vessels = priority + remainder[:max(0, 150 - len(priority))]
+    for source in {vessel.get("source", "unknown") for vessel in records_fetched}:
+        status = source_status.setdefault(source, {"status":"ok","timestamp":_now()})
+        status["records_fetched"] = sum(vessel.get("source") == source for vessel in records_fetched)
+        status["records_published"] = sum(vessel.get("source") == source for vessel in vessels)
     all_mock = not real_records
     metadata = {"generated_at":_now(),"mode":"mock" if all_mock else "mixed","sources":["mock"] + sorted({v["source"] for v in real_records}),"source_status":source_status,"fallbacks":["Mock vessels remain available when a live AIS source is missing, unavailable, or returns an error."]}
 
-    archive_dir = DOCS_DATA / "archive"
-    archive_dir.mkdir(exist_ok=True)
-    (archive_dir / ("data_" + datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ") + ".json")).write_text(json.dumps(previous, indent=2) + "\n", encoding="utf-8")
     output = {"metadata":metadata,"vessels":vessels,"sar_detections":sar_detections}
     (DOCS_DATA / "data.json").write_text(json.dumps(output, indent=2) + "\n", encoding="utf-8")
     (DOCS_DATA / "metadata.json").write_text(json.dumps(metadata, indent=2) + "\n", encoding="utf-8")
