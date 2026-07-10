@@ -1,0 +1,38 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Helsinki–Tallinn telecom corridor",
+        "category": "cable",
+        "source": "manual_schematic",
+        "source_url": null,
+        "last_updated": "2026-07-11",
+        "notes": "Illustrative schematic only; not a precise route or operational position.",
+        "route_precision": "schematic"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            24.75,
+            60.14
+          ],
+          [
+            24.55,
+            60
+          ],
+          [
+            24.3,
+            59.88
+          ],
+          [
+            24.1,
+            59.75
+          ]
+        ]
+      }
+    }
+  ]
+}
