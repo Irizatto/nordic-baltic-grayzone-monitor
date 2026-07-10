@@ -16,7 +16,6 @@ concurrency:
 
 jobs:
   update-data:
-    if: github.event_name == 'workflow_dispatch' || github.event.schedule != '30 5,6 * * *'
     runs-on: ubuntu-latest
     env:
       GFW_API_TOKEN: ${{ secrets.GFW_API_TOKEN }}
@@ -62,14 +61,14 @@ jobs:
           json.dump(data, open(path, "w", encoding="utf-8"), indent=2)
           PY
 
-      - name: Run daily report placeholder at 08:30 Helsinki
-        if: github.event.schedule == '30 5,6 * * *'
+      - name: Generate daily and weekly reports during Helsinki morning window
         continue-on-error: true
         run: |
-          if [ "$(TZ=Europe/Helsinki date +%H:%M)" = "08:30" ] && [ -f src/generate_daily_report.py ]; then
-            python src/generate_daily_report.py
+          HOUR=$(TZ=Europe/Helsinki date +%H)
+          if { [ "$HOUR" = "08" ] || [ "$HOUR" = "09" ]; }; then
+            python src/generate_reports.py
           else
-            echo "Daily report placeholder: no report script due at this time."
+            echo "Reports run only during the Helsinki morning reporting window."
           fi
 
       - name: Stage size-controlled outputs only
@@ -94,19 +93,3 @@ jobs:
         if: steps.pipeline.outcome == 'failure'
         run: exit 1
 
-  daily-report-placeholder:
-    if: github.event.schedule == '30 5,6 * * *'
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-      - name: Run daily report only at 08:30 Helsinki
-        run: |
-          if [ "$(TZ=Europe/Helsinki date +%H:%M)" = "08:30" ] && [ -f src/generate_daily_report.py ]; then
-            pip install -r requirements.txt
-            python src/generate_daily_report.py
-          else
-            echo "Daily report placeholder: no report script due at this time."
-          fi
