@@ -1,1 +1,23 @@
-{"generated_at":"2026-07-11T01:15:00+00:00","mode":"mock","sources":["mock"],"fallbacks":["No live data sources are configured in this stage; dashboard is using fictional mock data."]}
+{
+  "generated_at": "2026-07-10T17:54:10.285431+00:00",
+  "mode": "mixed",
+  "sources": [
+    "digitraffic",
+    "mock"
+  ],
+  "source_status": {
+    "digitraffic": {
+      "status": "ok",
+      "timestamp": "2026-07-10T17:54:10.285431+00:00",
+      "records": 808
+    },
+    "barentswatch": {
+      "status": "credentials_missing_fallback_mock",
+      "timestamp": "2026-07-10T17:54:10.285431+00:00",
+      "detail": "Credentials unavailable"
+    }
+  },
+  "fallbacks": [
+    "Mock vessels remain available when a live AIS source is missing, unavailable, or returns an error."
+  ]
+}
