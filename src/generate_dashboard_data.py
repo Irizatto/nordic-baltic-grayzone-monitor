@@ -10,6 +10,7 @@ import requests
 from config import DOCS_DATA, PROCESSED_DATA, USE_MOCK_DATA
 from fetch_barentswatch_ais import fetch_barentswatch_ais, write_latest as write_barentswatch
 from fetch_digitraffic_ais import fetch_digitraffic_ais, write_latest as write_digitraffic
+from fetch_gfw_data import fetch_gfw_sar, write_latest as write_gfw_sar
 
 
 def _now() -> str:
@@ -68,6 +69,11 @@ def run() -> dict:
     except requests.RequestException as error:
         source_status["barentswatch"] = {"status":"error_kept_old_data","timestamp":_now(),"detail":str(error)}
 
+    sar_detections, gfw_status, gfw_detail = fetch_gfw_sar()
+    if gfw_status == "ok":
+        write_gfw_sar(sar_detections)
+    source_status["gfw_sar"] = {"status":gfw_status,"timestamp":_now(),"records":len(sar_detections),"detail":gfw_detail}
+
     mock_vessels = [v for v in previous.get("vessels", []) if v.get("source") == "mock"]
     vessels = _merge_newest([_decorate_for_dashboard(v) for v in real_records] + mock_vessels)
     all_mock = not real_records
@@ -76,7 +82,7 @@ def run() -> dict:
     archive_dir = DOCS_DATA / "archive"
     archive_dir.mkdir(exist_ok=True)
     (archive_dir / ("data_" + datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ") + ".json")).write_text(json.dumps(previous, indent=2) + "\n", encoding="utf-8")
-    output = {"metadata":metadata,"vessels":vessels,"sar_detections":previous.get("sar_detections",[])}
+    output = {"metadata":metadata,"vessels":vessels,"sar_detections":sar_detections}
     (DOCS_DATA / "data.json").write_text(json.dumps(output, indent=2) + "\n", encoding="utf-8")
     (DOCS_DATA / "metadata.json").write_text(json.dumps(metadata, indent=2) + "\n", encoding="utf-8")
     return output
