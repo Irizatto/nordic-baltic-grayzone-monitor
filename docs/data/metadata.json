@@ -9,7 +9,8 @@
     "digitraffic": {
       "status": "ok",
       "timestamp": "2026-07-10T17:54:10.285431+00:00",
-      "records": 808
+      "records": 808,
+      "published_records": 25
     },
     "barentswatch": {
       "status": "credentials_missing_fallback_mock",
