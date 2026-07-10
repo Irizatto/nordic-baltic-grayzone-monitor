@@ -1,5 +1,7 @@
+# HTTP clients used by Digitraffic and BarentsWatch AIS adapters
+requests>=2.31,<3
+python-dotenv>=1.0
+# Geospatial tools reserved for later pipeline stages
 pandas>=2.0
 geopandas>=0.14
 shapely>=2.0
-requests>=2.31
-python-dotenv>=1.0
