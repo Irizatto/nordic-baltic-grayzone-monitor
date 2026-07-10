@@ -1,0 +1,92 @@
+name: Automated data update
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0,6,12,18 * * *" # AIS pipeline: every 6 hours UTC
+    - cron: "30 0,12 * * *" # SAR/scoring: every 12 hours UTC
+    - cron: "30 5,6 * * *" # guarded for 08:30 Europe/Helsinki
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nbgm-data-update
+  cancel-in-progress: false
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    env:
+      GFW_API_TOKEN: ${{ secrets.GFW_API_TOKEN }}
+      BARENTSWATCH_CLIENT_ID: ${{ secrets.BARENTSWATCH_CLIENT_ID }}
+      BARENTSWATCH_CLIENT_SECRET: ${{ secrets.BARENTSWATCH_CLIENT_SECRET }}
+      USE_MOCK_DATA: "false"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install pipeline dependencies
+        run: pip install -r requirements.txt
+
+      - name: Preserve published data before refresh
+        run: |
+          cp docs/data/data.json /tmp/data.json.previous
+          cp docs/data/metadata.json /tmp/metadata.json.previous
+
+      - name: Fetch AIS, SAR, score, and generate dashboard data
+        id: pipeline
+        continue-on-error: true
+        run: python src/generate_dashboard_data.py
+
+      - name: Restore published data and record degraded status on failure
+        if: steps.pipeline.outcome == 'failure'
+        run: |
+          cp /tmp/data.json.previous docs/data/data.json
+          python - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          path = "docs/data/metadata.json"
+          data = json.load(open(path, encoding="utf-8"))
+          data.setdefault("source_status", {})["pipeline"] = {
+              "status": "error_kept_old_data",
+              "timestamp": datetime.now(timezone.utc).isoformat(),
+              "detail": "Automated pipeline failed; previous dashboard data was retained."
+          }
+          json.dump(data, open(path, "w", encoding="utf-8"), indent=2)
+          PY
+
+      - name: Run daily report placeholder at 08:30 Helsinki
+        if: github.event.schedule == '30 5,6 * * *'
+        continue-on-error: true
+        run: |
+          if [ "$(TZ=Europe/Helsinki date +%H:%M)" = "08:30" ] && [ -f src/generate_daily_report.py ]; then
+            python src/generate_daily_report.py
+          else
+            echo "Daily report placeholder: no report script due at this time."
+          fi
+
+      - name: Stage size-controlled outputs only
+        run: |
+          git add docs/data/*.json docs/data/layers/*.geojson data/events/events.csv docs/reports/ data/processed/ais_history.jsonl
+          git add -u -- docs/data/*.json docs/data/layers/*.geojson data/events/events.csv docs/reports/ data/processed/ais_history.jsonl || true
+
+      - name: Commit and push changed data
+        run: |
+          if git diff --cached --quiet; then
+            echo "No allowed data changes to commit."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "data: automated update $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+            git push
+          fi
+
+      - name: Fail run after preserving site data
+        if: steps.pipeline.outcome == 'failure'
+        run: exit 1
