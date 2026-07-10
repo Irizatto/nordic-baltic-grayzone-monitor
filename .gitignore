@@ -1,0 +1,10 @@
+.env
+__pycache__/
+*.py[cod]
+data/raw/*
+!data/raw/.gitkeep
+data/raw/**
+!data/raw/.gitkeep
+data/processed/ais_latest_*.json
+data/processed/sar_latest_*.json
+docs/data/archive/
