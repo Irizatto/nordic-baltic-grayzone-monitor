@@ -1,0 +1,8 @@
+name,category,lat_min,lat_max,lon_min,lon_max,notes
+Gulf of Finland,chokepoint,59.0,60.8,22.0,30.5,High strategic traffic near Russia/NATO borders
+Gotland Area,sensitive_area,56.5,59.0,17.0,20.5,Central Baltic strategic location
+Bornholm Area,sensitive_area,54.5,56.2,13.5,16.5,Near Nord Stream routes and Danish Straits approaches
+Danish Straits,chokepoint,54.0,57.0,9.0,13.0,Access route between Baltic and North Sea
+Balticconnector Area,infrastructure_area,59.0,60.5,23.0,25.5,Gas pipeline and cable incident relevance
+Barents Sea North,high_north,70.0,78.0,20.0,45.0,High North maritime relevance
+Svalbard Approaches,high_north,74.0,81.0,5.0,35.0,Arctic strategic infrastructure relevance
