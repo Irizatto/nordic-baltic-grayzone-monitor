@@ -1,0 +1,67 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Balticconnector (Inkoo–Paldiski)",
+        "category": "pipeline",
+        "source": "manual_schematic",
+        "source_url": null,
+        "last_updated": "2026-07-11",
+        "notes": "Illustrative schematic only; not a precise route or operational position.",
+        "route_precision": "schematic"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            24.1,
+            60.04
+          ],
+          [
+            24.3,
+            59.83
+          ],
+          [
+            24.6,
+            59.68
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nord Stream corridor near Bornholm",
+        "category": "pipeline",
+        "source": "manual_schematic",
+        "source_url": null,
+        "last_updated": "2026-07-11",
+        "notes": "Illustrative schematic only; not a precise route or operational position.",
+        "route_precision": "schematic"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            12.1,
+            55.45
+          ],
+          [
+            14,
+            55.35
+          ],
+          [
+            15.6,
+            55.45
+          ],
+          [
+            17.1,
+            55.62
+          ]
+        ]
+      }
+    }
+  ]
+}
