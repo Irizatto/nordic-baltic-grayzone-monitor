@@ -1,0 +1,157 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gotland offshore wind area",
+        "category": "windfarm",
+        "source": "manual_schematic",
+        "source_url": null,
+        "last_updated": "2026-07-11",
+        "notes": "Illustrative schematic only; not a precise boundary or operational position."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              18.05,
+              57.45
+            ],
+            [
+              18.55,
+              57.45
+            ],
+            [
+              18.55,
+              57.75
+            ],
+            [
+              18.05,
+              57.75
+            ],
+            [
+              18.05,
+              57.45
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bornholm offshore wind area",
+        "category": "windfarm",
+        "source": "manual_schematic",
+        "source_url": null,
+        "last_updated": "2026-07-11",
+        "notes": "Illustrative schematic only; not a precise boundary or operational position."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              15.1,
+              55.1
+            ],
+            [
+              15.55,
+              55.1
+            ],
+            [
+              15.55,
+              55.38
+            ],
+            [
+              15.1,
+              55.38
+            ],
+            [
+              15.1,
+              55.1
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Danish Straits offshore wind area",
+        "category": "windfarm",
+        "source": "manual_schematic",
+        "source_url": null,
+        "last_updated": "2026-07-11",
+        "notes": "Illustrative schematic only; not a precise boundary or operational position."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              12.1,
+              55.75
+            ],
+            [
+              12.55,
+              55.75
+            ],
+            [
+              12.55,
+              56
+            ],
+            [
+              12.1,
+              56
+            ],
+            [
+              12.1,
+              55.75
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Eastern Baltic offshore wind area",
+        "category": "windfarm",
+        "source": "manual_schematic",
+        "source_url": null,
+        "last_updated": "2026-07-11",
+        "notes": "Illustrative schematic only; not a precise boundary or operational position."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.45,
+              58.55
+            ],
+            [
+              20.9,
+              58.55
+            ],
+            [
+              20.9,
+              58.83
+            ],
+            [
+              20.45,
+              58.83
+            ],
+            [
+              20.45,
+              58.55
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
