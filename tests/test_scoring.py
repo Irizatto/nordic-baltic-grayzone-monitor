@@ -51,6 +51,14 @@ class ScoringTests(unittest.TestCase):
         self.assertEqual(cargo["risk_score"],11)
         self.assertEqual(cargo["risk_level"],"High Review Priority")
 
+    @patch("analyze_suspicious._sensitive_bboxes", return_value=[])
+    def test_two_hour_low_speed_rule_and_watch_threshold(self, _):
+        prior=[vessel(timestamp="2026-07-10T21:00:00+00:00",speed=2)]
+        result=score_vessel(vessel(speed=2),prior,[],FEATURES,[])
+        self.assertIn("low_speed_near_infra_2h", ids(result))
+        self.assertEqual(result["risk_score"],5)
+        self.assertEqual(result["risk_level"],"Watch")
+
     def test_naval_is_never_auto_scored(self):
         result=score_vessel(vessel(ship_type="naval",suspected_sts_rendezvous=True),features=FEATURES,watchlist=[{"name":"TEST","imo":"","mmsi":"","source":"sanctions"}])
         self.assertEqual(result["risk_score"],0)
