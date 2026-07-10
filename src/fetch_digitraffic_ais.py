@@ -100,7 +100,8 @@ def fetch_digitraffic_ais() -> list[dict]:
         if not mmsi or lat is None or not _in_bbox(lat, lon):
             continue
         meta = metadata_by_mmsi.get(str(mmsi), {})
-        raw_time = _value(item, "timestampExternal", "lastUpdated", "time", "timestamp")\n        timestamp = datetime.fromtimestamp(float(raw_time) / 1000, timezone.utc).isoformat() if str(raw_time).isdigit() and float(raw_time) > 10_000_000_000 else datetime.now(timezone.utc).isoformat()
+        raw_time = _value(item, "timestampExternal", "lastUpdated", "time", "timestamp")
+        timestamp = datetime.fromtimestamp(float(raw_time) / 1000, timezone.utc).isoformat() if str(raw_time).isdigit() and float(raw_time) > 10_000_000_000 else datetime.now(timezone.utc).isoformat()
         records.append({"mmsi":str(mmsi),"imo":_value(meta,"imo","imoNumber"),"name":_value(meta,"name","vesselName"),"callsign":_value(meta,"callsign","callSign"),"flag":_value(meta,"flag","country"),"ship_type":map_ship_type(_value(meta,"shipType","shipTypeCode","type")),"lat":lat,"lon":lon,"speed":float(_value(item,"sog","speed") or 0),"course":float(_value(item,"cog","course") or 0),"heading":float(_value(item,"heading") or 0),"timestamp":str(timestamp),"source":"digitraffic"})
     return records
 
