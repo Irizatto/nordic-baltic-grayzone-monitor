@@ -16,6 +16,7 @@ concurrency:
 
 jobs:
   update-data:
+    if: github.event_name == 'workflow_dispatch' || github.event.schedule != '30 5,6 * * *'
     runs-on: ubuntu-latest
     env:
       GFW_API_TOKEN: ${{ secrets.GFW_API_TOKEN }}
@@ -73,8 +74,10 @@ jobs:
 
       - name: Stage size-controlled outputs only
         run: |
-          git add docs/data/*.json docs/data/layers/*.geojson data/events/events.csv docs/reports/ data/processed/ais_history.jsonl
-          git add -u -- docs/data/*.json docs/data/layers/*.geojson data/events/events.csv docs/reports/ data/processed/ais_history.jsonl || true
+          git add docs/data/*.json docs/data/layers/*.geojson data/events/events.csv docs/reports/ || true
+          if [ -f data/processed/ais_history.jsonl ]; then git add data/processed/ais_history.jsonl; fi
+          git add -u -- docs/data/*.json docs/data/layers/*.geojson data/events/events.csv docs/reports/ || true
+          if [ -f data/processed/ais_history.jsonl ]; then git add -u -- data/processed/ais_history.jsonl; fi
 
       - name: Commit and push changed data
         run: |
@@ -90,3 +93,20 @@ jobs:
       - name: Fail run after preserving site data
         if: steps.pipeline.outcome == 'failure'
         run: exit 1
+
+  daily-report-placeholder:
+    if: github.event.schedule == '30 5,6 * * *'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run daily report only at 08:30 Helsinki
+        run: |
+          if [ "$(TZ=Europe/Helsinki date +%H:%M)" = "08:30" ] && [ -f src/generate_daily_report.py ]; then
+            pip install -r requirements.txt
+            python src/generate_daily_report.py
+          else
+            echo "Daily report placeholder: no report script due at this time."
+          fi
