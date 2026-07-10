@@ -33,6 +33,101 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gotland–mainland Sweden link",
+        "category": "cable",
+        "source": "manual_schematic",
+        "source_url": null,
+        "last_updated": "2026-07-11",
+        "notes": "Illustrative schematic only; not a precise route or operational position.",
+        "route_precision": "schematic"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            18.05,
+            57.65
+          ],
+          [
+            17.55,
+            57.8
+          ],
+          [
+            16.65,
+            58.15
+          ],
+          [
+            15.45,
+            58.55
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bornholm-area cable corridor",
+        "category": "cable",
+        "source": "manual_schematic",
+        "source_url": null,
+        "last_updated": "2026-07-11",
+        "notes": "Illustrative schematic only; not a precise route or operational position.",
+        "route_precision": "schematic"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            13.2,
+            55.25
+          ],
+          [
+            14.7,
+            55.25
+          ],
+          [
+            16.1,
+            55.45
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Norway–Svalbard link",
+        "category": "cable",
+        "source": "manual_schematic",
+        "source_url": null,
+        "last_updated": "2026-07-11",
+        "notes": "Illustrative schematic only; not a precise route or operational position.",
+        "route_precision": "schematic"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            18.95,
+            69.65
+          ],
+          [
+            12.9,
+            71.2
+          ],
+          [
+            8.2,
+            74.1
+          ],
+          [
+            15.65,
+            78.22
+          ]
+        ]
+      }
     }
   ]
 }
