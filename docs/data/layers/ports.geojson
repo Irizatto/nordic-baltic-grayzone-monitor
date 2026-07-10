@@ -1,0 +1,221 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Helsinki",
+        "category": "port",
+        "source": "manual_schematic",
+        "source_url": null,
+        "last_updated": "2026-07-11",
+        "notes": "Illustrative port reference point only; not a port boundary or operational position."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.94,
+          60.17
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tallinn",
+        "category": "port",
+        "source": "manual_schematic",
+        "source_url": null,
+        "last_updated": "2026-07-11",
+        "notes": "Illustrative port reference point only; not a port boundary or operational position."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.75,
+          59.44
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Stockholm",
+        "category": "port",
+        "source": "manual_schematic",
+        "source_url": null,
+        "last_updated": "2026-07-11",
+        "notes": "Illustrative port reference point only; not a port boundary or operational position."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.07,
+          59.33
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gdansk",
+        "category": "port",
+        "source": "manual_schematic",
+        "source_url": null,
+        "last_updated": "2026-07-11",
+        "notes": "Illustrative port reference point only; not a port boundary or operational position."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.66,
+          54.35
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Klaipeda",
+        "category": "port",
+        "source": "manual_schematic",
+        "source_url": null,
+        "last_updated": "2026-07-11",
+        "notes": "Illustrative port reference point only; not a port boundary or operational position."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.12,
+          55.71
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Copenhagen",
+        "category": "port",
+        "source": "manual_schematic",
+        "source_url": null,
+        "last_updated": "2026-07-11",
+        "notes": "Illustrative port reference point only; not a port boundary or operational position."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.6,
+          55.68
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Oslo",
+        "category": "port",
+        "source": "manual_schematic",
+        "source_url": null,
+        "last_updated": "2026-07-11",
+        "notes": "Illustrative port reference point only; not a port boundary or operational position."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.75,
+          59.91
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Narvik",
+        "category": "port",
+        "source": "manual_schematic",
+        "source_url": null,
+        "last_updated": "2026-07-11",
+        "notes": "Illustrative port reference point only; not a port boundary or operational position."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.43,
+          68.44
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tromso",
+        "category": "port",
+        "source": "manual_schematic",
+        "source_url": null,
+        "last_updated": "2026-07-11",
+        "notes": "Illustrative port reference point only; not a port boundary or operational position."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.96,
+          69.65
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Murmansk approach reference only",
+        "category": "port",
+        "source": "manual_schematic",
+        "source_url": null,
+        "last_updated": "2026-07-11",
+        "notes": "Illustrative reference point only; not a port boundary or precise route."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33,
+          69.1
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kirkenes",
+        "category": "port",
+        "source": "manual_schematic",
+        "source_url": null,
+        "last_updated": "2026-07-11",
+        "notes": "Illustrative port reference point only; not a port boundary or operational position."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.05,
+          69.73
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Longyearbyen",
+        "category": "port",
+        "source": "manual_schematic",
+        "source_url": null,
+        "last_updated": "2026-07-11",
+        "notes": "Illustrative port reference point only; not a port boundary or operational position."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.65,
+          78.22
+        ]
+      }
+    }
+  ]
+}
