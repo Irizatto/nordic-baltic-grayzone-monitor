@@ -22,6 +22,11 @@
       "timestamp": "2026-07-10T18:01:04.712Z",
       "records": 3,
       "detail": "GFW_API_TOKEN is unavailable; SAR dataset approval may still be pending."
+    },
+    "pipeline": {
+      "status": "error_kept_old_data",
+      "timestamp": "2026-07-11T07:24:07.893703+00:00",
+      "detail": "Automated pipeline failed; previous dashboard data was retained."
     }
   },
   "fallbacks": [
