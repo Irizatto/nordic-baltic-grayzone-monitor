@@ -25,7 +25,7 @@
     },
     "pipeline": {
       "status": "error_kept_old_data",
-      "timestamp": "2026-07-12T10:57:47.701675+00:00",
+      "timestamp": "2026-07-12T15:40:03.114742+00:00",
       "detail": "Automated pipeline failed; previous dashboard data was retained."
     }
   },
