@@ -1,12 +1,63 @@
-const colors={Low:'#6ee7b7',Watch:'#facc15','High Review Priority':'#fb923c','Critical Review Priority':'#ef4444'};
+const colors={Normal:'#6ee7b7',Low:'#6ee7b7',Watch:'#facc15','High Review Priority':'#fb923c','Critical Review Priority':'#ef4444'};
 const statusColor={ok:'green',credentials_missing_fallback_mock:'yellow',error_kept_old_data:'red'};
-fetch('data/data.json').then(r=>r.json()).then(data=>{
-  document.getElementById('updated').textContent='Updated / 更新: '+new Date(data.metadata.generated_at).toLocaleString();
-  document.getElementById('mode').textContent=data.metadata.mode==='mock'?'MOCK DATA / 模拟数据':'MIXED DATA / 混合数据';
-  const statuses=data.metadata.source_status||{};
-  document.getElementById('sourceStatus').innerHTML=Object.entries(statuses).map(([name,info])=>'<span class="source-dot '+(statusColor[info.status]||'yellow')+'" title="'+name+': '+info.status+'"></span>'+name).join(' ');
-  const counts={low:0,watch:0,high:0,critical:0};
-  data.vessels.forEach(v=>{let k=v.risk_level.includes('Critical')?'critical':v.risk_level.includes('High')?'high':v.risk_level==='Watch'?'watch':'low';counts[k]++;const icon=L.divIcon({className:'vessel-icon',html:'<div class="vessel-dot" style="color:'+colors[v.risk_level]+';background:'+colors[v.risk_level]+'"></div>',iconSize:[14,14]});L.marker([v.lat,v.lon],{icon}).on('click',()=>showVessel(v)).addTo(groups.vessels)});
-  data.sar_detections.forEach(s=>{const marker=L.circleMarker([s.lat,s.lon],{radius:s.matched?5:7,color:s.matched?'#7893a8':'#d7e4e9',weight:s.matched?1:2,fillColor:s.matched?'#526f86':'#b9d4dc',fillOpacity:s.matched?.75:.15,dashArray:s.matched?null:'3 3',className:s.matched?'sar-matched':'sar-ghost'});marker.bindTooltip('SAR detection; a lead for review, not confirmation of illicit activity. / SAR 探测：供人工审查的线索，并非非法活动确认。').addTo(groups.sar)});
-  document.getElementById('total').textContent=data.vessels.length;document.getElementById('sarTotal').textContent=data.sar_detections.length;Object.keys(counts).forEach(k=>document.getElementById(k).textContent=counts[k]);document.getElementById('unmatched').textContent=data.sar_detections.filter(s=>!s.matched_mmsi).length;drawChart(counts)
-}).catch(()=>{document.getElementById('updated').textContent='Data unavailable / 数据不可用';});
+
+function fetchJson(path){
+  return fetch(path).then(response=>{if(!response.ok)throw new Error(path+' returned '+response.status);return response.json();});
+}
+
+function renderSourceStatus(statuses){
+  const container=document.getElementById('sourceStatus');
+  container.replaceChildren();
+  Object.entries(statuses||{}).forEach(([name,info])=>{
+    const dot=document.createElement('span');
+    dot.className='source-dot '+(statusColor[info?.status]||'yellow');
+    dot.title=name+': '+String(info?.status||'unknown')+(info?.detail?' — '+String(info.detail):'');
+    const label=document.createTextNode(name+' ');
+    container.append(dot,label);
+  });
+}
+
+fetchJson('data/data.json').then(data=>
+  Promise.all([Promise.resolve(data),fetchJson('data/metadata.json').catch(()=>data.metadata||{})])
+).then(([data,publishedMetadata])=>{
+  const embedded=data.metadata&&typeof data.metadata==='object'?data.metadata:{};
+  const metadata={...embedded,...(publishedMetadata||{}),source_status:(publishedMetadata||{}).source_status||embedded.source_status||{}};
+  const vessels=Array.isArray(data.vessels)?data.vessels:[];
+  const sarDetections=Array.isArray(data.sar_detections)?data.sar_detections:[];
+  const generatedAt=metadata.generated_at?new Date(metadata.generated_at):null;
+  document.getElementById('updated').textContent='Updated / 更新: '+(generatedAt&&!Number.isNaN(generatedAt.valueOf())?generatedAt.toLocaleString():'not supplied / 未提供');
+  const mode=document.getElementById('mode');
+  mode.hidden=metadata.mode!=='mock';
+  mode.textContent='MOCK DATA / 模拟数据';
+  renderSourceStatus(metadata.source_status);
+  const sourceNames=Array.isArray(metadata.sources)?metadata.sources:[];
+  document.getElementById('dataSourceStatus').textContent='Data source / last updated: '+(sourceNames.join(', ')||'not supplied')+' / '+(metadata.generated_at||'not supplied')+' / 数据来源与更新时间';
+
+  const counts={normal:0,watch:0,high:0,critical:0};
+  vessels.forEach(vessel=>{
+    const lat=Number(vessel.lat), lon=Number(vessel.lon);
+    const level=String(vessel.risk_level||'Normal');
+    const key=level.includes('Critical')?'critical':level.includes('High')?'high':level==='Watch'?'watch':'normal';
+    counts[key]++;
+    if(!Number.isFinite(lat)||!Number.isFinite(lon))return;
+    const color=colors[level]||colors.Normal;
+    const icon=L.divIcon({className:'vessel-icon',html:'<div class="vessel-dot" style="color:'+color+';background:'+color+'"></div>',iconSize:[14,14]});
+    L.marker([lat,lon],{icon}).on('click',()=>showVessel(vessel)).addTo(groups.vessels);
+  });
+  sarDetections.forEach(detection=>{
+    const lat=Number(detection.lat), lon=Number(detection.lon);
+    if(!Number.isFinite(lat)||!Number.isFinite(lon))return;
+    const matched=Boolean(detection.matched);
+    const marker=L.circleMarker([lat,lon],{radius:matched?5:7,color:matched?'#7893a8':'#d7e4e9',weight:matched?1:2,fillColor:matched?'#526f86':'#b9d4dc',fillOpacity:matched?.75:.15,dashArray:matched?null:'3 3',className:matched?'sar-matched':'sar-ghost'});
+    marker.bindTooltip('SAR detection; a lead for review, not confirmation of illicit activity. / SAR 探测：供人工审查的线索，并非非法活动确认。').addTo(groups.sar);
+  });
+  document.getElementById('total').textContent=vessels.length;
+  document.getElementById('sarTotal').textContent=sarDetections.length;
+  Object.keys(counts).forEach(key=>document.getElementById(key).textContent=counts[key]);
+  document.getElementById('unmatched').textContent=sarDetections.filter(detection=>!detection.matched).length;
+  try{if(typeof window.drawChart==='function')window.drawChart(counts);}catch(error){console.warn('Risk chart unavailable; map data remains visible.',error);}
+}).catch(error=>{
+  console.error(error);
+  document.getElementById('updated').textContent='Data unavailable / 数据不可用';
+  document.getElementById('dataSourceStatus').textContent='Data source unavailable / 数据源不可用';
+});

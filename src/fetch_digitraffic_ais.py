@@ -10,9 +10,9 @@ from typing import Any
 import requests
 
 from config import DIGITRAFFIC_BASE_URL, DIGITRAFFIC_BBOX, DIGITRAFFIC_USER_AGENT, PROCESSED_DATA
+from ais_schema import finite_float, in_bbox, iso8601_timestamp, map_ship_type, optional_string
 
 HEADERS = {"Digitraffic-User": DIGITRAFFIC_USER_AGENT, "User-Agent": DIGITRAFFIC_USER_AGENT, "Accept": "application/json"}
-VALID_TYPES = {"cargo", "tanker", "fishing", "research", "tug", "service", "naval", "law_enforcement", "unknown"}
 
 
 def _get(path: str, params: dict | None = None) -> Any:
@@ -46,33 +46,8 @@ def _value(item: dict, *names: str) -> Any:
     return None
 
 
-def map_ship_type(raw: Any) -> str:
-    """Map AIS type numbers (including Digitraffic values) to the unified enum."""
-    try:
-        code = int(raw)
-    except (TypeError, ValueError):
-        return "unknown"
-    if 70 <= code <= 79:
-        return "cargo"
-    if 80 <= code <= 89:
-        return "tanker"
-    if code == 30:
-        return "fishing"
-    if code in {31, 32}:
-        return "tug"
-    if code in {33, 34, 35}:
-        return "service"
-    if code == 36:
-        return "naval"
-    if code == 55:
-        return "law_enforcement"
-    if code in {37, 57, 97}:
-        return "research"
-    return "unknown"
-
-
 def _in_bbox(lat: float, lon: float) -> bool:
-    return DIGITRAFFIC_BBOX["lat_min"] <= lat <= DIGITRAFFIC_BBOX["lat_max"] and DIGITRAFFIC_BBOX["lon_min"] <= lon <= DIGITRAFFIC_BBOX["lon_max"]
+    return in_bbox(lat, lon, DIGITRAFFIC_BBOX)
 
 
 def _position(item: dict) -> tuple[float | None, float | None]:
@@ -96,12 +71,27 @@ def fetch_digitraffic_ais() -> list[dict]:
     records = []
     for item in locations:
         lat, lon = _position(item)
-        mmsi = _value(item, "mmsi", "MMSI")
+        mmsi = optional_string(_value(item, "mmsi", "MMSI"))
         if not mmsi or lat is None or not _in_bbox(lat, lon):
             continue
-        meta = metadata_by_mmsi.get(str(mmsi), {})
-        raw_time = _value(item, "timestampExternal", "lastUpdated", "time", "timestamp")\n        timestamp = datetime.fromtimestamp(float(raw_time) / 1000, timezone.utc).isoformat() if str(raw_time).isdigit() and float(raw_time) > 10_000_000_000 else datetime.now(timezone.utc).isoformat()
-        records.append({"mmsi":str(mmsi),"imo":_value(meta,"imo","imoNumber"),"name":_value(meta,"name","vesselName"),"callsign":_value(meta,"callsign","callSign"),"flag":_value(meta,"flag","country"),"ship_type":map_ship_type(_value(meta,"shipType","shipTypeCode","type")),"lat":lat,"lon":lon,"speed":float(_value(item,"sog","speed") or 0),"course":float(_value(item,"cog","course") or 0),"heading":float(_value(item,"heading") or 0),"timestamp":str(timestamp),"source":"digitraffic"})
+        meta = metadata_by_mmsi.get(mmsi, {})
+        raw_time = _value(item, "timestampExternal", "lastUpdated", "time", "timestamp")
+        timestamp = iso8601_timestamp(raw_time)
+        records.append({
+            "mmsi": mmsi,
+            "imo": optional_string(_value(meta, "imo", "imoNumber")),
+            "name": optional_string(_value(meta, "name", "vesselName")),
+            "callsign": optional_string(_value(meta, "callsign", "callSign")),
+            "flag": optional_string(_value(meta, "flag", "country")),
+            "ship_type": map_ship_type(_value(meta, "shipType", "shipTypeCode", "type")),
+            "lat": lat,
+            "lon": lon,
+            "speed": finite_float(_value(item, "sog", "speed")),
+            "course": finite_float(_value(item, "cog", "course")),
+            "heading": finite_float(_value(item, "heading")),
+            "timestamp": timestamp,
+            "source": "digitraffic",
+        })
     return records
 
 

@@ -1,18 +1,20 @@
-"""Merge AIS sources into the static dashboard while preserving safe fallback behaviour."""
+"""Merge AIS/SAR sources into safe, size-bounded static dashboard data."""
 from __future__ import annotations
 
+import argparse
 import json
 from datetime import datetime, timezone
 from pathlib import Path
 
-import requests
-
-from config import DOCS_DATA, PROCESSED_DATA, USE_MOCK_DATA
+from analyze_suspicious import score_vessel, update_history
+from config import DOCS_DATA, USE_MOCK_DATA
+from events import record_events
 from fetch_barentswatch_ais import fetch_barentswatch_ais, write_latest as write_barentswatch
 from fetch_digitraffic_ais import fetch_digitraffic_ais, write_latest as write_digitraffic
 from fetch_gfw_data import fetch_gfw_sar, write_latest as write_gfw_sar
-from analyze_suspicious import score_vessel, update_history
-from events import record_events
+
+PRIORITY_LEVELS = {"Watch", "High Review Priority", "Critical Review Priority"}
+PUBLISH_LIMIT = 150
 
 
 def _now() -> str:
@@ -26,73 +28,167 @@ def _read(path: Path, default):
         return default
 
 
-def _decorate_for_dashboard(record: dict) -> dict:
-    """Add neutral display fields after source conversion; source records stay unified."""
-    item = dict(record)
-    item.update({"risk_score":0,"risk_level":"Low","triggered_rules":[],"nearest_infrastructure":{"name":"Not calculated","type":"not available","distance_km":None}})
-    return item
+def _record_time(record: dict) -> datetime:
+    try:
+        parsed = datetime.fromisoformat(str(record.get("timestamp", "")).replace("Z", "+00:00"))
+        if parsed.tzinfo is None:
+            parsed = parsed.replace(tzinfo=timezone.utc)
+        return parsed.astimezone(timezone.utc)
+    except (TypeError, ValueError):
+        return datetime.min.replace(tzinfo=timezone.utc)
 
 
 def _merge_newest(records: list[dict]) -> list[dict]:
     newest = {}
     for record in records:
-        key = str(record.get("mmsi", ""))
-        if key and (key not in newest or str(record.get("timestamp","")) > str(newest[key].get("timestamp",""))):
+        key = str(record.get("mmsi") or "").strip()
+        if key and (key not in newest or _record_time(record) > _record_time(newest[key])):
             newest[key] = record
     return list(newest.values())
 
 
-def run() -> dict:
-    """Fetch available sources and write a refreshed derived dashboard artifact."""
-    DOCS_DATA.mkdir(parents=True, exist_ok=True)
-    previous = _read(DOCS_DATA / "data.json", {"vessels":[],"sar_detections":[]})
-    source_status = {}
-    real_records = []
+def _previous_by_source(previous: dict, source: str) -> list[dict]:
+    return [dict(record) for record in previous.get("vessels", []) if record.get("source") == source]
+
+
+def _safe_error(error: Exception) -> str:
+    return f"{type(error).__name__}: {error}"[:500]
+
+
+def _preserve_status(previous_metadata: dict, source_status: dict, source: str) -> None:
+    old = previous_metadata.get("source_status", {}).get(source)
+    if isinstance(old, dict):
+        source_status[source] = dict(old)
+
+
+def _fetch_ais(previous: dict, previous_metadata: dict, source_status: dict, fetch_ais: bool) -> tuple[list[dict], dict[str, int]]:
+    fetched_counts: dict[str, int] = {}
+    if not fetch_ais:
+        for source in ("digitraffic", "barentswatch"):
+            _preserve_status(previous_metadata, source_status, source)
+        records = [dict(record) for record in previous.get("vessels", [])]
+        return records, fetched_counts
+
+    records = _previous_by_source(previous, "mock")
+    fetched_counts["mock"] = len(records)
 
     if USE_MOCK_DATA:
         source_status["digitraffic"] = {"status":"credentials_missing_fallback_mock","timestamp":_now(),"detail":"USE_MOCK_DATA is enabled"}
     else:
         try:
             digitraffic = fetch_digitraffic_ais()
+            if not digitraffic:
+                raise ValueError("Digitraffic returned no valid records; retaining its previous published snapshot")
             write_digitraffic(digitraffic)
-            real_records.extend(digitraffic)
-            source_status["digitraffic"] = {"status":"ok","timestamp":_now(),"records":len(digitraffic)}
-        except requests.RequestException as error:
-            source_status["digitraffic"] = {"status":"error_kept_old_data","timestamp":_now(),"detail":str(error)}
+            records.extend(digitraffic)
+            fetched_counts["digitraffic"] = len(digitraffic)
+            source_status["digitraffic"] = {"status":"ok","timestamp":_now(),"records_fetched":len(digitraffic)}
+        except Exception as error:
+            retained = _previous_by_source(previous, "digitraffic")
+            records.extend(retained)
+            fetched_counts["digitraffic"] = 0
+            source_status["digitraffic"] = {"status":"error_kept_old_data","timestamp":_now(),"records_fetched":0,"records_reused":len(retained),"detail":_safe_error(error)}
+
+    if USE_MOCK_DATA:
+        source_status["barentswatch"] = {"status":"credentials_missing_fallback_mock","timestamp":_now(),"detail":"USE_MOCK_DATA is enabled"}
+    else:
+        try:
+            barentswatch = fetch_barentswatch_ais()
+            if barentswatch is None:
+                source_status["barentswatch"] = {"status":"credentials_missing_fallback_mock","timestamp":_now(),"detail":"BARENTSWATCH_CLIENT_ID / BARENTSWATCH_CLIENT_SECRET unavailable"}
+            elif not barentswatch:
+                raise ValueError("BarentsWatch returned no valid records; retaining its previous published snapshot")
+            else:
+                write_barentswatch(barentswatch)
+                records.extend(barentswatch)
+                fetched_counts["barentswatch"] = len(barentswatch)
+                source_status["barentswatch"] = {"status":"ok","timestamp":_now(),"records_fetched":len(barentswatch)}
+        except Exception as error:
+            retained = _previous_by_source(previous, "barentswatch")
+            records.extend(retained)
+            fetched_counts["barentswatch"] = 0
+            source_status["barentswatch"] = {"status":"error_kept_old_data","timestamp":_now(),"records_fetched":0,"records_reused":len(retained),"detail":_safe_error(error)}
+    return records, fetched_counts
+
+
+def _fetch_sar(previous: dict, previous_metadata: dict, source_status: dict, fetch_sar: bool) -> tuple[list[dict], int]:
+    if not fetch_sar:
+        _preserve_status(previous_metadata, source_status, "gfw_sar")
+        return [dict(record) for record in previous.get("sar_detections", [])], 0
 
     try:
-        barentswatch = None if USE_MOCK_DATA else fetch_barentswatch_ais()
-        if barentswatch is None:
-            source_status["barentswatch"] = {"status":"credentials_missing_fallback_mock","timestamp":_now(),"detail":"BARRENTSWATCH_CLIENT_ID / BARENTSWATCH_CLIENT_SECRET unavailable or mock mode enabled"}
-        else:
-            write_barentswatch(barentswatch)
-            real_records.extend(barentswatch)
-            source_status["barentswatch"] = {"status":"ok","timestamp":_now(),"records":len(barentswatch)}
-    except requests.RequestException as error:
-        source_status["barentswatch"] = {"status":"error_kept_old_data","timestamp":_now(),"detail":str(error)}
+        detections, status, detail = fetch_gfw_sar()
+    except Exception as error:
+        detections = [dict(record) for record in previous.get("sar_detections", [])]
+        status = "error_kept_old_data"
+        detail = "Unexpected GFW adapter error; previous detections retained: " + _safe_error(error)
+    fetched_count = len(detections) if status == "ok" else 0
+    if status == "ok":
+        write_gfw_sar(detections)
+    elif status == "error_kept_old_data":
+        retained = [dict(record) for record in previous.get("sar_detections", [])]
+        if retained:
+            detections = retained
+            detail += f" Reused {len(retained)} previous detections."
+    source_status["gfw_sar"] = {"status":status,"timestamp":_now(),"records_fetched":fetched_count,"records_published":len(detections),"detail":detail}
+    return detections, fetched_count
 
-    sar_detections, gfw_status, gfw_detail = fetch_gfw_sar()
-    if gfw_status == "ok":
-        write_gfw_sar(sar_detections)
-    source_status["gfw_sar"] = {"status":gfw_status,"timestamp":_now(),"records":len(sar_detections),"detail":gfw_detail}
 
-    mock_vessels = [v for v in previous.get("vessels", []) if v.get("source") == "mock"]
-    vessels = _merge_newest([_decorate_for_dashboard(v) for v in real_records] + mock_vessels)
+def _cap_vessels(vessels: list[dict]) -> list[dict]:
+    priority = sorted((v for v in vessels if v.get("risk_level") in PRIORITY_LEVELS), key=lambda v:v.get("risk_score", 0), reverse=True)
+    remainder = sorted((v for v in vessels if v.get("risk_level") not in PRIORITY_LEVELS), key=lambda v:v.get("risk_score", 0), reverse=True)
+    return priority + remainder[:max(0, PUBLISH_LIMIT-len(priority))]
+
+
+def run(*, fetch_ais: bool = True, fetch_sar: bool = True) -> dict:
+    """Refresh selected sources, rescore, retain safe fallbacks, and publish atomically sized JSON."""
+    DOCS_DATA.mkdir(parents=True, exist_ok=True)
+    previous = _read(DOCS_DATA / "data.json", {"metadata":{},"vessels":[],"sar_detections":[]})
+    previous_metadata = _read(DOCS_DATA / "metadata.json", previous.get("metadata", {}))
+    source_status: dict[str, dict] = {}
+
+    source_records, fetched_counts = _fetch_ais(previous, previous_metadata, source_status, fetch_ais)
+    sar_detections, sar_fetched = _fetch_sar(previous, previous_metadata, source_status, fetch_sar)
+    vessels = _merge_newest(source_records)
     history_by_mmsi = update_history(vessels)
-    vessels = [score_vessel(vessel, history_by_mmsi.get(str(vessel.get("mmsi")), []), sar_detections) for vessel in vessels]
-    record_events(vessels, sar_detections)
-    all_mock = not real_records
-    metadata = {"generated_at":_now(),"mode":"mock" if all_mock else "mixed","sources":["mock"] + sorted({v["source"] for v in real_records}),"source_status":source_status,"fallbacks":["Mock vessels remain available when a live AIS source is missing, unavailable, or returns an error."]}
+    scored = [score_vessel(vessel, history_by_mmsi.get(str(vessel.get("mmsi")), []), sar_detections) for vessel in vessels]
+    record_events(scored, sar_detections)
+    published = _cap_vessels(scored)
 
-    archive_dir = DOCS_DATA / "archive"
-    archive_dir.mkdir(exist_ok=True)
-    (archive_dir / ("data_" + datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ") + ".json")).write_text(json.dumps(previous, indent=2) + "\n", encoding="utf-8")
-    output = {"metadata":metadata,"vessels":vessels,"sar_detections":sar_detections}
-    (DOCS_DATA / "data.json").write_text(json.dumps(output, indent=2) + "\n", encoding="utf-8")
-    (DOCS_DATA / "metadata.json").write_text(json.dumps(metadata, indent=2) + "\n", encoding="utf-8")
+    for source in sorted({str(v.get("source") or "unknown") for v in scored} - {"mock"}):
+        status = source_status.setdefault(source, {"status":"ok","timestamp":_now()})
+        status.setdefault("records_fetched", fetched_counts.get(source, 0))
+        status["records_published"] = sum(v.get("source") == source for v in published)
+    if "gfw_sar" in source_status:
+        source_status["gfw_sar"]["records_fetched"] = sar_fetched
+        source_status["gfw_sar"]["records_published"] = len(sar_detections)
+
+    published_sources = {str(v.get("source") or "unknown") for v in published}
+    published_sources.update(str(d.get("source") or "unknown") for d in sar_detections)
+    all_mock = not published_sources or published_sources <= {"mock"}
+    mode = "mock" if all_mock else ("mixed" if "mock" in published_sources else "live")
+    metadata = {
+        "generated_at":_now(),
+        "mode":mode,
+        "sources":sorted(published_sources),
+        "source_status":source_status,
+        "fallbacks":["Mock records remain clearly labelled when a live source or credential is unavailable."],
+    }
+    output = {"metadata":metadata,"vessels":published,"sar_detections":sar_detections}
+    (DOCS_DATA / "data.json").write_text(json.dumps(output,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
+    (DOCS_DATA / "metadata.json").write_text(json.dumps(metadata,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
     return output
 
 
+def _arguments() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description=__doc__)
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument("--ais-only", action="store_true", help="Refresh AIS and preserve the published SAR snapshot.")
+    mode.add_argument("--sar-only", action="store_true", help="Refresh SAR and reuse the published AIS snapshot.")
+    return parser.parse_args()
+
+
 if __name__ == "__main__":
-    result = run()
+    args = _arguments()
+    result = run(fetch_ais=not args.sar_only, fetch_sar=not args.ais_only)
     print("Dashboard records:", len(result["vessels"]))

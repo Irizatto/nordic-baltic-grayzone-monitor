@@ -5,10 +5,9 @@ import json
 import time
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any
-
 import requests
 
+from ais_schema import finite_float, in_bbox, iso8601_timestamp, map_ship_type, optional_string
 from config import BARENTSWATCH_AIS_URL, BARENTSWATCH_BBOX, BARENTSWATCH_CLIENT_ID, BARENTSWATCH_CLIENT_SECRET, BARENTSWATCH_TOKEN_URL, PROCESSED_DATA
 
 
@@ -33,36 +32,38 @@ def _token() -> str | None:
     return response.json()["access_token"]
 
 
-def _ship_type(value: Any) -> str:
-    try:
-        code = int(value)
-    except (TypeError, ValueError):
-        return "unknown"
-    if 70 <= code <= 79: return "cargo"
-    if 80 <= code <= 89: return "tanker"
-    if code == 30: return "fishing"
-    if code in {31,32}: return "tug"
-    if code in {33,34,35}: return "service"
-    if code == 36: return "naval"
-    if code == 55: return "law_enforcement"
-    if code in {37,57,97}: return "research"
-    return "unknown"
-
-
 def fetch_barentswatch_ais() -> list[dict] | None:
     """Fetch latest BarentsWatch positions in the configured region, or None without credentials."""
     token = _token()
     if not token:
         return None
-    params = {"north":BARENTSWATCH_BBOX["lat_max"],"south":BARENTSWATCH_BBOX["lat_min"],"east":BARENTSWATCH_BBOX["lon_max"],"west":BARENTSWATCH_BBOX["lon_min"]}
-    payload = _request("GET", BARENTSWATCH_AIS_URL + "/v1/latest/combined", params=params, headers={"Authorization":"Bearer " + token,"Accept":"application/json"}).json()
+    payload = _request("GET", BARENTSWATCH_AIS_URL + "/v1/latest/combined", headers={"Authorization":"Bearer " + token,"Accept":"application/json"}).json()
     items = payload if isinstance(payload,list) else payload.get("items",payload.get("data",[]))
     records = []
     for item in items:
-        lat, lon = item.get("latitude",item.get("lat")), item.get("longitude",item.get("lon"))
-        try: lat, lon = float(lat), float(lon)
-        except (TypeError,ValueError): continue
-        records.append({"mmsi":str(item.get("mmsi")),"imo":item.get("imo"),"name":item.get("name"),"callsign":item.get("callsign"),"flag":item.get("flag"),"ship_type":_ship_type(item.get("shipType",item.get("shipTypeCode"))),"lat":lat,"lon":lon,"speed":float(item.get("sog",item.get("speed",0)) or 0),"course":float(item.get("cog",item.get("course",0)) or 0),"heading":float(item.get("heading",0) or 0),"timestamp":str(item.get("timestamp",item.get("time",datetime.now(timezone.utc).isoformat()))),"source":"barentswatch"})
+        mmsi = optional_string(item.get("mmsi"))
+        try:
+            lat = float(item.get("latitude", item.get("lat")))
+            lon = float(item.get("longitude", item.get("lon")))
+        except (TypeError, ValueError):
+            continue
+        if not mmsi or not in_bbox(lat, lon, BARENTSWATCH_BBOX):
+            continue
+        records.append({
+            "mmsi": mmsi,
+            "imo": optional_string(item.get("imoNumber", item.get("imo"))),
+            "name": optional_string(item.get("name")),
+            "callsign": optional_string(item.get("callSign", item.get("callsign"))),
+            "flag": optional_string(item.get("countryCode", item.get("flag"))),
+            "ship_type": map_ship_type(item.get("shipType", item.get("shipTypeCode"))),
+            "lat": lat,
+            "lon": lon,
+            "speed": finite_float(item.get("speedOverGround", item.get("sog", item.get("speed")))),
+            "course": finite_float(item.get("courseOverGround", item.get("cog", item.get("course")))),
+            "heading": finite_float(item.get("trueHeading", item.get("heading"))),
+            "timestamp": iso8601_timestamp(item.get("msgtime", item.get("timestamp", item.get("time")))),
+            "source": "barentswatch",
+        })
     return records
 
 

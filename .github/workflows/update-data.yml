@@ -3,9 +3,9 @@ name: Automated data update
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 0,6,12,18 * * *" # AIS pipeline: every 6 hours UTC
-    - cron: "30 0,12 * * *" # SAR/scoring: every 12 hours UTC
-    - cron: "30 5,6 * * *" # guarded for 08:30 Europe/Helsinki
+    - cron: "0 0,6,12,18 * * *" # AIS refresh every 6 hours UTC
+    - cron: "30 0,12 * * *" # GFW SAR refresh and rescoring every 12 hours UTC
+    - cron: "30 5,6 * * *" # one run maps to 08:30 Europe/Helsinki across DST
 
 permissions:
   contents: write
@@ -34,20 +34,73 @@ jobs:
       - name: Install pipeline dependencies
         run: pip install -r requirements.txt
 
-      - name: Preserve published data before refresh
+      - name: Select the scheduled stage
+        id: mode
+        shell: bash
         run: |
-          cp docs/data/data.json /tmp/data.json.previous
-          cp docs/data/metadata.json /tmp/metadata.json.previous
+          schedule='${{ github.event.schedule }}'
+          run_pipeline=false
+          pipeline_args=''
+          run_reports=false
+          case "$schedule" in
+            '0 0,6,12,18 * * *')
+              run_pipeline=true
+              pipeline_args='--ais-only'
+              ;;
+            '30 0,12 * * *')
+              run_pipeline=true
+              pipeline_args='--sar-only'
+              ;;
+            '30 5,6 * * *')
+              if [ "$(TZ=Europe/Helsinki date +%H)" = "08" ]; then
+                run_reports=true
+              fi
+              ;;
+            '')
+              run_pipeline=true
+              ;;
+          esac
+          echo "run_pipeline=$run_pipeline" >> "$GITHUB_OUTPUT"
+          echo "pipeline_args=$pipeline_args" >> "$GITHUB_OUTPUT"
+          echo "run_reports=$run_reports" >> "$GITHUB_OUTPUT"
 
-      - name: Fetch AIS, SAR, score, and generate dashboard data
-        id: pipeline
+      - name: Preserve published outputs before refresh
+        run: |
+          mkdir -p /tmp/nbgm-backup
+          cp docs/data/data.json /tmp/nbgm-backup/data.json
+          cp docs/data/metadata.json /tmp/nbgm-backup/metadata.json
+          cp data/events/events.csv /tmp/nbgm-backup/events-canonical.csv
+          cp docs/data/events.json /tmp/nbgm-backup/events.json
+          cp docs/data/events.csv /tmp/nbgm-backup/events-static.csv
+          if [ -f data/processed/ais_history.jsonl ]; then
+            cp data/processed/ais_history.jsonl /tmp/nbgm-backup/ais_history.jsonl
+          fi
+
+      - name: Validate pipeline before touching published data
+        id: validation
         continue-on-error: true
-        run: python src/generate_dashboard_data.py
+        run: |
+          python -m compileall -q src
+          python -m unittest discover -s tests
+          python -c "import sys; sys.path.insert(0, 'src'); import generate_dashboard_data, generate_reports"
 
-      - name: Restore published data and record degraded status on failure
+      - name: Fetch selected sources, score, and generate dashboard data
+        id: pipeline
+        if: steps.mode.outputs.run_pipeline == 'true' && steps.validation.outcome == 'success'
+        continue-on-error: true
+        run: python src/generate_dashboard_data.py ${{ steps.mode.outputs.pipeline_args }}
+
+      - name: Restore published data and record degraded status on pipeline failure
         if: steps.pipeline.outcome == 'failure'
         run: |
-          cp /tmp/data.json.previous docs/data/data.json
+          cp /tmp/nbgm-backup/data.json docs/data/data.json
+          cp /tmp/nbgm-backup/metadata.json docs/data/metadata.json
+          cp /tmp/nbgm-backup/events-canonical.csv data/events/events.csv
+          cp /tmp/nbgm-backup/events.json docs/data/events.json
+          cp /tmp/nbgm-backup/events-static.csv docs/data/events.csv
+          if [ -f /tmp/nbgm-backup/ais_history.jsonl ]; then
+            cp /tmp/nbgm-backup/ais_history.jsonl data/processed/ais_history.jsonl
+          fi
           python - <<'PY'
           import json
           from datetime import datetime, timezone
@@ -58,25 +111,67 @@ jobs:
               "timestamp": datetime.now(timezone.utc).isoformat(),
               "detail": "Automated pipeline failed; previous dashboard data was retained."
           }
-          json.dump(data, open(path, "w", encoding="utf-8"), indent=2)
+          with open(path, "w", encoding="utf-8") as handle:
+              json.dump(data, handle, indent=2, ensure_ascii=False)
+              handle.write("\n")
           PY
 
-      - name: Generate daily and weekly reports during Helsinki morning window
+      - name: Generate daily and Monday weekly reports
+        id: reports
+        if: steps.mode.outputs.run_reports == 'true' && steps.validation.outcome == 'success'
         continue-on-error: true
+        run: python src/generate_reports.py
+
+      - name: Record report generation failure
+        if: steps.reports.outcome == 'failure'
         run: |
-          HOUR=$(TZ=Europe/Helsinki date +%H)
-          if { [ "$HOUR" = "08" ] || [ "$HOUR" = "09" ]; }; then
-            python src/generate_reports.py
-          else
-            echo "Reports run only during the Helsinki morning reporting window."
-          fi
+          python - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          path = "docs/data/metadata.json"
+          data = json.load(open(path, encoding="utf-8"))
+          data.setdefault("source_status", {})["reports"] = {
+              "status": "error_kept_old_data",
+              "timestamp": datetime.now(timezone.utc).isoformat(),
+              "detail": "Report generation failed; existing published reports were retained."
+          }
+          with open(path, "w", encoding="utf-8") as handle:
+              json.dump(data, handle, indent=2, ensure_ascii=False)
+              handle.write("\n")
+          PY
+
+      - name: Record validation failure
+        if: steps.validation.outcome == 'failure'
+        run: |
+          python - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          path = "docs/data/metadata.json"
+          data = json.load(open(path, encoding="utf-8"))
+          data.setdefault("source_status", {})["pipeline"] = {
+              "status": "error_kept_old_data",
+              "timestamp": datetime.now(timezone.utc).isoformat(),
+              "detail": "Pipeline validation failed; previous published data was left intact."
+          }
+          with open(path, "w", encoding="utf-8") as handle:
+              json.dump(data, handle, indent=2, ensure_ascii=False)
+              handle.write("\n")
+          PY
 
       - name: Stage size-controlled outputs only
+        shell: bash
         run: |
-          git add docs/data/*.json docs/data/layers/*.geojson data/events/events.csv docs/reports/ || true
-          if [ -f data/processed/ais_history.jsonl ]; then git add data/processed/ais_history.jsonl; fi
-          git add -u -- docs/data/*.json docs/data/layers/*.geojson data/events/events.csv docs/reports/ || true
-          if [ -f data/processed/ais_history.jsonl ]; then git add -u -- data/processed/ais_history.jsonl; fi
+          git add docs/data/*.json || true
+          git add docs/data/events.csv || true
+          git add docs/data/layers/*.geojson || true
+          git add data/events/events.csv || true
+          if [ '${{ steps.reports.outcome }}' != 'failure' ]; then
+            git add docs/reports/ || true
+            git add docs/reports.html || true
+          fi
+          if [ '${{ steps.pipeline.outcome }}' != 'failure' ] && [ -f data/processed/ais_history.jsonl ]; then
+            git add data/processed/ais_history.jsonl || true
+          fi
 
       - name: Commit and push changed data
         run: |
@@ -89,7 +184,6 @@ jobs:
             git push
           fi
 
-      - name: Fail run after preserving site data
-        if: steps.pipeline.outcome == 'failure'
+      - name: Fail after safely publishing degraded status
+        if: steps.validation.outcome == 'failure' || steps.pipeline.outcome == 'failure' || steps.reports.outcome == 'failure'
         run: exit 1
-
