@@ -2,7 +2,7 @@ const colors={Normal:'#6ee7b7',Low:'#6ee7b7',Watch:'#facc15','High Review Priori
 const statusColor={ok:'green',credentials_missing_fallback_mock:'yellow',error_kept_old_data:'red'};
 
 function fetchJson(path){
-  return fetch(path).then(response=>{if(!response.ok)throw new Error(path+' returned '+response.status);return response.json();});
+  return fetch(path,{cache:'no-store'}).then(response=>{if(!response.ok)throw new Error(path+' returned '+response.status);return response.json();});
 }
 
 function renderSourceStatus(statuses){
