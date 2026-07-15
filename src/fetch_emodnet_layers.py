@@ -213,7 +213,7 @@ def _first_property(properties: dict[str, Any], names: Iterable[str]) -> Any:
 def _date_value(properties: dict[str, Any], retrieved: datetime) -> str:
     value = _first_property(
         properties,
-        ("last_updated", "updated", "update_date", "date", "year", "commissioned"),
+        ("last_updated", "updated", "update_date"),
     )
     if value is None:
         return retrieved.date().isoformat()
