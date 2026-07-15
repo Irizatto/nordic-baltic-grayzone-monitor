@@ -5,8 +5,7 @@ on:
   push:
     branches: [main]
     paths:
-      - "src/fetch_helcom_layers.py"
-      - "src/config.py"
+      - "src/*.py"
       - "docs/js/map.js"
       - "docs/index.html"
       - "docs/css/style.css"
@@ -293,5 +292,4 @@ jobs:
       - name: Fail after safely publishing degraded status
         if: steps.validation.outcome == 'failure' || steps.infrastructure.outcome == 'failure' || steps.helcom.outcome == 'failure' || steps.infrastructure_validation.outcome == 'failure' || steps.pipeline.outcome == 'failure' || steps.reports.outcome == 'failure'
         run: exit 1
-
 
