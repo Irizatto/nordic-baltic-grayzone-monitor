@@ -9,7 +9,7 @@ eventsButton.addEventListener('click',()=>{
   eventsButton.setAttribute('aria-expanded',String(open));
 });
 
-fetch('data/events.json').then(response=>{if(!response.ok)throw new Error('events.json unavailable');return response.json();}).then(payload=>{
+fetch('data/events.json',{cache:'no-store'}).then(response=>{if(!response.ok)throw new Error('events.json unavailable');return response.json();}).then(payload=>{
   const inputEvents=Array.isArray(payload.events)?payload.events:[];
   const events=[...inputEvents].sort((left,right)=>String(right.date||'').localeCompare(String(left.date||''))||String(right.time||'').localeCompare(String(left.time||'')));
   const filter=document.getElementById('eventFilter'), table=document.getElementById('eventsRows');

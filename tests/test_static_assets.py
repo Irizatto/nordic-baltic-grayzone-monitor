@@ -63,7 +63,7 @@ class StaticAssetTests(unittest.TestCase):
             [
                 "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js",
                 "https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js",
-                "js/layers.js", "js/map.js", "js/charts.js", "js/ui.js", "js/app.js", "js/events.js",
+                "js/layers.js", "js/map.js?v=20260715", "js/charts.js", "js/ui.js", "js/app.js?v=20260715", "js/events.js?v=20260715",
             ],
         )
 
@@ -76,6 +76,11 @@ class StaticAssetTests(unittest.TestCase):
         self.assertIn("review priorities, not legal or attribution determinations", self.html)
         self.assertIn("风险分数仅为审查优先级", self.html)
         self.assertNotIn("clearly labelled fictional mock vessel data", self.html)
+
+    def test_live_data_requests_bypass_stale_browser_cache(self):
+        for filename in ("app.js", "map.js", "events.js"):
+            script = (ROOT / "docs" / "js" / filename).read_text(encoding="utf-8")
+            self.assertIn("cache:'no-store'", script)
 
 
 if __name__ == "__main__":

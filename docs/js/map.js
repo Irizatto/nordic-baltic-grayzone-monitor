@@ -13,7 +13,7 @@ const layerSettings={
 };
 
 function addGeoJsonLayer(key,setting){
-  return fetch('data/layers/'+setting.file).then(response=>{if(!response.ok)throw new Error(setting.file+' returned '+response.status);return response.json();}).then(data=>{
+  return fetch('data/layers/'+setting.file,{cache:'no-store'}).then(response=>{if(!response.ok)throw new Error(setting.file+' returned '+response.status);return response.json();}).then(data=>{
     const features=Array.isArray(data.features)?data.features:[];
     L.geoJSON(data,{
       style:()=>setting.style,
