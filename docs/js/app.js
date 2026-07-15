@@ -5,6 +5,23 @@ function fetchJson(path){
   return fetch(path,{cache:'no-store'}).then(response=>{if(!response.ok)throw new Error(path+' returned '+response.status);return response.json();});
 }
 
+function setStatNumber(id,value){
+  const element=document.getElementById(id), target=Math.max(0,Math.round(Number(value)||0));
+  const reducedMotion=window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+  if(target===0||reducedMotion||typeof requestAnimationFrame!=='function'){
+    element.textContent=target.toLocaleString();
+    return;
+  }
+  const duration=650, started=performance.now();
+  const frame=timestamp=>{
+    const progress=Math.min(1,(timestamp-started)/duration);
+    const eased=1-Math.pow(1-progress,3);
+    element.textContent=Math.round(target*eased).toLocaleString();
+    if(progress<1)requestAnimationFrame(frame);
+  };
+  requestAnimationFrame(frame);
+}
+
 function renderSourceStatus(statuses){
   const container=document.getElementById('sourceStatus');
   container.replaceChildren();
@@ -56,11 +73,11 @@ fetchJson('data/data.json').then(data=>
     const gridNote=detection.source==='gfw_sar'?' GFW report coordinates are grid-cell centres, not precise individual positions. / GFW 报告坐标为网格中心，并非单个目标的精确位置。':'';
     marker.bindTooltip('SAR detection; a lead for review, not confirmation of illicit activity. / SAR 探测：供人工审查的线索，并非非法活动确认。'+gridNote).addTo(groups.sar);
   });
-  document.getElementById('total').textContent=vessels.length;
-  document.getElementById('sarTotal').textContent=sarDetections.length;
-  document.getElementById('official').textContent=officialCount;
-  Object.keys(counts).forEach(key=>document.getElementById(key).textContent=counts[key]);
-  document.getElementById('unmatched').textContent=sarDetections.filter(detection=>!detection.matched).length;
+  setStatNumber('total',vessels.length);
+  setStatNumber('sarTotal',sarDetections.length);
+  setStatNumber('official',officialCount);
+  Object.keys(counts).forEach(key=>setStatNumber(key,counts[key]));
+  setStatNumber('unmatched',sarDetections.filter(detection=>!detection.matched).length);
   try{if(typeof window.drawChart==='function')window.drawChart(counts);}catch(error){console.warn('Risk chart unavailable; map data remains visible.',error);}
 }).catch(error=>{
   console.error(error);
