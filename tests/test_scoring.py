@@ -6,7 +6,7 @@ from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from ais_schema import map_ship_type
-from analyze_suspicious import risk_level_for_score, score_vessel
+from analyze_suspicious import _within_infrastructure_distance, risk_level_for_score, score_vessel
 
 NOW = "2026-07-11T00:00:00+00:00"
 FEATURES = [{"properties":{"name":"Test cable","category":"cable"},"geometry":{"coordinates":[[24.0,60.0],[24.2,60.0]]}}]
@@ -18,6 +18,26 @@ def vessel(**extra):
 def ids(result): return {rule["rule_id"] for rule in result["triggered_rules"]}
 
 class ScoringTests(unittest.TestCase):
+    def test_history_proximity_prunes_distant_lines_before_exact_distance(self):
+        far_feature = {
+            "properties":{"name":"Far cable","category":"cable"},
+            "geometry":{"coordinates":[[2.0,40.0],[3.0,40.0]]},
+        }
+        with patch("analyze_suspicious.point_to_linestring_distance_km") as distance:
+            self.assertFalse(_within_infrastructure_distance(vessel(),[far_feature],10))
+            distance.assert_not_called()
+
+    def test_history_proximity_keeps_exact_ten_kilometre_rule(self):
+        self.assertTrue(_within_infrastructure_distance(vessel(),FEATURES,10))
+        self.assertFalse(_within_infrastructure_distance(vessel(lat=61.0),FEATURES,10))
+
+    @patch("analyze_suspicious._layers")
+    def test_explicit_empty_features_do_not_reload_layers(self, loader):
+        self.assertFalse(_within_infrastructure_distance(vessel(),[],10))
+        result = score_vessel(vessel(),features=[],watchlist=[])
+        loader.assert_not_called()
+        self.assertIsNone(result["nearest_infrastructure"]["distance_km"])
+
     def test_proximity_bands_are_exclusive(self):
         near=score_vessel(vessel(),features=FEATURES,watchlist=[])
         mid=score_vessel(vessel(lat=60.03),features=FEATURES,watchlist=[])
