@@ -1,0 +1,12 @@
+{
+  "generated_at": null,
+  "source": "helcom_mads",
+  "source_url": "https://maps.helcom.fi/arcgis/rest/services/MADS/Biodiversity/MapServer/54",
+  "status": "error_kept_old_data",
+  "records_fetched": 0,
+  "records_published": 0,
+  "fallbacks": [
+    "Initial empty fallback; run the data workflow to fetch HELCOM MPAs."
+  ],
+  "detail": "HELCOM MPA snapshot has not been refreshed yet."
+}

@@ -467,6 +467,7 @@
   .layer-swatch.ports { color: #9fc7d0; background: #9fc7d0; }
   .layer-swatch.windfarms { color: var(--mint); background: var(--mint); }
   .layer-swatch.areas { color: var(--red); background: var(--red); }
+  .layer-swatch.helcom { color: #7dd3a8; background: rgba(125, 211, 168, .2); border: 1px solid currentColor; }
 
   .layer-checkbox {
     position: absolute;
