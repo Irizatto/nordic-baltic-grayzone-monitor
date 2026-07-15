@@ -63,9 +63,21 @@ class StaticAssetTests(unittest.TestCase):
             [
                 "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js",
                 "https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js",
-                "js/layers.js", "js/map.js?v=20260715", "js/charts.js", "js/ui.js", "js/app.js?v=20260715", "js/events.js?v=20260715",
+                "js/layers.js", "js/map.js?v=20260715", "js/charts.js", "js/ui.js?v=20260716", "js/app.js?v=20260716", "js/events.js?v=20260715",
             ],
         )
+
+    def test_violet_intelligence_theme_and_motion_are_present(self):
+        app = (ROOT / "docs" / "js" / "app.js").read_text(encoding="utf-8")
+        ui = (ROOT / "docs" / "js" / "ui.js").read_text(encoding="utf-8")
+        self.assertIn("--brand: #a855f7", self.css)
+        self.assertIn("aurora-drift", self.css)
+        self.assertIn("--spotlight-x", self.css)
+        self.assertIn("border-glow-scan", self.css)
+        self.assertIn("prefers-reduced-motion: reduce", self.css)
+        self.assertIn("requestAnimationFrame", app)
+        self.assertIn("(pointer: fine)", ui)
+        self.assertIn("css/style.css?v=20260716", self.html)
 
     def test_frontend_language_and_safety_notices(self):
         app = (ROOT / "docs" / "js" / "app.js").read_text(encoding="utf-8")
