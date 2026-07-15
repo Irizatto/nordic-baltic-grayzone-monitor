@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import csv
 import json
+import math
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -58,12 +59,53 @@ def load_infrastructure_features() -> list[dict]:
 
 def _nearest_with_raw_distance(vessel: dict, features: list[dict] | None = None) -> dict:
     closest = None
-    for feature in features or _layers():
+    for feature in features if features is not None else _layers():
         distance = point_to_linestring_distance_km(vessel["lat"], vessel["lon"], feature["geometry"]["coordinates"])
         if closest is None or distance < closest["raw_distance_km"]:
             props = feature["properties"]
             closest = {"name":props["name"],"type":props["category"],"raw_distance_km":distance}
     return closest or {"name":"Not available","type":"not available","raw_distance_km":None}
+
+
+def _feature_distance_bbox(feature: dict) -> tuple[float, float, float, float]:
+    """Return and cache a LineString bounding box for fast history checks."""
+    cached = feature.get("_distance_bbox")
+    if cached is not None:
+        return cached
+    coordinates = feature["geometry"]["coordinates"]
+    lons, lats = zip(*coordinates)
+    bbox = (min(lats), max(lats), min(lons), max(lons))
+    feature["_distance_bbox"] = bbox
+    return bbox
+
+
+def _within_infrastructure_distance(
+    point: dict, features: list[dict] | None, threshold_km: float = 10
+) -> bool:
+    """Return whether a point is within the threshold of eligible infrastructure.
+
+    A conservative latitude/longitude bounding-box check removes distant lines
+    before the exact distance calculation. The padding is deliberately wider
+    than the requested distance, so this changes runtime only, not rule results.
+    """
+    lat, lon = float(point["lat"]), float(point["lon"])
+    lat_padding = threshold_km / 110.0 + 0.01
+    longitude_scale = max(0.05, abs(math.cos(math.radians(lat))))
+    lon_padding = threshold_km / (111.0 * longitude_scale) + 0.01
+    for feature in features if features is not None else _layers():
+        lat_min, lat_max, lon_min, lon_max = _feature_distance_bbox(feature)
+        if (
+            lat_max < lat - lat_padding
+            or lat_min > lat + lat_padding
+            or lon_max < lon - lon_padding
+            or lon_min > lon + lon_padding
+        ):
+            continue
+        if point_to_linestring_distance_km(
+            lat, lon, feature["geometry"]["coordinates"]
+        ) <= threshold_km:
+            return True
+    return False
 
 
 def nearest_infrastructure(vessel: dict, features: list[dict] | None = None) -> dict:
@@ -112,8 +154,7 @@ def _history_rules(vessel: dict, history: list[dict], nearest_raw: dict, sar: li
         point_time = _time(point["timestamp"])
         if previous_time is not None and point_time-previous_time > timedelta(hours=6):
             episode_start, episode_end = None, None
-        point_nearest = _nearest_with_raw_distance(point, features)
-        is_near_and_slow = point_nearest["raw_distance_km"] is not None and point_nearest["raw_distance_km"] <= 10 and float(point.get("speed",0)) < 6
+        is_near_and_slow = float(point.get("speed",0)) < 6 and _within_infrastructure_distance(point, features, 10)
         if is_near_and_slow:
             episode_start = episode_start or point_time
             episode_end = point_time
