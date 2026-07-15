@@ -24,22 +24,37 @@ function addGeoJsonLayer(key,setting){
         layer.on('click',()=>window.showFeature(feature.properties||{}));
       }
     }).addTo(groups[key]);
-    return features.map(feature=>feature.properties||{});
+    return {key,featureCount:features.length,properties:features.map(feature=>feature.properties||{})};
   });
 }
 
 const infrastructureLoads=Object.entries(layerSettings).map(([key,setting])=>addGeoJsonLayer(key,setting));
 Promise.allSettled(infrastructureLoads).then(results=>{
   const loaded=results.filter(result=>result.status==='fulfilled'), failed=results.length-loaded.length;
-  const properties=loaded.flatMap(result=>result.value);
+  const loadedValues=loaded.map(result=>result.value);
+  const properties=loadedValues.flatMap(result=>result.properties);
   const sources=[...new Set(properties.map(item=>item.source).filter(Boolean))];
   const dates=properties.map(item=>item.last_updated).filter(Boolean).sort();
+  const realCount=properties.filter(item=>item.source==='emodnet_human_activities').length;
+  const schematicCount=properties.filter(item=>item.source==='manual_schematic').length;
+  const counts=Object.fromEntries(loadedValues.map(item=>[item.key,item.featureCount]));
+  results.forEach((result,index)=>{
+    if(result.status==='fulfilled')return;
+    const key=Object.keys(layerSettings)[index], input=document.querySelector('[data-layer="'+key+'"]');
+    if(input){input.disabled=true;input.closest('.layer-row')?.classList.add('unavailable');}
+  });
   const status=document.getElementById('infrastructureStatus');
+  const note=document.getElementById('infrastructureNote');
   if(!status)return;
   if(!loaded.length){
     status.textContent='Infrastructure layers unavailable; vessel dashboard remains functional. / 基础设施图层不可用；船舶仪表板仍可使用。';
+    if(note)note.textContent='Infrastructure snapshots are unavailable; layer switches are disabled. / 基础设施快照不可用；相关图层开关已禁用。';
     return;
   }
   const degraded=failed?' · '+failed+' layer(s) unavailable / '+failed+' 个图层不可用':'';
   status.textContent='Infrastructure source / last updated: '+(sources.join(', ')||'not supplied')+' / '+(dates.at(-1)||'not supplied')+degraded+' / 基础设施来源与更新时间';
+  if(note){
+    const countText='Cables '+(counts.cables||0)+' · Pipelines '+(counts.pipelines||0)+' · Ports '+(counts.ports||0)+' · Wind farms '+(counts.windfarms||0)+' · Areas '+(counts.areas||0);
+    note.textContent=countText+'. Public EMODnet: '+realCount+'; labelled schematic supplements: '+schematicCount+'. Each switch controls its layer independently. / '+countText+'。EMODnet 公开数据：'+realCount+'；标注的示意补充：'+schematicCount+'。每个开关可独立控制对应图层。';
+  }
 });

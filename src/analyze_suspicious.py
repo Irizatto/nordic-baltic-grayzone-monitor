@@ -34,7 +34,11 @@ def _layers() -> list[dict]:
     result = []
     for filename in ("cables.geojson","pipelines.geojson"):
         payload = json.loads((DOCS_DATA / "layers" / filename).read_text(encoding="utf-8"))
-        result.extend(payload["features"])
+        result.extend(
+            feature
+            for feature in payload["features"]
+            if feature.get("properties", {}).get("scoring_eligible", True)
+        )
     return result
 
 
@@ -49,7 +53,7 @@ def _nearest_with_raw_distance(vessel: dict, features: list[dict] | None = None)
 
 
 def nearest_infrastructure(vessel: dict, features: list[dict] | None = None) -> dict:
-    """Return the nearest schematic cable/pipeline with display-rounded distance."""
+    """Return the nearest eligible cable/pipeline with display-rounded distance."""
     closest = _nearest_with_raw_distance(vessel, features)
     raw = closest["raw_distance_km"]
     return {"name":closest["name"],"type":closest["type"],"distance_km":round(raw,1) if raw is not None else None}

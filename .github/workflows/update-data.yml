@@ -67,11 +67,16 @@ jobs:
       - name: Preserve published outputs before refresh
         run: |
           mkdir -p /tmp/nbgm-backup
+          mkdir -p /tmp/nbgm-backup/layers
           cp docs/data/data.json /tmp/nbgm-backup/data.json
           cp docs/data/metadata.json /tmp/nbgm-backup/metadata.json
           cp data/events/events.csv /tmp/nbgm-backup/events-canonical.csv
           cp docs/data/events.json /tmp/nbgm-backup/events.json
           cp docs/data/events.csv /tmp/nbgm-backup/events-static.csv
+          cp docs/data/layers/*.geojson /tmp/nbgm-backup/layers/
+          if [ -f docs/data/infrastructure_metadata.json ]; then
+            cp docs/data/infrastructure_metadata.json /tmp/nbgm-backup/infrastructure_metadata.json
+          fi
           if [ -f data/processed/ais_history.jsonl ]; then
             cp data/processed/ais_history.jsonl /tmp/nbgm-backup/ais_history.jsonl
           fi
@@ -83,6 +88,38 @@ jobs:
           python -m compileall -q src
           python -m unittest discover -s tests
           python -c "import sys; sys.path.insert(0, 'src'); import generate_dashboard_data, generate_reports"
+
+      - name: Refresh public EMODnet infrastructure snapshots
+        id: infrastructure
+        if: steps.mode.outputs.run_pipeline == 'true' && steps.validation.outcome == 'success'
+        continue-on-error: true
+        run: python src/fetch_emodnet_layers.py
+
+      - name: Restore infrastructure snapshots on unexpected adapter failure
+        if: steps.infrastructure.outcome == 'failure'
+        run: |
+          cp /tmp/nbgm-backup/layers/*.geojson docs/data/layers/
+          if [ -f /tmp/nbgm-backup/infrastructure_metadata.json ]; then
+            cp /tmp/nbgm-backup/infrastructure_metadata.json docs/data/infrastructure_metadata.json
+          fi
+          python - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          path = "docs/data/infrastructure_metadata.json"
+          try:
+              data = json.load(open(path, encoding="utf-8"))
+          except (OSError, json.JSONDecodeError):
+              data = {"source": "emodnet_human_activities", "layers": {}, "fallbacks": []}
+          data.update({
+              "generated_at": datetime.now(timezone.utc).isoformat(),
+              "status": "error_kept_old_data",
+              "detail": "Unexpected EMODnet adapter failure; previous infrastructure snapshots were retained."
+          })
+          data.setdefault("fallbacks", []).append(data["detail"])
+          with open(path, "w", encoding="utf-8") as handle:
+              json.dump(data, handle, indent=2, ensure_ascii=False)
+              handle.write("\n")
+          PY
 
       - name: Fetch selected sources, score, and generate dashboard data
         id: pipeline

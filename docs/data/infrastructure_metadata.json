@@ -1,0 +1,58 @@
+{
+  "generated_at": "2026-07-15T12:55:15.812789+00:00",
+  "source": "emodnet_human_activities",
+  "source_url": "https://ows.emodnet-humanactivities.eu/wfs?SERVICE=WFS&REQUEST=GetCapabilities&VERSION=2.0.0",
+  "status": "ok",
+  "records_fetched": 1472,
+  "records_published": 1476,
+  "layers": {
+    "cables": {
+      "status": "ok",
+      "records_fetched": 503,
+      "records_published": 507,
+      "schematic_supplement": 4,
+      "source_layers": [
+        "emodnet:bshcontiscables",
+        "emodnet:pcablesbshcontis",
+        "emodnet:pcablesnve"
+      ],
+      "warnings": [],
+      "detail": "Fetched 503 public EMODnet features from 3 WFS layer(s). Retained 4 labelled schematic cable supplements."
+    },
+    "pipelines": {
+      "status": "ok",
+      "records_fetched": 553,
+      "records_published": 553,
+      "schematic_supplement": 0,
+      "source_layers": [
+        "emodnet:pipelines"
+      ],
+      "warnings": [],
+      "detail": "Fetched 553 public EMODnet features from 1 WFS layer(s)."
+    },
+    "ports": {
+      "status": "ok",
+      "records_fetched": 243,
+      "records_published": 243,
+      "schematic_supplement": 0,
+      "source_layers": [
+        "emodnet:portlocations"
+      ],
+      "warnings": [],
+      "detail": "Fetched 243 public EMODnet features from 1 WFS layer(s)."
+    },
+    "windfarms": {
+      "status": "ok",
+      "records_fetched": 173,
+      "records_published": 173,
+      "schematic_supplement": 0,
+      "source_layers": [
+        "emodnet:windfarmspoly"
+      ],
+      "warnings": [],
+      "detail": "Fetched 173 public EMODnet features from 1 WFS layer(s)."
+    }
+  },
+  "fallbacks": [],
+  "detail": "EMODnet WFS infrastructure snapshot; public-source coverage and precision vary by originator."
+}

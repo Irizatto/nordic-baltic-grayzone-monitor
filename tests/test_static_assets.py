@@ -72,7 +72,7 @@ class StaticAssetTests(unittest.TestCase):
         self.assertIn("data/metadata.json", app)
         self.assertIn("escapeHtml", (ROOT / "docs" / "js" / "ui.js").read_text(encoding="utf-8"))
         self.assertIn("research lead database, not a record of confirmed incidents", self.html)
-        self.assertIn("Infrastructure locations are schematic", self.html)
+        self.assertIn("Loading public infrastructure snapshots", self.html)
         self.assertIn("review priorities, not legal or attribution determinations", self.html)
         self.assertIn("风险分数仅为审查优先级", self.html)
         self.assertNotIn("clearly labelled fictional mock vessel data", self.html)

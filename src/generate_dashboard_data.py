@@ -145,10 +145,21 @@ def run(*, fetch_ais: bool = True, fetch_sar: bool = True) -> dict:
     DOCS_DATA.mkdir(parents=True, exist_ok=True)
     previous = _read(DOCS_DATA / "data.json", {"metadata":{},"vessels":[],"sar_detections":[]})
     previous_metadata = _read(DOCS_DATA / "metadata.json", previous.get("metadata", {}))
+    infrastructure_metadata = _read(DOCS_DATA / "infrastructure_metadata.json", {})
     source_status: dict[str, dict] = {}
 
     source_records, fetched_counts = _fetch_ais(previous, previous_metadata, source_status, fetch_ais)
     sar_detections, sar_fetched = _fetch_sar(previous, previous_metadata, source_status, fetch_sar)
+    if isinstance(infrastructure_metadata, dict) and infrastructure_metadata:
+        source_status["emodnet"] = {
+            "status": infrastructure_metadata.get("status", "error_kept_old_data"),
+            "timestamp": infrastructure_metadata.get("generated_at", _now()),
+            "records_fetched": infrastructure_metadata.get("records_fetched", 0),
+            "records_published": infrastructure_metadata.get("records_published", 0),
+            "detail": infrastructure_metadata.get(
+                "detail", "EMODnet infrastructure snapshot metadata is incomplete."
+            ),
+        }
     vessels = _merge_newest(source_records)
     history_index = update_history(vessels)
     scored = [score_vessel(vessel, history_for_vessel(history_index, vessel), sar_detections) for vessel in vessels]
@@ -167,12 +178,13 @@ def run(*, fetch_ais: bool = True, fetch_sar: bool = True) -> dict:
     published_sources.update(str(d.get("source") or "unknown") for d in sar_detections)
     all_mock = not published_sources or published_sources <= {"mock"}
     mode = "mock" if all_mock else ("mixed" if "mock" in published_sources else "live")
+    infrastructure_fallbacks = infrastructure_metadata.get("fallbacks", []) if isinstance(infrastructure_metadata, dict) else []
     metadata = {
         "generated_at":_now(),
         "mode":mode,
         "sources":sorted(published_sources),
         "source_status":source_status,
-        "fallbacks":["Mock records remain clearly labelled when a live source or credential is unavailable."],
+        "fallbacks":["Mock records remain clearly labelled when a live source or credential is unavailable."] + list(infrastructure_fallbacks),
     }
     output = {"metadata":metadata,"vessels":published,"sar_detections":sar_detections}
     (DOCS_DATA / "data.json").write_text(json.dumps(output,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")

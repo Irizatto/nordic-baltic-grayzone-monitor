@@ -438,6 +438,11 @@
     cursor: pointer;
   }
 
+  .layer-row.unavailable {
+    cursor: not-allowed;
+    opacity: .52;
+  }
+
   .layer-name {
     display: grid;
     grid-template-columns: 11px 1fr;
