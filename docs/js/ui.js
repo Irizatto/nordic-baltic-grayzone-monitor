@@ -12,6 +12,25 @@ document.querySelectorAll('[data-layer]').forEach(input=>input.addEventListener(
   if(input.checked)group.addTo(map);else map.removeLayer(group);
 }));
 
+if(window.matchMedia?.('(pointer: fine)').matches){
+  document.querySelectorAll('.stat-card').forEach(card=>{
+    let frame=0;
+    card.addEventListener('pointermove',event=>{
+      cancelAnimationFrame(frame);
+      frame=requestAnimationFrame(()=>{
+        const bounds=card.getBoundingClientRect();
+        card.style.setProperty('--spotlight-x',(event.clientX-bounds.left)+'px');
+        card.style.setProperty('--spotlight-y',(event.clientY-bounds.top)+'px');
+      });
+    });
+    card.addEventListener('pointerleave',()=>{
+      cancelAnimationFrame(frame);
+      card.style.removeProperty('--spotlight-x');
+      card.style.removeProperty('--spotlight-y');
+    });
+  });
+}
+
 window.showFeature=function(properties={}){
   const p=properties||{}, schematic=p.source==='manual_schematic'||p.route_precision==='schematic';
   document.getElementById('vesselDetail').innerHTML=
