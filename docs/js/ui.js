@@ -6,7 +6,11 @@ document.querySelectorAll('.panel-toggle').forEach(button=>button.addEventListen
   const open=button.parentElement.classList.toggle('open');
   button.setAttribute('aria-expanded',String(open));
 }));
-document.querySelectorAll('[data-layer]').forEach(input=>input.addEventListener('change',()=>input.checked?groups[input.dataset.layer].addTo(map):map.removeLayer(groups[input.dataset.layer])));
+document.querySelectorAll('[data-layer]').forEach(input=>input.addEventListener('change',()=>{
+  const group=window.groups?.[input.dataset.layer];
+  if(!group){input.disabled=true;return;}
+  if(input.checked)group.addTo(map);else map.removeLayer(group);
+}));
 
 window.showFeature=function(properties={}){
   const p=properties||{}, schematic=p.source==='manual_schematic'||p.route_precision==='schematic';
