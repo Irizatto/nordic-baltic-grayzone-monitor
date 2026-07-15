@@ -1,27 +1,26 @@
 {
-  "generated_at": "2026-07-15T07:32:24.409732+00:00",
-  "mode": "mixed",
+  "generated_at": "2026-07-15T10:48:21.189366+00:00",
+  "mode": "live",
   "sources": [
     "barentswatch",
-    "digitraffic",
-    "mock"
+    "digitraffic"
   ],
   "source_status": {
     "digitraffic": {
       "status": "ok",
-      "timestamp": "2026-07-15T07:30:50.434152+00:00",
-      "records_fetched": 910,
-      "records_published": 39
+      "timestamp": "2026-07-15T10:48:04.338852+00:00",
+      "records_fetched": 901,
+      "records_published": 260
     },
     "barentswatch": {
       "status": "ok",
-      "timestamp": "2026-07-15T07:30:52.001205+00:00",
-      "records_fetched": 1812,
-      "records_published": 99
+      "timestamp": "2026-07-15T10:48:06.272129+00:00",
+      "records_fetched": 1819,
+      "records_published": 6
     },
     "gfw_sar": {
       "status": "ok",
-      "timestamp": "2026-07-15T07:32:24.145941+00:00",
+      "timestamp": "2026-07-15T10:48:14.032517+00:00",
       "records_fetched": 0,
       "records_published": 0,
       "detail": "Live GFW SAR report cells; coordinates are grid-cell centres, not precise individual positions; leads require human review."
