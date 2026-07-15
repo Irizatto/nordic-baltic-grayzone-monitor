@@ -1,2 +1,1 @@
 event_id,date,time,region,lat,lon,vessel_name,mmsi,imo,ship_type,event_type,risk_score,triggered_rules,nearest_infrastructure,distance_km,sources,confidence,notes
-

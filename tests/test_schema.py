@@ -21,4 +21,3 @@ class EventSchemaTests(unittest.TestCase):
             self.assertEqual(list(rows[0].keys()),HEADER)
 
 if __name__=="__main__": unittest.main()
-
