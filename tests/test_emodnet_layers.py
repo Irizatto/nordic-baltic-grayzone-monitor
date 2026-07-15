@@ -40,6 +40,12 @@ class FailingSession:
 
 
 class EmodnetLayerTests(unittest.TestCase):
+    def test_invalid_utf8_snapshot_is_treated_as_unavailable(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "truncated.geojson"
+            path.write_bytes(b'{"type":"FeatureCollection","features":[' + b"\xdb")
+            self.assertIsNone(emodnet._read_json(path, None))
+
     def test_multilines_are_exploded_into_unified_schema(self):
         payload = {
             "type": "FeatureCollection",
@@ -141,3 +147,4 @@ class EmodnetLayerTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+

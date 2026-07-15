@@ -95,6 +95,24 @@ jobs:
         continue-on-error: true
         run: python src/fetch_emodnet_layers.py
 
+      - name: Validate refreshed infrastructure snapshots
+        id: infrastructure_validation
+        if: steps.mode.outputs.run_pipeline == 'true' && steps.validation.outcome == 'success' && steps.infrastructure.outcome == 'success'
+        continue-on-error: true
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          layer_dir = Path("docs/data/layers")
+          for name in ("cables", "pipelines", "ports", "windfarms", "sensitive_areas"):
+              path = layer_dir / f"{name}.geojson"
+              payload = json.loads(path.read_text(encoding="utf-8"))
+              if payload.get("type") != "FeatureCollection" or not isinstance(payload.get("features"), list):
+                  raise ValueError(f"{path} is not a valid GeoJSON FeatureCollection")
+              print(f"Validated {path}: {len(payload['features'])} features")
+          PY
+
       - name: Restore infrastructure snapshots on unexpected adapter failure
         if: steps.infrastructure.outcome == 'failure'
         run: |
@@ -108,7 +126,7 @@ jobs:
           path = "docs/data/infrastructure_metadata.json"
           try:
               data = json.load(open(path, encoding="utf-8"))
-          except (OSError, json.JSONDecodeError):
+          except (OSError, UnicodeDecodeError, json.JSONDecodeError):
               data = {"source": "emodnet_human_activities", "layers": {}, "fallbacks": []}
           data.update({
               "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -222,5 +240,6 @@ jobs:
           fi
 
       - name: Fail after safely publishing degraded status
-        if: steps.validation.outcome == 'failure' || steps.pipeline.outcome == 'failure' || steps.reports.outcome == 'failure'
+        if: steps.validation.outcome == 'failure' || steps.infrastructure.outcome == 'failure' || steps.infrastructure_validation.outcome == 'failure' || steps.pipeline.outcome == 'failure' || steps.reports.outcome == 'failure'
         run: exit 1
+

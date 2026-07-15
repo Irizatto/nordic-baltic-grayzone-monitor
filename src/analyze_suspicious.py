@@ -33,7 +33,16 @@ def risk_level_for_score(score: int) -> str:
 def _layers() -> list[dict]:
     result = []
     for filename in ("cables.geojson","pipelines.geojson"):
-        payload = json.loads((DOCS_DATA / "layers" / filename).read_text(encoding="utf-8"))
+        try:
+            payload = json.loads(
+                (DOCS_DATA / "layers" / filename).read_text(encoding="utf-8")
+            )
+        except (OSError, UnicodeDecodeError, json.JSONDecodeError):
+            # A damaged infrastructure snapshot must not stop AIS/SAR updates.
+            # The EMODnet adapter and metadata surface the degraded layer state.
+            continue
+        if not isinstance(payload, dict) or not isinstance(payload.get("features"), list):
+            continue
         result.extend(
             feature
             for feature in payload["features"]
@@ -230,3 +239,4 @@ def update_history(vessels: list[dict], path: Path = HISTORY_PATH, now: datetime
             for identity_key in _identity_keys(record):
                 grouped.setdefault(identity_key,[]).append(record)
     return grouped
+

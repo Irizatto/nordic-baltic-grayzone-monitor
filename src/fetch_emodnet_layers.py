@@ -82,7 +82,7 @@ def _now() -> datetime:
 def _read_json(path: Path, default: Any) -> Any:
     try:
         return json.loads(path.read_text(encoding="utf-8"))
-    except (OSError, json.JSONDecodeError):
+    except (OSError, UnicodeDecodeError, json.JSONDecodeError):
         return default
 
 
@@ -519,3 +519,4 @@ if __name__ == "__main__":
         result["status"],
         f"{result['records_published']} published features",
     )
+
