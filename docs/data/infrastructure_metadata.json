@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-15T12:55:15.812789+00:00",
+  "generated_at": "2026-07-15T13:32:31.738603+00:00",
   "source": "emodnet_human_activities",
   "source_url": "https://ows.emodnet-humanactivities.eu/wfs?SERVICE=WFS&REQUEST=GetCapabilities&VERSION=2.0.0",
-  "status": "ok",
+  "status": "error_kept_old_data",
   "records_fetched": 1472,
   "records_published": 1476,
   "layers": {
@@ -53,6 +53,8 @@
       "detail": "Fetched 173 public EMODnet features from 1 WFS layer(s)."
     }
   },
-  "fallbacks": [],
-  "detail": "EMODnet WFS infrastructure snapshot; public-source coverage and precision vary by originator."
+  "fallbacks": [
+    "Unexpected EMODnet adapter failure; previous infrastructure snapshots were retained."
+  ],
+  "detail": "Unexpected EMODnet adapter failure; previous infrastructure snapshots were retained."
 }

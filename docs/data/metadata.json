@@ -24,6 +24,11 @@
       "records_fetched": 0,
       "records_published": 0,
       "detail": "Live GFW SAR report cells; coordinates are grid-cell centres, not precise individual positions; leads require human review."
+    },
+    "pipeline": {
+      "status": "error_kept_old_data",
+      "timestamp": "2026-07-15T13:32:45.376524+00:00",
+      "detail": "Automated pipeline failed; previous dashboard data was retained."
     }
   },
   "fallbacks": [
