@@ -65,11 +65,7 @@ def _request_report(params: dict, body: dict) -> dict:
             if response.status_code in {401, 403}:
                 raise GFWPermissionUnavailable("GFW SAR permission is unavailable")
             if response.status_code == 429:
-                _poll_last_report(headers)
-                if attempt == 2:
-                    response.raise_for_status()
-                time.sleep(2 ** attempt)
-                continue
+                return _poll_last_report(headers)
             if response.status_code == 524:
                 return _poll_last_report(headers)
             response.raise_for_status()
@@ -77,6 +73,13 @@ def _request_report(params: dict, body: dict) -> dict:
             return _poll_last_report(headers) if payload.get("status") == "running" else payload
         except GFWPermissionUnavailable:
             raise
+        except requests.Timeout:
+            try:
+                return _poll_last_report(headers)
+            except requests.RequestException:
+                if attempt == 2:
+                    raise
+                time.sleep(2 ** attempt)
         except requests.RequestException:
             if attempt == 2:
                 raise

@@ -42,6 +42,12 @@ class HistoryTests(unittest.TestCase):
         result = score_vessel(current,[future],[],feature,[])
         self.assertEqual({rule["rule_id"] for rule in result["triggered_rules"]},{"infra_proximity_1km"})
 
+    def test_same_name_does_not_override_conflicting_imo(self):
+        old = {"mmsi":"111","imo":"100","name":"SAME NAME","callsign":None,"timestamp":"2026-07-14T00:00:00+00:00","source":"digitraffic"}
+        current = {**old,"mmsi":"222","imo":"200","timestamp":"2026-07-15T00:00:00+00:00"}
+        index = {"name:same name":[old],"imo:100":[old],"mmsi:111":[old]}
+        self.assertEqual(history_for_vessel(index,current),[])
+
     @patch("analyze_suspicious.point_to_linestring_distance_km", return_value=1.04)
     def test_proximity_band_uses_unrounded_distance(self, _distance):
         feature = [{"properties":{"name":"Cable","category":"cable"},"geometry":{"coordinates":[[24,60],[25,60]]}}]

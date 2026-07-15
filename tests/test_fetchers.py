@@ -102,6 +102,13 @@ class FetcherTests(unittest.TestCase):
         get.side_effect=[FakeResponse({"status":"running"}),FakeResponse({"entries":[]})]
         self.assertEqual(_request_report({},{}),{"entries":[]})
 
+    @patch("fetch_gfw_data.time.sleep")
+    @patch("fetch_gfw_data.requests.get")
+    @patch("fetch_gfw_data.requests.post",side_effect=requests.Timeout("read timeout"))
+    def test_gfw_client_timeout_recovers_last_report(self,_post,get,_sleep):
+        get.return_value=FakeResponse({"entries":[]})
+        self.assertEqual(_request_report({},{}),{"entries":[]})
+
     def test_gfw_query_uses_seven_day_window(self):
         with patch.object(fetch_gfw_data,"GFW_API_TOKEN","token"), patch("fetch_gfw_data._request_report",return_value={"entries":[]}) as request:
             _records,status,_detail=fetch_gfw_data.fetch_gfw_sar()

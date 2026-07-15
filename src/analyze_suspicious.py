@@ -176,8 +176,18 @@ def _identity_keys(record: dict) -> list[str]:
 def history_for_vessel(history_index: dict[str, list[dict]], vessel: dict) -> list[dict]:
     """Return de-duplicated prior records matching any stable identity alias."""
     matched = {}
-    for key in _identity_keys(vessel):
+    strong_keys = []
+    for field in ("mmsi", "imo", "callsign"):
+        value = " ".join(str(vessel.get(field) or "").split()).casefold()
+        if value:
+            strong_keys.append(f"{field}:{value}")
+    for key in strong_keys:
         for record in history_index.get(key, []):
+            identity = (str(record.get("mmsi") or ""), str(record.get("timestamp") or ""), str(record.get("source") or ""))
+            matched[identity] = record
+    if not matched and not vessel.get("imo") and not vessel.get("callsign"):
+        name = " ".join(str(vessel.get("name") or "").split()).casefold()
+        for record in history_index.get(f"name:{name}", []) if name else []:
             identity = (str(record.get("mmsi") or ""), str(record.get("timestamp") or ""), str(record.get("source") or ""))
             matched[identity] = record
     return sorted(matched.values(), key=lambda item:_time(item["timestamp"]))
