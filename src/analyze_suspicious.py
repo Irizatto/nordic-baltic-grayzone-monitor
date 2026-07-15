@@ -51,6 +51,11 @@ def _layers() -> list[dict]:
     return result
 
 
+def load_infrastructure_features() -> list[dict]:
+    """Load eligible cable/pipeline features once for reuse during a pipeline run."""
+    return _layers()
+
+
 def _nearest_with_raw_distance(vessel: dict, features: list[dict] | None = None) -> dict:
     closest = None
     for feature in features or _layers():
