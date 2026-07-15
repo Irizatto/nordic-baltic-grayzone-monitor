@@ -1,611 +1,39 @@
 {
   "metadata": {
-    "generated_at": "2026-07-10T18:01:04.712Z",
+    "generated_at": "2026-07-15T07:30:52.543445+00:00",
     "mode": "mixed",
     "sources": [
+      "barentswatch",
       "digitraffic",
       "mock"
     ],
     "source_status": {
       "digitraffic": {
         "status": "ok",
-        "timestamp": "2026-07-10T17:54:10.285431+00:00",
-        "records": 808,
-        "published_records": 25
+        "timestamp": "2026-07-15T07:30:50.434152+00:00",
+        "records_fetched": 910,
+        "records_published": 39
       },
       "barentswatch": {
-        "status": "credentials_missing_fallback_mock",
-        "timestamp": "2026-07-10T17:54:10.285431+00:00",
-        "detail": "Credentials unavailable"
+        "status": "ok",
+        "timestamp": "2026-07-15T07:30:52.001205+00:00",
+        "records_fetched": 1812,
+        "records_published": 99
       },
       "gfw_sar": {
         "status": "credentials_missing_fallback_mock",
         "timestamp": "2026-07-10T18:01:04.712Z",
         "records": 3,
-        "detail": "GFW_API_TOKEN is unavailable; SAR dataset approval may still be pending."
+        "detail": "GFW_API_TOKEN is unavailable; SAR dataset approval may still be pending.",
+        "records_fetched": 0,
+        "records_published": 3
       }
     },
     "fallbacks": [
-      "Mock vessels remain available when a live AIS source is missing, unavailable, or returns an error.",
-      "GFW SAR uses clearly labelled mock review leads while the API token or dataset approval is unavailable."
+      "Mock records remain clearly labelled when a live source or credential is unavailable."
     ]
   },
   "vessels": [
-    {
-      "mmsi": "273397140",
-      "imo": "8409290",
-      "name": "ASTERIY  ",
-      "callsign": "UBRP9",
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 60.61838,
-      "lon": 28.560555,
-      "speed": 0,
-      "course": 360,
-      "heading": 148,
-      "timestamp": "2026-07-10T17:00:48.702000+00:00",
-      "source": "digitraffic",
-      "risk_score": 0,
-      "risk_level": "Low",
-      "triggered_rules": [],
-      "nearest_infrastructure": {
-        "name": "Not calculated",
-        "type": "not available",
-        "distance_km": null
-      }
-    },
-    {
-      "mmsi": "230084160",
-      "imo": null,
-      "name": "SISSI",
-      "callsign": "OF5274",
-      "flag": null,
-      "ship_type": "research",
-      "lat": 61.197327,
-      "lon": 28.586825,
-      "speed": 8.2,
-      "course": 274.5,
-      "heading": 276,
-      "timestamp": "2026-07-10T17:53:18.645000+00:00",
-      "source": "digitraffic",
-      "risk_score": 0,
-      "risk_level": "Low",
-      "triggered_rules": [],
-      "nearest_infrastructure": {
-        "name": "Not calculated",
-        "type": "not available",
-        "distance_km": null
-      }
-    },
-    {
-      "mmsi": "230643000",
-      "imo": "9212644",
-      "name": "FINNPULP",
-      "callsign": "OJQH",
-      "flag": null,
-      "ship_type": "cargo",
-      "lat": 60.160838,
-      "lon": 25.210988,
-      "speed": 15.5,
-      "course": 190,
-      "heading": 189,
-      "timestamp": "2026-07-10T17:53:20.341000+00:00",
-      "source": "digitraffic",
-      "risk_score": 0,
-      "risk_level": "Low",
-      "triggered_rules": [],
-      "nearest_infrastructure": {
-        "name": "Not calculated",
-        "type": "not available",
-        "distance_km": null
-      }
-    },
-    {
-      "mmsi": "258914000",
-      "imo": "9725495",
-      "name": "YARA AESA",
-      "callsign": "LAXV7",
-      "flag": null,
-      "ship_type": "tanker",
-      "lat": 59.838187,
-      "lon": 19.583498,
-      "speed": 15.6,
-      "course": 140.4,
-      "heading": 139,
-      "timestamp": "2026-07-10T17:53:19.956000+00:00",
-      "source": "digitraffic",
-      "risk_score": 0,
-      "risk_level": "Low",
-      "triggered_rules": [],
-      "nearest_infrastructure": {
-        "name": "Not calculated",
-        "type": "not available",
-        "distance_km": null
-      }
-    },
-    {
-      "mmsi": "273391690",
-      "imo": "9793492",
-      "name": "ZUBR",
-      "callsign": "UBDP7",
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 60.600117,
-      "lon": 28.468285,
-      "speed": 0.1,
-      "course": 202.1,
-      "heading": 511,
-      "timestamp": "2026-07-10T17:01:12.754000+00:00",
-      "source": "digitraffic",
-      "risk_score": 0,
-      "risk_level": "Low",
-      "triggered_rules": [],
-      "nearest_infrastructure": {
-        "name": "Not calculated",
-        "type": "not available",
-        "distance_km": null
-      }
-    },
-    {
-      "mmsi": "304778000",
-      "imo": "9158109",
-      "name": "AMBER LIGHT",
-      "callsign": "V2BB2",
-      "flag": null,
-      "ship_type": "cargo",
-      "lat": 58.98664,
-      "lon": 21.636407,
-      "speed": 10.9,
-      "course": 34.6,
-      "heading": 35,
-      "timestamp": "2026-07-10T17:53:14.171000+00:00",
-      "source": "digitraffic",
-      "risk_score": 0,
-      "risk_level": "Low",
-      "triggered_rules": [],
-      "nearest_infrastructure": {
-        "name": "Not calculated",
-        "type": "not available",
-        "distance_km": null
-      }
-    },
-    {
-      "mmsi": "230992280",
-      "imo": null,
-      "name": "MT2300",
-      "callsign": "OI2830",
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 60.795077,
-      "lon": 21.390428,
-      "speed": 0.1,
-      "course": 125.9,
-      "heading": 205,
-      "timestamp": "2026-07-10T17:53:15.731000+00:00",
-      "source": "digitraffic",
-      "risk_score": 0,
-      "risk_level": "Low",
-      "triggered_rules": [],
-      "nearest_infrastructure": {
-        "name": "Not calculated",
-        "type": "not available",
-        "distance_km": null
-      }
-    },
-    {
-      "mmsi": "249565000",
-      "imo": "9875616",
-      "name": "CHARLIE",
-      "callsign": "9HA6306",
-      "flag": null,
-      "ship_type": "cargo",
-      "lat": 58.93351,
-      "lon": 21.616572,
-      "speed": 11.6,
-      "course": 13.4,
-      "heading": 12,
-      "timestamp": "2026-07-10T17:53:15.978000+00:00",
-      "source": "digitraffic",
-      "risk_score": 0,
-      "risk_level": "Low",
-      "triggered_rules": [],
-      "nearest_infrastructure": {
-        "name": "Not calculated",
-        "type": "not available",
-        "distance_km": null
-      }
-    },
-    {
-      "mmsi": "308121000",
-      "imo": "9015204",
-      "name": "BELUGA REEFER",
-      "callsign": "C6KD7",
-      "flag": null,
-      "ship_type": "cargo",
-      "lat": 59.942623,
-      "lon": 28.69743,
-      "speed": 1.3,
-      "course": 265.8,
-      "heading": 41,
-      "timestamp": "2026-07-10T17:00:12.305000+00:00",
-      "source": "digitraffic",
-      "risk_score": 0,
-      "risk_level": "Low",
-      "triggered_rules": [],
-      "nearest_infrastructure": {
-        "name": "Not calculated",
-        "type": "not available",
-        "distance_km": null
-      }
-    },
-    {
-      "mmsi": "230703000",
-      "imo": "9902419",
-      "name": "FINNSIRIUS",
-      "callsign": "OJUK",
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 60.457707,
-      "lon": 22.036283,
-      "speed": 0,
-      "course": 359.3,
-      "heading": 314,
-      "timestamp": "2026-07-10T17:52:17.939000+00:00",
-      "source": "digitraffic",
-      "risk_score": 0,
-      "risk_level": "Low",
-      "triggered_rules": [],
-      "nearest_infrastructure": {
-        "name": "Not calculated",
-        "type": "not available",
-        "distance_km": null
-      }
-    },
-    {
-      "mmsi": "230119910",
-      "imo": null,
-      "name": "RM-11",
-      "callsign": "OJ2643",
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 59.90104,
-      "lon": 23.267907,
-      "speed": 0,
-      "course": 78.2,
-      "heading": 265,
-      "timestamp": "2026-07-10T17:53:18.904000+00:00",
-      "source": "digitraffic",
-      "risk_score": 0,
-      "risk_level": "Low",
-      "triggered_rules": [],
-      "nearest_infrastructure": {
-        "name": "Not calculated",
-        "type": "not available",
-        "distance_km": null
-      }
-    },
-    {
-      "mmsi": "215015000",
-      "imo": "9247285",
-      "name": "ATHINA III",
-      "callsign": "9HA4921",
-      "flag": null,
-      "ship_type": "cargo",
-      "lat": 59.192238,
-      "lon": 22.019643,
-      "speed": 13.1,
-      "course": 51.9,
-      "heading": 51,
-      "timestamp": "2026-07-10T17:53:19.144000+00:00",
-      "source": "digitraffic",
-      "risk_score": 0,
-      "risk_level": "Low",
-      "triggered_rules": [],
-      "nearest_infrastructure": {
-        "name": "Not calculated",
-        "type": "not available",
-        "distance_km": null
-      }
-    },
-    {
-      "mmsi": "230992140",
-      "imo": null,
-      "name": "PANDION",
-      "callsign": "OI7036",
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 60.363087,
-      "lon": 21.861413,
-      "speed": 0,
-      "course": 200,
-      "heading": 202,
-      "timestamp": "2026-07-10T07:26:43.074000+00:00",
-      "source": "digitraffic",
-      "risk_score": 0,
-      "risk_level": "Low",
-      "triggered_rules": [],
-      "nearest_infrastructure": {
-        "name": "Not calculated",
-        "type": "not available",
-        "distance_km": null
-      }
-    },
-    {
-      "mmsi": "230251000",
-      "imo": "8518120",
-      "name": "KONTIO",
-      "callsign": "OIRV",
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 60.169927,
-      "lon": 24.974595,
-      "speed": 0,
-      "course": 277.6,
-      "heading": 511,
-      "timestamp": "2026-07-10T17:53:20.897000+00:00",
-      "source": "digitraffic",
-      "risk_score": 0,
-      "risk_level": "Low",
-      "triggered_rules": [],
-      "nearest_infrastructure": {
-        "name": "Not calculated",
-        "type": "not available",
-        "distance_km": null
-      }
-    },
-    {
-      "mmsi": "230991780",
-      "imo": null,
-      "name": "JOONAS",
-      "callsign": "OI4812",
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 61.133475,
-      "lon": 21.4406,
-      "speed": 0,
-      "course": 327.2,
-      "heading": 511,
-      "timestamp": "2026-07-10T17:53:14.912000+00:00",
-      "source": "digitraffic",
-      "risk_score": 0,
-      "risk_level": "Low",
-      "triggered_rules": [],
-      "nearest_infrastructure": {
-        "name": "Not calculated",
-        "type": "not available",
-        "distance_km": null
-      }
-    },
-    {
-      "mmsi": "273143900",
-      "imo": null,
-      "name": null,
-      "callsign": null,
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 59.875622,
-      "lon": 30.203453,
-      "speed": 0,
-      "course": 360,
-      "heading": 511,
-      "timestamp": "2026-07-10T05:06:41.106000+00:00",
-      "source": "digitraffic",
-      "risk_score": 0,
-      "risk_level": "Low",
-      "triggered_rules": [],
-      "nearest_infrastructure": {
-        "name": "Not calculated",
-        "type": "not available",
-        "distance_km": null
-      }
-    },
-    {
-      "mmsi": "636022218",
-      "imo": "9773923",
-      "name": "PALLADIUM",
-      "callsign": "5LHS8",
-      "flag": null,
-      "ship_type": "tanker",
-      "lat": 60.13772,
-      "lon": 27.509452,
-      "speed": 12.7,
-      "course": 237.4,
-      "heading": 237,
-      "timestamp": "2026-07-10T17:50:41.602000+00:00",
-      "source": "digitraffic",
-      "risk_score": 0,
-      "risk_level": "Low",
-      "triggered_rules": [],
-      "nearest_infrastructure": {
-        "name": "Not calculated",
-        "type": "not available",
-        "distance_km": null
-      }
-    },
-    {
-      "mmsi": "265519620",
-      "imo": null,
-      "name": "PILOT 116 SE",
-      "callsign": "SDQX",
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 59.287715,
-      "lon": 18.924038,
-      "speed": 8.7,
-      "course": 319.9,
-      "heading": 322,
-      "timestamp": "2026-07-10T17:50:59.987000+00:00",
-      "source": "digitraffic",
-      "risk_score": 0,
-      "risk_level": "Low",
-      "triggered_rules": [],
-      "nearest_infrastructure": {
-        "name": "Not calculated",
-        "type": "not available",
-        "distance_km": null
-      }
-    },
-    {
-      "mmsi": "265001110",
-      "imo": null,
-      "name": "RESCUE EKMAN",
-      "callsign": "7SA2006",
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 60.101993,
-      "lon": 18.803682,
-      "speed": 0,
-      "course": 360,
-      "heading": 511,
-      "timestamp": "2026-07-10T17:53:14.075000+00:00",
-      "source": "digitraffic",
-      "risk_score": 0,
-      "risk_level": "Low",
-      "triggered_rules": [],
-      "nearest_infrastructure": {
-        "name": "Not calculated",
-        "type": "not available",
-        "distance_km": null
-      }
-    },
-    {
-      "mmsi": "276858000",
-      "imo": "9875874",
-      "name": "SELENE",
-      "callsign": "ESLQ",
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 60.41937,
-      "lon": 26.918333,
-      "speed": 8.9,
-      "course": 233.9,
-      "heading": 238,
-      "timestamp": "2026-07-10T17:53:22.877000+00:00",
-      "source": "digitraffic",
-      "risk_score": 0,
-      "risk_level": "Low",
-      "triggered_rules": [],
-      "nearest_infrastructure": {
-        "name": "Not calculated",
-        "type": "not available",
-        "distance_km": null
-      }
-    },
-    {
-      "mmsi": "255806257",
-      "imo": "9344722",
-      "name": "MSC VALA II",
-      "callsign": "CQAR7",
-      "flag": null,
-      "ship_type": "cargo",
-      "lat": 60.39495,
-      "lon": 19.028407,
-      "speed": 13.5,
-      "course": 7.2,
-      "heading": 6,
-      "timestamp": "2026-07-10T17:53:17.587000+00:00",
-      "source": "digitraffic",
-      "risk_score": 0,
-      "risk_level": "Low",
-      "triggered_rules": [],
-      "nearest_infrastructure": {
-        "name": "Not calculated",
-        "type": "not available",
-        "distance_km": null
-      }
-    },
-    {
-      "mmsi": "230710000",
-      "imo": "9315410",
-      "name": "SATURN",
-      "callsign": "OJUV",
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 60.375215,
-      "lon": 21.58753,
-      "speed": 9.1,
-      "course": 169.7,
-      "heading": 172,
-      "timestamp": "2026-07-10T17:53:15.779000+00:00",
-      "source": "digitraffic",
-      "risk_score": 0,
-      "risk_level": "Low",
-      "triggered_rules": [],
-      "nearest_infrastructure": {
-        "name": "Not calculated",
-        "type": "not available",
-        "distance_km": null
-      }
-    },
-    {
-      "mmsi": "265577480",
-      "imo": "8409070",
-      "name": "SVANHILD",
-      "callsign": "SFIB",
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 59.541955,
-      "lon": 18.590822,
-      "speed": 0,
-      "course": 162.9,
-      "heading": 136,
-      "timestamp": "2026-07-10T17:45:32.869000+00:00",
-      "source": "digitraffic",
-      "risk_score": 0,
-      "risk_level": "Low",
-      "triggered_rules": [],
-      "nearest_infrastructure": {
-        "name": "Not calculated",
-        "type": "not available",
-        "distance_km": null
-      }
-    },
-    {
-      "mmsi": "230176640",
-      "imo": "8222331",
-      "name": "LOVSKAR",
-      "callsign": "OJUR",
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 60.443113,
-      "lon": 22.251025,
-      "speed": 0.1,
-      "course": 281.1,
-      "heading": 47,
-      "timestamp": "2026-07-10T17:52:32.324000+00:00",
-      "source": "digitraffic",
-      "risk_score": 0,
-      "risk_level": "Low",
-      "triggered_rules": [],
-      "nearest_infrastructure": {
-        "name": "Not calculated",
-        "type": "not available",
-        "distance_km": null
-      }
-    },
-    {
-      "mmsi": "230991258",
-      "imo": null,
-      "name": "TEKLA I",
-      "callsign": "OIRR",
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 60.399147,
-      "lon": 26.889673,
-      "speed": 8.3,
-      "course": 38.6,
-      "heading": 511,
-      "timestamp": "2026-07-10T17:53:14.720000+00:00",
-      "source": "digitraffic",
-      "risk_score": 0,
-      "risk_level": "Low",
-      "triggered_rules": [],
-      "nearest_infrastructure": {
-        "name": "Not calculated",
-        "type": "not available",
-        "distance_km": null
-      }
-    },
     {
       "mmsi": "255100001",
       "imo": "IMO5510001",
@@ -619,21 +47,3646 @@
       "course": 12,
       "heading": 14,
       "timestamp": "2026-07-11T01:15:00+00:00",
-      "risk_score": 91,
-      "risk_level": "Critical Review Priority",
+      "risk_score": 3,
+      "risk_level": "Normal",
       "triggered_rules": [
         {
-          "rule_id": "loitering_near_infrastructure",
-          "points": 55,
-          "evidence": "Low speed within 2 km of mock cable for 4 hours"
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.8 km from pipeline Balticconnector (Inkoo–Paldiski)"
         }
       ],
       "nearest_infrastructure": {
-        "name": "Mock Gulf Fibre Link",
-        "type": "submarine cable",
-        "distance_km": 1.8
+        "name": "Balticconnector (Inkoo–Paldiski)",
+        "type": "pipeline",
+        "distance_km": 0.8
       },
       "source": "mock"
+    },
+    {
+      "mmsi": "308121000",
+      "imo": "9015204",
+      "name": "BELUGA REEFER",
+      "callsign": "C6KD7",
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 59.771457,
+      "lon": 24.403092,
+      "speed": 16.7,
+      "course": 254.6,
+      "heading": 256.0,
+      "timestamp": "2026-07-15T07:30:47.359000+00:00",
+      "source": "digitraffic",
+      "risk_score": 3,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.6 km from pipeline Balticconnector (Inkoo–Paldiski)"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Balticconnector (Inkoo–Paldiski)",
+        "type": "pipeline",
+        "distance_km": 0.6
+      }
+    },
+    {
+      "mmsi": "259042360",
+      "imo": null,
+      "name": "FDA NIKLAS",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 69.646812,
+      "lon": 18.957778,
+      "speed": 0.0,
+      "course": 16.9,
+      "heading": 337.0,
+      "timestamp": "2026-07-15T07:28:01+00:00",
+      "source": "barentswatch",
+      "risk_score": 3,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.5 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 0.5
+      }
+    },
+    {
+      "mmsi": "257032420",
+      "imo": null,
+      "name": "ARCTIC DIVE",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 69.648905,
+      "lon": 18.963163,
+      "speed": 0.0,
+      "course": 20.8,
+      "heading": 191.0,
+      "timestamp": "2026-07-15T07:28:53+00:00",
+      "source": "barentswatch",
+      "risk_score": 3,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.5 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 0.5
+      }
+    },
+    {
+      "mmsi": "219023617",
+      "imo": null,
+      "name": "LINDEN",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 69.646957,
+      "lon": 18.957532,
+      "speed": 0.0,
+      "course": 353.1,
+      "heading": 224.0,
+      "timestamp": "2026-07-15T07:30:11+00:00",
+      "source": "barentswatch",
+      "risk_score": 3,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.4 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 0.4
+      }
+    },
+    {
+      "mmsi": "257136440",
+      "imo": null,
+      "name": "FROEY SPIRIT",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 69.646413,
+      "lon": 18.955777,
+      "speed": 0.0,
+      "course": 13.8,
+      "heading": 224.0,
+      "timestamp": "2026-07-15T07:30:40+00:00",
+      "source": "barentswatch",
+      "risk_score": 3,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.5 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 0.5
+      }
+    },
+    {
+      "mmsi": "259029890",
+      "imo": null,
+      "name": "WIEANAH",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 69.72786,
+      "lon": 18.653827,
+      "speed": 0.0,
+      "course": 234.8,
+      "heading": 0.0,
+      "timestamp": "2026-07-15T07:28:07+00:00",
+      "source": "barentswatch",
+      "risk_score": 3,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.2 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 0.2
+      }
+    },
+    {
+      "mmsi": "255100005",
+      "imo": "IMO5510005",
+      "name": "SKANE STAR",
+      "callsign": "OX0005",
+      "flag": "Example Registry",
+      "ship_type": "tanker",
+      "lat": 55.42,
+      "lon": 14.78,
+      "speed": 3.1,
+      "course": 82,
+      "heading": 84,
+      "timestamp": "2026-07-11T01:15:00+00:00",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "2.3 km from pipeline Nord Stream corridor near Bornholm"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Nord Stream corridor near Bornholm",
+        "type": "pipeline",
+        "distance_km": 2.3
+      },
+      "source": "mock"
+    },
+    {
+      "mmsi": "276002890",
+      "imo": "0",
+      "name": "LOOD",
+      "callsign": "ESQM",
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 59.703193,
+      "lon": 24.558073,
+      "speed": 9.1,
+      "course": 335.6,
+      "heading": 511.0,
+      "timestamp": "2026-07-15T07:30:45.555000+00:00",
+      "source": "digitraffic",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.2 km from pipeline Balticconnector (Inkoo–Paldiski)"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Balticconnector (Inkoo–Paldiski)",
+        "type": "pipeline",
+        "distance_km": 0.2
+      }
+    },
+    {
+      "mmsi": "230938050",
+      "imo": "0",
+      "name": "NEREID",
+      "callsign": "OG9249",
+      "flag": null,
+      "ship_type": "service",
+      "lat": 59.772328,
+      "lon": 24.517075,
+      "speed": 0.7,
+      "course": 98.9,
+      "heading": 511.0,
+      "timestamp": "2026-07-15T07:30:46.326000+00:00",
+      "source": "digitraffic",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "4.0 km from pipeline Balticconnector (Inkoo–Paldiski)"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Balticconnector (Inkoo–Paldiski)",
+        "type": "pipeline",
+        "distance_km": 4.0
+      }
+    },
+    {
+      "mmsi": "249905000",
+      "imo": "9697210",
+      "name": "AGAPI 1",
+      "callsign": "9HA6427",
+      "flag": null,
+      "ship_type": "tanker",
+      "lat": 59.784953,
+      "lon": 24.422222,
+      "speed": 11.6,
+      "course": 254.9,
+      "heading": 255.0,
+      "timestamp": "2026-07-15T07:30:41.846000+00:00",
+      "source": "digitraffic",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.3 km from pipeline Balticconnector (Inkoo–Paldiski)"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Balticconnector (Inkoo–Paldiski)",
+        "type": "pipeline",
+        "distance_km": 1.3
+      }
+    },
+    {
+      "mmsi": "636016498",
+      "imo": "9696515",
+      "name": "DIONYSUS",
+      "callsign": "D5GL8",
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 59.74469,
+      "lon": 24.12304,
+      "speed": 10.9,
+      "course": 254.2,
+      "heading": 253.0,
+      "timestamp": "2026-07-15T05:00:31.716000+00:00",
+      "source": "digitraffic",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.4 km from cable Helsinki–Tallinn telecom corridor"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Helsinki–Tallinn telecom corridor",
+        "type": "cable",
+        "distance_km": 1.4
+      }
+    },
+    {
+      "mmsi": "257974800",
+      "imo": null,
+      "name": "KVAENANGSTIND",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 69.68069,
+      "lon": 18.997353,
+      "speed": 0.0,
+      "course": 11.3,
+      "heading": 0.0,
+      "timestamp": "2026-07-15T07:30:43+00:00",
+      "source": "barentswatch",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "3.8 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 3.8
+      }
+    },
+    {
+      "mmsi": "258430000",
+      "imo": null,
+      "name": "NORSEL",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "tanker",
+      "lat": 78.234778,
+      "lon": 15.600232,
+      "speed": 0.2,
+      "course": 158.0,
+      "heading": 252.0,
+      "timestamp": "2026-07-15T07:29:36+00:00",
+      "source": "barentswatch",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "2.0 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 2.0
+      }
+    },
+    {
+      "mmsi": "259112000",
+      "imo": null,
+      "name": "SAMSKIP KVITBJORN",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 69.67533,
+      "lon": 19.001495,
+      "speed": 0.5,
+      "course": 332.8,
+      "heading": 245.0,
+      "timestamp": "2026-07-15T07:30:11+00:00",
+      "source": "barentswatch",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "3.4 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 3.4
+      }
+    },
+    {
+      "mmsi": "257003800",
+      "imo": null,
+      "name": "STERK",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "service",
+      "lat": 69.656463,
+      "lon": 18.968338,
+      "speed": 0.0,
+      "course": 343.5,
+      "heading": 159.0,
+      "timestamp": "2026-07-15T07:30:45+00:00",
+      "source": "barentswatch",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.0 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 1.0
+      }
+    },
+    {
+      "mmsi": "259043270",
+      "imo": null,
+      "name": "MAGNI",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "tug",
+      "lat": 78.229008,
+      "lon": 15.602037,
+      "speed": 0.1,
+      "course": 324.0,
+      "heading": 0.0,
+      "timestamp": "2026-07-15T05:39:17+00:00",
+      "source": "barentswatch",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.5 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 1.5
+      }
+    },
+    {
+      "mmsi": "983110594",
+      "imo": null,
+      "name": "SEA 8",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "service",
+      "lat": 78.238888,
+      "lon": 15.618217,
+      "speed": 7.9,
+      "course": 248.5,
+      "heading": 0.0,
+      "timestamp": "2026-07-14T10:52:44+00:00",
+      "source": "barentswatch",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "2.2 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 2.2
+      }
+    },
+    {
+      "mmsi": "983110598",
+      "imo": null,
+      "name": "SEA 12",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "service",
+      "lat": 78.239317,
+      "lon": 15.628838,
+      "speed": 1.5,
+      "course": 22.3,
+      "heading": 0.0,
+      "timestamp": "2026-07-14T11:18:22+00:00",
+      "source": "barentswatch",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "2.2 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 2.2
+      }
+    },
+    {
+      "mmsi": "259049950",
+      "imo": null,
+      "name": "LYNX",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "tug",
+      "lat": 69.678715,
+      "lon": 18.992652,
+      "speed": 0.0,
+      "course": 338.4,
+      "heading": 321.0,
+      "timestamp": "2026-07-15T07:30:27+00:00",
+      "source": "barentswatch",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "3.5 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 3.5
+      }
+    },
+    {
+      "mmsi": "257996000",
+      "imo": null,
+      "name": "MARTIN H",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 69.65915,
+      "lon": 18.971783,
+      "speed": 0.0,
+      "course": 293.1,
+      "heading": 321.0,
+      "timestamp": "2026-07-15T07:30:47+00:00",
+      "source": "barentswatch",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.3 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 1.3
+      }
+    },
+    {
+      "mmsi": "258373500",
+      "imo": null,
+      "name": "AURORA",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "service",
+      "lat": 69.673433,
+      "lon": 18.746638,
+      "speed": 0.0,
+      "course": 0.0,
+      "heading": 262.0,
+      "timestamp": "2026-07-15T07:30:24+00:00",
+      "source": "barentswatch",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "2.6 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 2.6
+      }
+    },
+    {
+      "mmsi": "231219000",
+      "imo": null,
+      "name": "BILLEFJORD",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 69.652142,
+      "lon": 18.965443,
+      "speed": 0.0,
+      "course": 354.9,
+      "heading": 0.0,
+      "timestamp": "2026-07-15T07:29:38+00:00",
+      "source": "barentswatch",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.6 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 0.6
+      }
+    },
+    {
+      "mmsi": "319173000",
+      "imo": null,
+      "name": "ATLAS",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 69.645662,
+      "lon": 18.954153,
+      "speed": 0.0,
+      "course": 245.8,
+      "heading": 215.0,
+      "timestamp": "2026-07-15T07:28:18+00:00",
+      "source": "barentswatch",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.5 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 0.5
+      }
+    },
+    {
+      "mmsi": "258301500",
+      "imo": null,
+      "name": "LONGYEAR 2",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "service",
+      "lat": 78.228318,
+      "lon": 15.600728,
+      "speed": 0.0,
+      "course": 0.0,
+      "heading": 0.0,
+      "timestamp": "2026-07-15T07:30:47+00:00",
+      "source": "barentswatch",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.5 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 1.5
+      }
+    },
+    {
+      "mmsi": "257095920",
+      "imo": null,
+      "name": "FJORDJARL",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 69.64645,
+      "lon": 18.9576,
+      "speed": 0.0,
+      "course": 209.6,
+      "heading": 38.0,
+      "timestamp": "2026-07-15T07:29:13+00:00",
+      "source": "barentswatch",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.5 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 0.5
+      }
+    },
+    {
+      "mmsi": "258008340",
+      "imo": null,
+      "name": "ADVENT SUPPLIER",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "service",
+      "lat": 78.227967,
+      "lon": 15.610182,
+      "speed": 0.0,
+      "course": 0.4,
+      "heading": 109.0,
+      "timestamp": "2026-07-15T07:27:58+00:00",
+      "source": "barentswatch",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.3 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 1.3
+      }
+    },
+    {
+      "mmsi": "258088000",
+      "imo": null,
+      "name": "BRAGE",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 69.64441,
+      "lon": 18.955677,
+      "speed": 0.0,
+      "course": 75.9,
+      "heading": 199.0,
+      "timestamp": "2026-07-15T07:29:04+00:00",
+      "source": "barentswatch",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.7 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 0.7
+      }
+    },
+    {
+      "mmsi": "259220000",
+      "imo": null,
+      "name": "RAID",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 69.679547,
+      "lon": 18.996417,
+      "speed": 0.0,
+      "course": 342.6,
+      "heading": 229.0,
+      "timestamp": "2026-07-15T07:29:48+00:00",
+      "source": "barentswatch",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "3.7 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 3.7
+      }
+    },
+    {
+      "mmsi": "258317000",
+      "imo": null,
+      "name": "T/B LUPUS",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "tug",
+      "lat": 69.650072,
+      "lon": 18.963563,
+      "speed": 0.0,
+      "course": 217.5,
+      "heading": 95.0,
+      "timestamp": "2026-07-15T07:30:43+00:00",
+      "source": "barentswatch",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.5 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 0.5
+      }
+    },
+    {
+      "mmsi": "325149700",
+      "imo": null,
+      "name": "GRAND NANOOK",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 78.227638,
+      "lon": 15.616065,
+      "speed": 0.0,
+      "course": 83.5,
+      "heading": 285.0,
+      "timestamp": "2026-07-15T07:29:18+00:00",
+      "source": "barentswatch",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.1 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 1.1
+      }
+    },
+    {
+      "mmsi": "258092500",
+      "imo": null,
+      "name": "RESCUE UNI OSLOFJORD",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "service",
+      "lat": 69.651655,
+      "lon": 18.962155,
+      "speed": 0.0,
+      "course": 103.0,
+      "heading": 155.0,
+      "timestamp": "2026-07-15T07:28:55+00:00",
+      "source": "barentswatch",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.5 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 0.5
+      }
+    },
+    {
+      "mmsi": "258021770",
+      "imo": null,
+      "name": "HANNA RESVOLL",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "service",
+      "lat": 78.228237,
+      "lon": 15.607997,
+      "speed": 0.0,
+      "course": 0.0,
+      "heading": 306.0,
+      "timestamp": "2026-07-15T07:29:00+00:00",
+      "source": "barentswatch",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.3 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 1.3
+      }
+    },
+    {
+      "mmsi": "257045680",
+      "imo": null,
+      "name": "FOSNA GYME",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "service",
+      "lat": 69.656407,
+      "lon": 18.968188,
+      "speed": 0.0,
+      "course": 338.0,
+      "heading": 159.0,
+      "timestamp": "2026-07-15T07:27:52+00:00",
+      "source": "barentswatch",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.0 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 1.0
+      }
+    },
+    {
+      "mmsi": "259007800",
+      "imo": null,
+      "name": "FJORGYN",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 69.644397,
+      "lon": 18.95617,
+      "speed": 0.0,
+      "course": 28.1,
+      "heading": 203.0,
+      "timestamp": "2026-07-15T07:30:42+00:00",
+      "source": "barentswatch",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.7 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 0.7
+      }
+    },
+    {
+      "mmsi": "259090000",
+      "imo": null,
+      "name": "POLARXPLORER",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 69.647452,
+      "lon": 18.979725,
+      "speed": 0.0,
+      "course": 0.6,
+      "heading": 353.0,
+      "timestamp": "2026-07-15T07:29:11+00:00",
+      "source": "barentswatch",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.2 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 1.2
+      }
+    },
+    {
+      "mmsi": "257958900",
+      "imo": null,
+      "name": "ELLING CARLSEN",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "service",
+      "lat": 78.228602,
+      "lon": 15.606588,
+      "speed": 0.0,
+      "course": 134.0,
+      "heading": 0.0,
+      "timestamp": "2026-07-15T07:30:16+00:00",
+      "source": "barentswatch",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.4 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 1.4
+      }
+    },
+    {
+      "mmsi": "259016200",
+      "imo": null,
+      "name": "PRS.INGRID ALEXANDRA",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 69.646242,
+      "lon": 18.955418,
+      "speed": 0.0,
+      "course": 334.1,
+      "heading": 226.0,
+      "timestamp": "2026-07-15T07:30:49+00:00",
+      "source": "barentswatch",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.5 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 0.5
+      }
+    },
+    {
+      "mmsi": "257136050",
+      "imo": null,
+      "name": "LOS 138",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "service",
+      "lat": 69.656753,
+      "lon": 18.9667,
+      "speed": 0.0,
+      "course": 39.4,
+      "heading": 290.0,
+      "timestamp": "2026-07-15T07:30:49+00:00",
+      "source": "barentswatch",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "1.0 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 1.0
+      }
+    },
+    {
+      "mmsi": "230359000",
+      "imo": null,
+      "name": "ARKTIS",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 78.22827,
+      "lon": 15.608692,
+      "speed": 0.0,
+      "course": 23.8,
+      "heading": 128.0,
+      "timestamp": "2026-07-15T07:28:43+00:00",
+      "source": "barentswatch",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.3 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 1.3
+      }
+    },
+    {
+      "mmsi": "257212800",
+      "imo": null,
+      "name": "POLAR ADVENTURE",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 69.649982,
+      "lon": 18.961135,
+      "speed": 0.0,
+      "course": 290.9,
+      "heading": 324.0,
+      "timestamp": "2026-07-15T07:30:30+00:00",
+      "source": "barentswatch",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.4 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 0.4
+      }
+    },
+    {
+      "mmsi": "259175000",
+      "imo": null,
+      "name": "VULKANA",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 69.651822,
+      "lon": 18.962908,
+      "speed": 0.0,
+      "course": 220.5,
+      "heading": 0.0,
+      "timestamp": "2026-07-15T07:30:39+00:00",
+      "source": "barentswatch",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.5 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 0.5
+      }
+    },
+    {
+      "mmsi": "258499000",
+      "imo": null,
+      "name": "POLARGIRL",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 69.649977,
+      "lon": 18.962998,
+      "speed": 0.0,
+      "course": 232.1,
+      "heading": 275.0,
+      "timestamp": "2026-07-15T07:30:41+00:00",
+      "source": "barentswatch",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.5 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 0.5
+      }
+    },
+    {
+      "mmsi": "319524000",
+      "imo": null,
+      "name": "DYTAN",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 69.649542,
+      "lon": 18.963703,
+      "speed": 0.0,
+      "course": 4.4,
+      "heading": 10.0,
+      "timestamp": "2026-07-15T07:28:49+00:00",
+      "source": "barentswatch",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.5 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 0.5
+      }
+    },
+    {
+      "mmsi": "257067570",
+      "imo": null,
+      "name": "GEO CAT",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "service",
+      "lat": 69.680582,
+      "lon": 18.997735,
+      "speed": 0.0,
+      "course": 150.1,
+      "heading": 315.0,
+      "timestamp": "2026-07-15T07:29:44+00:00",
+      "source": "barentswatch",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "3.8 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 3.8
+      }
+    },
+    {
+      "mmsi": "257897600",
+      "imo": null,
+      "name": "DIVE SUPPORT GARM",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "service",
+      "lat": 69.656967,
+      "lon": 18.967517,
+      "speed": 0.1,
+      "course": 0.0,
+      "heading": 0.0,
+      "timestamp": "2026-07-14T13:14:43+00:00",
+      "source": "barentswatch",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.0 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 1.0
+      }
+    },
+    {
+      "mmsi": "255100004",
+      "imo": "IMO5510004",
+      "name": "GOTLAND TRADER",
+      "callsign": "OX0004",
+      "flag": "Example Registry",
+      "ship_type": "cargo",
+      "lat": 57.72,
+      "lon": 18.01,
+      "speed": 9.4,
+      "course": 82,
+      "heading": 84,
+      "timestamp": "2026-07-11T01:15:00+00:00",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "5.6 km from cable Gotland–mainland Sweden link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Gotland–mainland Sweden link",
+        "type": "cable",
+        "distance_km": 5.6
+      },
+      "source": "mock"
+    },
+    {
+      "mmsi": "230628000",
+      "imo": "9214379",
+      "name": "FINLANDIA",
+      "callsign": "OJPP",
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 59.627482,
+      "lon": 24.656482,
+      "speed": 23.9,
+      "course": 187.5,
+      "heading": 186.0,
+      "timestamp": "2026-07-15T07:30:47.946000+00:00",
+      "source": "digitraffic",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "6.6 km from pipeline Balticconnector (Inkoo–Paldiski)"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Balticconnector (Inkoo–Paldiski)",
+        "type": "pipeline",
+        "distance_km": 6.6
+      }
+    },
+    {
+      "mmsi": "230059740",
+      "imo": "0",
+      "name": "RESCUE AKTIA",
+      "callsign": "OH3540",
+      "flag": null,
+      "ship_type": "service",
+      "lat": 59.931842,
+      "lon": 24.014992,
+      "speed": 0.1,
+      "course": 180.8,
+      "heading": 189.0,
+      "timestamp": "2026-07-15T07:30:45.122000+00:00",
+      "source": "digitraffic",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "9.4 km from pipeline Balticconnector (Inkoo–Paldiski)"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Balticconnector (Inkoo–Paldiski)",
+        "type": "pipeline",
+        "distance_km": 9.4
+      }
+    },
+    {
+      "mmsi": "305167000",
+      "imo": "9173214",
+      "name": "KATI",
+      "callsign": "V2QZ4",
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 60.015445,
+      "lon": 23.926933,
+      "speed": 0.0,
+      "course": 27.9,
+      "heading": 139.0,
+      "timestamp": "2026-07-15T07:27:54.615000+00:00",
+      "source": "digitraffic",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "10.0 km from pipeline Balticconnector (Inkoo–Paldiski)"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Balticconnector (Inkoo–Paldiski)",
+        "type": "pipeline",
+        "distance_km": 10.0
+      }
+    },
+    {
+      "mmsi": "230145000",
+      "imo": "8802076",
+      "name": "ARANDA",
+      "callsign": "OIRY",
+      "flag": null,
+      "ship_type": "service",
+      "lat": 60.161783,
+      "lon": 24.90159,
+      "speed": 0.0,
+      "course": 108.0,
+      "heading": 324.0,
+      "timestamp": "2026-07-15T07:28:39.814000+00:00",
+      "source": "digitraffic",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "8.7 km from cable Helsinki–Tallinn telecom corridor"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Helsinki–Tallinn telecom corridor",
+        "type": "cable",
+        "distance_km": 8.7
+      }
+    },
+    {
+      "mmsi": "276859000",
+      "imo": "9892690",
+      "name": "MYSTAR",
+      "callsign": "ESLR",
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 60.14799,
+      "lon": 24.914767,
+      "speed": 0.0,
+      "course": 176.0,
+      "heading": 208.0,
+      "timestamp": "2026-07-15T07:28:30.726000+00:00",
+      "source": "digitraffic",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "9.2 km from cable Helsinki–Tallinn telecom corridor"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Helsinki–Tallinn telecom corridor",
+        "type": "cable",
+        "distance_km": 9.2
+      }
+    },
+    {
+      "mmsi": "230094240",
+      "imo": "0",
+      "name": "KOILLISTUULI",
+      "callsign": "OH6441",
+      "flag": null,
+      "ship_type": "service",
+      "lat": 60.180252,
+      "lon": 24.907087,
+      "speed": 0.1,
+      "course": 8.0,
+      "heading": 511.0,
+      "timestamp": "2026-07-15T05:53:07.053000+00:00",
+      "source": "digitraffic",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "9.8 km from cable Helsinki–Tallinn telecom corridor"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Helsinki–Tallinn telecom corridor",
+        "type": "cable",
+        "distance_km": 9.8
+      }
+    },
+    {
+      "mmsi": "230955000",
+      "imo": "5419232",
+      "name": "CARMEL",
+      "callsign": "OIOC",
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 60.161205,
+      "lon": 24.923883,
+      "speed": 0.0,
+      "course": 288.4,
+      "heading": 314.0,
+      "timestamp": "2026-07-15T07:30:39.528000+00:00",
+      "source": "digitraffic",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "9.9 km from cable Helsinki–Tallinn telecom corridor"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Helsinki–Tallinn telecom corridor",
+        "type": "cable",
+        "distance_km": 9.9
+      }
+    },
+    {
+      "mmsi": "230941570",
+      "imo": "0",
+      "name": "MERIKUOKKA",
+      "callsign": "OI2932",
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 60.152378,
+      "lon": 24.92313,
+      "speed": 0.0,
+      "course": 360.0,
+      "heading": 511.0,
+      "timestamp": "2026-07-15T07:30:41.342000+00:00",
+      "source": "digitraffic",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "9.7 km from cable Helsinki–Tallinn telecom corridor"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Helsinki–Tallinn telecom corridor",
+        "type": "cable",
+        "distance_km": 9.7
+      }
+    },
+    {
+      "mmsi": "230941940",
+      "imo": "0",
+      "name": "VARTIOLAIVA 55",
+      "callsign": "OJ3724",
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 60.161052,
+      "lon": 24.924323,
+      "speed": 0.0,
+      "course": 309.1,
+      "heading": 317.0,
+      "timestamp": "2026-07-15T07:30:40.813000+00:00",
+      "source": "digitraffic",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "9.9 km from cable Helsinki–Tallinn telecom corridor"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Helsinki–Tallinn telecom corridor",
+        "type": "cable",
+        "distance_km": 9.9
+      }
+    },
+    {
+      "mmsi": "261000130",
+      "imo": "8829127",
+      "name": "MAJA",
+      "callsign": "SQKR",
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 60.152525,
+      "lon": 24.923825,
+      "speed": 0.0,
+      "course": 109.7,
+      "heading": 511.0,
+      "timestamp": "2026-07-15T07:29:11.529000+00:00",
+      "source": "digitraffic",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "9.7 km from cable Helsinki–Tallinn telecom corridor"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Helsinki–Tallinn telecom corridor",
+        "type": "cable",
+        "distance_km": 9.7
+      }
+    },
+    {
+      "mmsi": "230987940",
+      "imo": "0",
+      "name": "JOANNA SATURNA",
+      "callsign": "OJ2044",
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 60.155558,
+      "lon": 24.889263,
+      "speed": 0.0,
+      "course": 145.9,
+      "heading": 86.0,
+      "timestamp": "2026-07-15T07:29:29.837000+00:00",
+      "source": "digitraffic",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "7.9 km from cable Helsinki–Tallinn telecom corridor"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Helsinki–Tallinn telecom corridor",
+        "type": "cable",
+        "distance_km": 7.9
+      }
+    },
+    {
+      "mmsi": "210641000",
+      "imo": "1095351",
+      "name": "BELTMAR",
+      "callsign": "5BWL6",
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 60.015547,
+      "lon": 23.927575,
+      "speed": 0.0,
+      "course": 52.5,
+      "heading": 137.0,
+      "timestamp": "2026-07-15T07:30:11.747000+00:00",
+      "source": "digitraffic",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "10.0 km from pipeline Balticconnector (Inkoo–Paldiski)"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Balticconnector (Inkoo–Paldiski)",
+        "type": "pipeline",
+        "distance_km": 10.0
+      }
+    },
+    {
+      "mmsi": "230031000",
+      "imo": "0",
+      "name": "FURUNOP",
+      "callsign": "OJGJ",
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 60.166143,
+      "lon": 24.705823,
+      "speed": 0.0,
+      "course": 302.7,
+      "heading": 511.0,
+      "timestamp": "2026-07-15T07:30:40.524000+00:00",
+      "source": "digitraffic",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "3.8 km from cable Helsinki–Tallinn telecom corridor"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Helsinki–Tallinn telecom corridor",
+        "type": "cable",
+        "distance_km": 3.8
+      }
+    },
+    {
+      "mmsi": "230099950",
+      "imo": "0",
+      "name": "PILOT L244",
+      "callsign": "OH6918",
+      "flag": null,
+      "ship_type": "service",
+      "lat": 60.013407,
+      "lon": 23.946227,
+      "speed": 0.0,
+      "course": 355.7,
+      "heading": 27.0,
+      "timestamp": "2026-07-15T07:30:46.326000+00:00",
+      "source": "digitraffic",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "9.0 km from pipeline Balticconnector (Inkoo–Paldiski)"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Balticconnector (Inkoo–Paldiski)",
+        "type": "pipeline",
+        "distance_km": 9.0
+      }
+    },
+    {
+      "mmsi": "314169000",
+      "imo": "9384904",
+      "name": "XING SHENG",
+      "callsign": "8PRD",
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 59.75585,
+      "lon": 24.694025,
+      "speed": 13.0,
+      "course": 75.5,
+      "heading": 75.0,
+      "timestamp": "2026-07-15T07:30:49.028000+00:00",
+      "source": "digitraffic",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "9.7 km from pipeline Balticconnector (Inkoo–Paldiski)"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Balticconnector (Inkoo–Paldiski)",
+        "type": "pipeline",
+        "distance_km": 9.7
+      }
+    },
+    {
+      "mmsi": "230942800",
+      "imo": "8668183",
+      "name": "TERRA 2",
+      "callsign": "OH3748",
+      "flag": null,
+      "ship_type": "service",
+      "lat": 60.146063,
+      "lon": 24.926893,
+      "speed": 0.0,
+      "course": 338.2,
+      "heading": 47.0,
+      "timestamp": "2026-07-15T07:30:44.929000+00:00",
+      "source": "digitraffic",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "9.8 km from cable Helsinki–Tallinn telecom corridor"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Helsinki–Tallinn telecom corridor",
+        "type": "cable",
+        "distance_km": 9.8
+      }
+    },
+    {
+      "mmsi": "230992650",
+      "imo": "0",
+      "name": "URSUS",
+      "callsign": "OIRM",
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 59.942062,
+      "lon": 24.031183,
+      "speed": 7.4,
+      "course": 34.5,
+      "heading": 34.0,
+      "timestamp": "2026-07-15T07:30:43.245000+00:00",
+      "source": "digitraffic",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "8.1 km from pipeline Balticconnector (Inkoo–Paldiski)"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Balticconnector (Inkoo–Paldiski)",
+        "type": "pipeline",
+        "distance_km": 8.1
+      }
+    },
+    {
+      "mmsi": "210547000",
+      "imo": "9194098",
+      "name": "SWE-FREIGHTER",
+      "callsign": "5BFU4",
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 59.69921,
+      "lon": 24.332558,
+      "speed": 11.8,
+      "course": 76.3,
+      "heading": 76.0,
+      "timestamp": "2026-07-15T07:30:41.342000+00:00",
+      "source": "digitraffic",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "9.0 km from pipeline Balticconnector (Inkoo–Paldiski)"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Balticconnector (Inkoo–Paldiski)",
+        "type": "pipeline",
+        "distance_km": 9.0
+      }
+    },
+    {
+      "mmsi": "244944000",
+      "imo": "9256432",
+      "name": "BIT POWER",
+      "callsign": "PDSV",
+      "flag": null,
+      "ship_type": "tanker",
+      "lat": 59.631042,
+      "lon": 24.533997,
+      "speed": 11.2,
+      "course": 94.4,
+      "heading": 94.0,
+      "timestamp": "2026-07-15T07:30:45.315000+00:00",
+      "source": "digitraffic",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "6.6 km from pipeline Balticconnector (Inkoo–Paldiski)"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Balticconnector (Inkoo–Paldiski)",
+        "type": "pipeline",
+        "distance_km": 6.6
+      }
+    },
+    {
+      "mmsi": "258503000",
+      "imo": null,
+      "name": "FRUHOLMEN",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "fishing",
+      "lat": 69.674668,
+      "lon": 18.75175,
+      "speed": 0.0,
+      "course": 356.7,
+      "heading": 0.0,
+      "timestamp": "2026-07-14T19:17:09+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "2.3 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 2.3
+      }
+    },
+    {
+      "mmsi": "258051000",
+      "imo": null,
+      "name": "ARCTIC OPILIO",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "fishing",
+      "lat": 69.647555,
+      "lon": 18.97983,
+      "speed": 0.0,
+      "course": 0.0,
+      "heading": 348.0,
+      "timestamp": "2026-07-15T07:30:46+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.2 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 1.2
+      }
+    },
+    {
+      "mmsi": "257221500",
+      "imo": null,
+      "name": "KURT ENDRE",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "fishing",
+      "lat": 69.776493,
+      "lon": 18.401737,
+      "speed": 0.0,
+      "course": 283.3,
+      "heading": 0.0,
+      "timestamp": "2026-07-14T17:29:32+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.2 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 1.2
+      }
+    },
+    {
+      "mmsi": "257073260",
+      "imo": null,
+      "name": "BARBATUS",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 78.227952,
+      "lon": 15.608667,
+      "speed": 0.0,
+      "course": 0.0,
+      "heading": 0.0,
+      "timestamp": "2026-07-14T22:32:29+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.3 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 1.3
+      }
+    },
+    {
+      "mmsi": "257526000",
+      "imo": null,
+      "name": "VIKING VELA",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 78.229073,
+      "lon": 15.604902,
+      "speed": 0.0,
+      "course": 339.3,
+      "heading": 129.0,
+      "timestamp": "2026-07-15T07:29:50+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.4 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 1.4
+      }
+    },
+    {
+      "mmsi": "258205000",
+      "imo": null,
+      "name": "ARCTIC PIONEER",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "fishing",
+      "lat": 69.646387,
+      "lon": 18.980362,
+      "speed": 0.0,
+      "course": 0.5,
+      "heading": 353.0,
+      "timestamp": "2026-07-15T07:30:41+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.2 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 1.2
+      }
+    },
+    {
+      "mmsi": "257980000",
+      "imo": null,
+      "name": "EAGLE BARENTS",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "tanker",
+      "lat": 69.969773,
+      "lon": 17.42583,
+      "speed": 8.9,
+      "course": 341.1,
+      "heading": 333.0,
+      "timestamp": "2026-07-15T07:30:48+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "6.3 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 6.3
+      }
+    },
+    {
+      "mmsi": "244327000",
+      "imo": null,
+      "name": "HONDIUS",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 78.243162,
+      "lon": 15.543058,
+      "speed": 0.0,
+      "course": 297.6,
+      "heading": 214.0,
+      "timestamp": "2026-07-15T07:30:42+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "3.5 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 3.5
+      }
+    },
+    {
+      "mmsi": "259036600",
+      "imo": null,
+      "name": "NORDVEST",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 78.22819,
+      "lon": 15.607042,
+      "speed": 0.2,
+      "course": 0.0,
+      "heading": 0.0,
+      "timestamp": "2026-07-14T11:51:30+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.3 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 1.3
+      }
+    },
+    {
+      "mmsi": "258962000",
+      "imo": null,
+      "name": "POLAR PIONEER",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "fishing",
+      "lat": 69.646705,
+      "lon": 18.979902,
+      "speed": 0.0,
+      "course": 6.5,
+      "heading": 351.0,
+      "timestamp": "2026-07-15T07:30:49+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.2 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 1.2
+      }
+    },
+    {
+      "mmsi": "257757000",
+      "imo": null,
+      "name": "PROWESS",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "fishing",
+      "lat": 69.671235,
+      "lon": 18.976678,
+      "speed": 0.0,
+      "course": 275.3,
+      "heading": 195.0,
+      "timestamp": "2026-07-15T07:29:38+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "2.5 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 2.5
+      }
+    },
+    {
+      "mmsi": "257005140",
+      "imo": null,
+      "name": "VOLLEROSA",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "fishing",
+      "lat": 69.67239,
+      "lon": 18.747115,
+      "speed": 0.0,
+      "course": 288.9,
+      "heading": 352.0,
+      "timestamp": "2026-07-15T07:30:41+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "2.6 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 2.6
+      }
+    },
+    {
+      "mmsi": "257080750",
+      "imo": null,
+      "name": "EIDSVAAG OPAL",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 69.72425,
+      "lon": 18.28664,
+      "speed": 11.1,
+      "course": 327.2,
+      "heading": 325.0,
+      "timestamp": "2026-07-15T07:30:43+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "8.6 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 8.6
+      }
+    },
+    {
+      "mmsi": "257005840",
+      "imo": null,
+      "name": "BJORNSTEIN",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "fishing",
+      "lat": 69.680475,
+      "lon": 18.99809,
+      "speed": 0.0,
+      "course": 167.0,
+      "heading": 312.0,
+      "timestamp": "2026-07-15T07:30:47+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "3.8 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 3.8
+      }
+    },
+    {
+      "mmsi": "576988000",
+      "imo": null,
+      "name": "REMBRANDT VAN RIJN",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 78.227773,
+      "lon": 15.61387,
+      "speed": 0.0,
+      "course": 3.6,
+      "heading": 107.0,
+      "timestamp": "2026-07-15T07:28:14+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.2 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 1.2
+      }
+    },
+    {
+      "mmsi": "257538500",
+      "imo": null,
+      "name": "MJOSUND",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 69.757222,
+      "lon": 18.616148,
+      "speed": 0.0,
+      "course": 327.7,
+      "heading": 255.0,
+      "timestamp": "2026-07-15T07:30:48+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.9 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 1.9
+      }
+    },
+    {
+      "mmsi": "257237420",
+      "imo": null,
+      "name": "TOROLV",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "fishing",
+      "lat": 69.757438,
+      "lon": 18.615703,
+      "speed": 0.0,
+      "course": 0.0,
+      "heading": 255.0,
+      "timestamp": "2026-07-15T07:30:42+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.9 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 1.9
+      }
+    },
+    {
+      "mmsi": "255806397",
+      "imo": null,
+      "name": "SEA SPIRIT",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 78.234607,
+      "lon": 15.597628,
+      "speed": 0.2,
+      "course": 164.8,
+      "heading": 243.0,
+      "timestamp": "2026-07-15T07:30:31+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "2.0 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 2.0
+      }
+    },
+    {
+      "mmsi": "259050320",
+      "imo": null,
+      "name": "SJOVAAG",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 69.821433,
+      "lon": 18.515637,
+      "speed": 0.0,
+      "course": 153.0,
+      "heading": 241.0,
+      "timestamp": "2026-07-15T07:30:47+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "5.4 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 5.4
+      }
+    },
+    {
+      "mmsi": "257090600",
+      "imo": null,
+      "name": "FUGLOY",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 69.711013,
+      "lon": 18.365312,
+      "speed": 0.0,
+      "course": 112.2,
+      "heading": 171.0,
+      "timestamp": "2026-07-15T07:30:40+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "7.9 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 7.9
+      }
+    },
+    {
+      "mmsi": "257318500",
+      "imo": null,
+      "name": "STRONSTAD",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 69.704717,
+      "lon": 19.021222,
+      "speed": 0.0,
+      "course": 172.5,
+      "heading": 254.0,
+      "timestamp": "2026-07-15T07:30:27+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "6.5 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 6.5
+      }
+    },
+    {
+      "mmsi": "257922000",
+      "imo": null,
+      "name": "SENJAFISK",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "fishing",
+      "lat": 69.657623,
+      "lon": 18.970067,
+      "speed": 0.0,
+      "course": 31.0,
+      "heading": 221.0,
+      "timestamp": "2026-07-15T07:30:46+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.1 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 1.1
+      }
+    },
+    {
+      "mmsi": "258375000",
+      "imo": null,
+      "name": "RO CHIEF",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 69.657103,
+      "lon": 18.96881,
+      "speed": 0.0,
+      "course": 294.6,
+      "heading": 221.0,
+      "timestamp": "2026-07-15T07:30:47+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.1 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 1.1
+      }
+    },
+    {
+      "mmsi": "259508000",
+      "imo": null,
+      "name": "NESHOLMEN",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "fishing",
+      "lat": 69.672247,
+      "lon": 18.747883,
+      "speed": 0.0,
+      "course": 217.8,
+      "heading": 90.0,
+      "timestamp": "2026-07-15T07:30:41+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "2.6 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 2.6
+      }
+    },
+    {
+      "mmsi": "258001360",
+      "imo": null,
+      "name": "TALARIA",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 69.672382,
+      "lon": 18.977192,
+      "speed": 0.0,
+      "course": 0.0,
+      "heading": 0.0,
+      "timestamp": "2026-07-14T11:50:07+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "2.6 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 2.6
+      }
+    },
+    {
+      "mmsi": "247366500",
+      "imo": null,
+      "name": "NRV ALLIANCE",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 69.679143,
+      "lon": 18.993547,
+      "speed": 0.0,
+      "course": 82.2,
+      "heading": 48.0,
+      "timestamp": "2026-07-15T07:30:43+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "3.6 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 3.6
+      }
+    },
+    {
+      "mmsi": "257097340",
+      "imo": null,
+      "name": "TROMVIK",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 69.876428,
+      "lon": 18.244758,
+      "speed": 0.0,
+      "course": 208.1,
+      "heading": 139.0,
+      "timestamp": "2026-07-15T07:13:11+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "4.1 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 4.1
+      }
+    },
+    {
+      "mmsi": "257927500",
+      "imo": null,
+      "name": "STORMFUGLEN",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "fishing",
+      "lat": 69.680673,
+      "lon": 18.998173,
+      "speed": 0.0,
+      "course": 280.8,
+      "heading": 0.0,
+      "timestamp": "2026-07-15T07:28:10+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "3.8 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 3.8
+      }
+    },
+    {
+      "mmsi": "258984000",
+      "imo": null,
+      "name": "REMOY",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "fishing",
+      "lat": 69.626845,
+      "lon": 18.94496,
+      "speed": 0.0,
+      "course": 212.0,
+      "heading": 32.0,
+      "timestamp": "2026-07-15T07:30:47+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "2.6 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 2.6
+      }
+    },
+    {
+      "mmsi": "257098420",
+      "imo": null,
+      "name": "HERMES II",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 69.624492,
+      "lon": 18.928675,
+      "speed": 0.7,
+      "course": 56.8,
+      "heading": 167.0,
+      "timestamp": "2026-07-15T07:30:48+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "3.0 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 3.0
+      }
+    },
+    {
+      "mmsi": "258084000",
+      "imo": null,
+      "name": "HARMONI",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "fishing",
+      "lat": 69.670538,
+      "lon": 18.975787,
+      "speed": 0.0,
+      "course": 195.8,
+      "heading": 133.0,
+      "timestamp": "2026-07-15T07:30:45+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "2.4 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 2.4
+      }
+    },
+    {
+      "mmsi": "257183000",
+      "imo": null,
+      "name": "ULLA RINMAN",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 78.22738,
+      "lon": 15.61962,
+      "speed": 0.0,
+      "course": 33.0,
+      "heading": 288.0,
+      "timestamp": "2026-07-15T07:28:51+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.1 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 1.1
+      }
+    },
+    {
+      "mmsi": "231160000",
+      "imo": null,
+      "name": "FRAM",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "fishing",
+      "lat": 69.671233,
+      "lon": 18.9765,
+      "speed": 0.0,
+      "course": 315.0,
+      "heading": 182.0,
+      "timestamp": "2026-07-15T07:30:42+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "2.5 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 2.5
+      }
+    },
+    {
+      "mmsi": "258470000",
+      "imo": null,
+      "name": "SEGLA",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "fishing",
+      "lat": 69.658672,
+      "lon": 18.973015,
+      "speed": 0.0,
+      "course": 325.6,
+      "heading": 135.0,
+      "timestamp": "2026-07-15T07:30:43+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.3 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 1.3
+      }
+    },
+    {
+      "mmsi": "259602000",
+      "imo": null,
+      "name": "GRIMSHOLM",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "fishing",
+      "lat": 69.673058,
+      "lon": 18.980355,
+      "speed": 0.0,
+      "course": 338.6,
+      "heading": 293.0,
+      "timestamp": "2026-07-15T07:30:47+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "2.8 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 2.8
+      }
+    },
+    {
+      "mmsi": "257416120",
+      "imo": null,
+      "name": "KARLO",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 69.755535,
+      "lon": 18.619198,
+      "speed": 0.0,
+      "course": 132.9,
+      "heading": 0.0,
+      "timestamp": "2026-07-15T07:30:47+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.9 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 1.9
+      }
+    },
+    {
+      "mmsi": "273332880",
+      "imo": null,
+      "name": "TAURUS",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "fishing",
+      "lat": 76.945635,
+      "lon": 13.256362,
+      "speed": 3.9,
+      "course": 198.3,
+      "heading": 214.0,
+      "timestamp": "2026-07-15T07:30:22.729758+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "2.1 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 2.1
+      }
+    },
+    {
+      "mmsi": "259681000",
+      "imo": null,
+      "name": "FYKAN",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 69.672,
+      "lon": 18.7493,
+      "speed": 0.0,
+      "course": 328.0,
+      "heading": 92.0,
+      "timestamp": "2026-07-15T07:28:09+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "2.6 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 2.6
+      }
+    },
+    {
+      "mmsi": "259004930",
+      "imo": null,
+      "name": "FROYDIS",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 69.705345,
+      "lon": 19.025507,
+      "speed": 0.0,
+      "course": 116.8,
+      "heading": 71.0,
+      "timestamp": "2026-07-15T07:30:46+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "6.7 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 6.7
+      }
+    },
+    {
+      "mmsi": "258553000",
+      "imo": null,
+      "name": "SKAGOYSUND",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "fishing",
+      "lat": 69.673847,
+      "lon": 18.98021,
+      "speed": 0.0,
+      "course": 127.2,
+      "heading": 206.0,
+      "timestamp": "2026-07-15T07:30:45+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "2.8 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 2.8
+      }
+    },
+    {
+      "mmsi": "257798800",
+      "imo": null,
+      "name": "RIGNATOR",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 69.693387,
+      "lon": 19.019307,
+      "speed": 0.0,
+      "course": 288.5,
+      "heading": 255.0,
+      "timestamp": "2026-07-15T07:30:04+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "5.5 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 5.5
+      }
+    },
+    {
+      "mmsi": "259610000",
+      "imo": null,
+      "name": "HORDAFOR II",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 69.747937,
+      "lon": 18.24394,
+      "speed": 0.0,
+      "course": 5.1,
+      "heading": 352.0,
+      "timestamp": "2026-07-15T07:30:47+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "7.4 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 7.4
+      }
+    },
+    {
+      "mmsi": "257124460",
+      "imo": null,
+      "name": "SESSOYFJORD",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 69.733825,
+      "lon": 18.250862,
+      "speed": 0.7,
+      "course": 244.4,
+      "heading": 158.0,
+      "timestamp": "2026-07-15T07:30:15+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "8.5 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 8.5
+      }
+    },
+    {
+      "mmsi": "259691000",
+      "imo": null,
+      "name": "J BERGVOLL",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "fishing",
+      "lat": 69.675207,
+      "lon": 18.981933,
+      "speed": 0.0,
+      "course": 160.1,
+      "heading": 207.0,
+      "timestamp": "2026-07-15T07:30:39+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "3.0 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 3.0
+      }
+    },
+    {
+      "mmsi": "257729800",
+      "imo": null,
+      "name": "FREDHEIM",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 78.227865,
+      "lon": 15.608963,
+      "speed": 0.0,
+      "course": 321.7,
+      "heading": 0.0,
+      "timestamp": "2026-07-14T14:40:02+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.3 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 1.3
+      }
+    },
+    {
+      "mmsi": "258107500",
+      "imo": null,
+      "name": "HELFRID",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 78.22782,
+      "lon": 15.609282,
+      "speed": 0.0,
+      "course": 50.4,
+      "heading": 0.0,
+      "timestamp": "2026-07-15T06:35:51+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.3 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 1.3
+      }
+    },
+    {
+      "mmsi": "257127090",
+      "imo": null,
+      "name": "HAVORNA",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 69.747775,
+      "lon": 18.244383,
+      "speed": 0.0,
+      "course": 0.0,
+      "heading": 0.0,
+      "timestamp": "2026-07-15T06:46:03+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "7.4 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 7.4
+      }
+    },
+    {
+      "mmsi": "257656000",
+      "imo": null,
+      "name": "GADUS NJORD",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "fishing",
+      "lat": 69.688553,
+      "lon": 19.014435,
+      "speed": 0.0,
+      "course": 21.4,
+      "heading": 195.0,
+      "timestamp": "2026-07-15T07:30:42+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "4.9 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 4.9
+      }
+    },
+    {
+      "mmsi": "257129340",
+      "imo": null,
+      "name": "NORD-FUGLOEY",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "fishing",
+      "lat": 69.672247,
+      "lon": 18.749253,
+      "speed": 0.0,
+      "course": 216.3,
+      "heading": 269.0,
+      "timestamp": "2026-07-15T07:30:48+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "2.6 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 2.6
+      }
+    },
+    {
+      "mmsi": "259016340",
+      "imo": null,
+      "name": "BERET PAULSDATTER",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 69.657803,
+      "lon": 18.970575,
+      "speed": 0.0,
+      "course": 282.1,
+      "heading": 221.0,
+      "timestamp": "2026-07-15T07:28:07+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.2 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 1.2
+      }
+    },
+    {
+      "mmsi": "257209000",
+      "imo": null,
+      "name": "KAGTIND II",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "fishing",
+      "lat": 69.67329,
+      "lon": 18.980435,
+      "speed": 0.0,
+      "course": 34.6,
+      "heading": 292.0,
+      "timestamp": "2026-07-15T07:28:00+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "2.8 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 2.8
+      }
+    },
+    {
+      "mmsi": "257060500",
+      "imo": null,
+      "name": "SVENOR",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "fishing",
+      "lat": 69.67474,
+      "lon": 18.751623,
+      "speed": 0.0,
+      "course": 108.0,
+      "heading": 303.0,
+      "timestamp": "2026-07-15T07:30:48+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "2.3 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 2.3
+      }
+    },
+    {
+      "mmsi": "257289720",
+      "imo": null,
+      "name": "VENGSOEYVAERING",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "fishing",
+      "lat": 69.755527,
+      "lon": 18.618993,
+      "speed": 0.0,
+      "course": 309.8,
+      "heading": 0.0,
+      "timestamp": "2026-07-15T07:29:06+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.9 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 1.9
+      }
+    },
+    {
+      "mmsi": "111257511",
+      "imo": null,
+      "name": "SAR AC  RESCUE 7",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 69.683533,
+      "lon": 18.910533,
+      "speed": 0.0,
+      "course": 0.0,
+      "heading": 0.0,
+      "timestamp": "2026-07-15T06:16:29+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "2.1 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 2.1
+      }
+    },
+    {
+      "mmsi": "257744800",
+      "imo": null,
+      "name": "KAPS",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 78.227913,
+      "lon": 15.60853,
+      "speed": 0.2,
+      "course": 351.0,
+      "heading": 0.0,
+      "timestamp": "2026-07-14T09:33:39+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.3 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 1.3
+      }
+    },
+    {
+      "mmsi": "257292400",
+      "imo": null,
+      "name": "KARLSOY",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 69.79082,
+      "lon": 18.75402,
+      "speed": 9.8,
+      "course": 121.4,
+      "heading": 120.0,
+      "timestamp": "2026-07-15T07:30:40+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "8.1 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 8.1
+      }
+    },
+    {
+      "mmsi": "259707000",
+      "imo": null,
+      "name": "HAVTIND",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "fishing",
+      "lat": 69.657942,
+      "lon": 18.971827,
+      "speed": 0.0,
+      "course": 336.3,
+      "heading": 321.0,
+      "timestamp": "2026-07-15T07:29:50+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.2 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 1.2
+      }
+    },
+    {
+      "mmsi": "257067000",
+      "imo": null,
+      "name": "VENGSOY",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 69.672155,
+      "lon": 18.748048,
+      "speed": 0.0,
+      "course": 271.7,
+      "heading": 91.0,
+      "timestamp": "2026-07-15T07:28:58+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "2.6 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 2.6
+      }
+    },
+    {
+      "mmsi": "311000608",
+      "imo": null,
+      "name": "ARTANIA",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 69.676597,
+      "lon": 18.98495,
+      "speed": 0.0,
+      "course": 305.8,
+      "heading": 228.0,
+      "timestamp": "2026-07-15T07:30:02+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "3.2 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 3.2
+      }
+    },
+    {
+      "mmsi": "257747150",
+      "imo": null,
+      "name": "NORDAUST",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 78.228098,
+      "lon": 15.607158,
+      "speed": 0.1,
+      "course": 0.0,
+      "heading": 0.0,
+      "timestamp": "2026-07-14T18:15:39+00:00",
+      "source": "barentswatch",
+      "risk_score": 1,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.3 km from cable Norway–Svalbard link"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 1.3
+      }
     },
     {
       "mmsi": "255100002",
@@ -648,19 +3701,13 @@
       "course": 82,
       "heading": 84,
       "timestamp": "2026-07-11T01:15:00+00:00",
-      "risk_score": 63,
-      "risk_level": "High Review Priority",
-      "triggered_rules": [
-        {
-          "rule_id": "ais_gap",
-          "points": 35,
-          "evidence": "Mock AIS reporting gap of 6 hours"
-        }
-      ],
+      "risk_score": 0,
+      "risk_level": "Normal",
+      "triggered_rules": [],
       "nearest_infrastructure": {
-        "name": "Balticconnector Area",
-        "type": "pipeline",
-        "distance_km": 8.2
+        "name": "Helsinki–Tallinn telecom corridor",
+        "type": "cable",
+        "distance_km": 54.7
       },
       "source": "mock"
     },
@@ -677,77 +3724,13 @@
       "course": 82,
       "heading": 84,
       "timestamp": "2026-07-11T01:15:00+00:00",
-      "risk_score": 58,
-      "risk_level": "High Review Priority",
-      "triggered_rules": [
-        {
-          "rule_id": "identity_change",
-          "points": 32,
-          "evidence": "Mock name and callsign change in recent track"
-        }
-      ],
+      "risk_score": 0,
+      "risk_level": "Normal",
+      "triggered_rules": [],
       "nearest_infrastructure": {
-        "name": "Gotland Array",
-        "type": "wind farm",
-        "distance_km": 5.4
-      },
-      "source": "mock"
-    },
-    {
-      "mmsi": "255100004",
-      "imo": "IMO5510004",
-      "name": "GOTLAND TRADER",
-      "callsign": "OX0004",
-      "flag": "Example Registry",
-      "ship_type": "cargo",
-      "lat": 57.72,
-      "lon": 18.01,
-      "speed": 9.4,
-      "course": 82,
-      "heading": 84,
-      "timestamp": "2026-07-11T01:15:00+00:00",
-      "risk_score": 28,
-      "risk_level": "Watch",
-      "triggered_rules": [
-        {
-          "rule_id": "route_deviation",
-          "points": 12,
-          "evidence": "Mock route differs from recent pattern"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "Visby Port",
-        "type": "port",
-        "distance_km": 18.4
-      },
-      "source": "mock"
-    },
-    {
-      "mmsi": "255100005",
-      "imo": "IMO5510005",
-      "name": "SKANE STAR",
-      "callsign": "OX0005",
-      "flag": "Example Registry",
-      "ship_type": "tanker",
-      "lat": 55.42,
-      "lon": 14.78,
-      "speed": 3.1,
-      "course": 82,
-      "heading": 84,
-      "timestamp": "2026-07-11T01:15:00+00:00",
-      "risk_score": 41,
-      "risk_level": "Watch",
-      "triggered_rules": [
-        {
-          "rule_id": "slow_transit",
-          "points": 15,
-          "evidence": "Low-speed passage in mock sensitive area"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "Bornholm Cable",
-        "type": "submarine cable",
-        "distance_km": 7.1
+        "name": "Gotland–mainland Sweden link",
+        "type": "cable",
+        "distance_km": 19.1
       },
       "source": "mock"
     },
@@ -764,13 +3747,13 @@
       "course": 82,
       "heading": 84,
       "timestamp": "2026-07-11T01:15:00+00:00",
-      "risk_score": 18,
-      "risk_level": "Low",
+      "risk_score": 0,
+      "risk_level": "Normal",
       "triggered_rules": [],
       "nearest_infrastructure": {
-        "name": "Danish Straits",
-        "type": "chokepoint",
-        "distance_km": 14
+        "name": "Nord Stream corridor near Bornholm",
+        "type": "pipeline",
+        "distance_km": 62.4
       },
       "source": "mock"
     },
@@ -787,19 +3770,13 @@
       "course": 82,
       "heading": 84,
       "timestamp": "2026-07-11T01:15:00+00:00",
-      "risk_score": 46,
-      "risk_level": "Watch",
-      "triggered_rules": [
-        {
-          "rule_id": "unusual_dwell",
-          "points": 18,
-          "evidence": "Mock prolonged dwell outside usual survey zone"
-        }
-      ],
+      "risk_score": 0,
+      "risk_level": "Normal",
+      "triggered_rules": [],
       "nearest_infrastructure": {
-        "name": "Barents Link",
-        "type": "submarine cable",
-        "distance_km": 11.6
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 498.5
       },
       "source": "mock"
     },
@@ -816,13 +3793,13 @@
       "course": 82,
       "heading": 84,
       "timestamp": "2026-07-11T01:15:00+00:00",
-      "risk_score": 14,
-      "risk_level": "Low",
+      "risk_score": 0,
+      "risk_level": "Normal",
       "triggered_rules": [],
       "nearest_infrastructure": {
-        "name": "Barents Sea North",
-        "type": "sensitive area",
-        "distance_km": 25.7
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 420.6
       },
       "source": "mock"
     },
@@ -839,13 +3816,13 @@
       "course": 82,
       "heading": 84,
       "timestamp": "2026-07-11T01:15:00+00:00",
-      "risk_score": 22,
-      "risk_level": "Low",
+      "risk_score": 0,
+      "risk_level": "Normal",
       "triggered_rules": [],
       "nearest_infrastructure": {
-        "name": "Norwegian Sea Platform",
-        "type": "pipeline",
-        "distance_km": 19.2
+        "name": "Gotland–mainland Sweden link",
+        "type": "cable",
+        "distance_km": 785.6
       },
       "source": "mock"
     },
@@ -862,19 +3839,13 @@
       "course": 82,
       "heading": 84,
       "timestamp": "2026-07-11T01:15:00+00:00",
-      "risk_score": 33,
-      "risk_level": "Watch",
-      "triggered_rules": [
-        {
-          "rule_id": "night_speed_change",
-          "points": 10,
-          "evidence": "Mock speed pattern change"
-        }
-      ],
+      "risk_score": 0,
+      "risk_level": "Normal",
+      "triggered_rules": [],
       "nearest_infrastructure": {
-        "name": "Tromso Port",
-        "type": "port",
-        "distance_km": 12.5
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 14.9
       },
       "source": "mock"
     },
@@ -891,19 +3862,13 @@
       "course": 82,
       "heading": 84,
       "timestamp": "2026-07-11T01:15:00+00:00",
-      "risk_score": 52,
-      "risk_level": "High Review Priority",
-      "triggered_rules": [
-        {
-          "rule_id": "incomplete_identity",
-          "points": 24,
-          "evidence": "Mock incomplete identity fields"
-        }
-      ],
+      "risk_score": 0,
+      "risk_level": "Normal",
+      "triggered_rules": [],
       "nearest_infrastructure": {
-        "name": "Bornholm Area",
-        "type": "sensitive area",
-        "distance_km": 3.6
+        "name": "Bornholm-area cable corridor",
+        "type": "cable",
+        "distance_km": 28.4
       },
       "source": "mock"
     },
@@ -920,15 +3885,360 @@
       "course": 82,
       "heading": 84,
       "timestamp": "2026-07-11T01:15:00+00:00",
-      "risk_score": 9,
-      "risk_level": "Low",
+      "risk_score": 0,
+      "risk_level": "Normal",
       "triggered_rules": [],
       "nearest_infrastructure": {
-        "name": "Helsinki Port",
-        "type": "port",
-        "distance_km": 7.8
+        "name": "Helsinki–Tallinn telecom corridor",
+        "type": "cable",
+        "distance_km": 12.9
       },
       "source": "mock"
+    },
+    {
+      "mmsi": "314001155",
+      "imo": "9470131",
+      "name": "TORVIAN",
+      "callsign": "8PPK",
+      "flag": null,
+      "ship_type": "tanker",
+      "lat": 60.035222,
+      "lon": 28.533193,
+      "speed": 6.1,
+      "course": 103.4,
+      "heading": 104.0,
+      "timestamp": "2026-07-15T07:30:48.501000+00:00",
+      "source": "digitraffic",
+      "risk_score": 0,
+      "risk_level": "Normal",
+      "triggered_rules": [],
+      "nearest_infrastructure": {
+        "name": "Helsinki–Tallinn telecom corridor",
+        "type": "cable",
+        "distance_km": 210.1
+      }
+    },
+    {
+      "mmsi": "304364000",
+      "imo": "9454814",
+      "name": "KENDRA",
+      "callsign": "V2RJ4",
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 59.881033,
+      "lon": 25.394125,
+      "speed": 10.4,
+      "course": 261.9,
+      "heading": 264.0,
+      "timestamp": "2026-07-15T07:30:45.315000+00:00",
+      "source": "digitraffic",
+      "risk_score": 0,
+      "risk_level": "Normal",
+      "triggered_rules": [],
+      "nearest_infrastructure": {
+        "name": "Helsinki–Tallinn telecom corridor",
+        "type": "cable",
+        "distance_km": 45.9
+      }
+    },
+    {
+      "mmsi": "276342000",
+      "imo": "8228244",
+      "name": "VIIKING",
+      "callsign": "ES2412",
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 59.38763,
+      "lon": 24.073788,
+      "speed": 0.0,
+      "course": 44.9,
+      "heading": 511.0,
+      "timestamp": "2026-07-15T07:29:38.952000+00:00",
+      "source": "digitraffic",
+      "risk_score": 0,
+      "risk_level": "Normal",
+      "triggered_rules": [],
+      "nearest_infrastructure": {
+        "name": "Helsinki–Tallinn telecom corridor",
+        "type": "cable",
+        "distance_km": 40.3
+      }
+    },
+    {
+      "mmsi": "230174460",
+      "imo": "0",
+      "name": "L-317",
+      "callsign": "OHA4058",
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 60.541125,
+      "lon": 21.320788,
+      "speed": 2.2,
+      "course": 75.7,
+      "heading": 75.0,
+      "timestamp": "2026-07-15T07:30:42.182000+00:00",
+      "source": "digitraffic",
+      "risk_score": 0,
+      "risk_level": "Normal",
+      "triggered_rules": [],
+      "nearest_infrastructure": {
+        "name": "Balticconnector (Inkoo–Paldiski)",
+        "type": "pipeline",
+        "distance_km": 163.0
+      }
+    },
+    {
+      "mmsi": "230149160",
+      "imo": "0",
+      "name": "PILOT L245",
+      "callsign": "OH8756",
+      "flag": null,
+      "ship_type": "service",
+      "lat": 59.808855,
+      "lon": 22.910838,
+      "speed": 0.0,
+      "course": 261.7,
+      "heading": 160.0,
+      "timestamp": "2026-07-15T07:30:42.086000+00:00",
+      "source": "digitraffic",
+      "risk_score": 0,
+      "risk_level": "Normal",
+      "triggered_rules": [],
+      "nearest_infrastructure": {
+        "name": "Helsinki–Tallinn telecom corridor",
+        "type": "cable",
+        "distance_km": 66.9
+      }
+    },
+    {
+      "mmsi": "219015298",
+      "imo": "9372652",
+      "name": "TARNBRIS",
+      "callsign": "OZDU2",
+      "flag": null,
+      "ship_type": "tanker",
+      "lat": 59.875057,
+      "lon": 25.27314,
+      "speed": 14.2,
+      "course": 39.3,
+      "heading": 39.0,
+      "timestamp": "2026-07-15T07:30:45.652000+00:00",
+      "source": "digitraffic",
+      "risk_score": 0,
+      "risk_level": "Normal",
+      "triggered_rules": [],
+      "nearest_infrastructure": {
+        "name": "Helsinki–Tallinn telecom corridor",
+        "type": "cable",
+        "distance_km": 40.8
+      }
+    },
+    {
+      "mmsi": "304050000",
+      "imo": "9116008",
+      "name": "GRIFTBOR",
+      "callsign": "V2QP9",
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 61.131533,
+      "lon": 21.431575,
+      "speed": 0.0,
+      "course": 331.2,
+      "heading": 266.0,
+      "timestamp": "2026-07-15T07:29:11.241000+00:00",
+      "source": "digitraffic",
+      "risk_score": 0,
+      "risk_level": "Normal",
+      "triggered_rules": [],
+      "nearest_infrastructure": {
+        "name": "Balticconnector (Inkoo–Paldiski)",
+        "type": "pipeline",
+        "distance_km": 189.6
+      }
+    },
+    {
+      "mmsi": "636021090",
+      "imo": "9935143",
+      "name": "ARACHTHOS I",
+      "callsign": "5LCF6",
+      "flag": null,
+      "ship_type": "tanker",
+      "lat": 59.99508,
+      "lon": 26.346172,
+      "speed": 11.4,
+      "course": 254.9,
+      "heading": 254.0,
+      "timestamp": "2026-07-15T07:30:41.798000+00:00",
+      "source": "digitraffic",
+      "risk_score": 0,
+      "risk_level": "Normal",
+      "triggered_rules": [],
+      "nearest_infrastructure": {
+        "name": "Helsinki–Tallinn telecom corridor",
+        "type": "cable",
+        "distance_km": 90.0
+      }
+    },
+    {
+      "mmsi": "273133800",
+      "imo": "8501701",
+      "name": "MIR",
+      "callsign": "UFPV",
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 58.622577,
+      "lon": 21.140887,
+      "speed": 7.5,
+      "course": 33.5,
+      "heading": 34.0,
+      "timestamp": "2026-07-15T07:30:40.909000+00:00",
+      "source": "digitraffic",
+      "risk_score": 0,
+      "risk_level": "Normal",
+      "triggered_rules": [],
+      "nearest_infrastructure": {
+        "name": "Helsinki–Tallinn telecom corridor",
+        "type": "cable",
+        "distance_km": 210.0
+      }
+    },
+    {
+      "mmsi": "230685000",
+      "imo": "9181106",
+      "name": "FINBO CARGO",
+      "callsign": "OJST",
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 59.802898,
+      "lon": 25.065588,
+      "speed": 19.1,
+      "course": 4.8,
+      "heading": 4.0,
+      "timestamp": "2026-07-15T07:30:49.173000+00:00",
+      "source": "digitraffic",
+      "risk_score": 0,
+      "risk_level": "Normal",
+      "triggered_rules": [],
+      "nearest_infrastructure": {
+        "name": "Balticconnector (Inkoo–Paldiski)",
+        "type": "pipeline",
+        "distance_km": 29.5
+      }
+    },
+    {
+      "mmsi": "230024660",
+      "imo": "536491800",
+      "name": "TOR",
+      "callsign": "OIJT",
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 60.16542,
+      "lon": 24.958288,
+      "speed": 6.7,
+      "course": 305.0,
+      "heading": 307.0,
+      "timestamp": "2026-07-15T07:30:43.834000+00:00",
+      "source": "digitraffic",
+      "risk_score": 0,
+      "risk_level": "Normal",
+      "triggered_rules": [],
+      "nearest_infrastructure": {
+        "name": "Helsinki–Tallinn telecom corridor",
+        "type": "cable",
+        "distance_km": 11.9
+      }
+    },
+    {
+      "mmsi": "265732720",
+      "imo": "0",
+      "name": "PILOT 217 SE",
+      "callsign": "SIAP",
+      "flag": null,
+      "ship_type": "service",
+      "lat": 60.173113,
+      "lon": 18.806902,
+      "speed": 0.0,
+      "course": 170.5,
+      "heading": 163.0,
+      "timestamp": "2026-07-15T07:30:41.990000+00:00",
+      "source": "digitraffic",
+      "risk_score": 0,
+      "risk_level": "Normal",
+      "triggered_rules": [],
+      "nearest_infrastructure": {
+        "name": "Gotland–mainland Sweden link",
+        "type": "cable",
+        "distance_km": 255.5
+      }
+    },
+    {
+      "mmsi": "265698710",
+      "imo": "0",
+      "name": "ELINOR",
+      "callsign": "8SY5773",
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 59.4835,
+      "lon": 19.045103,
+      "speed": 5.7,
+      "course": 222.7,
+      "heading": 511.0,
+      "timestamp": "2026-07-15T07:30:43.148000+00:00",
+      "source": "digitraffic",
+      "risk_score": 0,
+      "risk_level": "Normal",
+      "triggered_rules": [],
+      "nearest_infrastructure": {
+        "name": "Gotland–mainland Sweden link",
+        "type": "cable",
+        "distance_km": 201.5
+      }
+    },
+    {
+      "mmsi": "230109470",
+      "imo": "0",
+      "name": "PILOT L129",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "service",
+      "lat": 59.808832,
+      "lon": 22.910573,
+      "speed": 0.0,
+      "course": 54.6,
+      "heading": 153.0,
+      "timestamp": "2026-07-15T07:30:43.341000+00:00",
+      "source": "digitraffic",
+      "risk_score": 0,
+      "risk_level": "Normal",
+      "triggered_rules": [],
+      "nearest_infrastructure": {
+        "name": "Helsinki–Tallinn telecom corridor",
+        "type": "cable",
+        "distance_km": 66.9
+      }
+    },
+    {
+      "mmsi": "230991670",
+      "imo": "0",
+      "name": "AJO",
+      "callsign": "OG2940",
+      "flag": null,
+      "ship_type": "tug",
+      "lat": 60.461962,
+      "lon": 26.962357,
+      "speed": 0.0,
+      "course": 97.0,
+      "heading": 305.0,
+      "timestamp": "2026-07-15T07:30:40.861000+00:00",
+      "source": "digitraffic",
+      "risk_score": 0,
+      "risk_level": "Normal",
+      "triggered_rules": [],
+      "nearest_infrastructure": {
+        "name": "Helsinki–Tallinn telecom corridor",
+        "type": "cable",
+        "distance_km": 127.0
+      }
     }
   ],
   "sar_detections": [

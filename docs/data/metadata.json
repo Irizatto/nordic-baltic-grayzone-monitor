@@ -1,36 +1,34 @@
 {
-  "generated_at": "2026-07-10T18:01:04.712Z",
+  "generated_at": "2026-07-15T07:30:52.543445+00:00",
   "mode": "mixed",
   "sources": [
+    "barentswatch",
     "digitraffic",
     "mock"
   ],
   "source_status": {
     "digitraffic": {
       "status": "ok",
-      "timestamp": "2026-07-10T17:54:10.285431+00:00",
-      "records": 808,
-      "published_records": 25
+      "timestamp": "2026-07-15T07:30:50.434152+00:00",
+      "records_fetched": 910,
+      "records_published": 39
     },
     "barentswatch": {
-      "status": "credentials_missing_fallback_mock",
-      "timestamp": "2026-07-10T17:54:10.285431+00:00",
-      "detail": "Credentials unavailable"
+      "status": "ok",
+      "timestamp": "2026-07-15T07:30:52.001205+00:00",
+      "records_fetched": 1812,
+      "records_published": 99
     },
     "gfw_sar": {
       "status": "credentials_missing_fallback_mock",
       "timestamp": "2026-07-10T18:01:04.712Z",
       "records": 3,
-      "detail": "GFW_API_TOKEN is unavailable; SAR dataset approval may still be pending."
-    },
-    "pipeline": {
-      "status": "error_kept_old_data",
-      "timestamp": "2026-07-14T21:33:11.448809+00:00",
-      "detail": "Automated pipeline failed; previous dashboard data was retained."
+      "detail": "GFW_API_TOKEN is unavailable; SAR dataset approval may still be pending.",
+      "records_fetched": 0,
+      "records_published": 3
     }
   },
   "fallbacks": [
-    "Mock vessels remain available when a live AIS source is missing, unavailable, or returns an error.",
-    "GFW SAR uses clearly labelled mock review leads while the API token or dataset approval is unavailable."
+    "Mock records remain clearly labelled when a live source or credential is unavailable."
   ]
 }
