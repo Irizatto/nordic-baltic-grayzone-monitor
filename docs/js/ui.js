@@ -2,7 +2,10 @@ window.escapeHtml=function(value){
   return String(value??'').replace(/[&<>'"]/g,character=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[character]));
 };
 
-document.querySelectorAll('.panel-toggle').forEach(button=>button.addEventListener('click',()=>button.parentElement.classList.toggle('open')));
+document.querySelectorAll('.panel-toggle').forEach(button=>button.addEventListener('click',()=>{
+  const open=button.parentElement.classList.toggle('open');
+  button.setAttribute('aria-expanded',String(open));
+}));
 document.querySelectorAll('[data-layer]').forEach(input=>input.addEventListener('change',()=>input.checked?groups[input.dataset.layer].addTo(map):map.removeLayer(groups[input.dataset.layer])));
 
 window.showFeature=function(properties={}){
@@ -36,3 +39,4 @@ window.showVessel=function(vessel={}){
     '<div class="detail-row"><b>Risk signals / 风险信号</b>'+rules+'</div>';
   document.getElementById('detailPanel').classList.add('open');
 };
+
