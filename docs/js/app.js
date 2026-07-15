@@ -34,25 +34,31 @@ fetchJson('data/data.json').then(data=>
   document.getElementById('dataSourceStatus').textContent='Data source / last updated: '+(sourceNames.join(', ')||'not supplied')+' / '+(metadata.generated_at||'not supplied')+' / 数据来源与更新时间';
 
   const counts={normal:0,watch:0,high:0,critical:0};
+  let officialCount=0;
   vessels.forEach(vessel=>{
     const lat=Number(vessel.lat), lon=Number(vessel.lon);
+    const shipType=String(vessel.ship_type||'unknown').trim().toLowerCase();
+    const unscored=shipType==='naval'||shipType==='law_enforcement';
     const level=String(vessel.risk_level||'Normal');
     const key=level.includes('Critical')?'critical':level.includes('High')?'high':level==='Watch'?'watch':'normal';
-    counts[key]++;
+    if(unscored)officialCount++;else counts[key]++;
     if(!Number.isFinite(lat)||!Number.isFinite(lon))return;
-    const color=colors[level]||colors.Normal;
-    const icon=L.divIcon({className:'vessel-icon',html:'<div class="vessel-dot" style="color:'+color+';background:'+color+'"></div>',iconSize:[14,14]});
-    L.marker([lat,lon],{icon}).on('click',()=>showVessel(vessel)).addTo(groups.vessels);
+    const color=unscored?'#94a3b8':(colors[level]||colors.Normal);
+    const markerClass=unscored?'vessel-dot unscored-dot':'vessel-dot';
+    const icon=L.divIcon({className:'vessel-icon',html:'<div class="'+markerClass+'" style="color:'+color+';background:'+color+'"></div>',iconSize:[14,14]});
+    L.marker([lat,lon],{icon}).on('click',()=>showVessel(vessel)).addTo(unscored?groups.official:groups.vessels);
   });
   sarDetections.forEach(detection=>{
     const lat=Number(detection.lat), lon=Number(detection.lon);
     if(!Number.isFinite(lat)||!Number.isFinite(lon))return;
     const matched=Boolean(detection.matched);
     const marker=L.circleMarker([lat,lon],{radius:matched?5:7,color:matched?'#7893a8':'#d7e4e9',weight:matched?1:2,fillColor:matched?'#526f86':'#b9d4dc',fillOpacity:matched?.75:.15,dashArray:matched?null:'3 3',className:matched?'sar-matched':'sar-ghost'});
-    marker.bindTooltip('SAR detection; a lead for review, not confirmation of illicit activity. / SAR 探测：供人工审查的线索，并非非法活动确认。').addTo(groups.sar);
+    const gridNote=detection.source==='gfw_sar'?' GFW report coordinates are grid-cell centres, not precise individual positions. / GFW 报告坐标为网格中心，并非单个目标的精确位置。':'';
+    marker.bindTooltip('SAR detection; a lead for review, not confirmation of illicit activity. / SAR 探测：供人工审查的线索，并非非法活动确认。'+gridNote).addTo(groups.sar);
   });
   document.getElementById('total').textContent=vessels.length;
   document.getElementById('sarTotal').textContent=sarDetections.length;
+  document.getElementById('official').textContent=officialCount;
   Object.keys(counts).forEach(key=>document.getElementById(key).textContent=counts[key]);
   document.getElementById('unmatched').textContent=sarDetections.filter(detection=>!detection.matched).length;
   try{if(typeof window.drawChart==='function')window.drawChart(counts);}catch(error){console.warn('Risk chart unavailable; map data remains visible.',error);}

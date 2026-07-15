@@ -1,7 +1,7 @@
 window.map=L.map('map',{zoomControl:false}).setView([59.5,21],5);
 L.control.zoom({position:'bottomright'}).addTo(map);
 L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{attribution:'© OpenStreetMap © CARTO',subdomains:'abcd',maxZoom:19}).addTo(map);
-window.groups={vessels:L.layerGroup().addTo(map),sar:L.layerGroup().addTo(map),cables:L.layerGroup().addTo(map),pipelines:L.layerGroup().addTo(map),ports:L.layerGroup().addTo(map),windfarms:L.layerGroup().addTo(map),areas:L.layerGroup().addTo(map)};
+window.groups={vessels:L.layerGroup().addTo(map),official:L.layerGroup().addTo(map),sar:L.layerGroup().addTo(map),cables:L.layerGroup().addTo(map),pipelines:L.layerGroup().addTo(map),ports:L.layerGroup().addTo(map),windfarms:L.layerGroup().addTo(map),areas:L.layerGroup().addTo(map)};
 
 const layerSettings={
   cables:{file:'cables.geojson',style:{color:'#00e5ff',weight:2,dashArray:'7 6',opacity:.9}},

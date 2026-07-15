@@ -33,3 +33,4 @@ def point_to_linestring_distance_km(lat: float, lon: float, coordinates: list[li
 def point_in_bbox(lat: float, lon: float, lat_min: float, lat_max: float, lon_min: float, lon_max: float) -> bool:
     """Return whether a point lies inside an inclusive latitude/longitude bounding box."""
     return lat_min <= lat <= lat_max and lon_min <= lon <= lon_max
+

@@ -6,7 +6,7 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 
-from analyze_suspicious import score_vessel, update_history
+from analyze_suspicious import history_for_vessel, score_vessel, update_history
 from config import DOCS_DATA, USE_MOCK_DATA
 from events import record_events
 from fetch_barentswatch_ais import fetch_barentswatch_ais, write_latest as write_barentswatch
@@ -150,8 +150,8 @@ def run(*, fetch_ais: bool = True, fetch_sar: bool = True) -> dict:
     source_records, fetched_counts = _fetch_ais(previous, previous_metadata, source_status, fetch_ais)
     sar_detections, sar_fetched = _fetch_sar(previous, previous_metadata, source_status, fetch_sar)
     vessels = _merge_newest(source_records)
-    history_by_mmsi = update_history(vessels)
-    scored = [score_vessel(vessel, history_by_mmsi.get(str(vessel.get("mmsi")), []), sar_detections) for vessel in vessels]
+    history_index = update_history(vessels)
+    scored = [score_vessel(vessel, history_for_vessel(history_index, vessel), sar_detections) for vessel in vessels]
     record_events(scored, sar_detections)
     published = _cap_vessels(scored)
 

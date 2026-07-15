@@ -1,2 +1,3 @@
 window.infrastructure = {cables:[[59.75,24.35,'Mock Gulf Fibre Link'],[55.25,15.65,'Bornholm Cable'],[72.4,29.7,'Barents Link']],pipelines:[[59.72,24.7,'Balticconnector Area'],[63.4,5.1,'Norwegian Sea Platform']],ports:[[60.16,24.95,'Helsinki'],[57.64,18.3,'Visby'],[69.65,18.95,'Tromso']],windfarms:[[57.7,18.15,'Gotland Array']]};
 window.sensitiveAreas=[[[59,22],[60.8,30.5],'Gulf of Finland'],[[56.5,17],[59,20.5],'Gotland Area'],[[54.5,13.5],[56.2,16.5],'Bornholm Area'],[[70,20],[78,45],'Barents Sea North']];
+

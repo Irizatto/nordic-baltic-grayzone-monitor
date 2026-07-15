@@ -18,6 +18,8 @@ window.showFeature=function(properties={}){
 
 window.showVessel=function(vessel={}){
   const v=vessel||{}, triggered=Array.isArray(v.triggered_rules)?v.triggered_rules:[];
+  const shipType=String(v.ship_type||'unknown').trim().toLowerCase();
+  const unscored=shipType==='naval'||shipType==='law_enforcement';
   const rules=triggered.length?triggered.map(rule=>
     '<div class="rule"><b>'+escapeHtml(String(rule.rule_id||'unknown').replaceAll('_',' '))+'</b>+'+escapeHtml(rule.points??0)+': '+escapeHtml(rule.evidence||'')+'</div>'
   ).join(''):'No triggered rules / 无触发规则';
@@ -27,7 +29,7 @@ window.showVessel=function(vessel={}){
   const distance=nearest.distance_km!==null&&nearest.distance_km!==undefined&&Number.isFinite(Number(nearest.distance_km))?nearest.distance_km:'not available / 不可用';
   document.getElementById('vesselDetail').innerHTML=
     '<div class="detail-row"><b>'+escapeHtml(v.name||'Unknown / 未知')+' · '+escapeHtml(v.mmsi||'')+'</b>'+escapeHtml(v.ship_type||'unknown')+' · '+escapeHtml(v.flag||'')+'</div>'+
-    '<div class="detail-row"><b>Review priority / 审查优先级</b><span class="risk risk-'+cssLevel+'">'+escapeHtml(v.risk_score??0)+' — '+escapeHtml(level)+'</span></div>'+
+    '<div class="detail-row"><b>Review priority / 审查优先级</b>'+(unscored?'<span class="risk risk-unscored">Not auto-scored / 不自动评分</span>':'<span class="risk risk-'+cssLevel+'">'+escapeHtml(v.risk_score??0)+' — '+escapeHtml(level)+'</span>')+'</div>'+
     '<div class="detail-row"><b>Motion / 动态</b>'+escapeHtml(v.speed??0)+' kn · course '+escapeHtml(v.course??0)+'° · heading '+escapeHtml(v.heading??0)+'°</div>'+
     '<div class="detail-row"><b>Nearest infrastructure / 最近基础设施</b>'+escapeHtml(nearest.name||'Not available')+' ('+escapeHtml(nearest.type||'not available')+'), '+escapeHtml(distance)+' km</div>'+
     '<div class="detail-row"><b>Data source / 数据来源</b>'+escapeHtml(v.source||'unknown')+'</div>'+

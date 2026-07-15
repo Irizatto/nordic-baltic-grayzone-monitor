@@ -25,6 +25,11 @@ def _rules(rule_id: str, points: int, evidence: str) -> dict:
     return {"rule_id":rule_id,"points":points,"evidence":evidence}
 
 
+def risk_level_for_score(score: int) -> str:
+    """Return the exact v1 review-priority level for a multiplied score."""
+    return next(level for threshold,level in LEVELS if score >= threshold)
+
+
 def _layers() -> list[dict]:
     result = []
     for filename in ("cables.geojson","pipelines.geojson"):
@@ -57,12 +62,17 @@ def _watchlist() -> list[dict]:
 
 
 def _match_watchlist(vessel: dict, rows: list[dict]) -> list[dict]:
-    matches = []
+    matched_sources = set()
     for row in rows:
         if any(str(vessel.get(k,"")).strip().lower() and str(vessel.get(k,"")).strip().lower() == str(row.get(k,"")).strip().lower() for k in ("imo","mmsi","name")):
             source = row.get("source","").lower()
-            if source == "sanctions": matches.append(_rules("sanctions_match",8,"Matched sanctions watchlist entry"))
-            if source == "shadow_fleet": matches.append(_rules("shadow_fleet_match",5,"Matched shadow-fleet watchlist entry"))
+            if source in {"sanctions", "shadow_fleet"}:
+                matched_sources.add(source)
+    matches = []
+    if "sanctions" in matched_sources:
+        matches.append(_rules("sanctions_match",8,"Matched sanctions watchlist entry"))
+    if "shadow_fleet" in matched_sources:
+        matches.append(_rules("shadow_fleet_match",5,"Matched shadow-fleet watchlist entry"))
     return matches
 
 
@@ -70,7 +80,10 @@ def _history_rules(vessel: dict, history: list[dict], nearest_raw: dict, sar: li
     """Apply only rules backed by stored earlier positions; empty history fires none."""
     if not history:
         return []
-    now, prior = _time(vessel["timestamp"]), sorted(history, key=lambda item:_time(item["timestamp"]))
+    now = _time(vessel["timestamp"])
+    prior = sorted((item for item in history if _time(item["timestamp"]) < now), key=lambda item:_time(item["timestamp"]))
+    if not prior:
+        return []
     rules, all_points = [], prior + [vessel]
     gaps = [(_time(b["timestamp"])-_time(a["timestamp"])).total_seconds()/3600 for a,b in zip(all_points,all_points[1:])]
     gap = max(gaps, default=0)
@@ -127,7 +140,8 @@ def _sensitive_bboxes() -> list[tuple]:
 
 def score_vessel(vessel: dict, history: list[dict] | None = None, sar: list[dict] | None = None, features: list[dict] | None = None, watchlist: list[dict] | None = None) -> dict:
     """Score one vessel using stable v1 rule IDs and explainable evidence."""
-    item, kind = dict(vessel), vessel.get("ship_type","unknown")
+    item = dict(vessel)
+    kind = str(vessel.get("ship_type") or "unknown").strip().lower().replace("-", "_").replace(" ", "_")
     if kind in {"naval","law_enforcement"}:
         item.update({"risk_score":0,"risk_level":"Normal","triggered_rules":[],"nearest_infrastructure":nearest_infrastructure(vessel,features)})
         return item
@@ -144,9 +158,29 @@ def score_vessel(vessel: dict, history: list[dict] | None = None, sar: list[dict
     if vessel.get("suspected_sts_rendezvous"): rules.append(_rules("sts_rendezvous",4,"Suspected ship-to-ship rendezvous lead supplied by upstream analysis"))
     raw = sum(rule["points"] for rule in rules)
     score = round(raw * MULTIPLIERS.get(kind,0.6))
-    level = next(level for threshold,level in LEVELS if score >= threshold)
+    level = risk_level_for_score(score)
     item.update({"risk_score":score,"risk_level":level,"triggered_rules":rules,"nearest_infrastructure":nearest})
     return item
+
+
+def _identity_keys(record: dict) -> list[str]:
+    """Build conservative aliases so an MMSI change can still find prior identity history."""
+    keys = []
+    for field in ("mmsi", "imo", "callsign", "name"):
+        value = " ".join(str(record.get(field) or "").split()).casefold()
+        if value:
+            keys.append(f"{field}:{value}")
+    return keys
+
+
+def history_for_vessel(history_index: dict[str, list[dict]], vessel: dict) -> list[dict]:
+    """Return de-duplicated prior records matching any stable identity alias."""
+    matched = {}
+    for key in _identity_keys(vessel):
+        for record in history_index.get(key, []):
+            identity = (str(record.get("mmsi") or ""), str(record.get("timestamp") or ""), str(record.get("source") or ""))
+            matched[identity] = record
+    return sorted(matched.values(), key=lambda item:_time(item["timestamp"]))
 
 
 def update_history(vessels: list[dict], path: Path = HISTORY_PATH, now: datetime | None = None) -> dict[str,list[dict]]:
@@ -178,5 +212,7 @@ def update_history(vessels: list[dict], path: Path = HISTORY_PATH, now: datetime
     grouped={}
     for record in retained:
         key = (str(record.get("mmsi") or ""),str(record.get("timestamp") or ""),str(record.get("source") or ""))
-        if key not in current_keys: grouped.setdefault(str(record.get("mmsi")),[]).append(record)
+        if key not in current_keys:
+            for identity_key in _identity_keys(record):
+                grouped.setdefault(identity_key,[]).append(record)
     return grouped

@@ -8,3 +8,4 @@ data/raw/**
 data/processed/ais_latest_*.json
 data/processed/sar_latest_*.json
 docs/data/archive/
+

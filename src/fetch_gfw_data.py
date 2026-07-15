@@ -39,26 +39,42 @@ def _geojson_region() -> dict:
     return {"type":"MultiPolygon","coordinates":[[ring] for ring in polygons]}
 
 
+def _poll_last_report(headers: dict) -> dict:
+    """Recover a timed-out GFW report through the documented last-report endpoint."""
+    for poll_attempt in range(4):
+        poll = requests.get(GFW_LAST_REPORT_URL, headers=headers, timeout=60)
+        if poll.status_code in {401, 403}:
+            raise GFWPermissionUnavailable("GFW SAR permission is unavailable")
+        poll.raise_for_status()
+        payload = poll.json()
+        if payload.get("status") == "running":
+            time.sleep(2 ** poll_attempt)
+            continue
+        if isinstance(payload.get("status"), int) and payload["status"] >= 400:
+            raise requests.HTTPError("GFW last report finished with an error")
+        return payload
+    raise requests.Timeout("GFW report was still running after bounded polling")
+
+
 def _request_report(params: dict, body: dict) -> dict:
-    """Request one report with bounded retry and short running-report polling."""
+    """Request one report with bounded retry and documented timeout recovery."""
     headers = {"Authorization":"Bearer "+str(GFW_API_TOKEN),"Accept":"application/json","Content-Type":"application/json"}
     for attempt in range(3):
         try:
             response = requests.post(GFW_REPORT_URL, params=params, json=body, headers=headers, timeout=60)
             if response.status_code in {401, 403}:
                 raise GFWPermissionUnavailable("GFW SAR permission is unavailable")
+            if response.status_code == 429:
+                _poll_last_report(headers)
+                if attempt == 2:
+                    response.raise_for_status()
+                time.sleep(2 ** attempt)
+                continue
+            if response.status_code == 524:
+                return _poll_last_report(headers)
             response.raise_for_status()
             payload = response.json()
-            for poll_attempt in range(3):
-                if payload.get("status") != "running":
-                    return payload
-                time.sleep(2 ** poll_attempt)
-                poll = requests.get(GFW_LAST_REPORT_URL, headers=headers, timeout=60)
-                if poll.status_code in {401, 403}:
-                    raise GFWPermissionUnavailable("GFW SAR permission is unavailable")
-                poll.raise_for_status()
-                payload = poll.json()
-            raise requests.Timeout("GFW report was still running after bounded polling")
+            return _poll_last_report(headers) if payload.get("status") == "running" else payload
         except GFWPermissionUnavailable:
             raise
         except requests.RequestException:
@@ -80,7 +96,7 @@ def _flatten_entries(payload: dict) -> list[dict]:
     return flattened
 
 
-def _convert(item: dict, matched: bool | None = None) -> dict | None:
+def _convert(item: dict, matched: bool | None = None, ordinal: int = 0) -> dict | None:
     """Convert a GFW report cell or vessel entry to the project SAR schema."""
     position = item.get("position", item.get("coordinates", {}))
     if isinstance(position, list) and len(position) >= 2:
@@ -94,10 +110,13 @@ def _convert(item: dict, matched: bool | None = None) -> dict | None:
     timestamp = iso8601_timestamp(item.get("entryTimestamp", item.get("timestamp", item.get("date"))))
     mmsi = optional_string(item.get("mmsi", item.get("matchedMmsi")))
     is_matched = bool(matched if matched is not None else item.get("matched", mmsi))
-    identity = optional_string(item.get("id", item.get("detectionId", item.get("vesselId"))))
+    identity = optional_string(item.get("detectionId", item.get("id")))
     if not identity:
-        seed = f"{lat:.5f}|{lon:.5f}|{timestamp}|{is_matched}"
+        vessel_id = optional_string(item.get("vesselId")) or ""
+        seed = f"{lat:.5f}|{lon:.5f}|{timestamp}|{is_matched}|{vessel_id}|{ordinal}"
         identity = hashlib.sha256(seed.encode("utf-8")).hexdigest()[:24]
+    elif ordinal:
+        identity = f"{identity}-{ordinal}"
     length = item.get("length", item.get("length_m"))
     return {
         "detection_id": identity,
@@ -110,6 +129,21 @@ def _convert(item: dict, matched: bool | None = None) -> dict | None:
         "length_m": finite_float(length) if length is not None else None,
         "source": "gfw_sar",
     }
+
+
+def _records_from_payload(payload: dict, matched: bool) -> list[dict]:
+    """Expand aggregated grid-cell counts into schema records at the reported cell centre."""
+    records = []
+    for item in _flatten_entries(payload):
+        try:
+            count = max(0, int(float(item.get("detections", 1))))
+        except (TypeError, ValueError):
+            count = 1
+        for ordinal in range(count):
+            record = _convert(item, matched, ordinal)
+            if record:
+                records.append(record)
+    return records
 
 
 def fetch_gfw_sar() -> tuple[list[dict], str, str]:
@@ -128,10 +162,10 @@ def fetch_gfw_sar() -> tuple[list[dict], str, str]:
     try:
         unmatched_payload = _request_report({**common,"filters[0]":"matched='false'"}, body)
         matched_payload = _request_report({**common,"filters[0]":"matched='true'","group-by":"VESSEL_ID"}, body)
-        records = [record for item in _flatten_entries(unmatched_payload) if (record := _convert(item, False))]
-        records.extend(record for item in _flatten_entries(matched_payload) if (record := _convert(item, True)))
+        records = _records_from_payload(unmatched_payload, False)
+        records.extend(_records_from_payload(matched_payload, True))
         unique = {record["detection_id"]:record for record in records}
-        return list(unique.values()), "ok", "Live GFW SAR report cells; leads require human review."
+        return list(unique.values()), "ok", "Live GFW SAR report cells; coordinates are grid-cell centres, not precise individual positions; leads require human review."
     except GFWPermissionUnavailable:
         return mock_sar_detections(), "credentials_missing_fallback_mock", "GFW SAR permission is unavailable; using mock review leads."
     except (requests.RequestException, ValueError, KeyError) as error:

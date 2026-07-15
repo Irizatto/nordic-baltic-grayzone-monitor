@@ -25,6 +25,8 @@ RULE_EVENT = {
     "repeat_sensitive_area_presence":"sensitive_area_repeat_presence",
     "sar_unmatched_near_ais_gap":"sar_unmatched",
 }
+PRIORITY_LEVELS = {"Watch", "High Review Priority", "Critical Review Priority"}
+STANDALONE_EVENT_TYPES = {"identity_change", "sanctions_match"}
 
 
 def _now() -> datetime:
@@ -108,20 +110,30 @@ def _row_time(row: dict) -> datetime:
     return _event_time(str(row.get("date", "")) + "T" + str(row.get("time", "")))
 
 
-def _same_entity(old: dict, entity_key: str) -> bool:
-    if entity_key.startswith("mmsi:"):
-        return old.get("mmsi") == entity_key.removeprefix("mmsi:")
-    if entity_key.startswith("identity:"):
-        return f"{old.get('imo','')}|{old.get('vessel_name','')}" == entity_key.removeprefix("identity:")
-    if entity_key.startswith("sar:"):
-        return f"detection_id={entity_key.removeprefix('sar:')}" in str(old.get("notes", ""))
+def _same_entity(old: dict, entity: dict | str) -> bool:
+    if isinstance(entity, str) and entity.startswith("sar:"):
+        return f"detection_id={entity.removeprefix('sar:')}" in str(old.get("notes", ""))
+    if not isinstance(entity, dict):
+        return False
+    stable_pairs = (
+        (str(old.get("imo") or "").strip(), str(entity.get("imo") or "").strip()),
+        (str(old.get("mmsi") or "").strip(), str(entity.get("mmsi") or "").strip()),
+    )
+    if any(left and right and left == right for left, right in stable_pairs):
+        return True
+    if any(left or right for left, right in stable_pairs):
+        return False
+    old_name = " ".join(str(old.get("vessel_name") or "").split()).casefold()
+    new_name = " ".join(str(entity.get("name") or "").split()).casefold()
+    if old_name and new_name:
+        return old_name == new_name
     return False
 
 
-def _append_or_revision(row: dict, rows: list[dict], entity_key: str) -> dict | None:
+def _append_or_revision(row: dict, rows: list[dict], entity: dict | str) -> dict | None:
     event_time = _row_time(row)
     for old in reversed(rows):
-        if old.get("event_type") != row["event_type"] or not _same_entity(old, entity_key):
+        if old.get("event_type") != row["event_type"] or not _same_entity(old, entity):
             continue
         if abs(event_time - _row_time(old)) <= timedelta(hours=24):
             if float(row["risk_score"]) > float(old.get("risk_score") or 0):
@@ -141,14 +153,14 @@ def record_events(vessels: list[dict], sar_detections: list[dict]) -> dict:
     for vessel in vessels:
         rules = vessel.get("triggered_rules") if isinstance(vessel.get("triggered_rules"), list) else []
         event_types = _event_types(vessel, rules)
-        if vessel.get("risk_level") not in {"Watch","High Review Priority","Critical Review Priority"} and not event_types:
-            continue
+        if vessel.get("risk_level") not in PRIORITY_LEVELS:
+            event_types = [event_type for event_type in event_types if event_type in STANDALONE_EVENT_TYPES]
         if not event_types:
             continue
         event_time = _event_time(vessel.get("timestamp"))
         nearest = vessel.get("nearest_infrastructure") if isinstance(vessel.get("nearest_infrastructure"), dict) else {}
         sources = _indicator_sources(vessel, rules)
-        entity_key = "mmsi:" + str(vessel.get("mmsi")) if vessel.get("mmsi") else "identity:" + f"{vessel.get('imo','')}|{vessel.get('name','')}"
+        entity = {"mmsi":vessel.get("mmsi"), "imo":vessel.get("imo"), "name":vessel.get("name")}
         for event_type in event_types:
             row = {
                 "event_id":"",
@@ -170,7 +182,7 @@ def record_events(vessels: list[dict], sar_detections: list[dict]) -> dict:
             }
             if event_type not in ALLOWED_EVENT_TYPES:
                 continue
-            written = _append_or_revision(row, rows, entity_key)
+            written = _append_or_revision(row, rows, entity)
             if written is not None:
                 rows.append(written)
 

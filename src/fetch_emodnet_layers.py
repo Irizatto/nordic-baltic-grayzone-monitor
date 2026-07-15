@@ -67,3 +67,4 @@ def fetch_windfarms() -> dict[str, Any]:
 def fetch_sensitive_areas() -> dict[str, Any]:
     """Return sensitive-area features in the dashboard GeoJSON schema."""
     return _fetch_or_fallback("sensitive_areas")
+

@@ -8,3 +8,4 @@
 - GitHub Pages serves the `docs/` folder.
 - All user-facing text is bilingual English and Simplified Chinese where practical, with English primary.
 - At the end of every task report files changed, why, how to run/check, what remains mock, and the recommended next step.
+
