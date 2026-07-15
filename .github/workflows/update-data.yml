@@ -21,11 +21,12 @@ permissions:
 
 concurrency:
   group: nbgm-data-update
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   update-data:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     env:
       GFW_API_TOKEN: ${{ secrets.GFW_API_TOKEN }}
       BARENTSWATCH_CLIENT_ID: ${{ secrets.BARENTSWATCH_CLIENT_ID }}
@@ -48,6 +49,7 @@ jobs:
         shell: bash
         run: |
           schedule='${{ github.event.schedule }}'
+          event_name='${{ github.event_name }}'
           run_pipeline=false
           pipeline_args=''
           run_reports=false
@@ -67,6 +69,9 @@ jobs:
               ;;
             '')
               run_pipeline=true
+              if [ "$event_name" = "push" ]; then
+                pipeline_args='--ais-only'
+              fi
               ;;
           esac
           echo "run_pipeline=$run_pipeline" >> "$GITHUB_OUTPUT"
@@ -288,4 +293,5 @@ jobs:
       - name: Fail after safely publishing degraded status
         if: steps.validation.outcome == 'failure' || steps.infrastructure.outcome == 'failure' || steps.helcom.outcome == 'failure' || steps.infrastructure_validation.outcome == 'failure' || steps.pipeline.outcome == 'failure' || steps.reports.outcome == 'failure'
         run: exit 1
+
 
