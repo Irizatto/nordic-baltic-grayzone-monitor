@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-15T11:48:34.531589+00:00",
+  "generated_at": "2026-07-15T17:29:38.581718+00:00",
   "mode": "live",
   "sources": [
     "barentswatch",
@@ -8,15 +8,15 @@
   "source_status": {
     "digitraffic": {
       "status": "ok",
-      "timestamp": "2026-07-15T11:48:20.244762+00:00",
-      "records_fetched": 905,
-      "records_published": 267
+      "timestamp": "2026-07-15T17:28:26.731135+00:00",
+      "records_fetched": 907,
+      "records_published": 398
     },
     "barentswatch": {
       "status": "ok",
-      "timestamp": "2026-07-15T11:48:21.770108+00:00",
-      "records_fetched": 1823,
-      "records_published": 12
+      "timestamp": "2026-07-15T17:28:28.970418+00:00",
+      "records_fetched": 1814,
+      "records_published": 288
     },
     "gfw_sar": {
       "status": "ok",
@@ -25,10 +25,19 @@
       "records_published": 0,
       "detail": "Live GFW SAR report cells; coordinates are grid-cell centres, not precise individual positions; leads require human review."
     },
-    "pipeline": {
-      "status": "error_kept_old_data",
-      "timestamp": "2026-07-15T13:32:45.376524+00:00",
-      "detail": "Automated pipeline failed; previous dashboard data was retained."
+    "emodnet": {
+      "status": "ok",
+      "timestamp": "2026-07-15T17:28:12.139985+00:00",
+      "records_fetched": 1472,
+      "records_published": 1472,
+      "detail": "EMODnet WFS infrastructure snapshot; public-source coverage and precision vary by originator."
+    },
+    "helcom": {
+      "status": "ok",
+      "timestamp": "2026-07-15T17:28:22.506543+00:00",
+      "records_fetched": 188,
+      "records_published": 187,
+      "detail": "HELCOM MADS Marine Protected Areas public GeoJSON snapshot."
     }
   },
   "fallbacks": [

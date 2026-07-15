@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-07-15T13:32:31.738603+00:00",
+  "generated_at": "2026-07-15T17:28:12.139985+00:00",
   "source": "emodnet_human_activities",
   "source_url": "https://ows.emodnet-humanactivities.eu/wfs?SERVICE=WFS&REQUEST=GetCapabilities&VERSION=2.0.0",
-  "status": "error_kept_old_data",
+  "status": "ok",
   "records_fetched": 1472,
-  "records_published": 1476,
+  "records_published": 1472,
   "layers": {
     "cables": {
       "status": "ok",
       "records_fetched": 503,
-      "records_published": 507,
-      "schematic_supplement": 4,
+      "records_published": 503,
+      "schematic_supplement": 0,
       "source_layers": [
         "emodnet:bshcontiscables",
         "emodnet:pcablesbshcontis",
         "emodnet:pcablesnve"
       ],
       "warnings": [],
-      "detail": "Fetched 503 public EMODnet features from 3 WFS layer(s). Retained 4 labelled schematic cable supplements."
+      "detail": "Fetched 503 public EMODnet features from 3 WFS layer(s)."
     },
     "pipelines": {
       "status": "ok",
@@ -53,8 +53,6 @@
       "detail": "Fetched 173 public EMODnet features from 1 WFS layer(s)."
     }
   },
-  "fallbacks": [
-    "Unexpected EMODnet adapter failure; previous infrastructure snapshots were retained."
-  ],
-  "detail": "Unexpected EMODnet adapter failure; previous infrastructure snapshots were retained."
+  "fallbacks": [],
+  "detail": "EMODnet WFS infrastructure snapshot; public-source coverage and precision vary by originator."
 }

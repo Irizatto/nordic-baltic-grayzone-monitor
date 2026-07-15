@@ -1,12 +1,10 @@
 {
-  "generated_at": null,
+  "generated_at": "2026-07-15T17:28:22.506543+00:00",
   "source": "helcom_mads",
   "source_url": "https://maps.helcom.fi/arcgis/rest/services/MADS/Biodiversity/MapServer/54",
-  "status": "error_kept_old_data",
-  "records_fetched": 0,
-  "records_published": 0,
-  "fallbacks": [
-    "Initial empty fallback; run the data workflow to fetch HELCOM MPAs."
-  ],
-  "detail": "HELCOM MPA snapshot has not been refreshed yet."
+  "status": "ok",
+  "records_fetched": 188,
+  "records_published": 187,
+  "fallbacks": [],
+  "detail": "HELCOM MADS Marine Protected Areas public GeoJSON snapshot."
 }
