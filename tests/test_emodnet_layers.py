@@ -40,6 +40,17 @@ class FailingSession:
 
 
 class EmodnetLayerTests(unittest.TestCase):
+    def test_planned_commissioning_year_is_not_used_as_snapshot_update_date(self):
+        retrieved = datetime(2026, 7, 15, tzinfo=timezone.utc)
+        self.assertEqual(
+            emodnet._date_value({"year": 2030, "commissioned": "2030"}, retrieved),
+            "2026-07-15",
+        )
+        self.assertEqual(
+            emodnet._date_value({"updated": "2026-07-14T10:00:00Z"}, retrieved),
+            "2026-07-14",
+        )
+
     def test_invalid_utf8_snapshot_is_treated_as_unavailable(self):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "truncated.geojson"
