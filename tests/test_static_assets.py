@@ -51,7 +51,7 @@ class StaticAssetTests(unittest.TestCase):
         self.assertEqual(required - self.parser.ids, set())
 
     def test_layer_keys_match_the_map_groups(self):
-        expected = {"vessels", "official", "sar", "cables", "pipelines", "ports", "windfarms", "areas"}
+        expected = {"vessels", "official", "sar", "cables", "pipelines", "ports", "windfarms", "areas", "helcom"}
         self.assertEqual(self.parser.layers, expected)
         map_js = (ROOT / "docs" / "js" / "map.js").read_text(encoding="utf-8")
         for layer in expected:

@@ -146,6 +146,7 @@ def run(*, fetch_ais: bool = True, fetch_sar: bool = True) -> dict:
     previous = _read(DOCS_DATA / "data.json", {"metadata":{},"vessels":[],"sar_detections":[]})
     previous_metadata = _read(DOCS_DATA / "metadata.json", previous.get("metadata", {}))
     infrastructure_metadata = _read(DOCS_DATA / "infrastructure_metadata.json", {})
+    helcom_metadata = _read(DOCS_DATA / "helcom_metadata.json", {})
     source_status: dict[str, dict] = {}
 
     source_records, fetched_counts = _fetch_ais(previous, previous_metadata, source_status, fetch_ais)
@@ -158,6 +159,16 @@ def run(*, fetch_ais: bool = True, fetch_sar: bool = True) -> dict:
             "records_published": infrastructure_metadata.get("records_published", 0),
             "detail": infrastructure_metadata.get(
                 "detail", "EMODnet infrastructure snapshot metadata is incomplete."
+            ),
+        }
+    if isinstance(helcom_metadata, dict) and helcom_metadata:
+        source_status["helcom"] = {
+            "status": helcom_metadata.get("status", "error_kept_old_data"),
+            "timestamp": helcom_metadata.get("generated_at", _now()),
+            "records_fetched": helcom_metadata.get("records_fetched", 0),
+            "records_published": helcom_metadata.get("records_published", 0),
+            "detail": helcom_metadata.get(
+                "detail", "HELCOM MPA snapshot metadata is incomplete."
             ),
         }
     vessels = _merge_newest(source_records)
@@ -179,12 +190,13 @@ def run(*, fetch_ais: bool = True, fetch_sar: bool = True) -> dict:
     all_mock = not published_sources or published_sources <= {"mock"}
     mode = "mock" if all_mock else ("mixed" if "mock" in published_sources else "live")
     infrastructure_fallbacks = infrastructure_metadata.get("fallbacks", []) if isinstance(infrastructure_metadata, dict) else []
+    helcom_fallbacks = helcom_metadata.get("fallbacks", []) if isinstance(helcom_metadata, dict) else []
     metadata = {
         "generated_at":_now(),
         "mode":mode,
         "sources":sorted(published_sources),
         "source_status":source_status,
-        "fallbacks":["Mock records remain clearly labelled when a live source or credential is unavailable."] + list(infrastructure_fallbacks),
+        "fallbacks":["Mock records remain clearly labelled when a live source or credential is unavailable."] + list(infrastructure_fallbacks) + list(helcom_fallbacks),
     }
     output = {"metadata":metadata,"vessels":published,"sar_detections":sar_detections}
     (DOCS_DATA / "data.json").write_text(json.dumps(output,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")

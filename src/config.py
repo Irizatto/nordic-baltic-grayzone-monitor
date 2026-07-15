@@ -32,3 +32,13 @@ EMODNET_BBOXES = {
 EMODNET_PAGE_SIZE = 1000
 EMODNET_MAX_FEATURES_PER_SOURCE = 6000
 EMODNET_SIMPLIFY_TOLERANCE_DEGREES = 0.0015
+
+HELCOM_MPA_QUERY_URL = (
+    "https://maps.helcom.fi/arcgis/rest/services/MADS/"
+    "Biodiversity/MapServer/54/query"
+)
+HELCOM_MPA_LAYER_URL = (
+    "https://maps.helcom.fi/arcgis/rest/services/MADS/"
+    "Biodiversity/MapServer/54"
+)
+HELCOM_USER_AGENT = "NBGM-research/1.0"

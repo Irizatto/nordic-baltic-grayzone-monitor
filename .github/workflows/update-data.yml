@@ -2,6 +2,15 @@ name: Automated data update
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "src/fetch_helcom_layers.py"
+      - "src/config.py"
+      - "docs/js/map.js"
+      - "docs/index.html"
+      - "docs/css/style.css"
+      - ".github/workflows/update-data.yml"
   schedule:
     - cron: "0 0,6,12,18 * * *" # AIS refresh every 6 hours UTC
     - cron: "30 0,12 * * *" # GFW SAR refresh and rescoring every 12 hours UTC
@@ -77,6 +86,9 @@ jobs:
           if [ -f docs/data/infrastructure_metadata.json ]; then
             cp docs/data/infrastructure_metadata.json /tmp/nbgm-backup/infrastructure_metadata.json
           fi
+          if [ -f docs/data/helcom_metadata.json ]; then
+            cp docs/data/helcom_metadata.json /tmp/nbgm-backup/helcom_metadata.json
+          fi
           if [ -f data/processed/ais_history.jsonl ]; then
             cp data/processed/ais_history.jsonl /tmp/nbgm-backup/ais_history.jsonl
           fi
@@ -95,9 +107,15 @@ jobs:
         continue-on-error: true
         run: python src/fetch_emodnet_layers.py
 
+      - name: Refresh public HELCOM MPA snapshot
+        id: helcom
+        if: steps.mode.outputs.run_pipeline == 'true' && steps.validation.outcome == 'success'
+        continue-on-error: true
+        run: python src/fetch_helcom_layers.py
+
       - name: Validate refreshed infrastructure snapshots
         id: infrastructure_validation
-        if: steps.mode.outputs.run_pipeline == 'true' && steps.validation.outcome == 'success' && steps.infrastructure.outcome == 'success'
+        if: steps.mode.outputs.run_pipeline == 'true' && steps.validation.outcome == 'success' && steps.infrastructure.outcome == 'success' && steps.helcom.outcome == 'success'
         continue-on-error: true
         run: |
           python - <<'PY'
@@ -105,7 +123,7 @@ jobs:
           from pathlib import Path
 
           layer_dir = Path("docs/data/layers")
-          for name in ("cables", "pipelines", "ports", "windfarms", "sensitive_areas"):
+          for name in ("cables", "pipelines", "ports", "windfarms", "sensitive_areas", "helcom_mpas"):
               path = layer_dir / f"{name}.geojson"
               payload = json.loads(path.read_text(encoding="utf-8"))
               if payload.get("type") != "FeatureCollection" or not isinstance(payload.get("features"), list):
@@ -116,7 +134,9 @@ jobs:
       - name: Restore infrastructure snapshots on unexpected adapter failure
         if: steps.infrastructure.outcome == 'failure'
         run: |
-          cp /tmp/nbgm-backup/layers/*.geojson docs/data/layers/
+          for name in cables pipelines ports windfarms; do
+            cp "/tmp/nbgm-backup/layers/${name}.geojson" "docs/data/layers/${name}.geojson"
+          done
           if [ -f /tmp/nbgm-backup/infrastructure_metadata.json ]; then
             cp /tmp/nbgm-backup/infrastructure_metadata.json docs/data/infrastructure_metadata.json
           fi
@@ -132,6 +152,32 @@ jobs:
               "generated_at": datetime.now(timezone.utc).isoformat(),
               "status": "error_kept_old_data",
               "detail": "Unexpected EMODnet adapter failure; previous infrastructure snapshots were retained."
+          })
+          data.setdefault("fallbacks", []).append(data["detail"])
+          with open(path, "w", encoding="utf-8") as handle:
+              json.dump(data, handle, indent=2, ensure_ascii=False)
+              handle.write("\n")
+          PY
+
+      - name: Restore HELCOM snapshot on unexpected adapter failure
+        if: steps.helcom.outcome == 'failure'
+        run: |
+          cp /tmp/nbgm-backup/layers/helcom_mpas.geojson docs/data/layers/helcom_mpas.geojson
+          if [ -f /tmp/nbgm-backup/helcom_metadata.json ]; then
+            cp /tmp/nbgm-backup/helcom_metadata.json docs/data/helcom_metadata.json
+          fi
+          python - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          path = "docs/data/helcom_metadata.json"
+          try:
+              data = json.load(open(path, encoding="utf-8"))
+          except (OSError, UnicodeDecodeError, json.JSONDecodeError):
+              data = {"source": "helcom_mads", "fallbacks": []}
+          data.update({
+              "generated_at": datetime.now(timezone.utc).isoformat(),
+              "status": "error_kept_old_data",
+              "detail": "Unexpected HELCOM adapter failure; previous MPA snapshot was retained."
           })
           data.setdefault("fallbacks", []).append(data["detail"])
           with open(path, "w", encoding="utf-8") as handle:
@@ -240,6 +286,6 @@ jobs:
           fi
 
       - name: Fail after safely publishing degraded status
-        if: steps.validation.outcome == 'failure' || steps.infrastructure.outcome == 'failure' || steps.infrastructure_validation.outcome == 'failure' || steps.pipeline.outcome == 'failure' || steps.reports.outcome == 'failure'
+        if: steps.validation.outcome == 'failure' || steps.infrastructure.outcome == 'failure' || steps.helcom.outcome == 'failure' || steps.infrastructure_validation.outcome == 'failure' || steps.pipeline.outcome == 'failure' || steps.reports.outcome == 'failure'
         run: exit 1
 
