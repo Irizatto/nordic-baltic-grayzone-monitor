@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-07-15T07:30:52.543445+00:00",
+    "generated_at": "2026-07-15T07:32:24.409732+00:00",
     "mode": "mixed",
     "sources": [
       "barentswatch",
@@ -21,12 +21,11 @@
         "records_published": 99
       },
       "gfw_sar": {
-        "status": "credentials_missing_fallback_mock",
-        "timestamp": "2026-07-10T18:01:04.712Z",
-        "records": 3,
-        "detail": "GFW_API_TOKEN is unavailable; SAR dataset approval may still be pending.",
+        "status": "ok",
+        "timestamp": "2026-07-15T07:32:24.145941+00:00",
         "records_fetched": 0,
-        "records_published": 3
+        "records_published": 0,
+        "detail": "Live GFW SAR report cells; coordinates are grid-cell centres, not precise individual positions; leads require human review."
       }
     },
     "fallbacks": [
@@ -34,6 +33,714 @@
     ]
   },
   "vessels": [
+    {
+      "mmsi": "230992650",
+      "imo": "0",
+      "name": "URSUS",
+      "callsign": "OIRM",
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 59.942062,
+      "lon": 24.031183,
+      "speed": 7.4,
+      "course": 34.5,
+      "heading": 34.0,
+      "timestamp": "2026-07-15T07:30:43.245000+00:00",
+      "source": "digitraffic",
+      "risk_score": 8,
+      "risk_level": "High Review Priority",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "8.1 km from pipeline Balticconnector (Inkoo–Paldiski)"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Balticconnector (Inkoo–Paldiski)",
+        "type": "pipeline",
+        "distance_km": 8.1
+      }
+    },
+    {
+      "mmsi": "230938050",
+      "imo": "0",
+      "name": "NEREID",
+      "callsign": "OG9249",
+      "flag": null,
+      "ship_type": "service",
+      "lat": 59.772328,
+      "lon": 24.517075,
+      "speed": 0.7,
+      "course": 98.9,
+      "heading": 511.0,
+      "timestamp": "2026-07-15T07:30:46.326000+00:00",
+      "source": "digitraffic",
+      "risk_score": 7,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "4.0 km from pipeline Balticconnector (Inkoo–Paldiski)"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Balticconnector (Inkoo–Paldiski)",
+        "type": "pipeline",
+        "distance_km": 4.0
+      }
+    },
+    {
+      "mmsi": "276002890",
+      "imo": "0",
+      "name": "LOOD",
+      "callsign": "ESQM",
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 59.703193,
+      "lon": 24.558073,
+      "speed": 9.1,
+      "course": 335.6,
+      "heading": 511.0,
+      "timestamp": "2026-07-15T07:30:45.555000+00:00",
+      "source": "digitraffic",
+      "risk_score": 6,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.2 km from pipeline Balticconnector (Inkoo–Paldiski)"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Balticconnector (Inkoo–Paldiski)",
+        "type": "pipeline",
+        "distance_km": 0.2
+      }
+    },
+    {
+      "mmsi": "230059740",
+      "imo": "0",
+      "name": "RESCUE AKTIA",
+      "callsign": "OH3540",
+      "flag": null,
+      "ship_type": "service",
+      "lat": 59.931842,
+      "lon": 24.014992,
+      "speed": 0.1,
+      "course": 180.8,
+      "heading": 189.0,
+      "timestamp": "2026-07-15T07:30:45.122000+00:00",
+      "source": "digitraffic",
+      "risk_score": 6,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "9.4 km from pipeline Balticconnector (Inkoo–Paldiski)"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Balticconnector (Inkoo–Paldiski)",
+        "type": "pipeline",
+        "distance_km": 9.4
+      }
+    },
+    {
+      "mmsi": "230094240",
+      "imo": "0",
+      "name": "KOILLISTUULI",
+      "callsign": "OH6441",
+      "flag": null,
+      "ship_type": "service",
+      "lat": 60.180252,
+      "lon": 24.907087,
+      "speed": 0.1,
+      "course": 8.0,
+      "heading": 511.0,
+      "timestamp": "2026-07-15T05:53:07.053000+00:00",
+      "source": "digitraffic",
+      "risk_score": 6,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "9.8 km from cable Helsinki–Tallinn telecom corridor"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Helsinki–Tallinn telecom corridor",
+        "type": "cable",
+        "distance_km": 9.8
+      }
+    },
+    {
+      "mmsi": "230099950",
+      "imo": "0",
+      "name": "PILOT L244",
+      "callsign": "OH6918",
+      "flag": null,
+      "ship_type": "service",
+      "lat": 60.013407,
+      "lon": 23.946227,
+      "speed": 0.0,
+      "course": 355.7,
+      "heading": 27.0,
+      "timestamp": "2026-07-15T07:30:46.326000+00:00",
+      "source": "digitraffic",
+      "risk_score": 6,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "9.0 km from pipeline Balticconnector (Inkoo–Paldiski)"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Balticconnector (Inkoo–Paldiski)",
+        "type": "pipeline",
+        "distance_km": 9.0
+      }
+    },
+    {
+      "mmsi": "230149160",
+      "imo": "0",
+      "name": "PILOT L245",
+      "callsign": "OH8756",
+      "flag": null,
+      "ship_type": "service",
+      "lat": 59.808855,
+      "lon": 22.910838,
+      "speed": 0.0,
+      "course": 261.7,
+      "heading": 160.0,
+      "timestamp": "2026-07-15T07:30:42.086000+00:00",
+      "source": "digitraffic",
+      "risk_score": 6,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Helsinki–Tallinn telecom corridor",
+        "type": "cable",
+        "distance_km": 66.9
+      }
+    },
+    {
+      "mmsi": "265732720",
+      "imo": "0",
+      "name": "PILOT 217 SE",
+      "callsign": "SIAP",
+      "flag": null,
+      "ship_type": "service",
+      "lat": 60.173113,
+      "lon": 18.806902,
+      "speed": 0.0,
+      "course": 170.5,
+      "heading": 163.0,
+      "timestamp": "2026-07-15T07:30:41.990000+00:00",
+      "source": "digitraffic",
+      "risk_score": 6,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Gotland–mainland Sweden link",
+        "type": "cable",
+        "distance_km": 255.5
+      }
+    },
+    {
+      "mmsi": "230109470",
+      "imo": "0",
+      "name": "PILOT L129",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "service",
+      "lat": 59.808832,
+      "lon": 22.910573,
+      "speed": 0.0,
+      "course": 54.6,
+      "heading": 153.0,
+      "timestamp": "2026-07-15T07:30:43.341000+00:00",
+      "source": "digitraffic",
+      "risk_score": 6,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Helsinki–Tallinn telecom corridor",
+        "type": "cable",
+        "distance_km": 66.9
+      }
+    },
+    {
+      "mmsi": "230991670",
+      "imo": "0",
+      "name": "AJO",
+      "callsign": "OG2940",
+      "flag": null,
+      "ship_type": "tug",
+      "lat": 60.461962,
+      "lon": 26.962357,
+      "speed": 0.0,
+      "course": 97.0,
+      "heading": 305.0,
+      "timestamp": "2026-07-15T07:30:40.861000+00:00",
+      "source": "digitraffic",
+      "risk_score": 6,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Helsinki–Tallinn telecom corridor",
+        "type": "cable",
+        "distance_km": 127.0
+      }
+    },
+    {
+      "mmsi": "230941570",
+      "imo": "0",
+      "name": "MERIKUOKKA",
+      "callsign": "OI2932",
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 60.152378,
+      "lon": 24.92313,
+      "speed": 0.0,
+      "course": 360.0,
+      "heading": 511.0,
+      "timestamp": "2026-07-15T07:30:41.342000+00:00",
+      "source": "digitraffic",
+      "risk_score": 5,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "9.7 km from cable Helsinki–Tallinn telecom corridor"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Helsinki–Tallinn telecom corridor",
+        "type": "cable",
+        "distance_km": 9.7
+      }
+    },
+    {
+      "mmsi": "230941940",
+      "imo": "0",
+      "name": "VARTIOLAIVA 55",
+      "callsign": "OJ3724",
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 60.161052,
+      "lon": 24.924323,
+      "speed": 0.0,
+      "course": 309.1,
+      "heading": 317.0,
+      "timestamp": "2026-07-15T07:30:40.813000+00:00",
+      "source": "digitraffic",
+      "risk_score": 5,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "9.9 km from cable Helsinki–Tallinn telecom corridor"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Helsinki–Tallinn telecom corridor",
+        "type": "cable",
+        "distance_km": 9.9
+      }
+    },
+    {
+      "mmsi": "230987940",
+      "imo": "0",
+      "name": "JOANNA SATURNA",
+      "callsign": "OJ2044",
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 60.155558,
+      "lon": 24.889263,
+      "speed": 0.0,
+      "course": 145.9,
+      "heading": 86.0,
+      "timestamp": "2026-07-15T07:29:29.837000+00:00",
+      "source": "digitraffic",
+      "risk_score": 5,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "7.9 km from cable Helsinki–Tallinn telecom corridor"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Helsinki–Tallinn telecom corridor",
+        "type": "cable",
+        "distance_km": 7.9
+      }
+    },
+    {
+      "mmsi": "230031000",
+      "imo": "0",
+      "name": "FURUNOP",
+      "callsign": "OJGJ",
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 60.166143,
+      "lon": 24.705823,
+      "speed": 0.0,
+      "course": 302.7,
+      "heading": 511.0,
+      "timestamp": "2026-07-15T07:30:40.524000+00:00",
+      "source": "digitraffic",
+      "risk_score": 5,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "3.8 km from cable Helsinki–Tallinn telecom corridor"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Helsinki–Tallinn telecom corridor",
+        "type": "cable",
+        "distance_km": 3.8
+      }
+    },
+    {
+      "mmsi": "259050320",
+      "imo": null,
+      "name": "SJOVAAG",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 69.821433,
+      "lon": 18.515637,
+      "speed": 0.0,
+      "course": 153.0,
+      "heading": 241.0,
+      "timestamp": "2026-07-15T07:30:47+00:00",
+      "source": "barentswatch",
+      "risk_score": 4,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "5.4 km from cable Norway–Svalbard link"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 5.4
+      }
+    },
+    {
+      "mmsi": "230174460",
+      "imo": "0",
+      "name": "L-317",
+      "callsign": "OHA4058",
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 60.541125,
+      "lon": 21.320788,
+      "speed": 2.2,
+      "course": 75.7,
+      "heading": 75.0,
+      "timestamp": "2026-07-15T07:30:42.182000+00:00",
+      "source": "digitraffic",
+      "risk_score": 4,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Balticconnector (Inkoo–Paldiski)",
+        "type": "pipeline",
+        "distance_km": 163.0
+      }
+    },
+    {
+      "mmsi": "265698710",
+      "imo": "0",
+      "name": "ELINOR",
+      "callsign": "8SY5773",
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 59.4835,
+      "lon": 19.045103,
+      "speed": 5.7,
+      "course": 222.7,
+      "heading": 511.0,
+      "timestamp": "2026-07-15T07:30:43.148000+00:00",
+      "source": "digitraffic",
+      "risk_score": 4,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Gotland–mainland Sweden link",
+        "type": "cable",
+        "distance_km": 201.5
+      }
+    },
     {
       "mmsi": "255100001",
       "imo": "IMO5510001",
@@ -265,64 +972,6 @@
         "distance_km": 2.3
       },
       "source": "mock"
-    },
-    {
-      "mmsi": "276002890",
-      "imo": "0",
-      "name": "LOOD",
-      "callsign": "ESQM",
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 59.703193,
-      "lon": 24.558073,
-      "speed": 9.1,
-      "course": 335.6,
-      "heading": 511.0,
-      "timestamp": "2026-07-15T07:30:45.555000+00:00",
-      "source": "digitraffic",
-      "risk_score": 2,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_1km",
-          "points": 3,
-          "evidence": "0.2 km from pipeline Balticconnector (Inkoo–Paldiski)"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "Balticconnector (Inkoo–Paldiski)",
-        "type": "pipeline",
-        "distance_km": 0.2
-      }
-    },
-    {
-      "mmsi": "230938050",
-      "imo": "0",
-      "name": "NEREID",
-      "callsign": "OG9249",
-      "flag": null,
-      "ship_type": "service",
-      "lat": 59.772328,
-      "lon": 24.517075,
-      "speed": 0.7,
-      "course": 98.9,
-      "heading": 511.0,
-      "timestamp": "2026-07-15T07:30:46.326000+00:00",
-      "source": "digitraffic",
-      "risk_score": 2,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_5km",
-          "points": 2,
-          "evidence": "4.0 km from pipeline Balticconnector (Inkoo–Paldiski)"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "Balticconnector (Inkoo–Paldiski)",
-        "type": "pipeline",
-        "distance_km": 4.0
-      }
     },
     {
       "mmsi": "249905000",
@@ -1369,6 +2018,74 @@
       }
     },
     {
+      "mmsi": "273332880",
+      "imo": null,
+      "name": "TAURUS",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "fishing",
+      "lat": 76.945635,
+      "lon": 13.256362,
+      "speed": 3.9,
+      "course": 198.3,
+      "heading": 214.0,
+      "timestamp": "2026-07-15T07:30:22.729758+00:00",
+      "source": "barentswatch",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "2.1 km from cable Norway–Svalbard link"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 2.1
+      }
+    },
+    {
+      "mmsi": "257292400",
+      "imo": null,
+      "name": "KARLSOY",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 69.79082,
+      "lon": 18.75402,
+      "speed": 9.8,
+      "course": 121.4,
+      "heading": 120.0,
+      "timestamp": "2026-07-15T07:30:40+00:00",
+      "source": "barentswatch",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "8.1 km from cable Norway–Svalbard link"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Norway–Svalbard link",
+        "type": "cable",
+        "distance_km": 8.1
+      }
+    },
+    {
       "mmsi": "255100004",
       "imo": "IMO5510004",
       "name": "GOTLAND TRADER",
@@ -1424,35 +2141,6 @@
         "name": "Balticconnector (Inkoo–Paldiski)",
         "type": "pipeline",
         "distance_km": 6.6
-      }
-    },
-    {
-      "mmsi": "230059740",
-      "imo": "0",
-      "name": "RESCUE AKTIA",
-      "callsign": "OH3540",
-      "flag": null,
-      "ship_type": "service",
-      "lat": 59.931842,
-      "lon": 24.014992,
-      "speed": 0.1,
-      "course": 180.8,
-      "heading": 189.0,
-      "timestamp": "2026-07-15T07:30:45.122000+00:00",
-      "source": "digitraffic",
-      "risk_score": 1,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_10km",
-          "points": 1,
-          "evidence": "9.4 km from pipeline Balticconnector (Inkoo–Paldiski)"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "Balticconnector (Inkoo–Paldiski)",
-        "type": "pipeline",
-        "distance_km": 9.4
       }
     },
     {
@@ -1543,35 +2231,6 @@
       }
     },
     {
-      "mmsi": "230094240",
-      "imo": "0",
-      "name": "KOILLISTUULI",
-      "callsign": "OH6441",
-      "flag": null,
-      "ship_type": "service",
-      "lat": 60.180252,
-      "lon": 24.907087,
-      "speed": 0.1,
-      "course": 8.0,
-      "heading": 511.0,
-      "timestamp": "2026-07-15T05:53:07.053000+00:00",
-      "source": "digitraffic",
-      "risk_score": 1,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_10km",
-          "points": 1,
-          "evidence": "9.8 km from cable Helsinki–Tallinn telecom corridor"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "Helsinki–Tallinn telecom corridor",
-        "type": "cable",
-        "distance_km": 9.8
-      }
-    },
-    {
       "mmsi": "230955000",
       "imo": "5419232",
       "name": "CARMEL",
@@ -1584,64 +2243,6 @@
       "course": 288.4,
       "heading": 314.0,
       "timestamp": "2026-07-15T07:30:39.528000+00:00",
-      "source": "digitraffic",
-      "risk_score": 1,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_10km",
-          "points": 1,
-          "evidence": "9.9 km from cable Helsinki–Tallinn telecom corridor"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "Helsinki–Tallinn telecom corridor",
-        "type": "cable",
-        "distance_km": 9.9
-      }
-    },
-    {
-      "mmsi": "230941570",
-      "imo": "0",
-      "name": "MERIKUOKKA",
-      "callsign": "OI2932",
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 60.152378,
-      "lon": 24.92313,
-      "speed": 0.0,
-      "course": 360.0,
-      "heading": 511.0,
-      "timestamp": "2026-07-15T07:30:41.342000+00:00",
-      "source": "digitraffic",
-      "risk_score": 1,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_10km",
-          "points": 1,
-          "evidence": "9.7 km from cable Helsinki–Tallinn telecom corridor"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "Helsinki–Tallinn telecom corridor",
-        "type": "cable",
-        "distance_km": 9.7
-      }
-    },
-    {
-      "mmsi": "230941940",
-      "imo": "0",
-      "name": "VARTIOLAIVA 55",
-      "callsign": "OJ3724",
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 60.161052,
-      "lon": 24.924323,
-      "speed": 0.0,
-      "course": 309.1,
-      "heading": 317.0,
-      "timestamp": "2026-07-15T07:30:40.813000+00:00",
       "source": "digitraffic",
       "risk_score": 1,
       "risk_level": "Normal",
@@ -1688,35 +2289,6 @@
       }
     },
     {
-      "mmsi": "230987940",
-      "imo": "0",
-      "name": "JOANNA SATURNA",
-      "callsign": "OJ2044",
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 60.155558,
-      "lon": 24.889263,
-      "speed": 0.0,
-      "course": 145.9,
-      "heading": 86.0,
-      "timestamp": "2026-07-15T07:29:29.837000+00:00",
-      "source": "digitraffic",
-      "risk_score": 1,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_10km",
-          "points": 1,
-          "evidence": "7.9 km from cable Helsinki–Tallinn telecom corridor"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "Helsinki–Tallinn telecom corridor",
-        "type": "cable",
-        "distance_km": 7.9
-      }
-    },
-    {
       "mmsi": "210641000",
       "imo": "1095351",
       "name": "BELTMAR",
@@ -1743,64 +2315,6 @@
         "name": "Balticconnector (Inkoo–Paldiski)",
         "type": "pipeline",
         "distance_km": 10.0
-      }
-    },
-    {
-      "mmsi": "230031000",
-      "imo": "0",
-      "name": "FURUNOP",
-      "callsign": "OJGJ",
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 60.166143,
-      "lon": 24.705823,
-      "speed": 0.0,
-      "course": 302.7,
-      "heading": 511.0,
-      "timestamp": "2026-07-15T07:30:40.524000+00:00",
-      "source": "digitraffic",
-      "risk_score": 1,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_5km",
-          "points": 2,
-          "evidence": "3.8 km from cable Helsinki–Tallinn telecom corridor"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "Helsinki–Tallinn telecom corridor",
-        "type": "cable",
-        "distance_km": 3.8
-      }
-    },
-    {
-      "mmsi": "230099950",
-      "imo": "0",
-      "name": "PILOT L244",
-      "callsign": "OH6918",
-      "flag": null,
-      "ship_type": "service",
-      "lat": 60.013407,
-      "lon": 23.946227,
-      "speed": 0.0,
-      "course": 355.7,
-      "heading": 27.0,
-      "timestamp": "2026-07-15T07:30:46.326000+00:00",
-      "source": "digitraffic",
-      "risk_score": 1,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_10km",
-          "points": 1,
-          "evidence": "9.0 km from pipeline Balticconnector (Inkoo–Paldiski)"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "Balticconnector (Inkoo–Paldiski)",
-        "type": "pipeline",
-        "distance_km": 9.0
       }
     },
     {
@@ -1859,35 +2373,6 @@
         "name": "Helsinki–Tallinn telecom corridor",
         "type": "cable",
         "distance_km": 9.8
-      }
-    },
-    {
-      "mmsi": "230992650",
-      "imo": "0",
-      "name": "URSUS",
-      "callsign": "OIRM",
-      "flag": null,
-      "ship_type": "cargo",
-      "lat": 59.942062,
-      "lon": 24.031183,
-      "speed": 7.4,
-      "course": 34.5,
-      "heading": 34.0,
-      "timestamp": "2026-07-15T07:30:43.245000+00:00",
-      "source": "digitraffic",
-      "risk_score": 1,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_10km",
-          "points": 1,
-          "evidence": "8.1 km from pipeline Balticconnector (Inkoo–Paldiski)"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "Balticconnector (Inkoo–Paldiski)",
-        "type": "pipeline",
-        "distance_km": 8.1
       }
     },
     {
@@ -2471,35 +2956,6 @@
       }
     },
     {
-      "mmsi": "259050320",
-      "imo": null,
-      "name": "SJOVAAG",
-      "callsign": null,
-      "flag": null,
-      "ship_type": "cargo",
-      "lat": 69.821433,
-      "lon": 18.515637,
-      "speed": 0.0,
-      "course": 153.0,
-      "heading": 241.0,
-      "timestamp": "2026-07-15T07:30:47+00:00",
-      "source": "barentswatch",
-      "risk_score": 1,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_10km",
-          "points": 1,
-          "evidence": "5.4 km from cable Norway–Svalbard link"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "Norway–Svalbard link",
-        "type": "cable",
-        "distance_km": 5.4
-      }
-    },
-    {
       "mmsi": "257090600",
       "imo": null,
       "name": "FUGLOY",
@@ -2990,35 +3446,6 @@
         "name": "Norway–Svalbard link",
         "type": "cable",
         "distance_km": 1.9
-      }
-    },
-    {
-      "mmsi": "273332880",
-      "imo": null,
-      "name": "TAURUS",
-      "callsign": null,
-      "flag": null,
-      "ship_type": "fishing",
-      "lat": 76.945635,
-      "lon": 13.256362,
-      "speed": 3.9,
-      "course": 198.3,
-      "heading": 214.0,
-      "timestamp": "2026-07-15T07:30:22.729758+00:00",
-      "source": "barentswatch",
-      "risk_score": 1,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_5km",
-          "points": 2,
-          "evidence": "2.1 km from cable Norway–Svalbard link"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "Norway–Svalbard link",
-        "type": "cable",
-        "distance_km": 2.1
       }
     },
     {
@@ -3544,35 +3971,6 @@
       }
     },
     {
-      "mmsi": "257292400",
-      "imo": null,
-      "name": "KARLSOY",
-      "callsign": null,
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 69.79082,
-      "lon": 18.75402,
-      "speed": 9.8,
-      "course": 121.4,
-      "heading": 120.0,
-      "timestamp": "2026-07-15T07:30:40+00:00",
-      "source": "barentswatch",
-      "risk_score": 1,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_10km",
-          "points": 1,
-          "evidence": "8.1 km from cable Norway–Svalbard link"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "Norway–Svalbard link",
-        "type": "cable",
-        "distance_km": 8.1
-      }
-    },
-    {
       "mmsi": "259707000",
       "imo": null,
       "name": "HAVTIND",
@@ -3965,52 +4363,6 @@
       }
     },
     {
-      "mmsi": "230174460",
-      "imo": "0",
-      "name": "L-317",
-      "callsign": "OHA4058",
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 60.541125,
-      "lon": 21.320788,
-      "speed": 2.2,
-      "course": 75.7,
-      "heading": 75.0,
-      "timestamp": "2026-07-15T07:30:42.182000+00:00",
-      "source": "digitraffic",
-      "risk_score": 0,
-      "risk_level": "Normal",
-      "triggered_rules": [],
-      "nearest_infrastructure": {
-        "name": "Balticconnector (Inkoo–Paldiski)",
-        "type": "pipeline",
-        "distance_km": 163.0
-      }
-    },
-    {
-      "mmsi": "230149160",
-      "imo": "0",
-      "name": "PILOT L245",
-      "callsign": "OH8756",
-      "flag": null,
-      "ship_type": "service",
-      "lat": 59.808855,
-      "lon": 22.910838,
-      "speed": 0.0,
-      "course": 261.7,
-      "heading": 160.0,
-      "timestamp": "2026-07-15T07:30:42.086000+00:00",
-      "source": "digitraffic",
-      "risk_score": 0,
-      "risk_level": "Normal",
-      "triggered_rules": [],
-      "nearest_infrastructure": {
-        "name": "Helsinki–Tallinn telecom corridor",
-        "type": "cable",
-        "distance_km": 66.9
-      }
-    },
-    {
       "mmsi": "219015298",
       "imo": "9372652",
       "name": "TARNBRIS",
@@ -4147,133 +4499,7 @@
         "type": "cable",
         "distance_km": 11.9
       }
-    },
-    {
-      "mmsi": "265732720",
-      "imo": "0",
-      "name": "PILOT 217 SE",
-      "callsign": "SIAP",
-      "flag": null,
-      "ship_type": "service",
-      "lat": 60.173113,
-      "lon": 18.806902,
-      "speed": 0.0,
-      "course": 170.5,
-      "heading": 163.0,
-      "timestamp": "2026-07-15T07:30:41.990000+00:00",
-      "source": "digitraffic",
-      "risk_score": 0,
-      "risk_level": "Normal",
-      "triggered_rules": [],
-      "nearest_infrastructure": {
-        "name": "Gotland–mainland Sweden link",
-        "type": "cable",
-        "distance_km": 255.5
-      }
-    },
-    {
-      "mmsi": "265698710",
-      "imo": "0",
-      "name": "ELINOR",
-      "callsign": "8SY5773",
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 59.4835,
-      "lon": 19.045103,
-      "speed": 5.7,
-      "course": 222.7,
-      "heading": 511.0,
-      "timestamp": "2026-07-15T07:30:43.148000+00:00",
-      "source": "digitraffic",
-      "risk_score": 0,
-      "risk_level": "Normal",
-      "triggered_rules": [],
-      "nearest_infrastructure": {
-        "name": "Gotland–mainland Sweden link",
-        "type": "cable",
-        "distance_km": 201.5
-      }
-    },
-    {
-      "mmsi": "230109470",
-      "imo": "0",
-      "name": "PILOT L129",
-      "callsign": null,
-      "flag": null,
-      "ship_type": "service",
-      "lat": 59.808832,
-      "lon": 22.910573,
-      "speed": 0.0,
-      "course": 54.6,
-      "heading": 153.0,
-      "timestamp": "2026-07-15T07:30:43.341000+00:00",
-      "source": "digitraffic",
-      "risk_score": 0,
-      "risk_level": "Normal",
-      "triggered_rules": [],
-      "nearest_infrastructure": {
-        "name": "Helsinki–Tallinn telecom corridor",
-        "type": "cable",
-        "distance_km": 66.9
-      }
-    },
-    {
-      "mmsi": "230991670",
-      "imo": "0",
-      "name": "AJO",
-      "callsign": "OG2940",
-      "flag": null,
-      "ship_type": "tug",
-      "lat": 60.461962,
-      "lon": 26.962357,
-      "speed": 0.0,
-      "course": 97.0,
-      "heading": 305.0,
-      "timestamp": "2026-07-15T07:30:40.861000+00:00",
-      "source": "digitraffic",
-      "risk_score": 0,
-      "risk_level": "Normal",
-      "triggered_rules": [],
-      "nearest_infrastructure": {
-        "name": "Helsinki–Tallinn telecom corridor",
-        "type": "cable",
-        "distance_km": 127.0
-      }
     }
   ],
-  "sar_detections": [
-    {
-      "detection_id": "mock-sar-001",
-      "lat": 59.8,
-      "lon": 24.45,
-      "timestamp": "2026-07-10T18:01:04.712Z",
-      "matched": true,
-      "matched_mmsi": "255100001",
-      "confidence": 0.82,
-      "length_m": 182,
-      "source": "mock"
-    },
-    {
-      "detection_id": "mock-sar-002",
-      "lat": 55.2,
-      "lon": 15.9,
-      "timestamp": "2026-07-10T15:01:04.732Z",
-      "matched": false,
-      "matched_mmsi": null,
-      "confidence": 0.61,
-      "length_m": 74,
-      "source": "mock"
-    },
-    {
-      "detection_id": "mock-sar-003",
-      "lat": 72.5,
-      "lon": 29.9,
-      "timestamp": "2026-07-10T10:01:04.732Z",
-      "matched": false,
-      "matched_mmsi": null,
-      "confidence": 0.48,
-      "length_m": null,
-      "source": "mock"
-    }
-  ]
+  "sar_detections": []
 }

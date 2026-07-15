@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-15T07:30:52.543445+00:00",
+  "generated_at": "2026-07-15T07:32:24.409732+00:00",
   "mode": "mixed",
   "sources": [
     "barentswatch",
@@ -20,12 +20,11 @@
       "records_published": 99
     },
     "gfw_sar": {
-      "status": "credentials_missing_fallback_mock",
-      "timestamp": "2026-07-10T18:01:04.712Z",
-      "records": 3,
-      "detail": "GFW_API_TOKEN is unavailable; SAR dataset approval may still be pending.",
+      "status": "ok",
+      "timestamp": "2026-07-15T07:32:24.145941+00:00",
       "records_fetched": 0,
-      "records_published": 3
+      "records_published": 0,
+      "detail": "Live GFW SAR report cells; coordinates are grid-cell centres, not precise individual positions; leads require human review."
     }
   },
   "fallbacks": [
