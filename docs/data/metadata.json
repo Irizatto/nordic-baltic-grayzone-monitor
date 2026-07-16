@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-16T07:40:46.305690+00:00",
+  "generated_at": "2026-07-16T07:51:57.547088+00:00",
   "mode": "live",
   "sources": [
     "barentswatch",
@@ -20,21 +20,21 @@
     },
     "gfw_sar": {
       "status": "ok",
-      "timestamp": "2026-07-15T11:48:22.111100+00:00",
+      "timestamp": "2026-07-16T07:49:39.022753+00:00",
       "records_fetched": 0,
       "records_published": 0,
       "detail": "Live GFW SAR report cells; coordinates are grid-cell centres, not precise individual positions; leads require human review."
     },
     "emodnet": {
       "status": "ok",
-      "timestamp": "2026-07-16T07:38:12.192897+00:00",
+      "timestamp": "2026-07-16T07:49:16.383826+00:00",
       "records_fetched": 1472,
       "records_published": 1472,
       "detail": "EMODnet WFS infrastructure snapshot; public-source coverage and precision vary by originator."
     },
     "helcom": {
       "status": "ok",
-      "timestamp": "2026-07-16T07:38:22.271423+00:00",
+      "timestamp": "2026-07-16T07:49:26.070587+00:00",
       "records_fetched": 188,
       "records_published": 187,
       "detail": "HELCOM MADS Marine Protected Areas public GeoJSON snapshot."
