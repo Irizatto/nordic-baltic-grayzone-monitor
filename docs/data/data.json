@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-07-24T09:23:20.403470+00:00",
+    "generated_at": "2026-07-24T09:40:44.524200+00:00",
     "mode": "live",
     "sources": [
       "barentswatch",
@@ -21,21 +21,21 @@
       },
       "gfw_sar": {
         "status": "ok",
-        "timestamp": "2026-07-23T17:06:38.518348+00:00",
+        "timestamp": "2026-07-24T09:30:35.854837+00:00",
         "records_fetched": 0,
         "records_published": 0,
         "detail": "Live GFW SAR report cells; coordinates are grid-cell centres, not precise individual positions; leads require human review."
       },
       "emodnet": {
         "status": "ok",
-        "timestamp": "2026-07-24T09:12:11.881497+00:00",
+        "timestamp": "2026-07-24T09:29:58.473416+00:00",
         "records_fetched": 1472,
         "records_published": 1472,
         "detail": "EMODnet WFS infrastructure snapshot; public-source coverage and precision vary by originator."
       },
       "helcom": {
         "status": "ok",
-        "timestamp": "2026-07-24T09:12:21.484838+00:00",
+        "timestamp": "2026-07-24T09:30:09.339776+00:00",
         "records_fetched": 188,
         "records_published": 187,
         "detail": "HELCOM MADS Marine Protected Areas public GeoJSON snapshot."
@@ -811,7 +811,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -865,7 +865,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -1752,7 +1752,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -1899,7 +1899,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -3926,7 +3926,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -6553,7 +6553,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -6607,7 +6607,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -6896,7 +6896,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -6994,7 +6994,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 8.6 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -7317,7 +7317,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -7606,7 +7606,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -7753,7 +7753,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.4 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -7939,7 +7939,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -7993,7 +7993,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -8047,7 +8047,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -8150,7 +8150,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -8341,7 +8341,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -8439,7 +8439,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -8542,7 +8542,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -8596,7 +8596,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -8694,7 +8694,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -8748,7 +8748,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -8802,7 +8802,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -8856,7 +8856,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -8910,7 +8910,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -8964,7 +8964,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -9018,7 +9018,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -9072,7 +9072,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -9121,7 +9121,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -9170,7 +9170,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -9273,7 +9273,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -9327,7 +9327,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -9381,7 +9381,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -9430,7 +9430,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -9484,7 +9484,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -9538,7 +9538,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -9636,7 +9636,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -9734,7 +9734,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -9832,7 +9832,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -9886,7 +9886,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -9940,7 +9940,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -9994,7 +9994,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -10087,7 +10087,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -10224,7 +10224,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.0 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -13570,7 +13570,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -14035,7 +14035,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -14275,7 +14275,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -14373,7 +14373,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -14569,7 +14569,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -14667,7 +14667,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -14721,7 +14721,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -14775,7 +14775,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -14829,7 +14829,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -14883,7 +14883,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -15172,7 +15172,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -15270,7 +15270,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -19947,7 +19947,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -19996,7 +19996,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 10.8 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -20177,7 +20177,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 8.4 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -20319,7 +20319,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -20412,7 +20412,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 8.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -20510,7 +20510,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -20559,7 +20559,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -20701,7 +20701,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -20789,7 +20789,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 10.4 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -20936,7 +20936,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -21029,7 +21029,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -21078,7 +21078,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -21127,7 +21127,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -21176,7 +21176,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 9.7 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -21318,7 +21318,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -21367,7 +21367,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -21416,7 +21416,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -21553,7 +21553,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -21602,7 +21602,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -21651,7 +21651,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -21744,7 +21744,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -21793,7 +21793,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -21979,7 +21979,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -22028,7 +22028,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -22077,7 +22077,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.1 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -22126,7 +22126,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.4 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -22258,7 +22258,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 10.1 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -22307,7 +22307,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -22356,7 +22356,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -22405,7 +22405,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -22498,7 +22498,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -22547,7 +22547,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -22645,7 +22645,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -22792,7 +22792,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 8.2 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -22841,7 +22841,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -22929,7 +22929,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -23110,7 +23110,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -23159,7 +23159,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -23208,7 +23208,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -23306,7 +23306,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -23355,7 +23355,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -23541,7 +23541,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -23629,7 +23629,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -23717,7 +23717,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -23766,7 +23766,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -23815,7 +23815,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -23864,7 +23864,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -24079,7 +24079,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -24128,7 +24128,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -24294,7 +24294,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.1 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -26879,7 +26879,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -27348,7 +27348,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -27558,7 +27558,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -27729,7 +27729,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -27832,7 +27832,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -27886,7 +27886,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.3 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -28018,7 +28018,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -28277,7 +28277,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.4 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -28497,7 +28497,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -29293,7 +29293,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -29474,7 +29474,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -29963,7 +29963,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -30095,7 +30095,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -30188,7 +30188,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -30320,7 +30320,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -30550,7 +30550,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -30731,7 +30731,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -30873,7 +30873,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -30971,7 +30971,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -31025,7 +31025,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -31079,7 +31079,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -31133,7 +31133,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -31187,7 +31187,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -31241,7 +31241,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -31295,7 +31295,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -31349,7 +31349,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -31442,7 +31442,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -31589,7 +31589,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -31643,7 +31643,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -31736,7 +31736,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -31790,7 +31790,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -31844,7 +31844,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -32093,7 +32093,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -32435,7 +32435,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -32489,7 +32489,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -38881,7 +38881,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 8.3 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -38930,7 +38930,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 9.3 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -39028,7 +39028,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 9.1 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -39390,7 +39390,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 8.4 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -39444,7 +39444,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -39542,7 +39542,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 8.2 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -39591,7 +39591,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 8.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -39645,7 +39645,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -39694,7 +39694,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 9.1 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -39743,7 +39743,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.4 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -39885,7 +39885,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -39983,7 +39983,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.0 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -40081,7 +40081,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -40174,7 +40174,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 8.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -40223,7 +40223,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -40272,7 +40272,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 10.1 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -40321,7 +40321,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -40370,7 +40370,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 9.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -40419,7 +40419,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 10.4 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -40468,7 +40468,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -40517,7 +40517,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 9.1 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -40566,7 +40566,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 9.3 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -40615,7 +40615,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 10.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -40664,7 +40664,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 10.6 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -40762,7 +40762,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 9.6 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -40811,7 +40811,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 10.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -40860,7 +40860,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.4 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -40997,7 +40997,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -41129,7 +41129,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 8.2 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -41178,7 +41178,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -41271,7 +41271,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -41408,7 +41408,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -41550,7 +41550,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -41599,7 +41599,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 10.6 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -41922,7 +41922,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.4 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -41971,7 +41971,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 8.4 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -42025,7 +42025,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.4 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -42074,7 +42074,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -42123,7 +42123,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -42172,7 +42172,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -42265,7 +42265,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -42314,7 +42314,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -42451,7 +42451,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -42500,7 +42500,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -42549,7 +42549,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 10.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -42598,7 +42598,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 10.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -42647,7 +42647,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 10.6 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -42745,7 +42745,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -42970,7 +42970,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 8.7 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -43063,7 +43063,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.1 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -43112,7 +43112,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -43161,7 +43161,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 10.8 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -43210,7 +43210,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -43259,7 +43259,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -43464,7 +43464,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -43513,7 +43513,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -43562,7 +43562,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -43611,7 +43611,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.4 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -43699,7 +43699,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -43875,7 +43875,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -43968,7 +43968,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -44017,7 +44017,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -44066,7 +44066,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -44115,7 +44115,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -44164,7 +44164,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -44257,7 +44257,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -44306,7 +44306,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -44448,7 +44448,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -44541,7 +44541,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -44678,7 +44678,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -44771,7 +44771,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -44869,7 +44869,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -44957,7 +44957,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -45006,7 +45006,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -45055,7 +45055,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -45109,7 +45109,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -45202,7 +45202,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -45251,7 +45251,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -45305,7 +45305,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -45403,7 +45403,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -45452,7 +45452,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -45545,7 +45545,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 8.2 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -45594,7 +45594,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -45643,7 +45643,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -45692,7 +45692,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -45746,7 +45746,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -45839,7 +45839,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -45932,7 +45932,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -45981,7 +45981,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -46074,7 +46074,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -46123,7 +46123,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -46206,7 +46206,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -46255,7 +46255,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -46304,7 +46304,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 8.2 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -46353,7 +46353,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -46407,7 +46407,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -46495,7 +46495,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -46544,7 +46544,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -46598,7 +46598,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -46720,7 +46720,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -46774,7 +46774,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -46823,7 +46823,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -46872,7 +46872,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -46921,7 +46921,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -47151,7 +47151,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 8.4 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -47200,7 +47200,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -47376,7 +47376,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 11.5 hours"
+          "evidence": "AIS reporting gap of 8.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
