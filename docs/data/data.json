@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-07-31T17:23:11.952922+00:00",
+    "generated_at": "2026-07-31T18:17:31.549047+00:00",
     "mode": "live",
     "sources": [
       "barentswatch",
@@ -17,25 +17,25 @@
         "status": "ok",
         "timestamp": "2026-07-31T17:12:58.195690+00:00",
         "records_fetched": 1773,
-        "records_published": 1109
+        "records_published": 1108
       },
       "gfw_sar": {
         "status": "ok",
-        "timestamp": "2026-07-31T10:19:08.601132+00:00",
+        "timestamp": "2026-07-31T18:07:37.605314+00:00",
         "records_fetched": 0,
         "records_published": 0,
         "detail": "Live GFW SAR report cells; coordinates are grid-cell centres, not precise individual positions; leads require human review."
       },
       "emodnet": {
         "status": "ok",
-        "timestamp": "2026-07-31T17:12:25.203767+00:00",
+        "timestamp": "2026-07-31T18:07:24.197331+00:00",
         "records_fetched": 1472,
         "records_published": 1472,
         "detail": "EMODnet WFS infrastructure snapshot; public-source coverage and precision vary by originator."
       },
       "helcom": {
         "status": "ok",
-        "timestamp": "2026-07-31T17:12:52.759180+00:00",
+        "timestamp": "2026-07-31T18:07:34.475143+00:00",
         "records_fetched": 188,
         "records_published": 187,
         "detail": "HELCOM MADS Marine Protected Areas public GeoJSON snapshot."
@@ -30741,7 +30741,7 @@
         {
           "rule_id": "ais_gap_6h",
           "points": 2,
-          "evidence": "AIS reporting gap of 7.1 hours"
+          "evidence": "AIS reporting gap of 6.7 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -66315,7 +66315,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 94.7 hours"
+          "evidence": "AIS reporting gap of 73.8 hours"
         },
         {
           "rule_id": "zigzag_or_anchor_drag_proxy",
@@ -75481,50 +75481,6 @@
         "name": "EMODnet cable pcablesnve.724",
         "type": "cable",
         "distance_km": 7.7
-      }
-    },
-    {
-      "mmsi": "258026800",
-      "imo": null,
-      "name": "SNOTINDEN",
-      "callsign": null,
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 66.588668,
-      "lon": 13.095607,
-      "speed": 0.7,
-      "course": 133.0,
-      "heading": 0.0,
-      "timestamp": "2026-07-31T17:11:36+00:00",
-      "source": "barentswatch",
-      "risk_score": 5,
-      "risk_level": "Watch",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_10km",
-          "points": 1,
-          "evidence": "8.4 km from cable EMODnet cable pcablesnve.861"
-        },
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 123.4 hours"
-        },
-        {
-          "rule_id": "low_speed_near_infra_2h",
-          "points": 2,
-          "evidence": "Speed below 6 kn near schematic infrastructure for 3.9 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet cable pcablesnve.861",
-        "type": "cable",
-        "distance_km": 8.4
       }
     },
     {
