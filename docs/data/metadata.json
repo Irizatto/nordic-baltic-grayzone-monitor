@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-01T20:47:30.593346+00:00",
+  "generated_at": "2026-08-02T08:05:53.934924+00:00",
   "mode": "live",
   "sources": [
     "barentswatch",
@@ -8,15 +8,15 @@
   "source_status": {
     "digitraffic": {
       "status": "ok",
-      "timestamp": "2026-08-01T20:38:11.104681+00:00",
-      "records_fetched": 782,
-      "records_published": 676
+      "timestamp": "2026-08-02T07:55:53.275710+00:00",
+      "records_fetched": 762,
+      "records_published": 655
     },
     "barentswatch": {
       "status": "ok",
-      "timestamp": "2026-08-01T20:38:13.212311+00:00",
-      "records_fetched": 1707,
-      "records_published": 1074
+      "timestamp": "2026-08-02T07:55:54.891689+00:00",
+      "records_fetched": 1742,
+      "records_published": 1082
     },
     "gfw_sar": {
       "status": "ok",
@@ -27,14 +27,14 @@
     },
     "emodnet": {
       "status": "ok",
-      "timestamp": "2026-08-01T20:37:57.572285+00:00",
+      "timestamp": "2026-08-02T07:55:41.421175+00:00",
       "records_fetched": 1472,
       "records_published": 1472,
       "detail": "EMODnet WFS infrastructure snapshot; public-source coverage and precision vary by originator."
     },
     "helcom": {
       "status": "ok",
-      "timestamp": "2026-08-01T20:38:06.983382+00:00",
+      "timestamp": "2026-08-02T07:55:50.095182+00:00",
       "records_fetched": 188,
       "records_published": 187,
       "detail": "HELCOM MADS Marine Protected Areas public GeoJSON snapshot."
