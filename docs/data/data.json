@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-08-02T08:05:53.934924+00:00",
+    "generated_at": "2026-08-02T09:11:03.073998+00:00",
     "mode": "live",
     "sources": [
       "barentswatch",
@@ -11,7 +11,7 @@
         "status": "ok",
         "timestamp": "2026-08-02T07:55:53.275710+00:00",
         "records_fetched": 762,
-        "records_published": 655
+        "records_published": 654
       },
       "barentswatch": {
         "status": "ok",
@@ -21,21 +21,21 @@
       },
       "gfw_sar": {
         "status": "ok",
-        "timestamp": "2026-08-01T15:48:26.908449+00:00",
+        "timestamp": "2026-08-02T09:02:46.271891+00:00",
         "records_fetched": 0,
         "records_published": 0,
         "detail": "Live GFW SAR report cells; coordinates are grid-cell centres, not precise individual positions; leads require human review."
       },
       "emodnet": {
         "status": "ok",
-        "timestamp": "2026-08-02T07:55:41.421175+00:00",
+        "timestamp": "2026-08-02T09:01:45.792593+00:00",
         "records_fetched": 1472,
         "records_published": 1472,
         "detail": "EMODnet WFS infrastructure snapshot; public-source coverage and precision vary by originator."
       },
       "helcom": {
         "status": "ok",
-        "timestamp": "2026-08-02T07:55:50.095182+00:00",
+        "timestamp": "2026-08-02T09:01:55.674055+00:00",
         "records_fetched": 188,
         "records_published": 187,
         "detail": "HELCOM MADS Marine Protected Areas public GeoJSON snapshot."
@@ -5786,50 +5786,6 @@
         "name": "NORD STREAM 1",
         "type": "pipeline",
         "distance_km": 56.6
-      }
-    },
-    {
-      "mmsi": "273253080",
-      "imo": "9164718",
-      "name": "THOTH",
-      "callsign": "UADB9",
-      "flag": null,
-      "ship_type": "tanker",
-      "lat": 59.714147,
-      "lon": 28.426962,
-      "speed": 4.5,
-      "course": 360.0,
-      "heading": 351.0,
-      "timestamp": "2026-08-01T16:54:03.254000+00:00",
-      "source": "digitraffic",
-      "risk_score": 11,
-      "risk_level": "High Review Priority",
-      "triggered_rules": [
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 90.4 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        },
-        {
-          "rule_id": "identity_change",
-          "points": 3,
-          "evidence": "Identity field changed compared with stored AIS position"
-        },
-        {
-          "rule_id": "repeat_sensitive_area_presence",
-          "points": 2,
-          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "NORD STREAM 1",
-        "type": "pipeline",
-        "distance_km": 67.2
       }
     },
     {
@@ -25722,6 +25678,45 @@
         "name": "EMODnet cable pcablesnve.22",
         "type": "cable",
         "distance_km": 9.8
+      }
+    },
+    {
+      "mmsi": "273253080",
+      "imo": "9164718",
+      "name": "THOTH",
+      "callsign": "UADB9",
+      "flag": null,
+      "ship_type": "tanker",
+      "lat": 59.714147,
+      "lon": 28.426962,
+      "speed": 4.5,
+      "course": 360.0,
+      "heading": 351.0,
+      "timestamp": "2026-08-01T16:54:03.254000+00:00",
+      "source": "digitraffic",
+      "risk_score": 8,
+      "risk_level": "High Review Priority",
+      "triggered_rules": [
+        {
+          "rule_id": "ais_gap_18h",
+          "points": 4,
+          "evidence": "AIS reporting gap of 90.4 hours"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "NORD STREAM 1",
+        "type": "pipeline",
+        "distance_km": 67.2
       }
     },
     {
@@ -48009,40 +48004,6 @@
         "name": "NORD STREAM 1",
         "type": "pipeline",
         "distance_km": 65.4
-      }
-    },
-    {
-      "mmsi": "249814000",
-      "imo": "9491501",
-      "name": "NORTH",
-      "callsign": "9HA6394",
-      "flag": null,
-      "ship_type": "cargo",
-      "lat": 58.672357,
-      "lon": 18.99716,
-      "speed": 11.9,
-      "course": 210.7,
-      "heading": 210.0,
-      "timestamp": "2026-08-02T07:27:09.494000+00:00",
-      "source": "digitraffic",
-      "risk_score": 6,
-      "risk_level": "Watch",
-      "triggered_rules": [
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 252.7 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "NORD STREAM 1",
-        "type": "pipeline",
-        "distance_km": 69.8
       }
     },
     {
