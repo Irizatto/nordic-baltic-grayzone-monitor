@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-08-03T22:03:20.710299+00:00",
+    "generated_at": "2026-08-04T10:27:49.385331+00:00",
     "mode": "live",
     "sources": [
       "barentswatch",
@@ -11,31 +11,31 @@
         "status": "ok",
         "timestamp": "2026-08-03T21:52:36.976588+00:00",
         "records_fetched": 754,
-        "records_published": 653
+        "records_published": 652
       },
       "barentswatch": {
         "status": "ok",
         "timestamp": "2026-08-03T21:52:38.834233+00:00",
         "records_fetched": 1764,
-        "records_published": 1073
+        "records_published": 1063
       },
       "gfw_sar": {
         "status": "ok",
-        "timestamp": "2026-08-03T12:44:23.721338+00:00",
+        "timestamp": "2026-08-04T10:20:04.630701+00:00",
         "records_fetched": 0,
         "records_published": 0,
         "detail": "Live GFW SAR report cells; coordinates are grid-cell centres, not precise individual positions; leads require human review."
       },
       "emodnet": {
         "status": "ok",
-        "timestamp": "2026-08-03T21:52:22.782720+00:00",
+        "timestamp": "2026-08-04T10:19:34.194097+00:00",
         "records_fetched": 1472,
         "records_published": 1472,
         "detail": "EMODnet WFS infrastructure snapshot; public-source coverage and precision vary by originator."
       },
       "helcom": {
         "status": "ok",
-        "timestamp": "2026-08-03T21:52:33.460441+00:00",
+        "timestamp": "2026-08-04T10:19:44.128487+00:00",
         "records_fetched": 188,
         "records_published": 187,
         "detail": "HELCOM MADS Marine Protected Areas public GeoJSON snapshot."
@@ -71,7 +71,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -125,7 +125,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -179,7 +179,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -233,7 +233,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -287,7 +287,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -341,7 +341,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -444,7 +444,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -493,7 +493,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -542,7 +542,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -591,7 +591,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -640,7 +640,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -792,7 +792,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -846,7 +846,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -900,7 +900,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -954,7 +954,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -1008,7 +1008,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -1062,7 +1062,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -1116,7 +1116,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -1170,7 +1170,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -1224,7 +1224,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -1278,7 +1278,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -1332,7 +1332,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -1386,7 +1386,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -1440,7 +1440,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -1494,7 +1494,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -1548,7 +1548,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -1602,7 +1602,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -1656,7 +1656,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -1710,7 +1710,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -1764,7 +1764,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -1818,7 +1818,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -1872,7 +1872,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -1926,7 +1926,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -1980,7 +1980,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -2034,7 +2034,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -2088,7 +2088,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -2142,7 +2142,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -2196,7 +2196,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -2250,7 +2250,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -2304,7 +2304,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -2358,7 +2358,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -2412,7 +2412,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -2466,7 +2466,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -2520,7 +2520,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -2628,7 +2628,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -2682,7 +2682,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -2736,7 +2736,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -2790,7 +2790,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -2844,7 +2844,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -2898,7 +2898,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -2952,7 +2952,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -3006,7 +3006,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -3060,7 +3060,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -3114,7 +3114,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -3168,7 +3168,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -3222,7 +3222,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -3276,7 +3276,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -3428,7 +3428,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -4516,7 +4516,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -4565,7 +4565,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -4614,7 +4614,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.4 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -4663,7 +4663,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -4712,7 +4712,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 22.8 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -4761,7 +4761,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -4810,7 +4810,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -4859,7 +4859,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -4908,7 +4908,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -4957,7 +4957,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -5006,7 +5006,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -5055,7 +5055,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -5104,7 +5104,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -5153,7 +5153,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -5251,7 +5251,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -5300,7 +5300,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -5349,7 +5349,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -5398,7 +5398,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -5447,7 +5447,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -5496,7 +5496,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 23.8 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -5545,7 +5545,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -5643,7 +5643,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -5692,7 +5692,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -5741,7 +5741,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -5839,7 +5839,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -5888,7 +5888,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -5937,7 +5937,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 23.4 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -5986,7 +5986,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -6035,7 +6035,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -6187,7 +6187,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -6236,7 +6236,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -6334,7 +6334,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -6383,7 +6383,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -6481,7 +6481,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -6530,7 +6530,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -6628,7 +6628,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -6726,7 +6726,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -6873,7 +6873,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -7020,7 +7020,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -7069,7 +7069,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -7858,7 +7858,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -8000,7 +8000,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -8186,7 +8186,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -8284,7 +8284,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -8382,7 +8382,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -8436,7 +8436,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -8490,7 +8490,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -8544,7 +8544,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -8696,7 +8696,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -8843,7 +8843,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -8897,7 +8897,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -8995,7 +8995,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -9323,7 +9323,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -9377,7 +9377,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -9431,7 +9431,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -9837,7 +9837,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -10111,7 +10111,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -10341,7 +10341,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -11254,55 +11254,6 @@
         "name": "EMODnet cable pcablesnve.431",
         "type": "cable",
         "distance_km": 7.6
-      }
-    },
-    {
-      "mmsi": "257033650",
-      "imo": null,
-      "name": "STORFJELL",
-      "callsign": null,
-      "flag": null,
-      "ship_type": "cargo",
-      "lat": 70.229368,
-      "lon": 23.397562,
-      "speed": 0.0,
-      "course": 0.0,
-      "heading": 0.0,
-      "timestamp": "2026-08-03T21:52:35+00:00",
-      "source": "barentswatch",
-      "risk_score": 11,
-      "risk_level": "High Review Priority",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_10km",
-          "points": 1,
-          "evidence": "5.7 km from cable EMODnet cable pcablesnve.340"
-        },
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
-        },
-        {
-          "rule_id": "low_speed_near_infra_2h",
-          "points": 2,
-          "evidence": "Speed below 6 kn near schematic infrastructure for 5.4 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        },
-        {
-          "rule_id": "repeat_sensitive_area_presence",
-          "points": 2,
-          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet cable pcablesnve.340",
-        "type": "cable",
-        "distance_km": 5.7
       }
     },
     {
@@ -12544,7 +12495,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -12794,7 +12745,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -12990,7 +12941,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -13269,7 +13220,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -13323,7 +13274,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -13421,7 +13372,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -13475,7 +13426,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -13529,7 +13480,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -13632,7 +13583,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -13823,7 +13774,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -13926,7 +13877,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -14112,7 +14063,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -14166,7 +14117,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -14264,7 +14215,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -14749,7 +14700,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -14896,7 +14847,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -15087,7 +15038,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -15283,7 +15234,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -15381,7 +15332,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -15435,7 +15386,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -15538,7 +15489,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -15729,7 +15680,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -15832,7 +15783,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -15886,7 +15837,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -15940,7 +15891,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -16180,7 +16131,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 175.7 hours"
+          "evidence": "AIS reporting gap of 24.6 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -16608,50 +16559,6 @@
         "name": "EMODnet cable pcablesnve.842",
         "type": "cable",
         "distance_km": 1.4
-      }
-    },
-    {
-      "mmsi": "257077100",
-      "imo": null,
-      "name": "FROYA",
-      "callsign": null,
-      "flag": null,
-      "ship_type": "cargo",
-      "lat": 69.000927,
-      "lon": 16.564365,
-      "speed": 0.0,
-      "course": 0.0,
-      "heading": 0.0,
-      "timestamp": "2026-08-03T21:52:34+00:00",
-      "source": "barentswatch",
-      "risk_score": 10,
-      "risk_level": "High Review Priority",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_5km",
-          "points": 2,
-          "evidence": "4.5 km from cable EMODnet cable pcablesnve.841"
-        },
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
-        },
-        {
-          "rule_id": "low_speed_near_infra_2h",
-          "points": 2,
-          "evidence": "Speed below 6 kn near schematic infrastructure for 5.4 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet cable pcablesnve.841",
-        "type": "cable",
-        "distance_km": 4.5
       }
     },
     {
@@ -20274,6 +20181,50 @@
       }
     },
     {
+      "mmsi": "257033650",
+      "imo": null,
+      "name": "STORFJELL",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 70.229368,
+      "lon": 23.397562,
+      "speed": 0.0,
+      "course": 0.0,
+      "heading": 0.0,
+      "timestamp": "2026-08-03T21:52:35+00:00",
+      "source": "barentswatch",
+      "risk_score": 9,
+      "risk_level": "High Review Priority",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "5.7 km from cable EMODnet cable pcablesnve.340"
+        },
+        {
+          "rule_id": "ais_gap_18h",
+          "points": 4,
+          "evidence": "AIS reporting gap of 24.7 hours"
+        },
+        {
+          "rule_id": "low_speed_near_infra_2h",
+          "points": 2,
+          "evidence": "Speed below 6 kn near schematic infrastructure for 5.4 hours"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet cable pcablesnve.340",
+        "type": "cable",
+        "distance_km": 5.7
+      }
+    },
+    {
       "mmsi": "265588910",
       "imo": "0",
       "name": "MONSUN",
@@ -20293,7 +20244,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -20391,7 +20342,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -20440,7 +20391,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -20533,7 +20484,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -20582,7 +20533,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -20631,7 +20582,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -20773,7 +20724,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -20822,7 +20773,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -20910,7 +20861,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -20959,7 +20910,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -21008,7 +20959,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -21101,7 +21052,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -21194,7 +21145,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -21243,7 +21194,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -21292,7 +21243,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -21341,7 +21292,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -21390,7 +21341,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -21439,7 +21390,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -21488,7 +21439,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -21752,7 +21703,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -22011,7 +21962,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -22060,7 +22011,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -22197,7 +22148,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -22329,7 +22280,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -22378,7 +22329,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -22427,7 +22378,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -22476,7 +22427,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -22618,7 +22569,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -22667,7 +22618,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -22760,7 +22711,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -22809,7 +22760,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -22897,7 +22848,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -22946,7 +22897,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -23132,7 +23083,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -23318,7 +23269,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -23367,7 +23318,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.3 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -23460,7 +23411,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -23509,7 +23460,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -23558,7 +23509,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -23651,7 +23602,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -23744,7 +23695,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.0 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -23793,7 +23744,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 50.1 hours"
+          "evidence": "AIS reporting gap of 49.9 hours"
         },
         {
           "rule_id": "zigzag_or_anchor_drag_proxy",
@@ -23837,7 +23788,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -23886,7 +23837,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -24013,7 +23964,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -24268,45 +24219,6 @@
       }
     },
     {
-      "mmsi": "265071000",
-      "imo": "9904041",
-      "name": "ASTELLA",
-      "callsign": "SABE",
-      "flag": null,
-      "ship_type": "tanker",
-      "lat": 60.695188,
-      "lon": 17.405723,
-      "speed": 0.0,
-      "course": 182.2,
-      "heading": 92.0,
-      "timestamp": "2026-08-03T21:51:45.780000+00:00",
-      "source": "digitraffic",
-      "risk_score": 9,
-      "risk_level": "High Review Priority",
-      "triggered_rules": [
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 278.7 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        },
-        {
-          "rule_id": "identity_change",
-          "points": 3,
-          "evidence": "Identity field changed compared with stored AIS position"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3613",
-        "type": "pipeline",
-        "distance_km": 127.9
-      }
-    },
-    {
       "mmsi": "265630390",
       "imo": "0",
       "name": "HEMFJORD",
@@ -24326,7 +24238,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.5 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -24375,7 +24287,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -24424,7 +24336,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -24473,7 +24385,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -24571,7 +24483,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -24669,7 +24581,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -24718,7 +24630,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.6 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -24811,7 +24723,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 24.3 hours"
+          "evidence": "AIS reporting gap of 22.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -26642,50 +26554,6 @@
         "name": "EMODnet cable pcablesnve.295",
         "type": "cable",
         "distance_km": 8.4
-      }
-    },
-    {
-      "mmsi": "257029770",
-      "imo": null,
-      "name": "HEIMDALL",
-      "callsign": null,
-      "flag": null,
-      "ship_type": "cargo",
-      "lat": 66.509433,
-      "lon": 13.017637,
-      "speed": 0.1,
-      "course": 0.0,
-      "heading": 0.0,
-      "timestamp": "2026-08-03T21:49:26+00:00",
-      "source": "barentswatch",
-      "risk_score": 9,
-      "risk_level": "High Review Priority",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_10km",
-          "points": 1,
-          "evidence": "8.1 km from cable EMODnet cable pcablesnve.861"
-        },
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
-        },
-        {
-          "rule_id": "low_speed_near_infra_2h",
-          "points": 2,
-          "evidence": "Speed below 6 kn near schematic infrastructure for 4.7 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet cable pcablesnve.861",
-        "type": "cable",
-        "distance_km": 8.1
       }
     },
     {
@@ -28744,6 +28612,45 @@
         "name": "EMODnet cable pcablesnve.22",
         "type": "cable",
         "distance_km": 9.8
+      }
+    },
+    {
+      "mmsi": "257077100",
+      "imo": null,
+      "name": "FROYA",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 69.000927,
+      "lon": 16.564365,
+      "speed": 0.0,
+      "course": 0.0,
+      "heading": 0.0,
+      "timestamp": "2026-08-03T21:52:34+00:00",
+      "source": "barentswatch",
+      "risk_score": 8,
+      "risk_level": "High Review Priority",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "4.5 km from cable EMODnet cable pcablesnve.841"
+        },
+        {
+          "rule_id": "ais_gap_18h",
+          "points": 4,
+          "evidence": "AIS reporting gap of 24.7 hours"
+        },
+        {
+          "rule_id": "low_speed_near_infra_2h",
+          "points": 2,
+          "evidence": "Speed below 6 kn near schematic infrastructure for 5.4 hours"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet cable pcablesnve.841",
+        "type": "cable",
+        "distance_km": 4.5
       }
     },
     {
@@ -31027,55 +30934,6 @@
       }
     },
     {
-      "mmsi": "273458830",
-      "imo": null,
-      "name": null,
-      "callsign": null,
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 60.028117,
-      "lon": 29.001515,
-      "speed": 5.0,
-      "course": 93.4,
-      "heading": 82.0,
-      "timestamp": "2026-08-02T22:56:23.832000+00:00",
-      "source": "digitraffic",
-      "risk_score": 8,
-      "risk_level": "High Review Priority",
-      "triggered_rules": [
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 138.5 hours"
-        },
-        {
-          "rule_id": "low_speed_near_infra_2h",
-          "points": 2,
-          "evidence": "Speed below 6 kn near schematic infrastructure for 4.8 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        },
-        {
-          "rule_id": "identity_change",
-          "points": 3,
-          "evidence": "Identity field changed compared with stored AIS position"
-        },
-        {
-          "rule_id": "repeat_sensitive_area_presence",
-          "points": 2,
-          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "NORD STREAM 1",
-        "type": "pipeline",
-        "distance_km": 68.0
-      }
-    },
-    {
       "mmsi": "352006698",
       "imo": "9315032",
       "name": "BALTIC SHARK",
@@ -31434,84 +31292,6 @@
         "name": "EMODnet pipeline pipelines.3464",
         "type": "pipeline",
         "distance_km": 1.0
-      }
-    },
-    {
-      "mmsi": "244201000",
-      "imo": "9483695",
-      "name": "NORDICA",
-      "callsign": "PCSK",
-      "flag": null,
-      "ship_type": "cargo",
-      "lat": 60.195143,
-      "lon": 26.34168,
-      "speed": 0.2,
-      "course": 163.0,
-      "heading": 253.0,
-      "timestamp": "2026-08-03T21:51:22.068000+00:00",
-      "source": "digitraffic",
-      "risk_score": 8,
-      "risk_level": "High Review Priority",
-      "triggered_rules": [
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 274.6 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        },
-        {
-          "rule_id": "repeat_sensitive_area_presence",
-          "points": 2,
-          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3644",
-        "type": "pipeline",
-        "distance_km": 10.8
-      }
-    },
-    {
-      "mmsi": "273389670",
-      "imo": "9823039",
-      "name": "VOLGOTRANS 2701",
-      "callsign": "UBHP4",
-      "flag": null,
-      "ship_type": "tanker",
-      "lat": 60.028708,
-      "lon": 27.045888,
-      "speed": 0.1,
-      "course": 185.4,
-      "heading": 271.0,
-      "timestamp": "2026-08-03T21:51:04.791000+00:00",
-      "source": "digitraffic",
-      "risk_score": 8,
-      "risk_level": "High Review Priority",
-      "triggered_rules": [
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 202.2 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        },
-        {
-          "rule_id": "repeat_sensitive_area_presence",
-          "points": 2,
-          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "NORD STREAM 1",
-        "type": "pipeline",
-        "distance_km": 10.8
       }
     },
     {
@@ -36717,50 +36497,6 @@
       }
     },
     {
-      "mmsi": "257057050",
-      "imo": null,
-      "name": "KOMAGFJORD",
-      "callsign": null,
-      "flag": null,
-      "ship_type": "service",
-      "lat": 69.977287,
-      "lon": 23.32957,
-      "speed": 0.0,
-      "course": 0.0,
-      "heading": 0.0,
-      "timestamp": "2026-08-03T21:52:27+00:00",
-      "source": "barentswatch",
-      "risk_score": 8,
-      "risk_level": "High Review Priority",
-      "triggered_rules": [
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
-        },
-        {
-          "rule_id": "low_speed_near_infra_2h",
-          "points": 2,
-          "evidence": "Speed below 6 kn near schematic infrastructure for 5.4 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        },
-        {
-          "rule_id": "repeat_sensitive_area_presence",
-          "points": 2,
-          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet cable pcablesnve.732",
-        "type": "cable",
-        "distance_km": 18.2
-      }
-    },
-    {
       "mmsi": "257132700",
       "imo": null,
       "name": "TORE I",
@@ -37563,6 +37299,123 @@
         "name": "EMODnet cable pcablesnve.342",
         "type": "cable",
         "distance_km": 1.4
+      }
+    },
+    {
+      "mmsi": "265071000",
+      "imo": "9904041",
+      "name": "ASTELLA",
+      "callsign": "SABE",
+      "flag": null,
+      "ship_type": "tanker",
+      "lat": 60.695188,
+      "lon": 17.405723,
+      "speed": 0.0,
+      "course": 182.2,
+      "heading": 92.0,
+      "timestamp": "2026-08-03T21:51:45.780000+00:00",
+      "source": "digitraffic",
+      "risk_score": 7,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "ais_gap_18h",
+          "points": 4,
+          "evidence": "AIS reporting gap of 278.7 hours"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3613",
+        "type": "pipeline",
+        "distance_km": 127.9
+      }
+    },
+    {
+      "mmsi": "257029770",
+      "imo": null,
+      "name": "HEIMDALL",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 66.509433,
+      "lon": 13.017637,
+      "speed": 0.1,
+      "course": 0.0,
+      "heading": 0.0,
+      "timestamp": "2026-08-03T21:49:26+00:00",
+      "source": "barentswatch",
+      "risk_score": 7,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_10km",
+          "points": 1,
+          "evidence": "8.1 km from cable EMODnet cable pcablesnve.861"
+        },
+        {
+          "rule_id": "ais_gap_18h",
+          "points": 4,
+          "evidence": "AIS reporting gap of 24.7 hours"
+        },
+        {
+          "rule_id": "low_speed_near_infra_2h",
+          "points": 2,
+          "evidence": "Speed below 6 kn near schematic infrastructure for 4.7 hours"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet cable pcablesnve.861",
+        "type": "cable",
+        "distance_km": 8.1
+      }
+    },
+    {
+      "mmsi": "273458830",
+      "imo": null,
+      "name": null,
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 60.028117,
+      "lon": 29.001515,
+      "speed": 5.0,
+      "course": 93.4,
+      "heading": 82.0,
+      "timestamp": "2026-08-02T22:56:23.832000+00:00",
+      "source": "digitraffic",
+      "risk_score": 7,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "ais_gap_18h",
+          "points": 4,
+          "evidence": "AIS reporting gap of 138.5 hours"
+        },
+        {
+          "rule_id": "low_speed_near_infra_2h",
+          "points": 2,
+          "evidence": "Speed below 6 kn near schematic infrastructure for 4.8 hours"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "NORD STREAM 1",
+        "type": "pipeline",
+        "distance_km": 68.0
       }
     },
     {
@@ -39711,7 +39564,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 37.3 hours"
+          "evidence": "AIS reporting gap of 26.6 hours"
         },
         {
           "rule_id": "zigzag_or_anchor_drag_proxy",
@@ -39848,7 +39701,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 36.6 hours"
+          "evidence": "AIS reporting gap of 29.1 hours"
         },
         {
           "rule_id": "identity_change",
@@ -44120,7 +43973,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 46.1 hours"
+          "evidence": "AIS reporting gap of 24.6 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -44846,50 +44699,6 @@
         "name": "Draugen Gasseksport",
         "type": "pipeline",
         "distance_km": 6.5
-      }
-    },
-    {
-      "mmsi": "257128280",
-      "imo": null,
-      "name": "XXLOFOTEN 2",
-      "callsign": null,
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 68.234693,
-      "lon": 14.575318,
-      "speed": 5.3,
-      "course": 194.7,
-      "heading": 0.0,
-      "timestamp": "2026-08-03T11:54:25+00:00",
-      "source": "barentswatch",
-      "risk_score": 7,
-      "risk_level": "Watch",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_1km",
-          "points": 3,
-          "evidence": "0.4 km from cable EMODnet cable pcablesnve.496"
-        },
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 29.2 hours"
-        },
-        {
-          "rule_id": "low_speed_near_infra_2h",
-          "points": 2,
-          "evidence": "Speed below 6 kn near schematic infrastructure for 5.4 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet cable pcablesnve.496",
-        "type": "cable",
-        "distance_km": 0.4
       }
     },
     {
@@ -45964,6 +45773,113 @@
       }
     },
     {
+      "mmsi": "244201000",
+      "imo": "9483695",
+      "name": "NORDICA",
+      "callsign": "PCSK",
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 60.195143,
+      "lon": 26.34168,
+      "speed": 0.2,
+      "course": 163.0,
+      "heading": 253.0,
+      "timestamp": "2026-08-03T21:51:22.068000+00:00",
+      "source": "digitraffic",
+      "risk_score": 6,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "ais_gap_18h",
+          "points": 4,
+          "evidence": "AIS reporting gap of 274.6 hours"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3644",
+        "type": "pipeline",
+        "distance_km": 10.8
+      }
+    },
+    {
+      "mmsi": "273389670",
+      "imo": "9823039",
+      "name": "VOLGOTRANS 2701",
+      "callsign": "UBHP4",
+      "flag": null,
+      "ship_type": "tanker",
+      "lat": 60.028708,
+      "lon": 27.045888,
+      "speed": 0.1,
+      "course": 185.4,
+      "heading": 271.0,
+      "timestamp": "2026-08-03T21:51:04.791000+00:00",
+      "source": "digitraffic",
+      "risk_score": 6,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "ais_gap_18h",
+          "points": 4,
+          "evidence": "AIS reporting gap of 202.2 hours"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "NORD STREAM 1",
+        "type": "pipeline",
+        "distance_km": 10.8
+      }
+    },
+    {
+      "mmsi": "257057050",
+      "imo": null,
+      "name": "KOMAGFJORD",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "service",
+      "lat": 69.977287,
+      "lon": 23.32957,
+      "speed": 0.0,
+      "course": 0.0,
+      "heading": 0.0,
+      "timestamp": "2026-08-03T21:52:27+00:00",
+      "source": "barentswatch",
+      "risk_score": 6,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "ais_gap_18h",
+          "points": 4,
+          "evidence": "AIS reporting gap of 24.7 hours"
+        },
+        {
+          "rule_id": "low_speed_near_infra_2h",
+          "points": 2,
+          "evidence": "Speed below 6 kn near schematic infrastructure for 5.4 hours"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet cable pcablesnve.732",
+        "type": "cable",
+        "distance_km": 18.2
+      }
+    },
+    {
       "mmsi": "273279360",
       "imo": "9281011",
       "name": "EKSPANDER",
@@ -46029,40 +45945,6 @@
         "name": "NORD STREAM 1",
         "type": "pipeline",
         "distance_km": 55.4
-      }
-    },
-    {
-      "mmsi": "257970000",
-      "imo": "9246152",
-      "name": "XANTHIA",
-      "callsign": "LAUR5",
-      "flag": null,
-      "ship_type": "tanker",
-      "lat": 60.739748,
-      "lon": 17.353923,
-      "speed": 9.2,
-      "course": 274.6,
-      "heading": 262.0,
-      "timestamp": "2026-08-03T02:19:01.782000+00:00",
-      "source": "digitraffic",
-      "risk_score": 6,
-      "risk_level": "Watch",
-      "triggered_rules": [
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 219.9 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3613",
-        "type": "pipeline",
-        "distance_km": 132.5
       }
     },
     {
@@ -46547,7 +46429,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 201.0 hours"
+          "evidence": "AIS reporting gap of 31.8 hours"
         },
         {
           "rule_id": "zigzag_or_anchor_drag_proxy",
@@ -48318,7 +48200,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 176.0 hours"
+          "evidence": "AIS reporting gap of 24.8 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -50146,40 +50028,6 @@
         "name": "EMODnet cable pcablesnve.88",
         "type": "cable",
         "distance_km": 55.8
-      }
-    },
-    {
-      "mmsi": "259044120",
-      "imo": null,
-      "name": "STEINKJERRINGA",
-      "callsign": null,
-      "flag": null,
-      "ship_type": "cargo",
-      "lat": 66.372862,
-      "lon": 12.360592,
-      "speed": 0.1,
-      "course": 0.0,
-      "heading": 68.0,
-      "timestamp": "2026-08-03T21:50:31+00:00",
-      "source": "barentswatch",
-      "risk_score": 6,
-      "risk_level": "Watch",
-      "triggered_rules": [
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 24.7 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet cable pcablesnve.88",
-        "type": "cable",
-        "distance_km": 37.7
       }
     },
     {
@@ -53002,40 +52850,6 @@
       }
     },
     {
-      "mmsi": "209356000",
-      "imo": null,
-      "name": "BORIS DAVYDOV",
-      "callsign": null,
-      "flag": null,
-      "ship_type": "tanker",
-      "lat": 71.52364,
-      "lon": 23.489807,
-      "speed": 14.0,
-      "course": 79.9,
-      "heading": 77.0,
-      "timestamp": "2026-08-03T21:52:33+00:00",
-      "source": "barentswatch",
-      "risk_score": 6,
-      "risk_level": "Watch",
-      "triggered_rules": [
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 226.6 hours"
-        },
-        {
-          "rule_id": "repeat_sensitive_area_presence",
-          "points": 2,
-          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "Snøhvit Gassrør",
-        "type": "pipeline",
-        "distance_km": 42.7
-      }
-    },
-    {
       "mmsi": "231910000",
       "imo": null,
       "name": "SELVIK ICE",
@@ -54501,7 +54315,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 47.5 hours"
+          "evidence": "AIS reporting gap of 24.4 hours"
         },
         {
           "rule_id": "zigzag_or_anchor_drag_proxy",
@@ -54784,7 +54598,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 167.9 hours"
+          "evidence": "AIS reporting gap of 24.7 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -55667,45 +55481,6 @@
         "name": "Norne Gasstransport",
         "type": "pipeline",
         "distance_km": 87.1
-      }
-    },
-    {
-      "mmsi": "257046750",
-      "imo": null,
-      "name": "FOX HUNTER",
-      "callsign": null,
-      "flag": null,
-      "ship_type": "service",
-      "lat": 68.784862,
-      "lon": 16.542083,
-      "speed": 0.0,
-      "course": 12.8,
-      "heading": 0.0,
-      "timestamp": "2026-08-03T14:36:33+00:00",
-      "source": "barentswatch",
-      "risk_score": 6,
-      "risk_level": "Watch",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_10km",
-          "points": 1,
-          "evidence": "8.3 km from cable EMODnet cable pcablesnve.836"
-        },
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 271.3 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet cable pcablesnve.836",
-        "type": "cable",
-        "distance_km": 8.3
       }
     },
     {
@@ -58610,40 +58385,6 @@
       }
     },
     {
-      "mmsi": "257142800",
-      "imo": null,
-      "name": "STURLA S",
-      "callsign": null,
-      "flag": null,
-      "ship_type": "cargo",
-      "lat": 69.913762,
-      "lon": 29.490678,
-      "speed": 0.0,
-      "course": 0.0,
-      "heading": 0.0,
-      "timestamp": "2026-08-03T20:46:14+00:00",
-      "source": "barentswatch",
-      "risk_score": 6,
-      "risk_level": "Watch",
-      "triggered_rules": [
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 24.5 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet cable pcablesnve.734",
-        "type": "cable",
-        "distance_km": 31.4
-      }
-    },
-    {
       "mmsi": "257520000",
       "imo": null,
       "name": "SILVER DANIA",
@@ -58777,6 +58518,45 @@
         "name": "EMODnet cable pcablesnve.343",
         "type": "cable",
         "distance_km": 19.7
+      }
+    },
+    {
+      "mmsi": "257128280",
+      "imo": null,
+      "name": "XXLOFOTEN 2",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 68.234693,
+      "lon": 14.575318,
+      "speed": 5.3,
+      "course": 194.7,
+      "heading": 0.0,
+      "timestamp": "2026-08-03T11:54:25+00:00",
+      "source": "barentswatch",
+      "risk_score": 5,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.4 km from cable EMODnet cable pcablesnve.496"
+        },
+        {
+          "rule_id": "ais_gap_18h",
+          "points": 4,
+          "evidence": "AIS reporting gap of 29.2 hours"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet cable pcablesnve.496",
+        "type": "cable",
+        "distance_km": 0.4
       }
     },
     {
@@ -59150,7 +58930,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 53.0 hours"
+          "evidence": "AIS reporting gap of 46.7 hours"
         },
         {
           "rule_id": "identity_change",
@@ -60905,7 +60685,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 85.0 hours"
+          "evidence": "AIS reporting gap of 84.8 hours"
         },
         {
           "rule_id": "identity_change",
@@ -61061,7 +60841,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 77.7 hours"
+          "evidence": "AIS reporting gap of 47.3 hours"
         },
         {
           "rule_id": "zigzag_or_anchor_drag_proxy",
@@ -61100,7 +60880,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 125.1 hours"
+          "evidence": "AIS reporting gap of 83.0 hours"
         },
         {
           "rule_id": "identity_change",
@@ -64912,45 +64692,6 @@
       }
     },
     {
-      "mmsi": "275492000",
-      "imo": null,
-      "name": "DORADO 2",
-      "callsign": null,
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 70.62923,
-      "lon": 29.722242,
-      "speed": 0.0,
-      "course": 324.3,
-      "heading": 251.0,
-      "timestamp": "2026-08-03T21:50:48+00:00",
-      "source": "barentswatch",
-      "risk_score": 5,
-      "risk_level": "Watch",
-      "triggered_rules": [
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 270.6 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        },
-        {
-          "rule_id": "repeat_sensitive_area_presence",
-          "points": 2,
-          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet cable pcablesnve.734",
-        "type": "cable",
-        "distance_km": 101.0
-      }
-    },
-    {
       "mmsi": "257992900",
       "imo": null,
       "name": "NORTH EXPLORER",
@@ -65829,50 +65570,6 @@
       }
     },
     {
-      "mmsi": "257471500",
-      "imo": null,
-      "name": "HELMER HANSSEN",
-      "callsign": null,
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 69.831282,
-      "lon": 20.478463,
-      "speed": 5.9,
-      "course": 182.3,
-      "heading": 180.0,
-      "timestamp": "2026-08-03T21:52:33+00:00",
-      "source": "barentswatch",
-      "risk_score": 5,
-      "risk_level": "Watch",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_10km",
-          "points": 1,
-          "evidence": "6.0 km from cable EMODnet cable pcablesnve.904"
-        },
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 151.4 hours"
-        },
-        {
-          "rule_id": "low_speed_near_infra_2h",
-          "points": 2,
-          "evidence": "Speed below 6 kn near schematic infrastructure for 4.7 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet cable pcablesnve.904",
-        "type": "cable",
-        "distance_km": 6.0
-      }
-    },
-    {
       "mmsi": "258301500",
       "imo": null,
       "name": "LONGYEAR 2",
@@ -66167,45 +65864,6 @@
         "name": "EMODnet cable pcablesnve.5",
         "type": "cable",
         "distance_km": 2.6
-      }
-    },
-    {
-      "mmsi": "258001360",
-      "imo": null,
-      "name": "TALARIA",
-      "callsign": null,
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 69.651182,
-      "lon": 18.960433,
-      "speed": 0.7,
-      "course": 274.6,
-      "heading": 0.0,
-      "timestamp": "2026-08-03T11:24:38+00:00",
-      "source": "barentswatch",
-      "risk_score": 5,
-      "risk_level": "Watch",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_1km",
-          "points": 3,
-          "evidence": "0.4 km from cable EMODnet cable pcablesnve.23"
-        },
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 312.0 hours"
-        },
-        {
-          "rule_id": "low_speed_near_infra_2h",
-          "points": 2,
-          "evidence": "Speed below 6 kn near schematic infrastructure for 2.2 hours"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet cable pcablesnve.23",
-        "type": "cable",
-        "distance_km": 0.4
       }
     },
     {
@@ -68149,45 +67807,6 @@
       }
     },
     {
-      "mmsi": "258999170",
-      "imo": null,
-      "name": "NEMO",
-      "callsign": null,
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 64.912845,
-      "lon": 11.3071,
-      "speed": 0.1,
-      "course": 0.0,
-      "heading": 0.0,
-      "timestamp": "2026-08-03T10:36:36+00:00",
-      "source": "barentswatch",
-      "risk_score": 5,
-      "risk_level": "Watch",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_5km",
-          "points": 2,
-          "evidence": "2.6 km from cable EMODnet cable pcablesnve.5"
-        },
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 68.2 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet cable pcablesnve.5",
-        "type": "cable",
-        "distance_km": 2.6
-      }
-    },
-    {
       "mmsi": "258094000",
       "imo": null,
       "name": "HAVILA POLARIS",
@@ -68448,50 +68067,6 @@
         "name": "EMODnet cable pcablesnve.88",
         "type": "cable",
         "distance_km": 24.4
-      }
-    },
-    {
-      "mmsi": "258021050",
-      "imo": null,
-      "name": "REPPAHESTEN",
-      "callsign": null,
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 66.662593,
-      "lon": 13.481805,
-      "speed": 25.6,
-      "course": 98.8,
-      "heading": 0.0,
-      "timestamp": "2026-08-03T14:17:08+00:00",
-      "source": "barentswatch",
-      "risk_score": 5,
-      "risk_level": "Watch",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_10km",
-          "points": 1,
-          "evidence": "7.2 km from cable EMODnet cable pcablesnve.295"
-        },
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 68.5 hours"
-        },
-        {
-          "rule_id": "low_speed_near_infra_2h",
-          "points": 2,
-          "evidence": "Speed below 6 kn near schematic infrastructure for 5.1 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet cable pcablesnve.295",
-        "type": "cable",
-        "distance_km": 7.2
       }
     },
     {
@@ -70927,45 +70502,6 @@
       }
     },
     {
-      "mmsi": "109060075",
-      "imo": null,
-      "name": "109060075",
-      "callsign": null,
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 71.142922,
-      "lon": 30.40004,
-      "speed": 2.0,
-      "course": 127.9,
-      "heading": 0.0,
-      "timestamp": "2026-08-03T09:51:04+00:00",
-      "source": "barentswatch",
-      "risk_score": 5,
-      "risk_level": "Watch",
-      "triggered_rules": [
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 88.7 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        },
-        {
-          "rule_id": "repeat_sensitive_area_presence",
-          "points": 2,
-          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet cable pcablesnve.734",
-        "type": "cable",
-        "distance_km": 157.4
-      }
-    },
-    {
       "mmsi": "109060383",
       "imo": null,
       "name": "SH2",
@@ -71131,7 +70667,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 127.5 hours"
+          "evidence": "AIS reporting gap of 49.5 hours"
         },
         {
           "rule_id": "zigzag_or_anchor_drag_proxy",
