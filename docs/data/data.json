@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-08-10T02:12:39.867237+00:00",
+    "generated_at": "2026-08-10T06:01:11.048548+00:00",
     "mode": "live",
     "sources": [
       "barentswatch",
@@ -11,7 +11,7 @@
         "status": "ok",
         "timestamp": "2026-08-10T02:05:15.779558+00:00",
         "records_fetched": 779,
-        "records_published": 656
+        "records_published": 655
       },
       "barentswatch": {
         "status": "ok",
@@ -21,21 +21,21 @@
       },
       "gfw_sar": {
         "status": "ok",
-        "timestamp": "2026-08-09T14:21:14.565329+00:00",
+        "timestamp": "2026-08-10T05:53:29.724918+00:00",
         "records_fetched": 0,
         "records_published": 0,
         "detail": "Live GFW SAR report cells; coordinates are grid-cell centres, not precise individual positions; leads require human review."
       },
       "emodnet": {
         "status": "ok",
-        "timestamp": "2026-08-10T02:05:01.504045+00:00",
+        "timestamp": "2026-08-10T05:52:59.302468+00:00",
         "records_fetched": 1472,
         "records_published": 1472,
         "detail": "EMODnet WFS infrastructure snapshot; public-source coverage and precision vary by originator."
       },
       "helcom": {
         "status": "ok",
-        "timestamp": "2026-08-10T02:05:11.177346+00:00",
+        "timestamp": "2026-08-10T05:53:08.655490+00:00",
         "records_fetched": 188,
         "records_published": 187,
         "detail": "HELCOM MADS Marine Protected Areas public GeoJSON snapshot."
@@ -50445,40 +50445,6 @@
         "name": "EMODnet pipeline pipelines.3613",
         "type": "pipeline",
         "distance_km": 167.7
-      }
-    },
-    {
-      "mmsi": "210705000",
-      "imo": "1095363",
-      "name": "BOTHNIAMAR",
-      "callsign": "5BYM6",
-      "flag": null,
-      "ship_type": "cargo",
-      "lat": 61.266553,
-      "lon": 17.167845,
-      "speed": 0.0,
-      "course": 238.7,
-      "heading": 345.0,
-      "timestamp": "2026-08-10T02:02:33.503000+00:00",
-      "source": "digitraffic",
-      "risk_score": 6,
-      "risk_level": "Watch",
-      "triggered_rules": [
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 268.2 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3613",
-        "type": "pipeline",
-        "distance_km": 173.3
       }
     },
     {
