@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-08-12T02:17:17.552689+00:00",
+    "generated_at": "2026-08-12T03:11:31.686744+00:00",
     "mode": "live",
     "sources": [
       "barentswatch",
@@ -23,21 +23,21 @@
       },
       "gfw_sar": {
         "status": "ok",
-        "timestamp": "2026-08-11T13:53:20.685466+00:00",
+        "timestamp": "2026-08-12T03:04:36.085882+00:00",
         "records_fetched": 0,
         "records_published": 0,
         "detail": "Live GFW SAR report cells; coordinates are grid-cell centres, not precise individual positions; leads require human review."
       },
       "emodnet": {
         "status": "ok",
-        "timestamp": "2026-08-12T02:12:49.250051+00:00",
+        "timestamp": "2026-08-12T03:03:47.690286+00:00",
         "records_fetched": 1472,
         "records_published": 1472,
         "detail": "EMODnet WFS infrastructure snapshot; public-source coverage and precision vary by originator."
       },
       "helcom": {
         "status": "ok",
-        "timestamp": "2026-08-12T02:12:57.843573+00:00",
+        "timestamp": "2026-08-12T03:03:57.937067+00:00",
         "records_fetched": 188,
         "records_published": 187,
         "detail": "HELCOM MADS Marine Protected Areas public GeoJSON snapshot."
@@ -4788,60 +4788,6 @@
         "name": "NORD STREAM 1",
         "type": "pipeline",
         "distance_km": 56.6
-      }
-    },
-    {
-      "mmsi": "230983340",
-      "imo": "0",
-      "name": "RESCUE JANNE MALEN",
-      "callsign": "OJKK",
-      "flag": null,
-      "ship_type": "service",
-      "lat": 60.797153,
-      "lon": 21.393922,
-      "speed": 0.0,
-      "course": 190.8,
-      "heading": 256.0,
-      "timestamp": "2026-08-11T23:12:40.713000+00:00",
-      "source": "digitraffic",
-      "risk_score": 12,
-      "risk_level": "Critical Review Priority",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_5km",
-          "points": 2,
-          "evidence": "1.1 km from pipeline EMODnet pipeline pipelines.3881"
-        },
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 21.5 hours"
-        },
-        {
-          "rule_id": "low_speed_near_infra_2h",
-          "points": 2,
-          "evidence": "Speed below 6 kn near schematic infrastructure for 4.1 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        },
-        {
-          "rule_id": "identity_change",
-          "points": 3,
-          "evidence": "Identity field changed compared with stored AIS position"
-        },
-        {
-          "rule_id": "repeat_sensitive_area_presence",
-          "points": 2,
-          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3881",
-        "type": "pipeline",
-        "distance_km": 1.1
       }
     },
     {
@@ -15409,6 +15355,55 @@
       }
     },
     {
+      "mmsi": "230983340",
+      "imo": "0",
+      "name": "RESCUE JANNE MALEN",
+      "callsign": "OJKK",
+      "flag": null,
+      "ship_type": "service",
+      "lat": 60.797153,
+      "lon": 21.393922,
+      "speed": 0.0,
+      "course": 190.8,
+      "heading": 256.0,
+      "timestamp": "2026-08-11T23:12:40.713000+00:00",
+      "source": "digitraffic",
+      "risk_score": 10,
+      "risk_level": "High Review Priority",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.1 km from pipeline EMODnet pipeline pipelines.3881"
+        },
+        {
+          "rule_id": "ais_gap_18h",
+          "points": 4,
+          "evidence": "AIS reporting gap of 21.5 hours"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3881",
+        "type": "pipeline",
+        "distance_km": 1.1
+      }
+    },
+    {
       "mmsi": "230014190",
       "imo": "0",
       "name": "RESCUE HARRY S",
@@ -15861,60 +15856,6 @@
         "name": "NORD STREAM 1",
         "type": "pipeline",
         "distance_km": 33.9
-      }
-    },
-    {
-      "mmsi": "230941570",
-      "imo": "0",
-      "name": "MERIKUOKKA",
-      "callsign": "OI2932",
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 60.151943,
-      "lon": 24.923408,
-      "speed": 0.0,
-      "course": 360.0,
-      "heading": 511.0,
-      "timestamp": "2026-08-11T22:46:40.943000+00:00",
-      "source": "digitraffic",
-      "risk_score": 10,
-      "risk_level": "High Review Priority",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_1km",
-          "points": 3,
-          "evidence": "0.0 km from pipeline EMODnet pipeline pipelines.3481"
-        },
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 21.5 hours"
-        },
-        {
-          "rule_id": "low_speed_near_infra_2h",
-          "points": 2,
-          "evidence": "Speed below 6 kn near schematic infrastructure for 3.7 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        },
-        {
-          "rule_id": "identity_change",
-          "points": 3,
-          "evidence": "Identity field changed compared with stored AIS position"
-        },
-        {
-          "rule_id": "repeat_sensitive_area_presence",
-          "points": 2,
-          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3481",
-        "type": "pipeline",
-        "distance_km": 0.0
       }
     },
     {
@@ -28136,6 +28077,55 @@
         "name": "EMODnet cable pcablesnve.88",
         "type": "cable",
         "distance_km": 7.2
+      }
+    },
+    {
+      "mmsi": "230941570",
+      "imo": "0",
+      "name": "MERIKUOKKA",
+      "callsign": "OI2932",
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 60.151943,
+      "lon": 24.923408,
+      "speed": 0.0,
+      "course": 360.0,
+      "heading": 511.0,
+      "timestamp": "2026-08-11T22:46:40.943000+00:00",
+      "source": "digitraffic",
+      "risk_score": 8,
+      "risk_level": "High Review Priority",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.0 km from pipeline EMODnet pipeline pipelines.3481"
+        },
+        {
+          "rule_id": "ais_gap_18h",
+          "points": 4,
+          "evidence": "AIS reporting gap of 21.5 hours"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3481",
+        "type": "pipeline",
+        "distance_km": 0.0
       }
     },
     {
