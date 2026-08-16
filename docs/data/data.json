@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-08-16T02:20:00.910492+00:00",
+    "generated_at": "2026-08-16T13:22:10.173659+00:00",
     "mode": "live",
     "sources": [
       "barentswatch",
@@ -11,31 +11,31 @@
         "status": "ok",
         "timestamp": "2026-08-15T12:44:18.639389+00:00",
         "records_fetched": 910,
-        "records_published": 801
+        "records_published": 799
       },
       "barentswatch": {
         "status": "ok",
         "timestamp": "2026-08-15T12:44:20.425352+00:00",
         "records_fetched": 1779,
-        "records_published": 1190
+        "records_published": 1188
       },
       "gfw_sar": {
         "status": "ok",
-        "timestamp": "2026-08-16T02:06:41.471328+00:00",
+        "timestamp": "2026-08-16T13:09:40.909017+00:00",
         "records_fetched": 0,
         "records_published": 0,
         "detail": "Live GFW SAR report cells; coordinates are grid-cell centres, not precise individual positions; leads require human review."
       },
       "emodnet": {
         "status": "ok",
-        "timestamp": "2026-08-16T02:05:38.060916+00:00",
+        "timestamp": "2026-08-16T13:09:00.126187+00:00",
         "records_fetched": 1472,
         "records_published": 1472,
         "detail": "EMODnet WFS infrastructure snapshot; public-source coverage and precision vary by originator."
       },
       "helcom": {
         "status": "ok",
-        "timestamp": "2026-08-16T02:05:47.649260+00:00",
+        "timestamp": "2026-08-16T13:09:08.344251+00:00",
         "records_fetched": 188,
         "records_published": 187,
         "detail": "HELCOM MADS Marine Protected Areas public GeoJSON snapshot."
@@ -4441,55 +4441,6 @@
       }
     },
     {
-      "mmsi": "219775000",
-      "imo": null,
-      "name": "TERNSUND",
-      "callsign": null,
-      "flag": null,
-      "ship_type": "tanker",
-      "lat": 66.280045,
-      "lon": 10.727715,
-      "speed": 11.6,
-      "course": 269.4,
-      "heading": 266.0,
-      "timestamp": "2026-08-15T12:44:13+00:00",
-      "source": "barentswatch",
-      "risk_score": 13,
-      "risk_level": "Critical Review Priority",
-      "triggered_rules": [
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 195.3 hours"
-        },
-        {
-          "rule_id": "low_speed_near_infra_2h",
-          "points": 2,
-          "evidence": "Speed below 6 kn near schematic infrastructure for 5.7 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        },
-        {
-          "rule_id": "identity_change",
-          "points": 3,
-          "evidence": "Identity field changed compared with stored AIS position"
-        },
-        {
-          "rule_id": "repeat_sensitive_area_presence",
-          "points": 2,
-          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet cable pcablesnve.88",
-        "type": "cable",
-        "distance_km": 104.6
-      }
-    },
-    {
       "mmsi": "257266000",
       "imo": null,
       "name": "KYSTBUNKER II",
@@ -4514,7 +4465,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 144.2 hours"
+          "evidence": "AIS reporting gap of 18.4 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -7255,7 +7206,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 81.3 hours"
+          "evidence": "AIS reporting gap of 71.1 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -7534,7 +7485,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 151.9 hours"
+          "evidence": "AIS reporting gap of 18.2 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -10913,50 +10864,6 @@
       }
     },
     {
-      "mmsi": "209722000",
-      "imo": "9453377",
-      "name": "BLUE WAVE",
-      "callsign": "5BGC3",
-      "flag": null,
-      "ship_type": "cargo",
-      "lat": 59.9037,
-      "lon": 26.03985,
-      "speed": 5.9,
-      "course": 74.0,
-      "heading": 67.0,
-      "timestamp": "2026-08-15T12:44:12.989000+00:00",
-      "source": "digitraffic",
-      "risk_score": 11,
-      "risk_level": "High Review Priority",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_5km",
-          "points": 2,
-          "evidence": "3.4 km from pipeline NORD STREAM 1"
-        },
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 224.1 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        },
-        {
-          "rule_id": "identity_change",
-          "points": 3,
-          "evidence": "Identity field changed compared with stored AIS position"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "NORD STREAM 1",
-        "type": "pipeline",
-        "distance_km": 3.4
-      }
-    },
-    {
       "mmsi": "352003439",
       "imo": "9453391",
       "name": "NEW KNIGHT",
@@ -13601,50 +13508,6 @@
       }
     },
     {
-      "mmsi": "249814000",
-      "imo": "9491501",
-      "name": "NORTH",
-      "callsign": "9HA6394",
-      "flag": null,
-      "ship_type": "cargo",
-      "lat": 61.13022,
-      "lon": 21.426165,
-      "speed": 0.0,
-      "course": 298.4,
-      "heading": 80.0,
-      "timestamp": "2026-08-15T12:41:37.546000+00:00",
-      "source": "digitraffic",
-      "risk_score": 11,
-      "risk_level": "High Review Priority",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_1km",
-          "points": 3,
-          "evidence": "0.3 km from pipeline EMODnet pipeline pipelines.3510"
-        },
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 275.7 hours"
-        },
-        {
-          "rule_id": "low_speed_near_infra_2h",
-          "points": 2,
-          "evidence": "Speed below 6 kn near schematic infrastructure for 6.0 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3510",
-        "type": "pipeline",
-        "distance_km": 0.3
-      }
-    },
-    {
       "mmsi": "230018670",
       "imo": "0",
       "name": "PILOT L-146",
@@ -14058,50 +13921,6 @@
         "name": "NORD STREAM 1",
         "type": "pipeline",
         "distance_km": 79.6
-      }
-    },
-    {
-      "mmsi": "248221000",
-      "imo": "9479802",
-      "name": "KEY SOUTH",
-      "callsign": "9HA2267",
-      "flag": null,
-      "ship_type": "tanker",
-      "lat": 58.597533,
-      "lon": 17.793492,
-      "speed": 0.0,
-      "course": 291.5,
-      "heading": 196.0,
-      "timestamp": "2026-08-15T12:41:26.803000+00:00",
-      "source": "digitraffic",
-      "risk_score": 11,
-      "risk_level": "High Review Priority",
-      "triggered_rules": [
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 249.8 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        },
-        {
-          "rule_id": "identity_change",
-          "points": 3,
-          "evidence": "Identity field changed compared with stored AIS position"
-        },
-        {
-          "rule_id": "repeat_sensitive_area_presence",
-          "points": 2,
-          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "NORD STREAM 1",
-        "type": "pipeline",
-        "distance_km": 133.1
       }
     },
     {
@@ -15372,7 +15191,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 121.5 hours"
+          "evidence": "AIS reporting gap of 102.6 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -18764,6 +18583,50 @@
         "name": "EMODnet cable pcablesnve.22",
         "type": "cable",
         "distance_km": 9.8
+      }
+    },
+    {
+      "mmsi": "219775000",
+      "imo": null,
+      "name": "TERNSUND",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "tanker",
+      "lat": 66.280045,
+      "lon": 10.727715,
+      "speed": 11.6,
+      "course": 269.4,
+      "heading": 266.0,
+      "timestamp": "2026-08-15T12:44:13+00:00",
+      "source": "barentswatch",
+      "risk_score": 10,
+      "risk_level": "High Review Priority",
+      "triggered_rules": [
+        {
+          "rule_id": "ais_gap_18h",
+          "points": 4,
+          "evidence": "AIS reporting gap of 18.4 hours"
+        },
+        {
+          "rule_id": "low_speed_near_infra_2h",
+          "points": 2,
+          "evidence": "Speed below 6 kn near schematic infrastructure for 5.7 hours"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet cable pcablesnve.88",
+        "type": "cable",
+        "distance_km": 104.6
       }
     },
     {
@@ -23559,50 +23422,6 @@
       }
     },
     {
-      "mmsi": "257028310",
-      "imo": null,
-      "name": "RO FORTUNE",
-      "callsign": null,
-      "flag": null,
-      "ship_type": "cargo",
-      "lat": 67.658553,
-      "lon": 15.127827,
-      "speed": 0.0,
-      "course": 282.7,
-      "heading": 228.0,
-      "timestamp": "2026-08-15T12:44:02+00:00",
-      "source": "barentswatch",
-      "risk_score": 10,
-      "risk_level": "High Review Priority",
-      "triggered_rules": [
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 43.3 hours"
-        },
-        {
-          "rule_id": "low_speed_near_infra_2h",
-          "points": 2,
-          "evidence": "Speed below 6 kn near schematic infrastructure for 5.1 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        },
-        {
-          "rule_id": "repeat_sensitive_area_presence",
-          "points": 2,
-          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet cable pcablesnve.36",
-        "type": "cable",
-        "distance_km": 21.0
-      }
-    },
-    {
       "mmsi": "258688000",
       "imo": null,
       "name": "NIKLAS",
@@ -25940,6 +25759,128 @@
         "name": "EMODnet cable pcablesnve.88",
         "type": "cable",
         "distance_km": 3.9
+      }
+    },
+    {
+      "mmsi": "209722000",
+      "imo": "9453377",
+      "name": "BLUE WAVE",
+      "callsign": "5BGC3",
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 59.9037,
+      "lon": 26.03985,
+      "speed": 5.9,
+      "course": 74.0,
+      "heading": 67.0,
+      "timestamp": "2026-08-15T12:44:12.989000+00:00",
+      "source": "digitraffic",
+      "risk_score": 9,
+      "risk_level": "High Review Priority",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "3.4 km from pipeline NORD STREAM 1"
+        },
+        {
+          "rule_id": "ais_gap_18h",
+          "points": 4,
+          "evidence": "AIS reporting gap of 224.1 hours"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "NORD STREAM 1",
+        "type": "pipeline",
+        "distance_km": 3.4
+      }
+    },
+    {
+      "mmsi": "249814000",
+      "imo": "9491501",
+      "name": "NORTH",
+      "callsign": "9HA6394",
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 61.13022,
+      "lon": 21.426165,
+      "speed": 0.0,
+      "course": 298.4,
+      "heading": 80.0,
+      "timestamp": "2026-08-15T12:41:37.546000+00:00",
+      "source": "digitraffic",
+      "risk_score": 9,
+      "risk_level": "High Review Priority",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.3 km from pipeline EMODnet pipeline pipelines.3510"
+        },
+        {
+          "rule_id": "ais_gap_6h",
+          "points": 2,
+          "evidence": "AIS reporting gap of 8.8 hours"
+        },
+        {
+          "rule_id": "low_speed_near_infra_2h",
+          "points": 2,
+          "evidence": "Speed below 6 kn near schematic infrastructure for 6.0 hours"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3510",
+        "type": "pipeline",
+        "distance_km": 0.3
+      }
+    },
+    {
+      "mmsi": "248221000",
+      "imo": "9479802",
+      "name": "KEY SOUTH",
+      "callsign": "9HA2267",
+      "flag": null,
+      "ship_type": "tanker",
+      "lat": 58.597533,
+      "lon": 17.793492,
+      "speed": 0.0,
+      "course": 291.5,
+      "heading": 196.0,
+      "timestamp": "2026-08-15T12:41:26.803000+00:00",
+      "source": "digitraffic",
+      "risk_score": 9,
+      "risk_level": "High Review Priority",
+      "triggered_rules": [
+        {
+          "rule_id": "ais_gap_18h",
+          "points": 4,
+          "evidence": "AIS reporting gap of 249.8 hours"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "NORD STREAM 1",
+        "type": "pipeline",
+        "distance_km": 133.1
       }
     },
     {
@@ -30451,45 +30392,6 @@
       }
     },
     {
-      "mmsi": "230042000",
-      "imo": "9129263",
-      "name": "BALTIC BRIGHT",
-      "callsign": "OJTY",
-      "flag": null,
-      "ship_type": "cargo",
-      "lat": 60.061552,
-      "lon": 18.591337,
-      "speed": 0.0,
-      "course": 99.8,
-      "heading": 1.0,
-      "timestamp": "2026-08-15T12:38:30.216000+00:00",
-      "source": "digitraffic",
-      "risk_score": 9,
-      "risk_level": "High Review Priority",
-      "triggered_rules": [
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 227.3 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        },
-        {
-          "rule_id": "identity_change",
-          "points": 3,
-          "evidence": "Identity field changed compared with stored AIS position"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3613",
-        "type": "pipeline",
-        "distance_km": 54.9
-      }
-    },
-    {
       "mmsi": "230290000",
       "imo": "7347615",
       "name": "URHO",
@@ -33022,6 +32924,45 @@
       }
     },
     {
+      "mmsi": "257028310",
+      "imo": null,
+      "name": "RO FORTUNE",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 67.658553,
+      "lon": 15.127827,
+      "speed": 0.0,
+      "course": 282.7,
+      "heading": 228.0,
+      "timestamp": "2026-08-15T12:44:02+00:00",
+      "source": "barentswatch",
+      "risk_score": 8,
+      "risk_level": "High Review Priority",
+      "triggered_rules": [
+        {
+          "rule_id": "ais_gap_18h",
+          "points": 4,
+          "evidence": "AIS reporting gap of 43.3 hours"
+        },
+        {
+          "rule_id": "low_speed_near_infra_2h",
+          "points": 2,
+          "evidence": "Speed below 6 kn near schematic infrastructure for 5.1 hours"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet cable pcablesnve.36",
+        "type": "cable",
+        "distance_km": 21.0
+      }
+    },
+    {
       "mmsi": "273398340",
       "imo": "9831622",
       "name": "EDINIY",
@@ -33476,7 +33417,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 73.4 hours"
+          "evidence": "AIS reporting gap of 47.9 hours"
         },
         {
           "rule_id": "zigzag_or_anchor_drag_proxy",
@@ -33576,45 +33517,6 @@
         "name": "NORD STREAM 1",
         "type": "pipeline",
         "distance_km": 12.2
-      }
-    },
-    {
-      "mmsi": "255917283",
-      "imo": "9359325",
-      "name": "MSC FERROL II",
-      "callsign": "CQ2912",
-      "flag": null,
-      "ship_type": "cargo",
-      "lat": 59.492415,
-      "lon": 24.96532,
-      "speed": 0.0,
-      "course": 28.1,
-      "heading": 131.0,
-      "timestamp": "2026-08-15T12:42:13.635000+00:00",
-      "source": "digitraffic",
-      "risk_score": 8,
-      "risk_level": "High Review Priority",
-      "triggered_rules": [
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 274.4 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        },
-        {
-          "rule_id": "repeat_sensitive_area_presence",
-          "points": 2,
-          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "NORD STREAM 1",
-        "type": "pipeline",
-        "distance_km": 39.3
       }
     },
     {
@@ -34856,45 +34758,6 @@
         "name": "NORD STREAM 1",
         "type": "pipeline",
         "distance_km": 54.7
-      }
-    },
-    {
-      "mmsi": "572728220",
-      "imo": "9292943",
-      "name": "ZEYNEP",
-      "callsign": "T2CL6",
-      "flag": null,
-      "ship_type": "cargo",
-      "lat": 60.039713,
-      "lon": 29.121705,
-      "speed": 13.4,
-      "course": 271.2,
-      "heading": 273.0,
-      "timestamp": "2026-08-15T12:44:15.281000+00:00",
-      "source": "digitraffic",
-      "risk_score": 8,
-      "risk_level": "High Review Priority",
-      "triggered_rules": [
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 228.6 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        },
-        {
-          "rule_id": "repeat_sensitive_area_presence",
-          "points": 2,
-          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "NORD STREAM 1",
-        "type": "pipeline",
-        "distance_km": 72.7
       }
     },
     {
@@ -41158,50 +41021,6 @@
       }
     },
     {
-      "mmsi": "258001630",
-      "imo": null,
-      "name": "SKINNAROY",
-      "callsign": null,
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 64.389608,
-      "lon": 10.51116,
-      "speed": 0.1,
-      "course": 0.0,
-      "heading": 0.0,
-      "timestamp": "2026-08-15T12:44:04+00:00",
-      "source": "barentswatch",
-      "risk_score": 8,
-      "risk_level": "High Review Priority",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_1km",
-          "points": 3,
-          "evidence": "0.3 km from cable EMODnet cable pcablesnve.300"
-        },
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 43.2 hours"
-        },
-        {
-          "rule_id": "low_speed_near_infra_6h",
-          "points": 4,
-          "evidence": "Speed below 6 kn near schematic infrastructure for 16.9 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet cable pcablesnve.300",
-        "type": "cable",
-        "distance_km": 0.3
-      }
-    },
-    {
       "mmsi": "259058000",
       "imo": null,
       "name": "ASGARD B",
@@ -41719,7 +41538,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 86.4 hours"
+          "evidence": "AIS reporting gap of 34.0 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -44811,6 +44630,84 @@
       }
     },
     {
+      "mmsi": "230042000",
+      "imo": "9129263",
+      "name": "BALTIC BRIGHT",
+      "callsign": "OJTY",
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 60.061552,
+      "lon": 18.591337,
+      "speed": 0.0,
+      "course": 99.8,
+      "heading": 1.0,
+      "timestamp": "2026-08-15T12:38:30.216000+00:00",
+      "source": "digitraffic",
+      "risk_score": 7,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "ais_gap_6h",
+          "points": 2,
+          "evidence": "AIS reporting gap of 7.4 hours"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3613",
+        "type": "pipeline",
+        "distance_km": 54.9
+      }
+    },
+    {
+      "mmsi": "258001630",
+      "imo": null,
+      "name": "SKINNAROY",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 64.389608,
+      "lon": 10.51116,
+      "speed": 0.1,
+      "course": 0.0,
+      "heading": 0.0,
+      "timestamp": "2026-08-15T12:44:04+00:00",
+      "source": "barentswatch",
+      "risk_score": 7,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.3 km from cable EMODnet cable pcablesnve.300"
+        },
+        {
+          "rule_id": "ais_gap_18h",
+          "points": 4,
+          "evidence": "AIS reporting gap of 43.2 hours"
+        },
+        {
+          "rule_id": "low_speed_near_infra_6h",
+          "points": 4,
+          "evidence": "Speed below 6 kn near schematic infrastructure for 16.9 hours"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet cable pcablesnve.300",
+        "type": "cable",
+        "distance_km": 0.3
+      }
+    },
+    {
       "mmsi": "257445500",
       "imo": null,
       "name": "STANGNESTIND",
@@ -45664,50 +45561,6 @@
         "name": "EMODnet pipeline pipelines.3721",
         "type": "pipeline",
         "distance_km": 6.7
-      }
-    },
-    {
-      "mmsi": "319173300",
-      "imo": "9807475",
-      "name": "LIFE SAGA",
-      "callsign": "ZGIW3",
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 59.430043,
-      "lon": 18.78697,
-      "speed": 10.3,
-      "course": 104.2,
-      "heading": 101.0,
-      "timestamp": "2026-08-15T12:44:16.345000+00:00",
-      "source": "digitraffic",
-      "risk_score": 7,
-      "risk_level": "Watch",
-      "triggered_rules": [
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 116.8 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        },
-        {
-          "rule_id": "identity_change",
-          "points": 3,
-          "evidence": "Identity field changed compared with stored AIS position"
-        },
-        {
-          "rule_id": "repeat_sensitive_area_presence",
-          "points": 2,
-          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3650",
-        "type": "pipeline",
-        "distance_km": 94.5
       }
     },
     {
@@ -48791,50 +48644,6 @@
       }
     },
     {
-      "mmsi": "273430960",
-      "imo": null,
-      "name": null,
-      "callsign": null,
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 59.883335,
-      "lon": 30.188177,
-      "speed": 0.2,
-      "course": 207.1,
-      "heading": 511.0,
-      "timestamp": "2026-08-15T12:18:31.880000+00:00",
-      "source": "digitraffic",
-      "risk_score": 7,
-      "risk_level": "Watch",
-      "triggered_rules": [
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 224.4 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        },
-        {
-          "rule_id": "identity_change",
-          "points": 3,
-          "evidence": "Identity field changed compared with stored AIS position"
-        },
-        {
-          "rule_id": "repeat_sensitive_area_presence",
-          "points": 2,
-          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "NORD STREAM 1",
-        "type": "pipeline",
-        "distance_km": 132.8
-      }
-    },
-    {
       "mmsi": "276014670",
       "imo": "0",
       "name": "NARGO",
@@ -49118,7 +48927,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 120.5 hours"
+          "evidence": "AIS reporting gap of 49.2 hours"
         },
         {
           "rule_id": "zigzag_or_anchor_drag_proxy",
@@ -53009,7 +52818,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 84.1 hours"
+          "evidence": "AIS reporting gap of 65.6 hours"
         },
         {
           "rule_id": "low_speed_near_infra_6h",
@@ -54192,7 +54001,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 83.1 hours"
+          "evidence": "AIS reporting gap of 35.3 hours"
         },
         {
           "rule_id": "low_speed_near_infra_2h",
@@ -54419,50 +54228,6 @@
         "name": "EMODnet cable pcablesnve.837",
         "type": "cable",
         "distance_km": 6.1
-      }
-    },
-    {
-      "mmsi": "257485800",
-      "imo": null,
-      "name": "LUTEN",
-      "callsign": null,
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 68.933267,
-      "lon": 16.724503,
-      "speed": 0.7,
-      "course": 0.0,
-      "heading": 0.0,
-      "timestamp": "2026-08-15T12:44:09+00:00",
-      "source": "barentswatch",
-      "risk_score": 7,
-      "risk_level": "Watch",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_5km",
-          "points": 2,
-          "evidence": "2.3 km from cable EMODnet cable pcablesnve.838"
-        },
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 43.3 hours"
-        },
-        {
-          "rule_id": "low_speed_near_infra_6h",
-          "points": 4,
-          "evidence": "Speed below 6 kn near schematic infrastructure for 17.0 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet cable pcablesnve.838",
-        "type": "cable",
-        "distance_km": 2.3
       }
     },
     {
@@ -54881,7 +54646,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 118.7 hours"
+          "evidence": "AIS reporting gap of 18.4 hours"
         },
         {
           "rule_id": "zigzag_or_anchor_drag_proxy",
@@ -56697,6 +56462,118 @@
         "name": "Snøhvit Gassrør",
         "type": "pipeline",
         "distance_km": 89.6
+      }
+    },
+    {
+      "mmsi": "255917283",
+      "imo": "9359325",
+      "name": "MSC FERROL II",
+      "callsign": "CQ2912",
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 59.492415,
+      "lon": 24.96532,
+      "speed": 0.0,
+      "course": 28.1,
+      "heading": 131.0,
+      "timestamp": "2026-08-15T12:42:13.635000+00:00",
+      "source": "digitraffic",
+      "risk_score": 6,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "ais_gap_18h",
+          "points": 4,
+          "evidence": "AIS reporting gap of 274.4 hours"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "NORD STREAM 1",
+        "type": "pipeline",
+        "distance_km": 39.3
+      }
+    },
+    {
+      "mmsi": "572728220",
+      "imo": "9292943",
+      "name": "ZEYNEP",
+      "callsign": "T2CL6",
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 60.039713,
+      "lon": 29.121705,
+      "speed": 13.4,
+      "course": 271.2,
+      "heading": 273.0,
+      "timestamp": "2026-08-15T12:44:15.281000+00:00",
+      "source": "digitraffic",
+      "risk_score": 6,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "ais_gap_6h",
+          "points": 2,
+          "evidence": "AIS reporting gap of 15.7 hours"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "NORD STREAM 1",
+        "type": "pipeline",
+        "distance_km": 72.7
+      }
+    },
+    {
+      "mmsi": "257485800",
+      "imo": null,
+      "name": "LUTEN",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 68.933267,
+      "lon": 16.724503,
+      "speed": 0.7,
+      "course": 0.0,
+      "heading": 0.0,
+      "timestamp": "2026-08-15T12:44:09+00:00",
+      "source": "barentswatch",
+      "risk_score": 6,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "2.3 km from cable EMODnet cable pcablesnve.838"
+        },
+        {
+          "rule_id": "ais_gap_18h",
+          "points": 4,
+          "evidence": "AIS reporting gap of 43.3 hours"
+        },
+        {
+          "rule_id": "low_speed_near_infra_6h",
+          "points": 4,
+          "evidence": "Speed below 6 kn near schematic infrastructure for 17.0 hours"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet cable pcablesnve.838",
+        "type": "cable",
+        "distance_km": 2.3
       }
     },
     {
@@ -59208,7 +59085,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 127.1 hours"
+          "evidence": "AIS reporting gap of 118.2 hours"
         },
         {
           "rule_id": "zigzag_or_anchor_drag_proxy",
@@ -60129,55 +60006,6 @@
         "name": "EMODnet cable pcablesnve.36",
         "type": "cable",
         "distance_km": 21.0
-      }
-    },
-    {
-      "mmsi": "259421000",
-      "imo": null,
-      "name": "BAUTAR_",
-      "callsign": null,
-      "flag": null,
-      "ship_type": "fishing",
-      "lat": 69.675775,
-      "lon": 18.982755,
-      "speed": 0.0,
-      "course": 207.5,
-      "heading": 209.0,
-      "timestamp": "2026-08-15T12:44:11+00:00",
-      "source": "barentswatch",
-      "risk_score": 6,
-      "risk_level": "Watch",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_5km",
-          "points": 2,
-          "evidence": "1.7 km from cable EMODnet cable pcablesnve.28"
-        },
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 43.3 hours"
-        },
-        {
-          "rule_id": "low_speed_near_infra_6h",
-          "points": 4,
-          "evidence": "Speed below 6 kn near schematic infrastructure for 17.0 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        },
-        {
-          "rule_id": "repeat_sensitive_area_presence",
-          "points": 2,
-          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet cable pcablesnve.28",
-        "type": "cable",
-        "distance_km": 1.7
       }
     },
     {
@@ -64306,7 +64134,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 225.1 hours"
+          "evidence": "AIS reporting gap of 18.7 hours"
         },
         {
           "rule_id": "zigzag_or_anchor_drag_proxy",
@@ -67601,6 +67429,128 @@
       }
     },
     {
+      "mmsi": "319173300",
+      "imo": "9807475",
+      "name": "LIFE SAGA",
+      "callsign": "ZGIW3",
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 59.430043,
+      "lon": 18.78697,
+      "speed": 10.3,
+      "course": 104.2,
+      "heading": 101.0,
+      "timestamp": "2026-08-15T12:44:16.345000+00:00",
+      "source": "digitraffic",
+      "risk_score": 5,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "ais_gap_18h",
+          "points": 4,
+          "evidence": "AIS reporting gap of 116.8 hours"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3650",
+        "type": "pipeline",
+        "distance_km": 94.5
+      }
+    },
+    {
+      "mmsi": "273430960",
+      "imo": null,
+      "name": null,
+      "callsign": null,
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 59.883335,
+      "lon": 30.188177,
+      "speed": 0.2,
+      "course": 207.1,
+      "heading": 511.0,
+      "timestamp": "2026-08-15T12:18:31.880000+00:00",
+      "source": "digitraffic",
+      "risk_score": 5,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "ais_gap_18h",
+          "points": 4,
+          "evidence": "AIS reporting gap of 224.4 hours"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "NORD STREAM 1",
+        "type": "pipeline",
+        "distance_km": 132.8
+      }
+    },
+    {
+      "mmsi": "259421000",
+      "imo": null,
+      "name": "BAUTAR_",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "fishing",
+      "lat": 69.675775,
+      "lon": 18.982755,
+      "speed": 0.0,
+      "course": 207.5,
+      "heading": 209.0,
+      "timestamp": "2026-08-15T12:44:11+00:00",
+      "source": "barentswatch",
+      "risk_score": 5,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.7 km from cable EMODnet cable pcablesnve.28"
+        },
+        {
+          "rule_id": "ais_gap_18h",
+          "points": 4,
+          "evidence": "AIS reporting gap of 43.3 hours"
+        },
+        {
+          "rule_id": "low_speed_near_infra_6h",
+          "points": 4,
+          "evidence": "Speed below 6 kn near schematic infrastructure for 17.0 hours"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet cable pcablesnve.28",
+        "type": "cable",
+        "distance_km": 1.7
+      }
+    },
+    {
       "mmsi": "276818000",
       "imo": "9744441",
       "name": "ORMSO",
@@ -69303,45 +69253,6 @@
       }
     },
     {
-      "mmsi": "273311070",
-      "imo": null,
-      "name": null,
-      "callsign": null,
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 59.878422,
-      "lon": 30.235428,
-      "speed": 4.9,
-      "course": 121.9,
-      "heading": 511.0,
-      "timestamp": "2026-08-14T17:31:03.623000+00:00",
-      "source": "digitraffic",
-      "risk_score": 5,
-      "risk_level": "Watch",
-      "triggered_rules": [
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 194.9 hours"
-        },
-        {
-          "rule_id": "identity_change",
-          "points": 3,
-          "evidence": "Identity field changed compared with stored AIS position"
-        },
-        {
-          "rule_id": "repeat_sensitive_area_presence",
-          "points": 2,
-          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "NORD STREAM 1",
-        "type": "pipeline",
-        "distance_km": 135.4
-      }
-    },
-    {
       "mmsi": "255806245",
       "imo": null,
       "name": null,
@@ -69417,45 +69328,6 @@
         "name": "EMODnet pipeline pipelines.3613",
         "type": "pipeline",
         "distance_km": 91.8
-      }
-    },
-    {
-      "mmsi": "265570850",
-      "imo": null,
-      "name": null,
-      "callsign": null,
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 59.303973,
-      "lon": 18.08112,
-      "speed": 0.0,
-      "course": 20.4,
-      "heading": 70.0,
-      "timestamp": "2026-08-14T22:48:14.559000+00:00",
-      "source": "digitraffic",
-      "risk_score": 5,
-      "risk_level": "Watch",
-      "triggered_rules": [
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 131.1 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        },
-        {
-          "rule_id": "identity_change",
-          "points": 3,
-          "evidence": "Identity field changed compared with stored AIS position"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3613",
-        "type": "pipeline",
-        "distance_km": 130.2
       }
     },
     {
@@ -70965,7 +70837,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 84.4 hours"
+          "evidence": "AIS reporting gap of 67.4 hours"
         },
         {
           "rule_id": "zigzag_or_anchor_drag_proxy",
@@ -75316,45 +75188,6 @@
       }
     },
     {
-      "mmsi": "983110630",
-      "imo": null,
-      "name": "SERENISSIMA ZODIAC 1",
-      "callsign": null,
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 79.5169,
-      "lon": 12.401663,
-      "speed": 0.1,
-      "course": 0.0,
-      "heading": 0.0,
-      "timestamp": "2026-08-15T12:34:44+00:00",
-      "source": "barentswatch",
-      "risk_score": 5,
-      "risk_level": "Watch",
-      "triggered_rules": [
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 172.5 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        },
-        {
-          "rule_id": "repeat_sensitive_area_presence",
-          "points": 2,
-          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "Snøhvit Gassrør",
-        "type": "pipeline",
-        "distance_km": 914.7
-      }
-    },
-    {
       "mmsi": "983110633",
       "imo": null,
       "name": "SERENISSIMA ZODIAC 4",
@@ -75391,45 +75224,6 @@
         "name": "Snøhvit Gassrør",
         "type": "pipeline",
         "distance_km": 914.8
-      }
-    },
-    {
-      "mmsi": "983110634",
-      "imo": null,
-      "name": "SERENISSIMA ZODIAC 5",
-      "callsign": null,
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 79.607147,
-      "lon": 12.649118,
-      "speed": 2.6,
-      "course": 343.0,
-      "heading": 0.0,
-      "timestamp": "2026-08-15T09:41:49+00:00",
-      "source": "barentswatch",
-      "risk_score": 5,
-      "risk_level": "Watch",
-      "triggered_rules": [
-        {
-          "rule_id": "ais_gap_18h",
-          "points": 4,
-          "evidence": "AIS reporting gap of 211.4 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        },
-        {
-          "rule_id": "repeat_sensitive_area_presence",
-          "points": 2,
-          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "Snøhvit Gassrør",
-        "type": "pipeline",
-        "distance_km": 922.5
       }
     },
     {
@@ -82803,7 +82597,7 @@
         {
           "rule_id": "ais_gap_18h",
           "points": 4,
-          "evidence": "AIS reporting gap of 80.1 hours"
+          "evidence": "AIS reporting gap of 34.2 hours"
         },
         {
           "rule_id": "zigzag_or_anchor_drag_proxy",
