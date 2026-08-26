@@ -1,10 +1,12 @@
 {
-  "generated_at": "2026-08-26T02:08:18.579256+00:00",
+  "generated_at": "2026-08-26T13:33:14.875653+00:00",
   "source": "helcom_mads",
   "source_url": "https://maps.helcom.fi/arcgis/rest/services/MADS/Biodiversity/MapServer/54",
-  "status": "ok",
-  "records_fetched": 188,
+  "status": "error_kept_old_data",
+  "records_fetched": 0,
   "records_published": 187,
-  "fallbacks": [],
-  "detail": "HELCOM MADS Marine Protected Areas public GeoJSON snapshot."
+  "fallbacks": [
+    "HELCOM unavailable; previous snapshot retained: RuntimeError: HELCOM request failed after 3 attempts: 503 Server Error: Service Unavailable for url: https://maps.helcom.fi/arcgis/rest/services/MADS/Biodiversity/MapServer/54/query?where=1%3D1&outFields=OBJECTID%2CName%2CMPA_ID%2CCountry%2CSite_link%2CMPA_status%2CDate_est%2CYear_est&returnGeometry=true&outSR=4326&geometryPrecision=5&maxAllowableOffset=0.002&f=geojson"
+  ],
+  "detail": "HELCOM refresh unavailable; previous validated snapshot retained."
 }
