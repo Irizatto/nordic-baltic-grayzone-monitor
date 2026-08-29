@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-08-29T16:28:44.831594+00:00",
+    "generated_at": "2026-08-29T16:50:05.517716+00:00",
     "mode": "live",
     "sources": [
       "barentswatch",
@@ -21,21 +21,21 @@
       },
       "gfw_sar": {
         "status": "ok",
-        "timestamp": "2026-08-29T07:16:01.260057+00:00",
+        "timestamp": "2026-08-29T16:49:56.739888+00:00",
         "records_fetched": 0,
         "records_published": 0,
         "detail": "Live GFW SAR report cells; coordinates are grid-cell centres, not precise individual positions; leads require human review."
       },
       "emodnet": {
         "status": "ok",
-        "timestamp": "2026-08-29T16:28:18.856191+00:00",
+        "timestamp": "2026-08-29T16:49:34.849364+00:00",
         "records_fetched": 1472,
         "records_published": 1472,
         "detail": "EMODnet WFS infrastructure snapshot; public-source coverage and precision vary by originator."
       },
       "helcom": {
         "status": "ok",
-        "timestamp": "2026-08-29T16:28:27.679917+00:00",
+        "timestamp": "2026-08-29T16:49:44.299281+00:00",
         "records_fetched": 188,
         "records_published": 187,
         "detail": "HELCOM MADS Marine Protected Areas public GeoJSON snapshot."
@@ -46,6 +46,1824 @@
     ]
   },
   "vessels": [
+    {
+      "mmsi": "230151360",
+      "imo": "0",
+      "name": "ARAMIS",
+      "callsign": "OH9009",
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 60.15423,
+      "lon": 24.890128,
+      "speed": 0.0,
+      "course": 0.0,
+      "heading": 511.0,
+      "timestamp": "2026-08-29T16:28:28.114000+00:00",
+      "source": "digitraffic",
+      "risk_score": 10,
+      "risk_level": "High Review Priority",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.0 km from pipeline EMODnet pipeline pipelines.3530"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3530",
+        "type": "pipeline",
+        "distance_km": 0.0
+      }
+    },
+    {
+      "mmsi": "230992650",
+      "imo": "0",
+      "name": "URSUS",
+      "callsign": "OIRM",
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 61.125918,
+      "lon": 21.472192,
+      "speed": 0.0,
+      "course": 0.1,
+      "heading": 61.0,
+      "timestamp": "2026-08-29T16:28:28.500000+00:00",
+      "source": "digitraffic",
+      "risk_score": 9,
+      "risk_level": "High Review Priority",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "2.6 km from pipeline EMODnet pipeline pipelines.3510"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3510",
+        "type": "pipeline",
+        "distance_km": 2.6
+      }
+    },
+    {
+      "mmsi": "230046990",
+      "imo": "0",
+      "name": "MT5300",
+      "callsign": "OH2372",
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 60.168765,
+      "lon": 24.969857,
+      "speed": 0.0,
+      "course": 303.7,
+      "heading": 511.0,
+      "timestamp": "2026-08-29T16:25:57.605000+00:00",
+      "source": "digitraffic",
+      "risk_score": 9,
+      "risk_level": "High Review Priority",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.1 km from pipeline EMODnet pipeline pipelines.3464"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3464",
+        "type": "pipeline",
+        "distance_km": 1.1
+      }
+    },
+    {
+      "mmsi": "230112370",
+      "imo": "0",
+      "name": "HESSU",
+      "callsign": "OG 8397",
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 60.167405,
+      "lon": 24.980065,
+      "speed": 0.0,
+      "course": 276.6,
+      "heading": 226.0,
+      "timestamp": "2026-08-29T16:26:02.112000+00:00",
+      "source": "digitraffic",
+      "risk_score": 9,
+      "risk_level": "High Review Priority",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.1 km from pipeline EMODnet pipeline pipelines.3464"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3464",
+        "type": "pipeline",
+        "distance_km": 1.1
+      }
+    },
+    {
+      "mmsi": "230046580",
+      "imo": "0",
+      "name": "SVANTE G",
+      "callsign": "OH2344",
+      "flag": null,
+      "ship_type": "service",
+      "lat": 60.080685,
+      "lon": 19.934122,
+      "speed": 0.0,
+      "course": 0.0,
+      "heading": 357.0,
+      "timestamp": "2026-08-29T16:28:22.846000+00:00",
+      "source": "digitraffic",
+      "risk_score": 8,
+      "risk_level": "High Review Priority",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.7 km from pipeline EMODnet pipeline pipelines.3529"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3529",
+        "type": "pipeline",
+        "distance_km": 0.7
+      }
+    },
+    {
+      "mmsi": "230169030",
+      "imo": "0",
+      "name": "RODNY",
+      "callsign": "OHA3332",
+      "flag": null,
+      "ship_type": "tug",
+      "lat": 60.145987,
+      "lon": 24.983418,
+      "speed": 0.0,
+      "course": 360.0,
+      "heading": 141.0,
+      "timestamp": "2026-08-29T16:24:09.586000+00:00",
+      "source": "digitraffic",
+      "risk_score": 8,
+      "risk_level": "High Review Priority",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.2 km from pipeline EMODnet pipeline pipelines.3580"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3580",
+        "type": "pipeline",
+        "distance_km": 0.2
+      }
+    },
+    {
+      "mmsi": "230174140",
+      "imo": "0",
+      "name": "JEHU",
+      "callsign": "OHA4017",
+      "flag": null,
+      "ship_type": "tug",
+      "lat": 60.435733,
+      "lon": 22.205138,
+      "speed": 0.0,
+      "course": 200.8,
+      "heading": 298.0,
+      "timestamp": "2026-08-29T16:27:23.259000+00:00",
+      "source": "digitraffic",
+      "risk_score": 8,
+      "risk_level": "High Review Priority",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.7 km from pipeline EMODnet pipeline pipelines.3633"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3633",
+        "type": "pipeline",
+        "distance_km": 0.7
+      }
+    },
+    {
+      "mmsi": "230175570",
+      "imo": "0",
+      "name": "RESCUE WEST",
+      "callsign": "OHA4222",
+      "flag": null,
+      "ship_type": "service",
+      "lat": 60.219247,
+      "lon": 19.53854,
+      "speed": 0.0,
+      "course": 222.1,
+      "heading": 311.0,
+      "timestamp": "2026-08-29T16:23:40.872000+00:00",
+      "source": "digitraffic",
+      "risk_score": 8,
+      "risk_level": "High Review Priority",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.1 km from pipeline EMODnet pipeline pipelines.3613"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3613",
+        "type": "pipeline",
+        "distance_km": 0.1
+      }
+    },
+    {
+      "mmsi": "230111190",
+      "imo": "0",
+      "name": "MERIHOYLA",
+      "callsign": "OHA7173",
+      "flag": null,
+      "ship_type": "service",
+      "lat": 60.274022,
+      "lon": 25.540663,
+      "speed": 0.1,
+      "course": 86.5,
+      "heading": 511.0,
+      "timestamp": "2026-08-29T16:28:26.861000+00:00",
+      "source": "digitraffic",
+      "risk_score": 8,
+      "risk_level": "High Review Priority",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.7 km from pipeline EMODnet pipeline pipelines.3856"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3856",
+        "type": "pipeline",
+        "distance_km": 0.7
+      }
+    },
+    {
+      "mmsi": "230992750",
+      "imo": "0",
+      "name": "SVAERTAN",
+      "callsign": "OJDT",
+      "flag": null,
+      "ship_type": "service",
+      "lat": 60.080427,
+      "lon": 19.934147,
+      "speed": 0.0,
+      "course": 347.6,
+      "heading": 356.0,
+      "timestamp": "2026-08-29T16:25:09.459000+00:00",
+      "source": "digitraffic",
+      "risk_score": 8,
+      "risk_level": "High Review Priority",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.7 km from pipeline EMODnet pipeline pipelines.3529"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3529",
+        "type": "pipeline",
+        "distance_km": 0.7
+      }
+    },
+    {
+      "mmsi": "230980160",
+      "imo": "0",
+      "name": "SUBSEA VI",
+      "callsign": "OGVY",
+      "flag": null,
+      "ship_type": "tug",
+      "lat": 60.080153,
+      "lon": 19.934285,
+      "speed": 0.0,
+      "course": 88.8,
+      "heading": 267.0,
+      "timestamp": "2026-08-29T16:27:23.117000+00:00",
+      "source": "digitraffic",
+      "risk_score": 8,
+      "risk_level": "High Review Priority",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.7 km from pipeline EMODnet pipeline pipelines.3529"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3529",
+        "type": "pipeline",
+        "distance_km": 0.7
+      }
+    },
+    {
+      "mmsi": "230093090",
+      "imo": "0",
+      "name": "PILOT L243",
+      "callsign": "OH6348",
+      "flag": null,
+      "ship_type": "service",
+      "lat": 60.2754,
+      "lon": 26.445547,
+      "speed": 0.0,
+      "course": 286.1,
+      "heading": 213.0,
+      "timestamp": "2026-08-29T16:28:22.285000+00:00",
+      "source": "digitraffic",
+      "risk_score": 8,
+      "risk_level": "High Review Priority",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.2 km from pipeline EMODnet pipeline pipelines.3644"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3644",
+        "type": "pipeline",
+        "distance_km": 0.2
+      }
+    },
+    {
+      "mmsi": "230033880",
+      "imo": "0",
+      "name": "PILOT L238",
+      "callsign": "OJ9333",
+      "flag": null,
+      "ship_type": "service",
+      "lat": 60.105188,
+      "lon": 24.974505,
+      "speed": 0.0,
+      "course": 282.1,
+      "heading": 28.0,
+      "timestamp": "2026-08-29T16:28:25.829000+00:00",
+      "source": "digitraffic",
+      "risk_score": 8,
+      "risk_level": "High Review Priority",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.1 km from pipeline EMODnet pipeline pipelines.3495"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3495",
+        "type": "pipeline",
+        "distance_km": 0.1
+      }
+    },
+    {
+      "mmsi": "230055040",
+      "imo": "0",
+      "name": "MIINA",
+      "callsign": "OH-3114",
+      "flag": null,
+      "ship_type": "service",
+      "lat": 60.14897,
+      "lon": 25.035728,
+      "speed": 0.0,
+      "course": 360.0,
+      "heading": 511.0,
+      "timestamp": "2026-08-29T16:26:04.738000+00:00",
+      "source": "digitraffic",
+      "risk_score": 8,
+      "risk_level": "High Review Priority",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.3 km from pipeline EMODnet pipeline pipelines.3908"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3908",
+        "type": "pipeline",
+        "distance_km": 0.3
+      }
+    },
+    {
+      "mmsi": "230193440",
+      "imo": "0",
+      "name": "L253",
+      "callsign": "OHA6849",
+      "flag": null,
+      "ship_type": "service",
+      "lat": 60.275332,
+      "lon": 26.445682,
+      "speed": 0.0,
+      "course": 218.7,
+      "heading": 511.0,
+      "timestamp": "2026-08-29T16:28:22.052000+00:00",
+      "source": "digitraffic",
+      "risk_score": 8,
+      "risk_level": "High Review Priority",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.2 km from pipeline EMODnet pipeline pipelines.3644"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3644",
+        "type": "pipeline",
+        "distance_km": 0.2
+      }
+    },
+    {
+      "mmsi": "230109470",
+      "imo": "0",
+      "name": "PILOT L129",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "service",
+      "lat": 59.808838,
+      "lon": 22.910557,
+      "speed": 0.0,
+      "course": 90.6,
+      "heading": 148.0,
+      "timestamp": "2026-08-29T16:28:24.882000+00:00",
+      "source": "digitraffic",
+      "risk_score": 8,
+      "risk_level": "High Review Priority",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.0 km from pipeline EMODnet pipeline pipelines.3889"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3889",
+        "type": "pipeline",
+        "distance_km": 0.0
+      }
+    },
+    {
+      "mmsi": "230099950",
+      "imo": "0",
+      "name": "PILOT L244",
+      "callsign": "OH6918",
+      "flag": null,
+      "ship_type": "service",
+      "lat": 60.013415,
+      "lon": 23.946202,
+      "speed": 0.0,
+      "course": 40.5,
+      "heading": 28.0,
+      "timestamp": "2026-08-29T16:28:28.310000+00:00",
+      "source": "digitraffic",
+      "risk_score": 8,
+      "risk_level": "High Review Priority",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "1.0 km from pipeline Balticconnector"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Balticconnector",
+        "type": "pipeline",
+        "distance_km": 1.0
+      }
+    },
+    {
+      "mmsi": "230018360",
+      "imo": "0",
+      "name": "RESCUE KOTKA",
+      "callsign": "OJ7975",
+      "flag": null,
+      "ship_type": "service",
+      "lat": 60.461417,
+      "lon": 26.961798,
+      "speed": 0.0,
+      "course": 316.4,
+      "heading": 297.0,
+      "timestamp": "2026-08-29T16:28:23.672000+00:00",
+      "source": "digitraffic",
+      "risk_score": 8,
+      "risk_level": "High Review Priority",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.2 km from pipeline EMODnet pipeline pipelines.3860"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3860",
+        "type": "pipeline",
+        "distance_km": 0.2
+      }
+    },
+    {
+      "mmsi": "230991670",
+      "imo": "0",
+      "name": "AJO",
+      "callsign": "OG2940",
+      "flag": null,
+      "ship_type": "tug",
+      "lat": 60.462007,
+      "lon": 26.962247,
+      "speed": 0.0,
+      "course": 103.1,
+      "heading": 306.0,
+      "timestamp": "2026-08-29T16:28:20.275000+00:00",
+      "source": "digitraffic",
+      "risk_score": 8,
+      "risk_level": "High Review Priority",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.2 km from pipeline EMODnet pipeline pipelines.3860"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3860",
+        "type": "pipeline",
+        "distance_km": 0.2
+      }
+    },
+    {
+      "mmsi": "230161450",
+      "imo": "0",
+      "name": "L248",
+      "callsign": "OHA2259",
+      "flag": null,
+      "ship_type": "service",
+      "lat": 60.796395,
+      "lon": 21.376775,
+      "speed": 0.0,
+      "course": 130.9,
+      "heading": 46.0,
+      "timestamp": "2026-08-29T16:28:22.519000+00:00",
+      "source": "digitraffic",
+      "risk_score": 8,
+      "risk_level": "High Review Priority",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "1.0 km from pipeline EMODnet pipeline pipelines.3877"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3877",
+        "type": "pipeline",
+        "distance_km": 1.0
+      }
+    },
+    {
+      "mmsi": "230991780",
+      "imo": "0",
+      "name": "JOONAS",
+      "callsign": "OI4812",
+      "flag": null,
+      "ship_type": "tug",
+      "lat": 61.133498,
+      "lon": 21.44057,
+      "speed": 0.0,
+      "course": 214.0,
+      "heading": 139.0,
+      "timestamp": "2026-08-29T16:28:27.188000+00:00",
+      "source": "digitraffic",
+      "risk_score": 8,
+      "risk_level": "High Review Priority",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.8 km from pipeline EMODnet pipeline pipelines.3510"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3510",
+        "type": "pipeline",
+        "distance_km": 0.8
+      }
+    },
+    {
+      "mmsi": "230111650",
+      "imo": "0",
+      "name": "GAIA",
+      "callsign": "OF-4195",
+      "flag": null,
+      "ship_type": "service",
+      "lat": 60.442868,
+      "lon": 22.152608,
+      "speed": 0.0,
+      "course": 251.6,
+      "heading": 10.0,
+      "timestamp": "2026-08-29T16:27:04.967000+00:00",
+      "source": "digitraffic",
+      "risk_score": 7,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.2 km from pipeline EMODnet pipeline pipelines.3704"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3704",
+        "type": "pipeline",
+        "distance_km": 1.2
+      }
+    },
+    {
+      "mmsi": "230109460",
+      "imo": "0",
+      "name": "ULLA",
+      "callsign": "OIES",
+      "flag": null,
+      "ship_type": "tug",
+      "lat": 61.132212,
+      "lon": 21.449062,
+      "speed": 0.0,
+      "course": 0.0,
+      "heading": 29.0,
+      "timestamp": "2026-08-29T16:23:34.680000+00:00",
+      "source": "digitraffic",
+      "risk_score": 7,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.3 km from pipeline EMODnet pipeline pipelines.3510"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3510",
+        "type": "pipeline",
+        "distance_km": 1.3
+      }
+    },
+    {
+      "mmsi": "230151590",
+      "imo": "0",
+      "name": "L246",
+      "callsign": "OH9033",
+      "flag": null,
+      "ship_type": "service",
+      "lat": 60.169642,
+      "lon": 24.964457,
+      "speed": 0.0,
+      "course": 179.7,
+      "heading": 84.0,
+      "timestamp": "2026-08-29T16:28:22.239000+00:00",
+      "source": "digitraffic",
+      "risk_score": 7,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.0 km from pipeline EMODnet pipeline pipelines.3465"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3465",
+        "type": "pipeline",
+        "distance_km": 1.0
+      }
+    },
+    {
+      "mmsi": "230059760",
+      "imo": "0",
+      "name": "RESCUE EMMI",
+      "callsign": "OH3542",
+      "flag": null,
+      "ship_type": "service",
+      "lat": 60.153883,
+      "lon": 24.770953,
+      "speed": 0.0,
+      "course": 217.1,
+      "heading": 261.0,
+      "timestamp": "2026-08-29T15:34:00.296000+00:00",
+      "source": "digitraffic",
+      "risk_score": 7,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.3 km from pipeline EMODnet pipeline pipelines.3612"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3612",
+        "type": "pipeline",
+        "distance_km": 1.3
+      }
+    },
+    {
+      "mmsi": "276752000",
+      "imo": "0",
+      "name": "AHTO-27",
+      "callsign": "ES2731",
+      "flag": null,
+      "ship_type": "service",
+      "lat": 59.334878,
+      "lon": 24.07814,
+      "speed": 0.1,
+      "course": 129.6,
+      "heading": 511.0,
+      "timestamp": "2026-08-29T15:34:26.128000+00:00",
+      "source": "digitraffic",
+      "risk_score": 7,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "5.0 km from pipeline Balticconnector"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "Balticconnector",
+        "type": "pipeline",
+        "distance_km": 5.0
+      }
+    },
+    {
+      "mmsi": "230163320",
+      "imo": "0",
+      "name": "VILLE 2",
+      "callsign": "OHA2562",
+      "flag": null,
+      "ship_type": "tug",
+      "lat": 60.280667,
+      "lon": 22.287333,
+      "speed": 0.0,
+      "course": 185.0,
+      "heading": 324.0,
+      "timestamp": "2026-08-29T16:25:43.169000+00:00",
+      "source": "digitraffic",
+      "risk_score": 7,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "3.7 km from pipeline EMODnet pipeline pipelines.3561"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3561",
+        "type": "pipeline",
+        "distance_km": 3.7
+      }
+    },
+    {
+      "mmsi": "230113940",
+      "imo": "0",
+      "name": "PILOT L133",
+      "callsign": "OG-8951",
+      "flag": null,
+      "ship_type": "service",
+      "lat": 60.472552,
+      "lon": 26.95853,
+      "speed": 0.0,
+      "course": 25.6,
+      "heading": 294.0,
+      "timestamp": "2026-08-29T16:28:28.207000+00:00",
+      "source": "digitraffic",
+      "risk_score": 7,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.1 km from pipeline EMODnet pipeline pipelines.3854"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3854",
+        "type": "pipeline",
+        "distance_km": 1.1
+      }
+    },
+    {
+      "mmsi": "257974900",
+      "imo": null,
+      "name": "TRITON",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 68.235233,
+      "lon": 14.580683,
+      "speed": 0.0,
+      "course": 0.0,
+      "heading": 0.0,
+      "timestamp": "2026-08-29T16:28:27+00:00",
+      "source": "barentswatch",
+      "risk_score": 6,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.2 km from cable EMODnet cable pcablesnve.496"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet cable pcablesnve.496",
+        "type": "cable",
+        "distance_km": 0.2
+      }
+    },
+    {
+      "mmsi": "257025360",
+      "imo": null,
+      "name": "STOROEY",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 69.929925,
+      "lon": 20.958528,
+      "speed": 0.0,
+      "course": 277.0,
+      "heading": 123.0,
+      "timestamp": "2026-08-29T16:27:54+00:00",
+      "source": "barentswatch",
+      "risk_score": 6,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.5 km from cable EMODnet cable pcablesnve.161"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet cable pcablesnve.161",
+        "type": "cable",
+        "distance_km": 0.5
+      }
+    },
+    {
+      "mmsi": "257934800",
+      "imo": null,
+      "name": "STADDA",
+      "callsign": null,
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 68.433652,
+      "lon": 14.815587,
+      "speed": 0.0,
+      "course": 0.0,
+      "heading": 0.0,
+      "timestamp": "2026-08-29T16:28:23+00:00",
+      "source": "barentswatch",
+      "risk_score": 6,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.5 km from cable EMODnet cable pcablesnve.116"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet cable pcablesnve.116",
+        "type": "cable",
+        "distance_km": 0.5
+      }
+    },
+    {
+      "mmsi": "230984450",
+      "imo": "0",
+      "name": "ALEXANDRA",
+      "callsign": "OJKV",
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 60.28813,
+      "lon": 25.835173,
+      "speed": 0.0,
+      "course": 215.8,
+      "heading": 267.0,
+      "timestamp": "2026-08-29T16:26:48.662000+00:00",
+      "source": "digitraffic",
+      "risk_score": 6,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.4 km from pipeline EMODnet pipeline pipelines.3558"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3558",
+        "type": "pipeline",
+        "distance_km": 0.4
+      }
+    },
+    {
+      "mmsi": "230182220",
+      "imo": "0",
+      "name": "NORDENSKIOLD",
+      "callsign": "OHA5145",
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 60.337993,
+      "lon": 25.5785,
+      "speed": 102.3,
+      "course": 360.0,
+      "heading": 511.0,
+      "timestamp": "2026-08-29T16:27:05.455000+00:00",
+      "source": "digitraffic",
+      "risk_score": 6,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.4 km from pipeline EMODnet pipeline pipelines.3727"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3727",
+        "type": "pipeline",
+        "distance_km": 0.4
+      }
+    },
+    {
+      "mmsi": "230998680",
+      "imo": "0",
+      "name": "EUGENIA",
+      "callsign": "OJJK",
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 60.018663,
+      "lon": 22.509137,
+      "speed": 0.0,
+      "course": 360.0,
+      "heading": 511.0,
+      "timestamp": "2026-08-29T16:26:55.502000+00:00",
+      "source": "digitraffic",
+      "risk_score": 6,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.4 km from pipeline EMODnet pipeline pipelines.3454"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3454",
+        "type": "pipeline",
+        "distance_km": 0.4
+      }
+    },
+    {
+      "mmsi": "230938640",
+      "imo": "0",
+      "name": "INGEBORG",
+      "callsign": "OI-8564",
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 60.170792,
+      "lon": 24.96188,
+      "speed": 0.0,
+      "course": 340.1,
+      "heading": 511.0,
+      "timestamp": "2026-08-29T16:28:06.262000+00:00",
+      "source": "digitraffic",
+      "risk_score": 6,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.9 km from pipeline EMODnet pipeline pipelines.3465"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3465",
+        "type": "pipeline",
+        "distance_km": 0.9
+      }
+    },
+    {
+      "mmsi": "230235000",
+      "imo": "0",
+      "name": "VIVAN",
+      "callsign": "OFOJ",
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 60.471432,
+      "lon": 26.943273,
+      "speed": 0.0,
+      "course": 265.2,
+      "heading": 511.0,
+      "timestamp": "2026-08-29T16:25:44.649000+00:00",
+      "source": "digitraffic",
+      "risk_score": 6,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.6 km from pipeline EMODnet pipeline pipelines.3826"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3826",
+        "type": "pipeline",
+        "distance_km": 0.6
+      }
+    },
+    {
+      "mmsi": "230998670",
+      "imo": "0",
+      "name": "ASTRID",
+      "callsign": "OFLT",
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 60.157972,
+      "lon": 24.971767,
+      "speed": 6.7,
+      "course": 224.8,
+      "heading": 217.0,
+      "timestamp": "2026-08-29T16:28:26.018000+00:00",
+      "source": "digitraffic",
+      "risk_score": 6,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.4 km from pipeline EMODnet pipeline pipelines.3482"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3482",
+        "type": "pipeline",
+        "distance_km": 0.4
+      }
+    },
+    {
+      "mmsi": "230046140",
+      "imo": "0",
+      "name": "VIGGEN",
+      "callsign": "OH2309",
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 60.391693,
+      "lon": 22.349337,
+      "speed": 0.0,
+      "course": 123.8,
+      "heading": 301.0,
+      "timestamp": "2026-08-29T16:28:21.771000+00:00",
+      "source": "digitraffic",
+      "risk_score": 6,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.6 km from pipeline EMODnet pipeline pipelines.3711"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3711",
+        "type": "pipeline",
+        "distance_km": 0.6
+      }
+    },
+    {
+      "mmsi": "230941570",
+      "imo": "0",
+      "name": "MERIKUOKKA",
+      "callsign": "OI2932",
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 60.147158,
+      "lon": 24.913055,
+      "speed": 0.1,
+      "course": 360.0,
+      "heading": 511.0,
+      "timestamp": "2026-08-29T16:26:07.470000+00:00",
+      "source": "digitraffic",
+      "risk_score": 6,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.3 km from pipeline EMODnet pipeline pipelines.3609"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3609",
+        "type": "pipeline",
+        "distance_km": 0.3
+      }
+    },
+    {
+      "mmsi": "230052800",
+      "imo": "0",
+      "name": "EMMA",
+      "callsign": "OI-2286",
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 60.176542,
+      "lon": 25.014597,
+      "speed": 4.5,
+      "course": 68.6,
+      "heading": 64.0,
+      "timestamp": "2026-08-29T16:28:23.272000+00:00",
+      "source": "digitraffic",
+      "risk_score": 6,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.4 km from pipeline EMODnet pipeline pipelines.3611"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3611",
+        "type": "pipeline",
+        "distance_km": 0.4
+      }
+    },
+    {
+      "mmsi": "230174460",
+      "imo": "0",
+      "name": "L-317",
+      "callsign": "OHA4058",
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 60.541077,
+      "lon": 21.320483,
+      "speed": 0.0,
+      "course": 169.5,
+      "heading": 258.0,
+      "timestamp": "2026-08-29T16:28:21.537000+00:00",
+      "source": "digitraffic",
+      "risk_score": 6,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.8 km from pipeline EMODnet pipeline pipelines.3668"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3668",
+        "type": "pipeline",
+        "distance_km": 0.8
+      }
+    },
+    {
+      "mmsi": "230174220",
+      "imo": "0",
+      "name": "PRINCESS CAROLINE",
+      "callsign": "OHA4027",
+      "flag": null,
+      "ship_type": "unknown",
+      "lat": 60.194227,
+      "lon": 21.91217,
+      "speed": 0.0,
+      "course": 360.0,
+      "heading": 239.0,
+      "timestamp": "2026-08-29T16:28:24.425000+00:00",
+      "source": "digitraffic",
+      "risk_score": 6,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "1.0 km from pipeline EMODnet pipeline pipelines.3802"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3802",
+        "type": "pipeline",
+        "distance_km": 1.0
+      }
+    },
     {
       "mmsi": "230955000",
       "imo": "5419232",
@@ -656,35 +2474,6 @@
       }
     },
     {
-      "mmsi": "230151360",
-      "imo": "0",
-      "name": "ARAMIS",
-      "callsign": "OH9009",
-      "flag": null,
-      "ship_type": "cargo",
-      "lat": 60.15423,
-      "lon": 24.890128,
-      "speed": 0.0,
-      "course": 0.0,
-      "heading": 511.0,
-      "timestamp": "2026-08-29T16:28:28.114000+00:00",
-      "source": "digitraffic",
-      "risk_score": 3,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_1km",
-          "points": 3,
-          "evidence": "0.0 km from pipeline EMODnet pipeline pipelines.3530"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3530",
-        "type": "pipeline",
-        "distance_km": 0.0
-      }
-    },
-    {
       "mmsi": "230938660",
       "imo": "5135977",
       "name": "LEONIE",
@@ -740,35 +2529,6 @@
         "name": "EMODnet pipeline pipelines.3856",
         "type": "pipeline",
         "distance_km": 0.7
-      }
-    },
-    {
-      "mmsi": "257974900",
-      "imo": null,
-      "name": "TRITON",
-      "callsign": null,
-      "flag": null,
-      "ship_type": "cargo",
-      "lat": 68.235233,
-      "lon": 14.580683,
-      "speed": 0.0,
-      "course": 0.0,
-      "heading": 0.0,
-      "timestamp": "2026-08-29T16:28:27+00:00",
-      "source": "barentswatch",
-      "risk_score": 3,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_1km",
-          "points": 3,
-          "evidence": "0.2 km from cable EMODnet cable pcablesnve.496"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet cable pcablesnve.496",
-        "type": "cable",
-        "distance_km": 0.2
       }
     },
     {
@@ -1178,35 +2938,6 @@
       }
     },
     {
-      "mmsi": "257025360",
-      "imo": null,
-      "name": "STOROEY",
-      "callsign": null,
-      "flag": null,
-      "ship_type": "cargo",
-      "lat": 69.929925,
-      "lon": 20.958528,
-      "speed": 0.0,
-      "course": 277.0,
-      "heading": 123.0,
-      "timestamp": "2026-08-29T16:27:54+00:00",
-      "source": "barentswatch",
-      "risk_score": 3,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_1km",
-          "points": 3,
-          "evidence": "0.5 km from cable EMODnet cable pcablesnve.161"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet cable pcablesnve.161",
-        "type": "cable",
-        "distance_km": 0.5
-      }
-    },
-    {
       "mmsi": "257553600",
       "imo": null,
       "name": "ANDA",
@@ -1378,35 +3109,6 @@
         "name": "EMODnet cable pcablesnve.305",
         "type": "cable",
         "distance_km": 0.9
-      }
-    },
-    {
-      "mmsi": "257934800",
-      "imo": null,
-      "name": "STADDA",
-      "callsign": null,
-      "flag": null,
-      "ship_type": "cargo",
-      "lat": 68.433652,
-      "lon": 14.815587,
-      "speed": 0.0,
-      "course": 0.0,
-      "heading": 0.0,
-      "timestamp": "2026-08-29T16:28:23+00:00",
-      "source": "barentswatch",
-      "risk_score": 3,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_1km",
-          "points": 3,
-          "evidence": "0.5 km from cable EMODnet cable pcablesnve.116"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet cable pcablesnve.116",
-        "type": "cable",
-        "distance_km": 0.5
       }
     },
     {
@@ -1990,35 +3692,6 @@
       }
     },
     {
-      "mmsi": "230984450",
-      "imo": "0",
-      "name": "ALEXANDRA",
-      "callsign": "OJKV",
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 60.28813,
-      "lon": 25.835173,
-      "speed": 0.0,
-      "course": 215.8,
-      "heading": 267.0,
-      "timestamp": "2026-08-29T16:26:48.662000+00:00",
-      "source": "digitraffic",
-      "risk_score": 2,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_1km",
-          "points": 3,
-          "evidence": "0.4 km from pipeline EMODnet pipeline pipelines.3558"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3558",
-        "type": "pipeline",
-        "distance_km": 0.4
-      }
-    },
-    {
       "mmsi": "230931000",
       "imo": "5400267",
       "name": "AJAX",
@@ -2103,35 +3776,6 @@
         "name": "EMODnet pipeline pipelines.3767",
         "type": "pipeline",
         "distance_km": 0.1
-      }
-    },
-    {
-      "mmsi": "230046580",
-      "imo": "0",
-      "name": "SVANTE G",
-      "callsign": "OH2344",
-      "flag": null,
-      "ship_type": "service",
-      "lat": 60.080685,
-      "lon": 19.934122,
-      "speed": 0.0,
-      "course": 0.0,
-      "heading": 357.0,
-      "timestamp": "2026-08-29T16:28:22.846000+00:00",
-      "source": "digitraffic",
-      "risk_score": 2,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_1km",
-          "points": 3,
-          "evidence": "0.7 km from pipeline EMODnet pipeline pipelines.3529"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3529",
-        "type": "pipeline",
-        "distance_km": 0.7
       }
     },
     {
@@ -2222,93 +3866,6 @@
       }
     },
     {
-      "mmsi": "230111650",
-      "imo": "0",
-      "name": "GAIA",
-      "callsign": "OF-4195",
-      "flag": null,
-      "ship_type": "service",
-      "lat": 60.442868,
-      "lon": 22.152608,
-      "speed": 0.0,
-      "course": 251.6,
-      "heading": 10.0,
-      "timestamp": "2026-08-29T16:27:04.967000+00:00",
-      "source": "digitraffic",
-      "risk_score": 2,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_5km",
-          "points": 2,
-          "evidence": "1.2 km from pipeline EMODnet pipeline pipelines.3704"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3704",
-        "type": "pipeline",
-        "distance_km": 1.2
-      }
-    },
-    {
-      "mmsi": "230182220",
-      "imo": "0",
-      "name": "NORDENSKIOLD",
-      "callsign": "OHA5145",
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 60.337993,
-      "lon": 25.5785,
-      "speed": 102.3,
-      "course": 360.0,
-      "heading": 511.0,
-      "timestamp": "2026-08-29T16:27:05.455000+00:00",
-      "source": "digitraffic",
-      "risk_score": 2,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_1km",
-          "points": 3,
-          "evidence": "0.4 km from pipeline EMODnet pipeline pipelines.3727"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3727",
-        "type": "pipeline",
-        "distance_km": 0.4
-      }
-    },
-    {
-      "mmsi": "230998680",
-      "imo": "0",
-      "name": "EUGENIA",
-      "callsign": "OJJK",
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 60.018663,
-      "lon": 22.509137,
-      "speed": 0.0,
-      "course": 360.0,
-      "heading": 511.0,
-      "timestamp": "2026-08-29T16:26:55.502000+00:00",
-      "source": "digitraffic",
-      "risk_score": 2,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_1km",
-          "points": 3,
-          "evidence": "0.4 km from pipeline EMODnet pipeline pipelines.3454"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3454",
-        "type": "pipeline",
-        "distance_km": 0.4
-      }
-    },
-    {
       "mmsi": "230145000",
       "imo": "8802076",
       "name": "ARANDA",
@@ -2364,35 +3921,6 @@
         "name": "EMODnet pipeline pipelines.3917",
         "type": "pipeline",
         "distance_km": 0.4
-      }
-    },
-    {
-      "mmsi": "230938640",
-      "imo": "0",
-      "name": "INGEBORG",
-      "callsign": "OI-8564",
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 60.170792,
-      "lon": 24.96188,
-      "speed": 0.0,
-      "course": 340.1,
-      "heading": 511.0,
-      "timestamp": "2026-08-29T16:28:06.262000+00:00",
-      "source": "digitraffic",
-      "risk_score": 2,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_1km",
-          "points": 3,
-          "evidence": "0.9 km from pipeline EMODnet pipeline pipelines.3465"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3465",
-        "type": "pipeline",
-        "distance_km": 0.9
       }
     },
     {
@@ -2454,64 +3982,6 @@
       }
     },
     {
-      "mmsi": "230992650",
-      "imo": "0",
-      "name": "URSUS",
-      "callsign": "OIRM",
-      "flag": null,
-      "ship_type": "cargo",
-      "lat": 61.125918,
-      "lon": 21.472192,
-      "speed": 0.0,
-      "course": 0.1,
-      "heading": 61.0,
-      "timestamp": "2026-08-29T16:28:28.500000+00:00",
-      "source": "digitraffic",
-      "risk_score": 2,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_5km",
-          "points": 2,
-          "evidence": "2.6 km from pipeline EMODnet pipeline pipelines.3510"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3510",
-        "type": "pipeline",
-        "distance_km": 2.6
-      }
-    },
-    {
-      "mmsi": "230235000",
-      "imo": "0",
-      "name": "VIVAN",
-      "callsign": "OFOJ",
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 60.471432,
-      "lon": 26.943273,
-      "speed": 0.0,
-      "course": 265.2,
-      "heading": 511.0,
-      "timestamp": "2026-08-29T16:25:44.649000+00:00",
-      "source": "digitraffic",
-      "risk_score": 2,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_1km",
-          "points": 3,
-          "evidence": "0.6 km from pipeline EMODnet pipeline pipelines.3826"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3826",
-        "type": "pipeline",
-        "distance_km": 0.6
-      }
-    },
-    {
       "mmsi": "230355000",
       "imo": "7636327",
       "name": "KEMI 1",
@@ -2541,93 +4011,6 @@
       }
     },
     {
-      "mmsi": "230046990",
-      "imo": "0",
-      "name": "MT5300",
-      "callsign": "OH2372",
-      "flag": null,
-      "ship_type": "cargo",
-      "lat": 60.168765,
-      "lon": 24.969857,
-      "speed": 0.0,
-      "course": 303.7,
-      "heading": 511.0,
-      "timestamp": "2026-08-29T16:25:57.605000+00:00",
-      "source": "digitraffic",
-      "risk_score": 2,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_5km",
-          "points": 2,
-          "evidence": "1.1 km from pipeline EMODnet pipeline pipelines.3464"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3464",
-        "type": "pipeline",
-        "distance_km": 1.1
-      }
-    },
-    {
-      "mmsi": "230169030",
-      "imo": "0",
-      "name": "RODNY",
-      "callsign": "OHA3332",
-      "flag": null,
-      "ship_type": "tug",
-      "lat": 60.145987,
-      "lon": 24.983418,
-      "speed": 0.0,
-      "course": 360.0,
-      "heading": 141.0,
-      "timestamp": "2026-08-29T16:24:09.586000+00:00",
-      "source": "digitraffic",
-      "risk_score": 2,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_1km",
-          "points": 3,
-          "evidence": "0.2 km from pipeline EMODnet pipeline pipelines.3580"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3580",
-        "type": "pipeline",
-        "distance_km": 0.2
-      }
-    },
-    {
-      "mmsi": "230998670",
-      "imo": "0",
-      "name": "ASTRID",
-      "callsign": "OFLT",
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 60.157972,
-      "lon": 24.971767,
-      "speed": 6.7,
-      "course": 224.8,
-      "heading": 217.0,
-      "timestamp": "2026-08-29T16:28:26.018000+00:00",
-      "source": "digitraffic",
-      "risk_score": 2,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_1km",
-          "points": 3,
-          "evidence": "0.4 km from pipeline EMODnet pipeline pipelines.3482"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3482",
-        "type": "pipeline",
-        "distance_km": 0.4
-      }
-    },
-    {
       "mmsi": "311062300",
       "imo": "8819938",
       "name": "IVAR",
@@ -2654,35 +4037,6 @@
         "name": "NORD STREAM 1",
         "type": "pipeline",
         "distance_km": 1.9
-      }
-    },
-    {
-      "mmsi": "230174140",
-      "imo": "0",
-      "name": "JEHU",
-      "callsign": "OHA4017",
-      "flag": null,
-      "ship_type": "tug",
-      "lat": 60.435733,
-      "lon": 22.205138,
-      "speed": 0.0,
-      "course": 200.8,
-      "heading": 298.0,
-      "timestamp": "2026-08-29T16:27:23.259000+00:00",
-      "source": "digitraffic",
-      "risk_score": 2,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_1km",
-          "points": 3,
-          "evidence": "0.7 km from pipeline EMODnet pipeline pipelines.3633"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3633",
-        "type": "pipeline",
-        "distance_km": 0.7
       }
     },
     {
@@ -2773,35 +4127,6 @@
       }
     },
     {
-      "mmsi": "230109460",
-      "imo": "0",
-      "name": "ULLA",
-      "callsign": "OIES",
-      "flag": null,
-      "ship_type": "tug",
-      "lat": 61.132212,
-      "lon": 21.449062,
-      "speed": 0.0,
-      "course": 0.0,
-      "heading": 29.0,
-      "timestamp": "2026-08-29T16:23:34.680000+00:00",
-      "source": "digitraffic",
-      "risk_score": 2,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_5km",
-          "points": 2,
-          "evidence": "1.3 km from pipeline EMODnet pipeline pipelines.3510"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3510",
-        "type": "pipeline",
-        "distance_km": 1.3
-      }
-    },
-    {
       "mmsi": "273299870",
       "imo": "9841055",
       "name": "BOGATYR",
@@ -2831,35 +4156,6 @@
       }
     },
     {
-      "mmsi": "230151590",
-      "imo": "0",
-      "name": "L246",
-      "callsign": "OH9033",
-      "flag": null,
-      "ship_type": "service",
-      "lat": 60.169642,
-      "lon": 24.964457,
-      "speed": 0.0,
-      "course": 179.7,
-      "heading": 84.0,
-      "timestamp": "2026-08-29T16:28:22.239000+00:00",
-      "source": "digitraffic",
-      "risk_score": 2,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_5km",
-          "points": 2,
-          "evidence": "1.0 km from pipeline EMODnet pipeline pipelines.3465"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3465",
-        "type": "pipeline",
-        "distance_km": 1.0
-      }
-    },
-    {
       "mmsi": "244855000",
       "imo": "9604184",
       "name": "VIKINGBANK",
@@ -2886,64 +4182,6 @@
         "name": "EMODnet pipeline pipelines.3797",
         "type": "pipeline",
         "distance_km": 1.8
-      }
-    },
-    {
-      "mmsi": "230046140",
-      "imo": "0",
-      "name": "VIGGEN",
-      "callsign": "OH2309",
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 60.391693,
-      "lon": 22.349337,
-      "speed": 0.0,
-      "course": 123.8,
-      "heading": 301.0,
-      "timestamp": "2026-08-29T16:28:21.771000+00:00",
-      "source": "digitraffic",
-      "risk_score": 2,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_1km",
-          "points": 3,
-          "evidence": "0.6 km from pipeline EMODnet pipeline pipelines.3711"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3711",
-        "type": "pipeline",
-        "distance_km": 0.6
-      }
-    },
-    {
-      "mmsi": "230175570",
-      "imo": "0",
-      "name": "RESCUE WEST",
-      "callsign": "OHA4222",
-      "flag": null,
-      "ship_type": "service",
-      "lat": 60.219247,
-      "lon": 19.53854,
-      "speed": 0.0,
-      "course": 222.1,
-      "heading": 311.0,
-      "timestamp": "2026-08-29T16:23:40.872000+00:00",
-      "source": "digitraffic",
-      "risk_score": 2,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_1km",
-          "points": 3,
-          "evidence": "0.1 km from pipeline EMODnet pipeline pipelines.3613"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3613",
-        "type": "pipeline",
-        "distance_km": 0.1
       }
     },
     {
@@ -3034,35 +4272,6 @@
       }
     },
     {
-      "mmsi": "230941570",
-      "imo": "0",
-      "name": "MERIKUOKKA",
-      "callsign": "OI2932",
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 60.147158,
-      "lon": 24.913055,
-      "speed": 0.1,
-      "course": 360.0,
-      "heading": 511.0,
-      "timestamp": "2026-08-29T16:26:07.470000+00:00",
-      "source": "digitraffic",
-      "risk_score": 2,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_1km",
-          "points": 3,
-          "evidence": "0.3 km from pipeline EMODnet pipeline pipelines.3609"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3609",
-        "type": "pipeline",
-        "distance_km": 0.3
-      }
-    },
-    {
       "mmsi": "273458830",
       "imo": "8033089",
       "name": "SGV-FLOT",
@@ -3089,93 +4298,6 @@
         "name": "NORD STREAM 1",
         "type": "pipeline",
         "distance_km": 3.8
-      }
-    },
-    {
-      "mmsi": "230111190",
-      "imo": "0",
-      "name": "MERIHOYLA",
-      "callsign": "OHA7173",
-      "flag": null,
-      "ship_type": "service",
-      "lat": 60.274022,
-      "lon": 25.540663,
-      "speed": 0.1,
-      "course": 86.5,
-      "heading": 511.0,
-      "timestamp": "2026-08-29T16:28:26.861000+00:00",
-      "source": "digitraffic",
-      "risk_score": 2,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_1km",
-          "points": 3,
-          "evidence": "0.7 km from pipeline EMODnet pipeline pipelines.3856"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3856",
-        "type": "pipeline",
-        "distance_km": 0.7
-      }
-    },
-    {
-      "mmsi": "230992750",
-      "imo": "0",
-      "name": "SVAERTAN",
-      "callsign": "OJDT",
-      "flag": null,
-      "ship_type": "service",
-      "lat": 60.080427,
-      "lon": 19.934147,
-      "speed": 0.0,
-      "course": 347.6,
-      "heading": 356.0,
-      "timestamp": "2026-08-29T16:25:09.459000+00:00",
-      "source": "digitraffic",
-      "risk_score": 2,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_1km",
-          "points": 3,
-          "evidence": "0.7 km from pipeline EMODnet pipeline pipelines.3529"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3529",
-        "type": "pipeline",
-        "distance_km": 0.7
-      }
-    },
-    {
-      "mmsi": "230059760",
-      "imo": "0",
-      "name": "RESCUE EMMI",
-      "callsign": "OH3542",
-      "flag": null,
-      "ship_type": "service",
-      "lat": 60.153883,
-      "lon": 24.770953,
-      "speed": 0.0,
-      "course": 217.1,
-      "heading": 261.0,
-      "timestamp": "2026-08-29T15:34:00.296000+00:00",
-      "source": "digitraffic",
-      "risk_score": 2,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_5km",
-          "points": 2,
-          "evidence": "1.3 km from pipeline EMODnet pipeline pipelines.3612"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3612",
-        "type": "pipeline",
-        "distance_km": 1.3
       }
     },
     {
@@ -3208,93 +4330,6 @@
       }
     },
     {
-      "mmsi": "230980160",
-      "imo": "0",
-      "name": "SUBSEA VI",
-      "callsign": "OGVY",
-      "flag": null,
-      "ship_type": "tug",
-      "lat": 60.080153,
-      "lon": 19.934285,
-      "speed": 0.0,
-      "course": 88.8,
-      "heading": 267.0,
-      "timestamp": "2026-08-29T16:27:23.117000+00:00",
-      "source": "digitraffic",
-      "risk_score": 2,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_1km",
-          "points": 3,
-          "evidence": "0.7 km from pipeline EMODnet pipeline pipelines.3529"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3529",
-        "type": "pipeline",
-        "distance_km": 0.7
-      }
-    },
-    {
-      "mmsi": "230052800",
-      "imo": "0",
-      "name": "EMMA",
-      "callsign": "OI-2286",
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 60.176542,
-      "lon": 25.014597,
-      "speed": 4.5,
-      "course": 68.6,
-      "heading": 64.0,
-      "timestamp": "2026-08-29T16:28:23.272000+00:00",
-      "source": "digitraffic",
-      "risk_score": 2,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_1km",
-          "points": 3,
-          "evidence": "0.4 km from pipeline EMODnet pipeline pipelines.3611"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3611",
-        "type": "pipeline",
-        "distance_km": 0.4
-      }
-    },
-    {
-      "mmsi": "230093090",
-      "imo": "0",
-      "name": "PILOT L243",
-      "callsign": "OH6348",
-      "flag": null,
-      "ship_type": "service",
-      "lat": 60.2754,
-      "lon": 26.445547,
-      "speed": 0.0,
-      "course": 286.1,
-      "heading": 213.0,
-      "timestamp": "2026-08-29T16:28:22.285000+00:00",
-      "source": "digitraffic",
-      "risk_score": 2,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_1km",
-          "points": 3,
-          "evidence": "0.2 km from pipeline EMODnet pipeline pipelines.3644"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3644",
-        "type": "pipeline",
-        "distance_km": 0.2
-      }
-    },
-    {
       "mmsi": "275546000",
       "imo": "9155872",
       "name": "DREAMLAND",
@@ -3324,64 +4359,6 @@
       }
     },
     {
-      "mmsi": "276752000",
-      "imo": "0",
-      "name": "AHTO-27",
-      "callsign": "ES2731",
-      "flag": null,
-      "ship_type": "service",
-      "lat": 59.334878,
-      "lon": 24.07814,
-      "speed": 0.1,
-      "course": 129.6,
-      "heading": 511.0,
-      "timestamp": "2026-08-29T15:34:26.128000+00:00",
-      "source": "digitraffic",
-      "risk_score": 2,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_5km",
-          "points": 2,
-          "evidence": "5.0 km from pipeline Balticconnector"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "Balticconnector",
-        "type": "pipeline",
-        "distance_km": 5.0
-      }
-    },
-    {
-      "mmsi": "230033880",
-      "imo": "0",
-      "name": "PILOT L238",
-      "callsign": "OJ9333",
-      "flag": null,
-      "ship_type": "service",
-      "lat": 60.105188,
-      "lon": 24.974505,
-      "speed": 0.0,
-      "course": 282.1,
-      "heading": 28.0,
-      "timestamp": "2026-08-29T16:28:25.829000+00:00",
-      "source": "digitraffic",
-      "risk_score": 2,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_1km",
-          "points": 3,
-          "evidence": "0.1 km from pipeline EMODnet pipeline pipelines.3495"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3495",
-        "type": "pipeline",
-        "distance_km": 0.1
-      }
-    },
-    {
       "mmsi": "230182000",
       "imo": "7927934",
       "name": "ARTEMIS",
@@ -3408,93 +4385,6 @@
         "name": "EMODnet pipeline pipelines.3450",
         "type": "pipeline",
         "distance_km": 1.6
-      }
-    },
-    {
-      "mmsi": "230163320",
-      "imo": "0",
-      "name": "VILLE 2",
-      "callsign": "OHA2562",
-      "flag": null,
-      "ship_type": "tug",
-      "lat": 60.280667,
-      "lon": 22.287333,
-      "speed": 0.0,
-      "course": 185.0,
-      "heading": 324.0,
-      "timestamp": "2026-08-29T16:25:43.169000+00:00",
-      "source": "digitraffic",
-      "risk_score": 2,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_5km",
-          "points": 2,
-          "evidence": "3.7 km from pipeline EMODnet pipeline pipelines.3561"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3561",
-        "type": "pipeline",
-        "distance_km": 3.7
-      }
-    },
-    {
-      "mmsi": "230112370",
-      "imo": "0",
-      "name": "HESSU",
-      "callsign": "OG 8397",
-      "flag": null,
-      "ship_type": "cargo",
-      "lat": 60.167405,
-      "lon": 24.980065,
-      "speed": 0.0,
-      "course": 276.6,
-      "heading": 226.0,
-      "timestamp": "2026-08-29T16:26:02.112000+00:00",
-      "source": "digitraffic",
-      "risk_score": 2,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_5km",
-          "points": 2,
-          "evidence": "1.1 km from pipeline EMODnet pipeline pipelines.3464"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3464",
-        "type": "pipeline",
-        "distance_km": 1.1
-      }
-    },
-    {
-      "mmsi": "230055040",
-      "imo": "0",
-      "name": "MIINA",
-      "callsign": "OH-3114",
-      "flag": null,
-      "ship_type": "service",
-      "lat": 60.14897,
-      "lon": 25.035728,
-      "speed": 0.0,
-      "course": 360.0,
-      "heading": 511.0,
-      "timestamp": "2026-08-29T16:26:04.738000+00:00",
-      "source": "digitraffic",
-      "risk_score": 2,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_1km",
-          "points": 3,
-          "evidence": "0.3 km from pipeline EMODnet pipeline pipelines.3908"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3908",
-        "type": "pipeline",
-        "distance_km": 0.3
       }
     },
     {
@@ -3640,35 +4530,6 @@
         "name": "NORD STREAM 1",
         "type": "pipeline",
         "distance_km": 1.4
-      }
-    },
-    {
-      "mmsi": "230193440",
-      "imo": "0",
-      "name": "L253",
-      "callsign": "OHA6849",
-      "flag": null,
-      "ship_type": "service",
-      "lat": 60.275332,
-      "lon": 26.445682,
-      "speed": 0.0,
-      "course": 218.7,
-      "heading": 511.0,
-      "timestamp": "2026-08-29T16:28:22.052000+00:00",
-      "source": "digitraffic",
-      "risk_score": 2,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_1km",
-          "points": 3,
-          "evidence": "0.2 km from pipeline EMODnet pipeline pipelines.3644"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3644",
-        "type": "pipeline",
-        "distance_km": 0.2
       }
     },
     {
@@ -3933,35 +4794,6 @@
       }
     },
     {
-      "mmsi": "230174460",
-      "imo": "0",
-      "name": "L-317",
-      "callsign": "OHA4058",
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 60.541077,
-      "lon": 21.320483,
-      "speed": 0.0,
-      "course": 169.5,
-      "heading": 258.0,
-      "timestamp": "2026-08-29T16:28:21.537000+00:00",
-      "source": "digitraffic",
-      "risk_score": 2,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_1km",
-          "points": 3,
-          "evidence": "0.8 km from pipeline EMODnet pipeline pipelines.3668"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3668",
-        "type": "pipeline",
-        "distance_km": 0.8
-      }
-    },
-    {
       "mmsi": "230639000",
       "imo": "9354284",
       "name": "BALTIC PRINCESS",
@@ -4017,93 +4849,6 @@
         "name": "EMODnet pipeline pipelines.3510",
         "type": "pipeline",
         "distance_km": 2.4
-      }
-    },
-    {
-      "mmsi": "230109470",
-      "imo": "0",
-      "name": "PILOT L129",
-      "callsign": null,
-      "flag": null,
-      "ship_type": "service",
-      "lat": 59.808838,
-      "lon": 22.910557,
-      "speed": 0.0,
-      "course": 90.6,
-      "heading": 148.0,
-      "timestamp": "2026-08-29T16:28:24.882000+00:00",
-      "source": "digitraffic",
-      "risk_score": 2,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_1km",
-          "points": 3,
-          "evidence": "0.0 km from pipeline EMODnet pipeline pipelines.3889"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3889",
-        "type": "pipeline",
-        "distance_km": 0.0
-      }
-    },
-    {
-      "mmsi": "230099950",
-      "imo": "0",
-      "name": "PILOT L244",
-      "callsign": "OH6918",
-      "flag": null,
-      "ship_type": "service",
-      "lat": 60.013415,
-      "lon": 23.946202,
-      "speed": 0.0,
-      "course": 40.5,
-      "heading": 28.0,
-      "timestamp": "2026-08-29T16:28:28.310000+00:00",
-      "source": "digitraffic",
-      "risk_score": 2,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_1km",
-          "points": 3,
-          "evidence": "1.0 km from pipeline Balticconnector"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "Balticconnector",
-        "type": "pipeline",
-        "distance_km": 1.0
-      }
-    },
-    {
-      "mmsi": "230018360",
-      "imo": "0",
-      "name": "RESCUE KOTKA",
-      "callsign": "OJ7975",
-      "flag": null,
-      "ship_type": "service",
-      "lat": 60.461417,
-      "lon": 26.961798,
-      "speed": 0.0,
-      "course": 316.4,
-      "heading": 297.0,
-      "timestamp": "2026-08-29T16:28:23.672000+00:00",
-      "source": "digitraffic",
-      "risk_score": 2,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_1km",
-          "points": 3,
-          "evidence": "0.2 km from pipeline EMODnet pipeline pipelines.3860"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3860",
-        "type": "pipeline",
-        "distance_km": 0.2
       }
     },
     {
@@ -4165,93 +4910,6 @@
       }
     },
     {
-      "mmsi": "230991670",
-      "imo": "0",
-      "name": "AJO",
-      "callsign": "OG2940",
-      "flag": null,
-      "ship_type": "tug",
-      "lat": 60.462007,
-      "lon": 26.962247,
-      "speed": 0.0,
-      "course": 103.1,
-      "heading": 306.0,
-      "timestamp": "2026-08-29T16:28:20.275000+00:00",
-      "source": "digitraffic",
-      "risk_score": 2,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_1km",
-          "points": 3,
-          "evidence": "0.2 km from pipeline EMODnet pipeline pipelines.3860"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3860",
-        "type": "pipeline",
-        "distance_km": 0.2
-      }
-    },
-    {
-      "mmsi": "230161450",
-      "imo": "0",
-      "name": "L248",
-      "callsign": "OHA2259",
-      "flag": null,
-      "ship_type": "service",
-      "lat": 60.796395,
-      "lon": 21.376775,
-      "speed": 0.0,
-      "course": 130.9,
-      "heading": 46.0,
-      "timestamp": "2026-08-29T16:28:22.519000+00:00",
-      "source": "digitraffic",
-      "risk_score": 2,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_1km",
-          "points": 3,
-          "evidence": "1.0 km from pipeline EMODnet pipeline pipelines.3877"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3877",
-        "type": "pipeline",
-        "distance_km": 1.0
-      }
-    },
-    {
-      "mmsi": "230174220",
-      "imo": "0",
-      "name": "PRINCESS CAROLINE",
-      "callsign": "OHA4027",
-      "flag": null,
-      "ship_type": "unknown",
-      "lat": 60.194227,
-      "lon": 21.91217,
-      "speed": 0.0,
-      "course": 360.0,
-      "heading": 239.0,
-      "timestamp": "2026-08-29T16:28:24.425000+00:00",
-      "source": "digitraffic",
-      "risk_score": 2,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_1km",
-          "points": 3,
-          "evidence": "1.0 km from pipeline EMODnet pipeline pipelines.3802"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3802",
-        "type": "pipeline",
-        "distance_km": 1.0
-      }
-    },
-    {
       "mmsi": "230361000",
       "imo": "8917601",
       "name": "GABRIELLA",
@@ -4310,35 +4968,6 @@
       }
     },
     {
-      "mmsi": "230991780",
-      "imo": "0",
-      "name": "JOONAS",
-      "callsign": "OI4812",
-      "flag": null,
-      "ship_type": "tug",
-      "lat": 61.133498,
-      "lon": 21.44057,
-      "speed": 0.0,
-      "course": 214.0,
-      "heading": 139.0,
-      "timestamp": "2026-08-29T16:28:27.188000+00:00",
-      "source": "digitraffic",
-      "risk_score": 2,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_1km",
-          "points": 3,
-          "evidence": "0.8 km from pipeline EMODnet pipeline pipelines.3510"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3510",
-        "type": "pipeline",
-        "distance_km": 0.8
-      }
-    },
-    {
       "mmsi": "230981050",
       "imo": "8702903",
       "name": "MERISILTA",
@@ -4365,35 +4994,6 @@
         "name": "EMODnet pipeline pipelines.3511",
         "type": "pipeline",
         "distance_km": 0.6
-      }
-    },
-    {
-      "mmsi": "230113940",
-      "imo": "0",
-      "name": "PILOT L133",
-      "callsign": "OG-8951",
-      "flag": null,
-      "ship_type": "service",
-      "lat": 60.472552,
-      "lon": 26.95853,
-      "speed": 0.0,
-      "course": 25.6,
-      "heading": 294.0,
-      "timestamp": "2026-08-29T16:28:28.207000+00:00",
-      "source": "digitraffic",
-      "risk_score": 2,
-      "risk_level": "Normal",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_5km",
-          "points": 2,
-          "evidence": "1.1 km from pipeline EMODnet pipeline pipelines.3854"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3854",
-        "type": "pipeline",
-        "distance_km": 1.1
       }
     }
   ],
