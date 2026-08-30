@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-08-29T20:42:27.104699+00:00",
+    "generated_at": "2026-08-30T05:40:08.987083+00:00",
     "mode": "live",
     "sources": [
       "barentswatch",
@@ -21,21 +21,21 @@
       },
       "gfw_sar": {
         "status": "ok",
-        "timestamp": "2026-08-29T16:49:56.739888+00:00",
+        "timestamp": "2026-08-30T05:39:53.116380+00:00",
         "records_fetched": 0,
         "records_published": 0,
         "detail": "Live GFW SAR report cells; coordinates are grid-cell centres, not precise individual positions; leads require human review."
       },
       "emodnet": {
         "status": "ok",
-        "timestamp": "2026-08-29T20:41:44.300752+00:00",
+        "timestamp": "2026-08-30T05:39:03.084411+00:00",
         "records_fetched": 1472,
         "records_published": 1472,
         "detail": "EMODnet WFS infrastructure snapshot; public-source coverage and precision vary by originator."
       },
       "helcom": {
         "status": "ok",
-        "timestamp": "2026-08-29T20:41:54.029118+00:00",
+        "timestamp": "2026-08-30T05:39:12.670035+00:00",
         "records_fetched": 188,
         "records_published": 187,
         "detail": "HELCOM MADS Marine Protected Areas public GeoJSON snapshot."
@@ -2476,6 +2476,172 @@
       }
     },
     {
+      "mmsi": "230059760",
+      "imo": "0",
+      "name": "RESCUE EMMI",
+      "callsign": "OH3542",
+      "flag": null,
+      "ship_type": "service",
+      "lat": 60.153883,
+      "lon": 24.770953,
+      "speed": 0.0,
+      "course": 217.1,
+      "heading": 261.0,
+      "timestamp": "2026-08-29T15:34:00.296000+00:00",
+      "source": "digitraffic",
+      "risk_score": 7,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.3 km from pipeline EMODnet pipeline pipelines.3612"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3612",
+        "type": "pipeline",
+        "distance_km": 1.3
+      }
+    },
+    {
+      "mmsi": "230354000",
+      "imo": "0",
+      "name": "FNS HALLI 899",
+      "callsign": "OIMX",
+      "flag": null,
+      "ship_type": "service",
+      "lat": 60.426165,
+      "lon": 22.082353,
+      "speed": 10.3,
+      "course": 352.2,
+      "heading": 354.0,
+      "timestamp": "2026-08-29T06:48:26.832000+00:00",
+      "source": "digitraffic",
+      "risk_score": 7,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.0 km from pipeline EMODnet pipeline pipelines.3704"
+        },
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3704",
+        "type": "pipeline",
+        "distance_km": 1.0
+      }
+    },
+    {
+      "mmsi": "273439940",
+      "imo": "0",
+      "name": "AMURSKAY",
+      "callsign": "UIQZ",
+      "flag": null,
+      "ship_type": "cargo",
+      "lat": 60.838488,
+      "lon": 30.461232,
+      "speed": 0.1,
+      "course": 145.4,
+      "heading": 143.0,
+      "timestamp": "2026-08-29T05:46:41.159000+00:00",
+      "source": "digitraffic",
+      "risk_score": 7,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "NORD STREAM 1",
+        "type": "pipeline",
+        "distance_km": 134.5
+      }
+    },
+    {
+      "mmsi": "273433260",
+      "imo": "0",
+      "name": "SBORSHCHIK-3",
+      "callsign": "UAOG",
+      "flag": null,
+      "ship_type": "tanker",
+      "lat": 59.86773,
+      "lon": 30.220655,
+      "speed": 0.0,
+      "course": 189.9,
+      "heading": 283.0,
+      "timestamp": "2026-08-29T04:39:25.149000+00:00",
+      "source": "digitraffic",
+      "risk_score": 7,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "zigzag_or_anchor_drag_proxy",
+          "points": 2,
+          "evidence": "Repeated large course changes in stored AIS positions"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        },
+        {
+          "rule_id": "repeat_sensitive_area_presence",
+          "points": 2,
+          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "NORD STREAM 1",
+        "type": "pipeline",
+        "distance_km": 135.2
+      }
+    },
+    {
       "mmsi": "265001110",
       "imo": "0",
       "name": "RESCUE EKMAN",
@@ -3892,45 +4058,6 @@
       }
     },
     {
-      "mmsi": "230059760",
-      "imo": "0",
-      "name": "RESCUE EMMI",
-      "callsign": "OH3542",
-      "flag": null,
-      "ship_type": "service",
-      "lat": 60.153883,
-      "lon": 24.770953,
-      "speed": 0.0,
-      "course": 217.1,
-      "heading": 261.0,
-      "timestamp": "2026-08-29T15:34:00.296000+00:00",
-      "source": "digitraffic",
-      "risk_score": 6,
-      "risk_level": "Watch",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_5km",
-          "points": 2,
-          "evidence": "1.3 km from pipeline EMODnet pipeline pipelines.3612"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        },
-        {
-          "rule_id": "identity_change",
-          "points": 3,
-          "evidence": "Identity field changed compared with stored AIS position"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3612",
-        "type": "pipeline",
-        "distance_km": 1.3
-      }
-    },
-    {
       "mmsi": "230998680",
       "imo": "0",
       "name": "EUGENIA",
@@ -4265,45 +4392,6 @@
         "name": "EMODnet pipeline pipelines.3727",
         "type": "pipeline",
         "distance_km": 0.4
-      }
-    },
-    {
-      "mmsi": "230354000",
-      "imo": "0",
-      "name": "FNS HALLI 899",
-      "callsign": "OIMX",
-      "flag": null,
-      "ship_type": "service",
-      "lat": 60.426165,
-      "lon": 22.082353,
-      "speed": 10.3,
-      "course": 352.2,
-      "heading": 354.0,
-      "timestamp": "2026-08-29T06:48:26.832000+00:00",
-      "source": "digitraffic",
-      "risk_score": 6,
-      "risk_level": "Watch",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_5km",
-          "points": 2,
-          "evidence": "1.0 km from pipeline EMODnet pipeline pipelines.3704"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        },
-        {
-          "rule_id": "identity_change",
-          "points": 3,
-          "evidence": "Identity field changed compared with stored AIS position"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3704",
-        "type": "pipeline",
-        "distance_km": 1.0
       }
     },
     {
@@ -6570,40 +6658,6 @@
       }
     },
     {
-      "mmsi": "273439940",
-      "imo": "0",
-      "name": "AMURSKAY",
-      "callsign": "UIQZ",
-      "flag": null,
-      "ship_type": "cargo",
-      "lat": 60.838488,
-      "lon": 30.461232,
-      "speed": 0.1,
-      "course": 145.4,
-      "heading": 143.0,
-      "timestamp": "2026-08-29T05:46:41.159000+00:00",
-      "source": "digitraffic",
-      "risk_score": 5,
-      "risk_level": "Watch",
-      "triggered_rules": [
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        },
-        {
-          "rule_id": "identity_change",
-          "points": 3,
-          "evidence": "Identity field changed compared with stored AIS position"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "NORD STREAM 1",
-        "type": "pipeline",
-        "distance_km": 134.5
-      }
-    },
-    {
       "mmsi": "230707000",
       "imo": "9818278",
       "name": "HALTI",
@@ -6801,40 +6855,6 @@
         "name": "EMODnet pipeline pipelines.3695",
         "type": "pipeline",
         "distance_km": 8.5
-      }
-    },
-    {
-      "mmsi": "273433260",
-      "imo": "0",
-      "name": "SBORSHCHIK-3",
-      "callsign": "UAOG",
-      "flag": null,
-      "ship_type": "tanker",
-      "lat": 59.86773,
-      "lon": 30.220655,
-      "speed": 0.0,
-      "course": 189.9,
-      "heading": 283.0,
-      "timestamp": "2026-08-29T04:39:25.149000+00:00",
-      "source": "digitraffic",
-      "risk_score": 5,
-      "risk_level": "Watch",
-      "triggered_rules": [
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        },
-        {
-          "rule_id": "identity_change",
-          "points": 3,
-          "evidence": "Identity field changed compared with stored AIS position"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "NORD STREAM 1",
-        "type": "pipeline",
-        "distance_km": 135.2
       }
     },
     {
