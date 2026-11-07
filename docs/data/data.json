@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-11-07T06:21:33.899612+00:00",
+    "generated_at": "2026-11-07T17:49:23.971038+00:00",
     "mode": "live",
     "sources": [
       "barentswatch",
@@ -22,21 +22,21 @@
       },
       "gfw_sar": {
         "status": "error_kept_old_data",
-        "timestamp": "2026-11-07T06:21:26.723046+00:00",
+        "timestamp": "2026-11-07T17:49:18.936917+00:00",
         "records_fetched": 0,
         "records_published": 3356,
         "detail": "GFW request unavailable; previous published SAR should be retained: 404 Client Error: Not Found for url: https://gateway.api.globalfishingwatch.org/v3/4wings/report?spatial-resolution=HIGH&temporal-resolution=HOURLY&datasets%5B0%5D=public-global-sar-presence%3Alatest&date-range=2026-10-31%2C2026-11-07&format=JSON&filters%5B0%5D=matched%3D%27true%27&group-by=VESSEL_ID Reused 3356 previous detections."
       },
       "emodnet": {
         "status": "ok",
-        "timestamp": "2026-11-07T06:21:11.194411+00:00",
+        "timestamp": "2026-11-07T17:49:03.313287+00:00",
         "records_fetched": 1472,
         "records_published": 1472,
         "detail": "EMODnet WFS infrastructure snapshot; public-source coverage and precision vary by originator."
       },
       "helcom": {
         "status": "ok",
-        "timestamp": "2026-11-07T06:21:19.345047+00:00",
+        "timestamp": "2026-11-07T17:49:10.947670+00:00",
         "records_fetched": 188,
         "records_published": 187,
         "detail": "HELCOM MADS Marine Protected Areas public GeoJSON snapshot."
@@ -339,55 +339,6 @@
         "name": "EMODnet pipeline pipelines.3685",
         "type": "pipeline",
         "distance_km": 0.4
-      }
-    },
-    {
-      "mmsi": "230995040",
-      "imo": "0",
-      "name": "RESCUE LAHITAPIOLAVS",
-      "callsign": "OJHW",
-      "flag": null,
-      "ship_type": "service",
-      "lat": 60.47588,
-      "lon": 22.022058,
-      "speed": 0.0,
-      "course": 360.0,
-      "heading": 511.0,
-      "timestamp": "2026-10-25T09:54:20.087000+00:00",
-      "source": "digitraffic",
-      "risk_score": 10,
-      "risk_level": "High Review Priority",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_1km",
-          "points": 3,
-          "evidence": "0.1 km from pipeline EMODnet pipeline pipelines.3552"
-        },
-        {
-          "rule_id": "ais_gap_6h",
-          "points": 2,
-          "evidence": "AIS reporting gap of 9.4 hours"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        },
-        {
-          "rule_id": "identity_change",
-          "points": 3,
-          "evidence": "Identity field changed compared with stored AIS position"
-        },
-        {
-          "rule_id": "repeat_sensitive_area_presence",
-          "points": 2,
-          "evidence": "Repeated stored presence inside a sensitive-area bounding box"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3552",
-        "type": "pipeline",
-        "distance_km": 0.1
       }
     },
     {
@@ -1469,6 +1420,45 @@
       }
     },
     {
+      "mmsi": "230995040",
+      "imo": "0",
+      "name": "RESCUE LAHITAPIOLAVS",
+      "callsign": "OJHW",
+      "flag": null,
+      "ship_type": "service",
+      "lat": 60.47588,
+      "lon": 22.022058,
+      "speed": 0.0,
+      "course": 360.0,
+      "heading": 511.0,
+      "timestamp": "2026-10-25T09:54:20.087000+00:00",
+      "source": "digitraffic",
+      "risk_score": 6,
+      "risk_level": "Watch",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_1km",
+          "points": 3,
+          "evidence": "0.1 km from pipeline EMODnet pipeline pipelines.3552"
+        },
+        {
+          "rule_id": "ais_gap_6h",
+          "points": 2,
+          "evidence": "AIS reporting gap of 9.4 hours"
+        },
+        {
+          "rule_id": "identity_change",
+          "points": 3,
+          "evidence": "Identity field changed compared with stored AIS position"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3552",
+        "type": "pipeline",
+        "distance_km": 0.1
+      }
+    },
+    {
       "mmsi": "257974900",
       "imo": null,
       "name": "TRITON",
@@ -1568,45 +1558,6 @@
         "name": "EMODnet cable pcablesnve.496",
         "type": "cable",
         "distance_km": 0.4
-      }
-    },
-    {
-      "mmsi": "230059760",
-      "imo": "0",
-      "name": "RESCUE EMMI",
-      "callsign": "OH3542",
-      "flag": null,
-      "ship_type": "service",
-      "lat": 60.153903,
-      "lon": 24.770948,
-      "speed": 0.1,
-      "course": 260.9,
-      "heading": 262.0,
-      "timestamp": "2026-10-24T19:24:15.212000+00:00",
-      "source": "digitraffic",
-      "risk_score": 6,
-      "risk_level": "Watch",
-      "triggered_rules": [
-        {
-          "rule_id": "infra_proximity_5km",
-          "points": 2,
-          "evidence": "1.3 km from pipeline EMODnet pipeline pipelines.3612"
-        },
-        {
-          "rule_id": "zigzag_or_anchor_drag_proxy",
-          "points": 2,
-          "evidence": "Repeated large course changes in stored AIS positions"
-        },
-        {
-          "rule_id": "identity_change",
-          "points": 3,
-          "evidence": "Identity field changed compared with stored AIS position"
-        }
-      ],
-      "nearest_infrastructure": {
-        "name": "EMODnet pipeline pipelines.3612",
-        "type": "pipeline",
-        "distance_km": 1.3
       }
     },
     {
@@ -3289,6 +3240,35 @@
         "name": "EMODnet cable pcablesnve.395",
         "type": "cable",
         "distance_km": 0.6
+      }
+    },
+    {
+      "mmsi": "230059760",
+      "imo": "0",
+      "name": "RESCUE EMMI",
+      "callsign": "OH3542",
+      "flag": null,
+      "ship_type": "service",
+      "lat": 60.153903,
+      "lon": 24.770948,
+      "speed": 0.1,
+      "course": 260.9,
+      "heading": 262.0,
+      "timestamp": "2026-10-24T19:24:15.212000+00:00",
+      "source": "digitraffic",
+      "risk_score": 2,
+      "risk_level": "Normal",
+      "triggered_rules": [
+        {
+          "rule_id": "infra_proximity_5km",
+          "points": 2,
+          "evidence": "1.3 km from pipeline EMODnet pipeline pipelines.3612"
+        }
+      ],
+      "nearest_infrastructure": {
+        "name": "EMODnet pipeline pipelines.3612",
+        "type": "pipeline",
+        "distance_km": 1.3
       }
     },
     {
