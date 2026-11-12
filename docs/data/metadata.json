@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T19:47:27.505263+00:00",
+  "generated_at": "2026-11-12T07:30:28.992694+00:00",
   "mode": "live",
   "sources": [
     "barentswatch",
@@ -21,21 +21,21 @@
     },
     "gfw_sar": {
       "status": "error_kept_old_data",
-      "timestamp": "2026-11-11T19:47:20.068041+00:00",
+      "timestamp": "2026-11-12T07:30:21.606183+00:00",
       "records_fetched": 0,
       "records_published": 3356,
-      "detail": "GFW request unavailable; previous published SAR should be retained: 404 Client Error: Not Found for url: https://gateway.api.globalfishingwatch.org/v3/4wings/report?spatial-resolution=HIGH&temporal-resolution=HOURLY&datasets%5B0%5D=public-global-sar-presence%3Alatest&date-range=2026-11-04%2C2026-11-11&format=JSON&filters%5B0%5D=matched%3D%27true%27&group-by=VESSEL_ID Reused 3356 previous detections."
+      "detail": "GFW request unavailable; previous published SAR should be retained: 404 Client Error: Not Found for url: https://gateway.api.globalfishingwatch.org/v3/4wings/report?spatial-resolution=HIGH&temporal-resolution=HOURLY&datasets%5B0%5D=public-global-sar-presence%3Alatest&date-range=2026-11-05%2C2026-11-12&format=JSON&filters%5B0%5D=matched%3D%27true%27&group-by=VESSEL_ID Reused 3356 previous detections."
     },
     "emodnet": {
       "status": "ok",
-      "timestamp": "2026-11-11T19:47:02.752350+00:00",
+      "timestamp": "2026-11-12T07:30:03.809090+00:00",
       "records_fetched": 1472,
       "records_published": 1472,
       "detail": "EMODnet WFS infrastructure snapshot; public-source coverage and precision vary by originator."
     },
     "helcom": {
       "status": "ok",
-      "timestamp": "2026-11-11T19:47:11.536459+00:00",
+      "timestamp": "2026-11-12T07:30:14.095314+00:00",
       "records_fetched": 188,
       "records_published": 187,
       "detail": "HELCOM MADS Marine Protected Areas public GeoJSON snapshot."
